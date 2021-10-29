@@ -1,0 +1,56 @@
+@font-face {
+font-family: Poppins-Regular;
+src: url('../fonts/Poppins/Poppins-Regular.ttf'); 
+}
+
+@font-face {
+font-family: Poppins-Light;
+src: url('../fonts/Poppins/Poppins-Light.ttf'); 
+}
+
+@font-face {
+font-family: Poppins-ExtraLight;
+src: url('../fonts/Poppins/Poppins-ExtraLight.ttf'); 
+}
+
+@font-face {
+font-family: Poppins-Medium;
+src: url('../fonts/Poppins/Poppins-Medium.ttf'); 
+}
+
+@font-face {
+font-family: Poppins-Italic;
+src: url('../fonts/Poppins/Poppins-Italic.ttf'); 
+}
+
+@font-face {
+font-family: Poppins-Bold;
+src: url('../fonts/Poppins/Poppins-Bold.ttf'); 
+}
+
+@font-face {
+font-family: Poppins-SemiBold;
+src: url('../fonts/Poppins/Poppins-SemiBold.ttf'); 
+}
+
+/*--------------------*/
+.cambio-home {
+    background-color: #56A85E;
+}
+
+.sesion{
+    font-family: Poppins-Medium;
+    font-size: 17px;
+    color: #333;
+}
+
+.hov-nuevo:hover{
+    color: #56A85E;
+}
+
+.cls-1 {
+    fill: none;
+    stroke: #56A85E;
+    stroke-width: 7.5px;
+    fill-rule: evenodd;
+  }

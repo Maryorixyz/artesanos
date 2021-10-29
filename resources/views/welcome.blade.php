@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-	<title>Home</title>
+	<title>Ruta Artesanal</title>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 <!--===============================================================================================-->	
@@ -35,6 +35,8 @@
 <!--===============================================================================================-->
 	<link rel="stylesheet" type="text/css" href="{{ asset("css/util.css") }}">
 	<link rel="stylesheet" type="text/css" href="{{ asset("css/main.css") }}">
+
+	<link rel="stylesheet" type="text/css" href="{{ asset("css/custom.css") }}">
 <!--===============================================================================================-->
 </head>
 <body class="animsition">
@@ -51,60 +53,56 @@
 					<a href="#" class="logo">
                         <svg id="R_copia" data-name="R copia" xmlns="http://www.w3.org/2000/svg" width="200" height="200" viewBox="0 0 200 200" style="max-height: 50px;">
                             <defs>
-                              <style>
+                              {{-- <style>
                                 .cls-1 {
                                   fill: none;
-                                  stroke: #f3821e;
-                                  stroke-width: 1.5px;
+                                  stroke: #56A85E;
+                                  stroke-width: 5.5px;
                                   fill-rule: evenodd;
                                 }
-                              </style>
+                              </style> --}}
                             </defs>
                             <path id="Forma_3" data-name="Forma 3" class="cls-1" d="M23.99,108.99l35.843,47.019h21.18L43.54,108.99"/>
                             <path id="Forma_1_copia" data-name="Forma 1 copia" class="cls-1" d="M20.143,157L4,147.5V92.071a8.09,8.09,0,0,1,8.071-4.751,7.979,7.979,0,0,1,6.457,4.751v4.751H50.814a23.41,23.41,0,0,0,0-38.007H18.529v9.5a9.862,9.862,0,0,1-6.457,3.167A9.977,9.977,0,0,1,4,68.3V44.562H55.657A37.533,37.533,0,0,1,75.028,74.651c0.9,13.983-6.547,27.56-19.371,34.84H20.143V157Z"/>
                             <path id="Forma_6" data-name="Forma 6" class="cls-1" d="M114.027,126.505a6.091,6.091,0,0,0-2.886,5.622,5.968,5.968,0,0,0,2.886,4.819h21.642a6.7,6.7,0,0,0-.721-10.441H114.027Z"/>
                             <path id="Forma_4" data-name="Forma 4" class="cls-1" d="M60,156L112.024,43.008q24.2,50.488,48.4,100.975l16.615-.814L140.92,72.323l-2.889,5.7a6.63,6.63,0,0,1-7.225-.814,8.788,8.788,0,0,1-2.889-8.143l13-26.058L198,156H152q-19.987-41.838-39.976-83.677L79.516,143.169H90.352q10.475-20.358,20.95-40.716a6.557,6.557,0,0,1,7.224,0,8.461,8.461,0,0,1,3.612,7.329L98,156H60Z"/>
                         </svg>
-						<img src="images/icons/logo-01.png" alt="IMG-LOGO">
+						{{-- <img src="images/icons/logo-01.png" alt="IMG-LOGO"> --}}
 					</a>
 
 					<!-- Menu desktop -->
 					<div class="menu-desktop">
 						<ul class="main-menu">
-							<li class="active-menu">
-								<a href="index.html">INICIO</a>
-								<ul class="sub-menu">
-									<li><a href="index.html">Homepage 1</a></li>
-									<li><a href="home-02.html">Homepage 2</a></li>
-									<li><a href="home-03.html">Homepage 3</a></li>
+							<li>
+								<a href="product.html">Asociaciones</a>
+							</li>
+							{{-- <li class="active-menu">
+								<a href="index.html">Asociaciones</a>
+								<ul class="sub-menu"> ---Ctrl k + Ctrl C
+									<li><a href="index.html">Asociaciones 1</a></li>
+									<li><a href="home-02.html">Asociaciones 2</a></li>
+									<li><a href="home-03.html">Asociaciones 3</a></li>
 								</ul>
-							</li>
+							</li> --}}
 
 							<li>
-								<a href="product.html">Shop</a>
+								<a href="product.html">Catalogo</a>
 							</li>
 
-							<li class="label1" data-label1="hot">
-								<a href="shoping-cart.html">Features</a>
+							<li class="label1">
+								<a href="shoping-cart.html">Nosotros</a>
 							</li>
-
+							
 							<li>
-								<a href="blog.html">Blog</a>
+								<a href="contact.html">Contactos</a>
 							</li>
-
-							<li>
-								<a href="about.html">About</a>
-							</li>
-
-							<li>
-								<a href="contact.html">Contact</a>
-							</li>
+							
 						</ul>
 					</div>	
 
 					<!-- Icon header -->
 					<div class="wrap-icon-header flex-w flex-r-m">
-						<div class="icon-header-item cl2 hov-cl1 trans-04 p-l-22 p-r-11 js-show-modal-search">
+						<div class="icon-header-item cl2 hov-nuevo trans-04 p-l-22 p-r-11 js-show-modal-search">
 							<i class="zmdi zmdi-search"></i>
 						</div>
 
@@ -118,9 +116,9 @@
                         
                         @if (Route::has('login'))
                             @auth
-                                <a href="{{ url('/home') }}" class="dis-block cl2 hov-cl1 trans-04 p-l-22 p-r-11">Dashboard</a>
+                                <a href="{{ url('/home') }}" class="dis-block cl2 hov-nuevo trans-04 p-l-22 p-r-11">Dashboard</a>
                             @else
-                                <a href="{{ route('login') }}" class="dis-block cl2 hov-cl1 trans-04 p-l-22 p-r-11">Inicia Sesión</a>
+                                <a href="{{ route('login') }}" class="dis-block sesion hov-nuevo trans-04 p-l-22 p-r-11">Inicia Sesión</a>
                             @endauth
                         @endif
 
@@ -138,7 +136,7 @@
 
 			<!-- Icon header -->
 			<div class="wrap-icon-header flex-w flex-r-m m-r-15">
-				<div class="icon-header-item cl2 hov-cl1 trans-04 p-r-11 js-show-modal-search">
+				<div class="icon-header-item cl2 hov-nuevo trans-04 p-r-11 js-show-modal-search">
 					<i class="zmdi zmdi-search"></i>
 				</div>
 
@@ -152,9 +150,9 @@
 
                 @if (Route::has('login'))
                     @auth
-                        <a href="{{ url('/home') }}" class="dis-block cl2 hov-cl1 trans-04 p-r-11 p-l-10">Dashboard</a>
+                        <a href="{{ url('/home') }}" class="dis-block cl2 hov-nuevo trans-04 p-r-11 p-l-10">Dashboard</a>
                     @else
-                        <a href="{{ route('login') }}" class="dis-block cl2 hov-cl1 trans-04 p-r-11 p-l-10">Inicia Sesión</a>
+                        <a href="{{ route('login') }}" class="dis-block cl2 hov-nuevo trans-04 p-r-11 p-l-10">Inicia Sesión</a> <!--CAMBIO hov-cl1-->
                     @endauth
                 @endif
 			</div>
@@ -173,35 +171,27 @@
 
 			<ul class="main-menu-m">
 				<li>
-					<a href="index.html">Home</a>
-					<ul class="sub-menu-m">
+					<a href="index.html">Asociaciones</a>
+					{{-- <ul class="sub-menu-m">
 						<li><a href="index.html">Homepage 1</a></li>
 						<li><a href="home-02.html">Homepage 2</a></li>
 						<li><a href="home-03.html">Homepage 3</a></li>
-					</ul>
-					<span class="arrow-main-menu-m">
+					</ul> --}}
+					{{-- <span class="arrow-main-menu-m">
 						<i class="fa fa-angle-right" aria-hidden="true"></i>
-					</span>
+					</span> --}}
 				</li>
 
 				<li>
-					<a href="product.html">Shop</a>
+					<a href="product.html">Catalogo</a>
 				</li>
 
 				<li>
-					<a href="shoping-cart.html" class="label1 rs1" data-label1="hot">Features</a>
+					<a href="shoping-cart.html" class="label1 rs1">Nosotros</a>
 				</li>
 
 				<li>
-					<a href="blog.html">Blog</a>
-				</li>
-
-				<li>
-					<a href="about.html">About</a>
-				</li>
-
-				<li>
-					<a href="contact.html">Contact</a>
+					<a href="contact.html">Contactos</a>
 				</li>
 			</ul>
 		</div>
@@ -330,8 +320,8 @@
 							</div>
 								
 							<div class="layer-slick1 animated visible-false" data-appear="zoomIn" data-delay="1600">
-								<a href="product.html" class="flex-c-m stext-101 cl0 size-101 bg1 bor1 hov-btn1 p-lr-15 trans-04">
-									Shop Now
+								<a href="product.html" class="flex-c-m stext-101 cl0 size-101 cambio-home bor1 hov-btn1 p-lr-15 trans-04">
+									Descubrelo
 								</a>
 							</div>
 						</div>
@@ -354,8 +344,8 @@
 							</div>
 								
 							<div class="layer-slick1 animated visible-false" data-appear="slideInUp" data-delay="1600">
-								<a href="product.html" class="flex-c-m stext-101 cl0 size-101 bg1 bor1 hov-btn1 p-lr-15 trans-04">
-									Shop Now
+								<a href="product.html" class="flex-c-m stext-101 cl0 size-101 cambio-home bor1 hov-btn1 p-lr-15 trans-04">
+									Descubrelo
 								</a>
 							</div>
 						</div>
@@ -378,8 +368,8 @@
 							</div>
 								
 							<div class="layer-slick1 animated visible-false" data-appear="rotateIn" data-delay="1600">
-								<a href="product.html" class="flex-c-m stext-101 cl0 size-101 bg1 bor1 hov-btn1 p-lr-15 trans-04">
-									Shop Now
+								<a href="product.html" class="flex-c-m stext-101 cl0 size-101 cambio-home bor1 hov-btn1 p-lr-15 trans-04">
+									Descubrelo
 								</a>
 							</div>
 						</div>
@@ -412,7 +402,7 @@
 
 							<div class="block1-txt-child2 p-b-4 trans-05">
 								<div class="block1-link stext-101 cl0 trans-09">
-									Shop Now
+									Descubrelo
 								</div>
 							</div>
 						</a>
@@ -437,7 +427,7 @@
 
 							<div class="block1-txt-child2 p-b-4 trans-05">
 								<div class="block1-link stext-101 cl0 trans-09">
-									Shop Now
+									Descubrelo
 								</div>
 							</div>
 						</a>
@@ -462,7 +452,7 @@
 
 							<div class="block1-txt-child2 p-b-4 trans-05">
 								<div class="block1-link stext-101 cl0 trans-09">
-									Shop Now
+									Descubrelo
 								</div>
 							</div>
 						</a>
