@@ -319,16 +319,16 @@
 								</h2>
 							</div>
 								
-							<div class="layer-slick1 animated visible-false" data-appear="zoomIn" data-delay="1600">
+						{{-- <!-- Cart -->	<div class="layer-slick1 animated visible-false" data-appear="zoomIn" data-delay="1600">
 								<a href="product.html" class="flex-c-m stext-101 cl0 size-101 cambio-home bor1 hov-btn1 p-lr-15 trans-04">
 									Descubrelo
 								</a>
-							</div>
+							</div> --}}
 						</div>
 					</div>
 				</div>
 
-				<div class="item-slick1" style="background-image: url(images/slide-02.jpg);">
+			{{-- <!-- Cart -->	<div class="item-slick1" style="background-image: url(images/slide-02.jpg);">
 					<div class="container h-full">
 						<div class="flex-col-l-m h-full p-t-100 p-b-30 respon5">
 							<div class="layer-slick1 animated visible-false" data-appear="rollIn" data-delay="0">
@@ -374,7 +374,7 @@
 							</div>
 						</div>
 					</div>
-				</div>
+				</div>--}}
 			</div>
 		</div>
 	</section>
@@ -383,6 +383,11 @@
 	<!-- Banner -->
 	<div class="sec-banner bg0 p-t-80 p-b-50">
 		<div class="container">
+			<div class="p-b-10">
+				<h3 class="ltext-103 cl5">
+					Asociación
+				</h3>
+			</div>
 			<div class="row">
 				<div class="col-md-6 col-xl-4 p-b-30 m-lr-auto">
 					<!-- Block1 -->
@@ -392,7 +397,7 @@
 						<a href="product.html" class="block1-txt ab-t-l s-full flex-col-l-sb p-lr-38 p-tb-34 trans-03 respon3">
 							<div class="block1-txt-child1 flex-col-l">
 								<span class="block1-name ltext-102 trans-04 p-b-8">
-									Asociaciones
+									Asociacion
 								</span>
 
 								<span class="block1-info stext-102 trans-04">
@@ -402,14 +407,14 @@
 
 							<div class="block1-txt-child2 p-b-4 trans-05">
 								<div class="block1-link stext-101 cl0 trans-09">
-									Descubrelo
+									Ver
 								</div>
 							</div>
 						</a>
 					</div>
 				</div>
 
-				<div class="col-md-6 col-xl-4 p-b-30 m-lr-auto">
+				{{-- <!-- Cart --><div class="col-md-6 col-xl-4 p-b-30 m-lr-auto">
 					<!-- Block1 -->
 					<div class="block1 wrap-pic-w">
 						<img src="images/banner-02.jpg" alt="IMG-BANNER">
@@ -432,7 +437,7 @@
 							</div>
 						</a>
 					</div>
-				</div>
+				</div> 
 
 				<div class="col-md-6 col-xl-4 p-b-30 m-lr-auto">
 					<!-- Block1 -->
@@ -457,7 +462,7 @@
 							</div>
 						</a>
 					</div>
-				</div>
+				</div>--}}
 			</div>
 		</div>
 	</div>
@@ -503,13 +508,13 @@
 					<div class="flex-c-m stext-106 cl6 size-104 bor4 pointer hov-btn3 trans-04 m-r-8 m-tb-4 js-show-filter">
 						<i class="icon-filter cl2 m-r-6 fs-15 trans-04 zmdi zmdi-filter-list"></i>
 						<i class="icon-close-filter cl2 m-r-6 fs-15 trans-04 zmdi zmdi-close dis-none"></i>
-						 Filter
+						 Filtrar
 					</div>
 
 					<div class="flex-c-m stext-106 cl6 size-105 bor4 pointer hov-btn3 trans-04 m-tb-4 js-show-search">
 						<i class="icon-search cl2 m-r-6 fs-15 trans-04 zmdi zmdi-search"></i>
 						<i class="icon-close-search cl2 m-r-6 fs-15 trans-04 zmdi zmdi-close dis-none"></i>
-						Search
+						Buscar
 					</div>
 				</div>
 				
