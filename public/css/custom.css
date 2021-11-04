@@ -51,6 +51,11 @@ src: url('../fonts/Poppins/Poppins-SemiBold.ttf');
 .cls-1 {
     fill: none;
     stroke: #56A85E;
-    stroke-width: 7.5px;
+    stroke-width: 5.5px;
     fill-rule: evenodd;
-  }
+}
+
+.edicion{
+    width: 300px;
+    height: 390px;
+}
