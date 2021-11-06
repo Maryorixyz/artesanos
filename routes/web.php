@@ -4,6 +4,7 @@ use Illuminate\Support\Facades\Route;
 
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\AsociacionController;
+use Illuminate\Support\Facades\Auth;
 
 /*
 |--------------------------------------------------------------------------
@@ -16,9 +17,9 @@ use App\Http\Controllers\AsociacionController;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('/', App\Http\Controllers\Invitado\HomeController::class);
+
+
 Route::get('asociaciones/create', [App\Http\Controllers\AsociacionController::class,'create'])
         ->name('asociaciones.create');
 
@@ -26,6 +27,7 @@ Route::get('asociaciones/{asociacion}', [App\Http\Controllers\AsociacionControll
         ->name('asociaciones.show');
 
 Auth::routes();
+
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 
