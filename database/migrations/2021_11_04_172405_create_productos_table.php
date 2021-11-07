@@ -18,6 +18,7 @@ class CreateProductosTable extends Migration
 
             $table->string('nombre')->nullable(); // Mascara de Negrito
             $table->string('descripcion')->nullable(); // Mascara ancha con bordados
+            $table->string('medidas')->nullable();
             $table->decimal('precio', 12,2)->default(0)->nullable(); // 80.52
             $table->bigInteger('stock')->default(0); // 10 
 
