@@ -7,7 +7,7 @@
 <!--===============================================================================================-->	
     <link rel="stylesheet" href="{{ asset('vendor/fontawesome-free/css/all.min.css') }}">
 <!--===============================================================================================-->	
-	<link rel="icon" type="image/png" href="{{ asset("images/icons/favicon.png") }}">
+	<link rel="icon" type="image/png" href="{{ asset("images/logo_amarilis.png") }}">
 <!--===============================================================================================-->
 	<link rel="stylesheet" type="text/css" href="{{ asset("vendor/bootstrap/css/bootstrap.min.css") }}">
 <!--===============================================================================================-->
@@ -46,22 +46,12 @@
 		<!-- Header desktop -->
 		<div class="container-menu-desktop">
 
-			<div class="wrap-menu-desktop">
+			<div class="wrap-menu-desktop ">
 				<nav class="limiter-menu-desktop container">
 					
 					<!-- Logo desktop -->		
-					<a href="#" class="logo">
-                        <svg id="R_copia" data-name="R copia" xmlns="http://www.w3.org/2000/svg" width="400" height="400" viewBox="0 0 200 200" style="max-height: 60px;">
-                            <defs>
-                              {{-- <style>
-                                .cls-1 {
-                                  fill: none;
-                                  stroke: #56A85E;
-                                  stroke-width: 5.5px;
-                                  fill-rule: evenodd;
-                                }
-                              </style> --}}
-                            </defs>
+					<a href="{{ route('inicio') }}" class="logo">
+                        <svg id="R_copia" data-name="R copia" xmlns="http://www.w3.org/2000/svg" width="100" height="60" viewBox="0 0 200 200" style="max-height: 60px;">
                             <path id="Forma_3" data-name="Forma 3" class="cls-1" d="M23.99,108.99l35.843,47.019h21.18L43.54,108.99"/>
                             <path id="Forma_1_copia" data-name="Forma 1 copia" class="cls-1" d="M20.143,157L4,147.5V92.071a8.09,8.09,0,0,1,8.071-4.751,7.979,7.979,0,0,1,6.457,4.751v4.751H50.814a23.41,23.41,0,0,0,0-38.007H18.529v9.5a9.862,9.862,0,0,1-6.457,3.167A9.977,9.977,0,0,1,4,68.3V44.562H55.657A37.533,37.533,0,0,1,75.028,74.651c0.9,13.983-6.547,27.56-19.371,34.84H20.143V157Z"/>
                             <path id="Forma_6" data-name="Forma 6" class="cls-1" d="M114.027,126.505a6.091,6.091,0,0,0-2.886,5.622,5.968,5.968,0,0,0,2.886,4.819h21.642a6.7,6.7,0,0,0-.721-10.441H114.027Z"/>
@@ -86,7 +76,7 @@
 							</li> --}}
 
 							<li>
-								<a href="product.html">Catalogo</a>
+								<a href="{{ route('catalogo') }}">Catalogo</a>
 							</li>
 
 							<li class="label1">
@@ -131,7 +121,14 @@
 		<div class="wrap-header-mobile">
 			<!-- Logo moblie -->		
 			<div class="logo-mobile">
-				<a href="index.html"><img src="images/icons/logo-01.png" alt="IMG-LOGO"></a>
+				<a href="#">
+					<svg id="R_copia" data-name="R copia" xmlns="http://www.w3.org/2000/svg" width="100" height="400" viewBox="0 0 200 200" style="max-height: 60px;">
+						<path id="Forma_3" data-name="Forma 3" class="cls-2" d="M23.99,108.99l35.843,47.019h21.18L43.54,108.99"/>
+						<path id="Forma_1_copia" data-name="Forma 1 copia" class="cls-2" d="M20.143,157L4,147.5V92.071a8.09,8.09,0,0,1,8.071-4.751,7.979,7.979,0,0,1,6.457,4.751v4.751H50.814a23.41,23.41,0,0,0,0-38.007H18.529v9.5a9.862,9.862,0,0,1-6.457,3.167A9.977,9.977,0,0,1,4,68.3V44.562H55.657A37.533,37.533,0,0,1,75.028,74.651c0.9,13.983-6.547,27.56-19.371,34.84H20.143V157Z"/>
+						<path id="Forma_6" data-name="Forma 6" class="cls-2" d="M114.027,126.505a6.091,6.091,0,0,0-2.886,5.622,5.968,5.968,0,0,0,2.886,4.819h21.642a6.7,6.7,0,0,0-.721-10.441H114.027Z"/>
+						<path id="Forma_4" data-name="Forma 4" class="cls-2" d="M60,156L112.024,43.008q24.2,50.488,48.4,100.975l16.615-.814L140.92,72.323l-2.889,5.7a6.63,6.63,0,0,1-7.225-.814,8.788,8.788,0,0,1-2.889-8.143l13-26.058L198,156H152q-19.987-41.838-39.976-83.677L79.516,143.169H90.352q10.475-20.358,20.95-40.716a6.557,6.557,0,0,1,7.224,0,8.461,8.461,0,0,1,3.612,7.329L98,156H60Z"/>
+					</svg>
+				</a>
 			</div>
 
 			<!-- Icon header -->
@@ -152,7 +149,7 @@
                     @auth
                         <a href="{{ url('/home') }}" class="dis-block cl2 hov-nuevo trans-04 p-r-11 p-l-10">Dashboard</a>
                     @else
-                        <a href="{{ route('login') }}" class="dis-block cl2 hov-nuevo trans-04 p-r-11 p-l-10">Inicia Sesión</a> <!--CAMBIO hov-cl1-->
+                        <a href="{{ route('login') }}" class="dis-block cl2 sesion-mobile hov-nuevo trans-04 p-r-11 p-l-10">Inicia Sesión</a> <!--CAMBIO hov-cl1-->
                     @endauth
                 @endif
 			</div>
@@ -207,7 +204,7 @@
 					<button class="flex-c-m trans-04">
 						<i class="zmdi zmdi-search"></i>
 					</button>
-					<input class="plh3" type="text" name="search" placeholder="Search...">
+					<input class="plh3" type="text" name="search" placeholder="Buscar...">
 				</form>
 			</div>
 		</div>
@@ -527,7 +524,7 @@
 							<i class="zmdi zmdi-search"></i>
 						</button>
 
-						<input class="mtext-107 cl2 size-114 plh2 p-r-15" type="text" name="search-product" placeholder="Search">
+						<input class="mtext-107 cl2 size-114 plh2 p-r-15" type="text" name="search-product" placeholder="Buscar Producto">
 					</div>	
 				</div>
 				
@@ -536,43 +533,43 @@
 					<div class="wrap-filter flex-w bg6 w-full p-lr-40 p-t-27 p-lr-15-sm">
 						<div class="filter-col1 p-r-15 p-b-27">
 							<div class="mtext-102 cl2 p-b-15">
-								Sort By
+								Ordenar por:
 							</div>
 
 							<ul>
 								<li class="p-b-6">
 									<a href="#" class="filter-link stext-106 trans-04">
-										Default
+										Defecto
 									</a>
 								</li>
 
 								<li class="p-b-6">
 									<a href="#" class="filter-link stext-106 trans-04">
-										Popularity
+										Novedad
 									</a>
 								</li>
 
 								<li class="p-b-6">
 									<a href="#" class="filter-link stext-106 trans-04">
-										Average rating
+										Populares
 									</a>
 								</li>
 
-								<li class="p-b-6">
+								{{-- <li class="p-b-6">
 									<a href="#" class="filter-link stext-106 trans-04 filter-link-active">
 										Newness
 									</a>
-								</li>
+								</li> --}}
 
 								<li class="p-b-6">
 									<a href="#" class="filter-link stext-106 trans-04">
-										Price: Low to High
+										Precio: Menor a Mayor
 									</a>
 								</li>
 
 								<li class="p-b-6">
 									<a href="#" class="filter-link stext-106 trans-04">
-										Price: High to Low
+										Precio: Mayor a Menor
 									</a>
 								</li>
 							</ul>
@@ -580,51 +577,51 @@
 
 						<div class="filter-col2 p-r-15 p-b-27">
 							<div class="mtext-102 cl2 p-b-15">
-								Price
+								Precio
 							</div>
 
 							<ul>
 								<li class="p-b-6">
 									<a href="#" class="filter-link stext-106 trans-04 filter-link-active">
-										All
+										Todo
 									</a>
 								</li>
 
 								<li class="p-b-6">
 									<a href="#" class="filter-link stext-106 trans-04">
-										$0.00 - $50.00
+										S/.0.00 - S/.20.00
 									</a>
 								</li>
 
 								<li class="p-b-6">
 									<a href="#" class="filter-link stext-106 trans-04">
-										$50.00 - $100.00
+										S/.20.00 - S/.50.00
 									</a>
 								</li>
 
 								<li class="p-b-6">
 									<a href="#" class="filter-link stext-106 trans-04">
-										$100.00 - $150.00
+										S/.50.00 - S/.100.00
 									</a>
 								</li>
 
 								<li class="p-b-6">
 									<a href="#" class="filter-link stext-106 trans-04">
-										$150.00 - $200.00
+										S/.100.00 - S/.200.00
 									</a>
 								</li>
 
-								<li class="p-b-6">
+								{{-- <li class="p-b-6">
 									<a href="#" class="filter-link stext-106 trans-04">
 										$200.00+
 									</a>
-								</li>
+								</li> --}}
 							</ul>
 						</div>
 
 						<div class="filter-col3 p-r-15 p-b-27">
 							<div class="mtext-102 cl2 p-b-15">
-								Color
+								Colores
 							</div>
 
 							<ul>
@@ -634,7 +631,7 @@
 									</span>
 
 									<a href="#" class="filter-link stext-106 trans-04">
-										Black
+										Negro
 									</a>
 								</li>
 
@@ -648,7 +645,7 @@
 									</a>
 								</li>
 
-								<li class="p-b-6">
+								{{-- <li class="p-b-6">
 									<span class="fs-15 lh-12 m-r-6" style="color: #b3b3b3;">
 										<i class="zmdi zmdi-circle"></i>
 									</span>
@@ -656,7 +653,7 @@
 									<a href="#" class="filter-link stext-106 trans-04">
 										Grey
 									</a>
-								</li>
+								</li> --}}
 
 								<li class="p-b-6">
 									<span class="fs-15 lh-12 m-r-6" style="color: #00ad5f;">
@@ -664,7 +661,7 @@
 									</span>
 
 									<a href="#" class="filter-link stext-106 trans-04">
-										Green
+										Verde
 									</a>
 								</li>
 
@@ -674,7 +671,7 @@
 									</span>
 
 									<a href="#" class="filter-link stext-106 trans-04">
-										Red
+										Rojo
 									</a>
 								</li>
 
@@ -684,7 +681,7 @@
 									</span>
 
 									<a href="#" class="filter-link stext-106 trans-04">
-										White
+										Blanco
 									</a>
 								</li>
 							</ul>
@@ -728,10 +725,10 @@
 						<!-- Block2 -->
 						<div class="block2">
 							<div class="block2-pic hov-img0">
-								<img src="images/product-02.jpg" alt="IMG-PRODUCT">
+								<img src="{{ $producto->url }}" alt="{{ $producto->nombre }}">
 
 								<a href="#" class="block2-btn flex-c-m stext-103 cl2 size-102 bg0 bor2 hov-btn1 p-lr-15 trans-04 js-show-modal1">
-									Quick View
+									Vista Rapida
 								</a>
 							</div>
 
@@ -764,7 +761,7 @@
 							<img src="images/product-02.jpg" alt="IMG-PRODUCT">
 
 							<a href="#" class="block2-btn flex-c-m stext-103 cl2 size-102 bg0 bor2 hov-btn1 p-lr-15 trans-04 js-show-modal1">
-								Quick View
+								Vista Rapida
 							</a>
 						</div>
 
@@ -796,7 +793,7 @@
 							<img src="images/product-02.jpg" alt="IMG-PRODUCT">
 
 							<a href="#" class="block2-btn flex-c-m stext-103 cl2 size-102 bg0 bor2 hov-btn1 p-lr-15 trans-04 js-show-modal1">
-								Quick View
+								Vista Rapida
 							</a>
 						</div>
 
@@ -828,7 +825,7 @@
 							<img src="images/product-03.jpg" alt="IMG-PRODUCT">
 
 							<a href="#" class="block2-btn flex-c-m stext-103 cl2 size-102 bg0 bor2 hov-btn1 p-lr-15 trans-04 js-show-modal1">
-								Quick View
+								Vista Rapida
 							</a>
 						</div>
 
@@ -860,7 +857,7 @@
 							<img src="images/product-04.jpg" alt="IMG-PRODUCT">
 
 							<a href="#" class="block2-btn flex-c-m stext-103 cl2 size-102 bg0 bor2 hov-btn1 p-lr-15 trans-04 js-show-modal1">
-								Quick View
+								Vista Rapida
 							</a>
 						</div>
 
@@ -892,7 +889,7 @@
 							<img src="images/product-05.jpg" alt="IMG-PRODUCT">
 
 							<a href="#" class="block2-btn flex-c-m stext-103 cl2 size-102 bg0 bor2 hov-btn1 p-lr-15 trans-04 js-show-modal1">
-								Quick View
+								Vista Rapida
 							</a>
 						</div>
 
@@ -924,7 +921,7 @@
 							<img src="images/product-06.jpg" alt="IMG-PRODUCT">
 
 							<a href="#" class="block2-btn flex-c-m stext-103 cl2 size-102 bg0 bor2 hov-btn1 p-lr-15 trans-04 js-show-modal1">
-								Quick View
+								Vista Rapida
 							</a>
 						</div>
 
@@ -956,7 +953,7 @@
 							<img src="images/product-07.jpg" alt="IMG-PRODUCT">
 
 							<a href="#" class="block2-btn flex-c-m stext-103 cl2 size-102 bg0 bor2 hov-btn1 p-lr-15 trans-04 js-show-modal1">
-								Quick View
+								Vista Rapida
 							</a>
 						</div>
 
@@ -988,7 +985,7 @@
 							<img src="images/product-08.jpg" alt="IMG-PRODUCT">
 
 							<a href="#" class="block2-btn flex-c-m stext-103 cl2 size-102 bg0 bor2 hov-btn1 p-lr-15 trans-04 js-show-modal1">
-								Quick View
+								Vista Rapida
 							</a>
 						</div>
 
@@ -1020,7 +1017,7 @@
 							<img src="images/product-09.jpg" alt="IMG-PRODUCT">
 
 							<a href="#" class="block2-btn flex-c-m stext-103 cl2 size-102 bg0 bor2 hov-btn1 p-lr-15 trans-04 js-show-modal1">
-								Quick View
+								Vista Rapida
 							</a>
 						</div>
 
@@ -1052,7 +1049,7 @@
 							<img src="images/product-10.jpg" alt="IMG-PRODUCT">
 
 							<a href="#" class="block2-btn flex-c-m stext-103 cl2 size-102 bg0 bor2 hov-btn1 p-lr-15 trans-04 js-show-modal1">
-								Quick View
+								Vista Rapida
 							</a>
 						</div>
 
@@ -1084,7 +1081,7 @@
 							<img src="images/product-11.jpg" alt="IMG-PRODUCT">
 
 							<a href="#" class="block2-btn flex-c-m stext-103 cl2 size-102 bg0 bor2 hov-btn1 p-lr-15 trans-04 js-show-modal1">
-								Quick View
+								Vista Rapida
 							</a>
 						</div>
 
@@ -1116,7 +1113,7 @@
 							<img src="images/product-12.jpg" alt="IMG-PRODUCT">
 
 							<a href="#" class="block2-btn flex-c-m stext-103 cl2 size-102 bg0 bor2 hov-btn1 p-lr-15 trans-04 js-show-modal1">
-								Quick View
+								Vista Rapida
 							</a>
 						</div>
 
@@ -1148,7 +1145,7 @@
 							<img src="images/product-13.jpg" alt="IMG-PRODUCT">
 
 							<a href="#" class="block2-btn flex-c-m stext-103 cl2 size-102 bg0 bor2 hov-btn1 p-lr-15 trans-04 js-show-modal1">
-								Quick View
+								Vista Rapida
 							</a>
 						</div>
 
@@ -1180,7 +1177,7 @@
 							<img src="images/product-14.jpg" alt="IMG-PRODUCT">
 
 							<a href="#" class="block2-btn flex-c-m stext-103 cl2 size-102 bg0 bor2 hov-btn1 p-lr-15 trans-04 js-show-modal1">
-								Quick View
+								Vista Rapida
 							</a>
 						</div>
 
@@ -1212,7 +1209,7 @@
 							<img src="images/product-15.jpg" alt="IMG-PRODUCT">
 
 							<a href="#" class="block2-btn flex-c-m stext-103 cl2 size-102 bg0 bor2 hov-btn1 p-lr-15 trans-04 js-show-modal1">
-								Quick View
+								Vista Rapida
 							</a>
 						</div>
 
@@ -1244,7 +1241,7 @@
 							<img src="images/product-16.jpg" alt="IMG-PRODUCT">
 
 							<a href="#" class="block2-btn flex-c-m stext-103 cl2 size-102 bg0 bor2 hov-btn1 p-lr-15 trans-04 js-show-modal1">
-								Quick View
+								Vista Rapida
 							</a>
 						</div>
 

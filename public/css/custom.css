@@ -55,7 +55,16 @@ src: url('../fonts/Poppins/Poppins-SemiBold.ttf');
     fill-rule: evenodd;
 }
 
-.edicion{
-    width: 300px;
-    height: 390px;
+.cls-2{
+    fill: none;
+    stroke: #56A85E;
+    stroke-width: 5.5px;
+    fill-rule: evenodd;
+    padding: auto;
+}
+
+.sesion-mobile{
+    font-family: Poppins-Medium;
+    font-size: 17px;
+    color: #333;
 }
