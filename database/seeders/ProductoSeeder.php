@@ -16,7 +16,7 @@ class ProductoSeeder extends Seeder
     public function run()
     {
         //
-        Producto::create([
+        $producto = Producto::create([
             'nombre' => 'Mascara de Negrito',
             'descripcion' => 'Hecho de cuerina, barba de cola de vaca, perlas, ojos y nariz de madera',
             'medidas' => 'Chico y Grande',
@@ -25,6 +25,20 @@ class ProductoSeeder extends Seeder
             'colores' => 'negro',
             'user_id' => 1
         ]);
+        // Agregar imagenes
+        $producto->imagenes()->create([
+            'url' => 'productos/244466632_6257266250981309_3538745621928429614_n.jpg'
+        ]);
+        $producto->imagenes()->create([
+            'url' => 'productos/244339550_6257264870981447_8362491361793996181_n.jpg'
+        ]);
+        $producto->imagenes()->create([
+            'url' => 'productos/243819831_6257265540981380_7573648241688503420_n.jpg'
+        ]);
+        $producto->imagenes()->create([
+            'url' => 'productos/243730873_6257266980981236_5772367078276017715_n.jpg'
+        ]);
+
 
         Producto::create([
             'nombre' => 'Mascara de Corochano',
