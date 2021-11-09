@@ -280,5 +280,243 @@ class ProductoSeeder extends Seeder
             'colores' => 'Blanco, perla, rosado y celeste',
             'user_id' => 5
         ]);
+
+        Producto::create([
+            'nombre' => 'Mascarilla de Negrito',
+            'descripcion' => 'Hecho de biocuero, forro drill, perlas acrilicas, elastico y nariz de ceramica',
+            'medidas' => 'Chico y Grande',
+            'precio' => 25,
+            'stock' => 10,
+            'colores' => 'Variados',
+            'user_id' => 6
+        ]);
+        Producto::create([
+            'nombre' => 'Mascarilla de Corochano',
+            'descripcion' => 'Hecho de biocuero, forro drill, perlas acrilicas, elastico, nariz de ceramica y pelaje  de baraba de chivo',
+            'medidas' => 'Grande',
+            'precio' => 35,
+            'stock' => 10,
+            'colores' => 'Variados',
+            'user_id' => 6
+        ]);
+        Producto::create([
+            'nombre' => 'Canasta',
+            'descripcion' => 'Trupan MDF',
+            'medidas' => 'Varios Tamaños',
+            'precio' => 10,
+            'stock' => 10,
+            'colores' => 'Variados',
+            'user_id' => 6
+        ]);
+
+        Producto::create([
+            'nombre' => 'Rompecabezas',
+            'descripcion' => 'Trupan MDF',
+            'medidas' => 'Varios Tamaños',
+            'precio' => 20,
+            'stock' => 10,
+            'colores' => 'Amarillo, azul, celeste, rosado',
+            'user_id' => 6
+        ]);
+
+        Producto::create([
+            'nombre' => 'Torre Eiffel',
+            'descripcion' => 'Trupan MDF',
+            'medidas' => 'Varios Tamaños',
+            'precio' => 50,
+            'stock' => 10,
+            'colores' => 'Unico',
+            'user_id' => 6
+        ]);
+
+        Producto::create([
+            'nombre' => 'Mascara de Corochano',
+            'descripcion' => 'Hecho de Cuero Sintetico, perlas, barba de cola de ganado y ojos y nariz de madera',
+            'medidas' => 'Chico y Grande',
+            'precio' => 150,
+            'stock' => 10,
+            'colores' => 'Unico',
+            'user_id' => 7
+        ]);
+
+        Producto::create([
+            'nombre' => 'Mascara de Negrito',
+            'descripcion' => 'Hecho de Cuero Sintetico, perlas de vidrio y ojos y nariz de madera',
+            'medidas' => 'Chico y Grande',
+            'precio' => 180,
+            'stock' => 10,
+            'colores' => 'Unico',
+            'user_id' => 7
+        ]);
+
+        Producto::create([
+            'nombre' => 'Muñeco de Negritos',
+            'descripcion' => 'Hecho de hilo metalico, tela greca - mostacilla arrocillo, cuero sintetico y carton',
+            'medidas' => 'Mediano',
+            'precio' => 120,
+            'stock' => 10,
+            'colores' => 'Unico',
+            'user_id' => 7
+        ]);
+
+        Producto::create([
+            'nombre' => 'Matraca',
+            'descripcion' => 'Hecho de tripley y engranaje de madera',
+            'medidas' => 'Chico, Mediano y Grande',
+            'precio' => 60,
+            'stock' => 10,
+            'colores' => 'Variados',
+            'user_id' => 7
+        ]);
+
+        Producto::create([
+            'nombre' => 'Botines',
+            'descripcion' => 'Hecho de tela, hilo, mostacilla, lentejuelas, greca, aparado y perlas',
+            'medidas' => 'Chico, Mediano y Grande',
+            'precio' => 300,
+            'stock' => 10,
+            'colores' => 'Variados',
+            'user_id' => 7
+        ]);
+
+        Producto::create([
+            'nombre' => 'Mascara de Corochano',
+            'descripcion' => 'Hecho de marroqui, barba de cola de vaca, ojos y nariz de madera',
+            'medidas' => 'Mediano',
+            'precio' => 65,
+            'stock' => 10,
+            'colores' => 'Unico',
+            'user_id' => 8
+        ]);
+
+        Producto::create([
+            'nombre' => 'Mascara de Corochano',
+            'descripcion' => 'Hecho de marroqui, barba de cola de vaca, ojos y nariz de madera',
+            'medidas' => 'Mediano',
+            'precio' => 65,
+            'stock' => 10,
+            'colores' => 'Variado',
+            'user_id' => 8
+        ]);
+
+        Producto::create([
+            'nombre' => 'Pañuelos',
+            'descripcion' => 'Hecho de hilos metalicos, piedras metalicas, grecas, perlas y tela lame',
+            'medidas' => 'Mediano',
+            'precio' => 15,
+            'stock' => 10,
+            'colores' => 'Variado',
+            'user_id' => 8
+        ]);
+
+        Producto::create([
+            'nombre' => 'Faja',
+            'descripcion' => 'Hecho de tela lame, mostacilla, hilos y piedras metalicos',
+            'medidas' => 'Grande',
+            'precio' => 35,
+            'stock' => 10,
+            'colores' => 'Variado',
+            'user_id' => 8
+        ]);
+
+        Producto::create([
+            'nombre' => 'Botas de Negritos',
+            'descripcion' => 'Hecho de carnaza, tela polinam, ojalillos, ganchos, hilos y perlas',
+            'medidas' => 'Chico y Grande',
+            'precio' => 400,
+            'stock' => 10,
+            'colores' => 'Variado',
+            'user_id' => 9
+        ]);
+
+        Producto::create([
+            'nombre' => 'Zapatillas de Dama',
+            'descripcion' => 'Hecho de microfibra, planta de goma parzon, pasador, malla pixel y polinam',
+            'medidas' => '35-38',
+            'precio' => 45,
+            'stock' => 10,
+            'colores' => 'Blanco, pseudo-rosa y negro',
+            'user_id' => 9
+        ]);
+
+        Producto::create([
+            'nombre' => 'Zapatillas de Varón',
+            'descripcion' => 'Hecho de cuero, planta de caucho y polinam',
+            'medidas' => '38-42',
+            'precio' => 60,
+            'stock' => 10,
+            'colores' => 'Blanco y negro',
+            'user_id' => 9
+        ]);
+
+        Producto::create([
+            'nombre' => 'Corte para Botas',
+            'descripcion' => 'Hecho de terciopelo, perlas y poliseda',
+            'medidas' => 'Chico y Grande',
+            'precio' => 200,
+            'stock' => 10,
+            'colores' => 'Variado',
+            'user_id' => 9
+        ]);
+
+        Producto::create([
+            'nombre' => 'Mascarilla de Corochano',
+            'descripcion' => 'Hecho de tela de lino sintetico, forro de esponja laminada, perlas y nariz de madera',
+            'medidas' => 'Grande',
+            'precio' => 25,
+            'stock' => 10,
+            'colores' => 'Variado',
+            'user_id' => 10
+        ]);
+
+        Producto::create([
+            'nombre' => 'Mascarilla de Negritos',
+            'descripcion' => 'Hecho de tela de lino sintetico, forro de esponja laminada, perlas y nariz de madera',
+            'medidas' => 'Grande',
+            'precio' => 30,
+            'stock' => 10,
+            'colores' => 'Variado',
+            'user_id' => 10
+        ]);
+
+        Producto::create([
+            'nombre' => 'Mascarilla Amarilis y Bordado',
+            'descripcion' => 'Hecho de tela de algodon, elastico, bordado computalizado y forro de esponja laminada',
+            'medidas' => 'Grande',
+            'precio' => 10,
+            'stock' => 10,
+            'colores' => 'Variado',
+            'user_id' => 10
+        ]);
+
+        Producto::create([
+            'nombre' => 'Michi',
+            'descripcion' => 'Hecho de terciopelo, carton prensado, hilos bañados de oro, perlas y lentejuelas',
+            'medidas' => 'Grande',
+            'precio' => 30,
+            'stock' => 10,
+            'colores' => 'Variado',
+            'user_id' => 10
+        ]);
+
+        Producto::create([
+            'nombre' => 'Mascara de Negritos',
+            'descripcion' => 'Hecho de badana, perlas, ojos y nariz de madera',
+            'medidas' => 'Grande',
+            'precio' => 110,
+            'stock' => 10,
+            'colores' => 'Variado',
+            'user_id' => 10
+        ]);
+
+        Producto::create([
+            'nombre' => 'Botas',
+            'descripcion' => 'Hecho de terciopelo, carton prensado, hilos bañados en oro, piedras, lentejuelas, mostacilla y grecas',
+            'medidas' => 'Grande',
+            'precio' => 350,
+            'stock' => 10,
+            'colores' => 'Variado',
+            'user_id' => 10
+        ]);
     }
 }
