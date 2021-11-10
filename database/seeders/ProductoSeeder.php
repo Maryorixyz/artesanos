@@ -27,20 +27,21 @@ class ProductoSeeder extends Seeder
         ]);
         // Agregar imagenes
         $producto->imagenes()->create([
-            'url' => 'productos/244466632_6257266250981309_3538745621928429614_n.jpg'
+            'url' => 'productos/WhatsApp Image 2021-09-23 at 10.26.54 PM (3).jpg'
         ]);
         $producto->imagenes()->create([
-            'url' => 'productos/244339550_6257264870981447_8362491361793996181_n.jpg'
+            'url' => 'productos/WhatsApp Image 2021-09-23 at 10.26.54 PM (4).jpg'
         ]);
         $producto->imagenes()->create([
-            'url' => 'productos/243819831_6257265540981380_7573648241688503420_n.jpg'
+            'url' => 'productos/WhatsApp Image 2021-09-23 at 10.26.55 PM (1).jpg'
         ]);
         $producto->imagenes()->create([
-            'url' => 'productos/243730873_6257266980981236_5772367078276017715_n.jpg'
+            'url' => 'productos/WhatsApp Image 2021-09-23 at 10.26.55 PM.jpg'
         ]);
 
 
-        Producto::create([
+        $producto=Producto::create([
+            
             'nombre' => 'Mascara de Corochano',
             'descripcion' => 'Mascara Grande',
             'medidas' => 'Chico y Grande',
@@ -50,12 +51,24 @@ class ProductoSeeder extends Seeder
             'user_id' => 1
         ]);
 
+        $producto->imagenes()->create([
+            'url' => 'productos/WhatsApp Image 2021-09-23 at 10.26.53 PM.jpg'
+        ]);
+
+        $producto->imagenes()->create([
+            'url' => 'productos/WhatsApp Image 2021-09-23 at 10.26.54 PM (1).jpg'
+        ]);
+
+        $producto->imagenes()->create([
+            'url' => 'productos/WhatsApp Image 2021-09-23 at 10.26.54 PM.jpg'
+        ]);
+
        // DB::table('productos')->insert([
          //   ['user_id' => 1, 'nombre' => 'Mascara de Negrito' , 'descripcion' => 'Mascara Grande', 'precio' => 120, 'stock' => 10,'colores' => 'negro'],
            // ['user_id' => 1, 'nombre' => 'Mascara de Corochano' , 'descripcion' => 'Mascara Grande', 'precio' => 120, 'stock' => 10,'colores' => 'blanco'],
         //]);
         
-        Producto::create([
+        $producto=Producto::create([
             'nombre' => 'Matraca',
             'descripcion' => 'Hecho de madera.',
             'medidas' => 'Grande',
@@ -64,8 +77,12 @@ class ProductoSeeder extends Seeder
             'colores' => 'Variados',
             'user_id' => 1
         ]);
+        
+        $producto->imagenes()->create([
+            'url' => 'productos/WhatsApp Image 2021-09-23 at 10.26.56 PM (3).jpg'
+        ]);
 
-        Producto::create([
+        $producto=Producto::create([
             'nombre' => 'Campana',
             'descripcion' => 'Hecho de brocas y campanita.',
             'medidas' => 'Chico y Grande',
@@ -75,7 +92,11 @@ class ProductoSeeder extends Seeder
             'user_id' => 1
         ]);
 
-        Producto::create([
+        $producto->imagenes()->create([
+            'url' => 'productos/WhatsApp Image 2021-09-23 at 10.26.56 PM.jpg'
+        ]);
+
+        $producto=Producto::create([
             'nombre' => 'Cotones',
             'descripcion' => 'Hecho de terciopelo, hilos de bordar,perlas carton duplex, cintas, botones y plecos.',
             'medidas' => 'Grande',
@@ -85,7 +106,15 @@ class ProductoSeeder extends Seeder
             'user_id' => 1
         ]);
 
-        Producto::create([
+        $producto->imagenes()->create([
+            'url' => 'productos/WhatsApp Image 2021-09-23 at 10.26.57 PM (1).jpg'
+        ]);
+
+        $producto->imagenes()->create([
+            'url' => 'productos/WhatsApp Image 2021-09-23 at 10.26.57 PM.jpg'
+        ]);
+
+        $producto=Producto::create([
             'nombre' => 'Mascara Negrito',
             'descripcion' => 'Hecho de biocuero, perlas, ojos y nariz de madera',
             'medidas' => 'Chico y Grande',
@@ -95,7 +124,11 @@ class ProductoSeeder extends Seeder
             'user_id' => 2
         ]);
 
-        Producto::create([
+        $producto->imagenes()->create([
+            'url' => 'productos/WhatsApp Image 2021-09-21 at 9.01.16 PM.jpg'
+        ]);
+
+        $producto=Producto::create([
             'nombre' => 'Mascara de corochano',
             'descripcion' => 'Hecho de biocuero, cola de ganado, perlas, ojos y nariz de madera',
             'medidas' => 'Chico y Grande',
@@ -105,8 +138,12 @@ class ProductoSeeder extends Seeder
             'user_id' => 2
         ]);
 
-        Producto::create([
-            'nombre' => 'Mascarilla',
+        $producto->imagenes()->create([
+            'url' => 'productos/WhatsApp Image 2021-09-21 at 9.01.16 PM (2).jpg'
+        ]);
+
+        $producto=Producto::create([
+            'nombre' => 'Mascarilla de Negritos',
             'descripcion' => 'Hecho de biocuero, perlas y nariz de madera',
             'medidas' => 'Chico y Grande',
             'precio' => 30,
@@ -115,7 +152,19 @@ class ProductoSeeder extends Seeder
             'user_id' => 2
         ]);
 
-        Producto::create([
+        $producto->imagenes()->create([
+            'url' => 'productos/WhatsApp Image 2021-09-21 at 9.01.17 PM (2).jpg'
+        ]);
+
+        $producto->imagenes()->create([
+            'url' => 'productos/WhatsApp Image 2021-09-21 at 9.01.17 PM (3).jpg'
+        ]);
+
+        $producto->imagenes()->create([
+            'url' => 'productos/WhatsApp Image 2021-09-21 at 9.01.17 PM.jpg'
+        ]);
+
+        $producto=Producto::create([
             'nombre' => 'Leva de niño',
             'descripcion' => 'Hecho de tornasolado, perlas, carton prensado 14 y forro de lamel',
             'medidas' => 'Chico',
@@ -125,7 +174,11 @@ class ProductoSeeder extends Seeder
             'user_id' => 2
         ]);
 
-        Producto::create([
+        $producto->imagenes()->create([
+            'url' => 'productos/WhatsApp Image 2021-09-21 at 9.01.18 PM.jpg'
+        ]);
+
+        $producto=Producto::create([
             'nombre' => 'Coton de Ngritos',
             'descripcion' => 'Hecho de tornasol, perlas checas, grecas y terciopelo coreano',
             'medidas' => 'Chico y Grande',
@@ -133,6 +186,10 @@ class ProductoSeeder extends Seeder
             'stock' => 10,
             'colores' => 'Morado, Rojo, Verde, Jade, Negro',
             'user_id' => 3
+        ]);
+
+        $producto->imagenes()->create([
+            'url' => 'productos/WhatsApp Image 2021-09-21 at 9.01.41 PM.jpg'
         ]);
       
         Producto::create([
