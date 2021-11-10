@@ -25,4 +25,11 @@ class Producto extends Model
     {
         return $this->belongsTo(User::class);
     }
+
+    /**
+    * Devuelve todas las imagenes del producto.
+    */
+    public function imagenes(){
+        return $this->morphMany(Imagen::class, 'modelo');
+    }
 }
