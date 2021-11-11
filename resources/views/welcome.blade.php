@@ -105,11 +105,28 @@
                         </a>   --}}
                         
                         @if (Route::has('login'))
-                            @auth
-                                <a href="{{ url('/home') }}" class="dis-block cl2 hov-nuevo trans-04 p-l-22 p-r-11">Dashboard</a>
-                            @else
-                                <a href="{{ route('login') }}" class="dis-block sesion hov-nuevo trans-04 p-l-22 p-r-11">Inicia Sesión</a>
-                            @endauth
+							<ul class="main-menu">
+								@auth
+									<li>
+										<a class="sesion">{{ explode(' ', Auth::user()->name)[0] }}</a>
+										<ul class="sub-menu">
+											<li><a href="#">Perfil</a></li>
+											<li><a href="{{ route('admin.inicio') }}">Dashboard</a></li>
+											<li>
+												<a href="{{ route('logout') }}" onclick="event.preventDefault();
+													document.getElementById('logout-form').submit();">Cerrar Sesión</a>
+												<form method="POST" id="logout-form" action="{{ route('logout') }}">
+													@csrf
+												</form>
+											</li>
+										</ul>
+									</li>
+								@else
+									<li>
+										<a href="{{ route('login') }}" class="sesion">Inicia Sesión</a>
+									</li>
+								@endauth
+							</ul>
                         @endif
 
 					</div>
@@ -147,9 +164,9 @@
 
                 @if (Route::has('login'))
                     @auth
-                        <a href="{{ url('/home') }}" class="dis-block cl2 hov-nuevo trans-04 p-r-11 p-l-10">Dashboard</a>
+                        <a class="dis-block cl2 hov-nuevo trans-04 p-r-11 p-l-10">{{ explode(' ', Auth::user()->name)[0] }}</a>
                     @else
-                        <a href="{{ route('login') }}" class="dis-block cl2 sesion-mobile hov-nuevo trans-04 p-r-11 p-l-10">Inicia Sesión</a> <!--CAMBIO hov-cl1-->
+                        <a href="{{ route('login') }}" class="dis-block cl2 hov-nuevo trans-04 p-r-11 p-l-10">Inicia Sesión</a> <!--CAMBIO hov-cl1-->
                     @endauth
                 @endif
 			</div>
@@ -167,8 +184,33 @@
 		<div class="menu-mobile">
 
 			<ul class="main-menu-m">
+				@if (Route::has('login'))
+                    @auth
+						<li>
+							<a class="dis-block cl2 hov-nuevo trans-04 p-r-11 p-l-10">{{ explode(' ', Auth::user()->name)[0] }}</a>
+							<ul class="sub-menu-m">
+								<li><a href="#">Perfil</a></li>
+								<li><a href="{{ route('admin.inicio') }}">Dashboard</a></li>
+								<li>
+									<a href="{{ route('logout') }}" onclick="event.preventDefault();
+										document.getElementById('logout-form').submit();">Cerrar Sesión</a>
+									<form method="POST" id="logout-form" action="{{ route('logout') }}">
+										@csrf
+									</form>
+								</li>
+							</ul>
+							<span class="arrow-main-menu-m">
+								<i class="fa fa-angle-right" aria-hidden="true"></i>
+							</span>
+						</li>
+                    @else
+						<li>
+							<a href="{{ route('login') }}">Inicia Sesión</a>
+						</li>
+                    @endauth
+                @endif
 				<li>
-					<a href="{{route('asociaciones.index')}}">Asociaciones</a>
+					<a href="{{ route('asociaciones.index') }}">Asociaciones</a>
 					{{-- <ul class="sub-menu-m">
 						<li><a href="index.html">Homepage 1</a></li>
 						<li><a href="home-02.html">Homepage 2</a></li>

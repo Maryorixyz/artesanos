@@ -40,7 +40,7 @@ src: url('../fonts/Poppins/Poppins-SemiBold.ttf');
 
 .sesion{
     font-family: Poppins-Medium;
-    font-size: 17px;
+    font-size: 14px !important;
     color: #333;
 }
 
