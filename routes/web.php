@@ -26,7 +26,10 @@ Route::get('/nosotros', [App\Http\Controllers\NosotrosController::class,'index']
 Route::get('/contactanos', [App\Http\Controllers\ContactanosController::class,'index'])
 ->name('contactanos');
 
-Route::get('asociaciones/create', [App\Http\Controllers\AsosciacionController::class,'create'])
+Route::get('/asociaciones', [App\Http\Controllers\AsociacionController::class,'index'])
+->name('asociaciones.index');
+
+Route::get('asociaciones/create', [App\Http\Controllers\AsociacionController::class,'create'])
         ->name('asociaciones.create');
 
 Route::get('asociaciones/{asociacion}', [App\Http\Controllers\AsociacionController::class,'show'])
