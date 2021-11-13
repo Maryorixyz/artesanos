@@ -188,7 +188,7 @@ return [
     */
 
     'use_route_url' => false,
-    'dashboard_url' => 'admin',
+    'dashboard_url' => '/',
     'logout_url' => 'logout',
     'login_url' => 'login',
     'register_url' => 'register',
@@ -258,7 +258,7 @@ return [
         ['header' => 'PRODUCTOS'],
         [
             'text' => 'Lista de Productos',
-            'url'  => 'admin/settings',
+            'route'  => 'admin.producto.index',
             'icon' => 'fas fa-box',
         ],
 
