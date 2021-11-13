@@ -7,6 +7,12 @@
 @stop
 
 @section('content')
+
+    @if (session('info'))
+        <div class="alert alert-success">
+            <strong>{{session('info')}}</strong>
+        </div>
+    @endif
     <div class="card">
         
         <div class="card-header">
@@ -21,8 +27,9 @@
                         <th>Nombre</th>
                         <th>Descripcion</th>
                         <th>Medidas</th>
-                        <th>Precio</th>
                         <th>Colores</th>
+                        <th>Precio</th>
+                        <th>Stock</th>
                         <th>User_id</th>
                         <th colspan="2"></th>
 
@@ -38,6 +45,7 @@
                             <td>{{$producto->medidas}}</td>
                             <td>{{$producto->colores}}</td>
                             <td>{{$producto->precio}}</td>
+                            <td>{{$producto->stock}}</td>
                             <td>{{$producto->user_id}}</td>
                             <td width="10px">
                                 <a class="btn btn-primary btn-sm" href="{{route('admin.producto.edit', $producto)}}">Editar</a>
@@ -60,12 +68,6 @@
         
         </div>    
     </div>   
-
-
-
-
-
-
 
 
 

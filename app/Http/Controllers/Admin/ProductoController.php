@@ -38,7 +38,19 @@ class ProductoController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $request->validate([
+             
+            'nombre'=>'required',
+            'descripcion'=>'required',
+            'medidas'=>'required',
+            'colores'=>'required',
+            'precio'=>'required',
+            'stock'=>'required'
+
+        ]);
+        $productos = Producto::create($request->all()) ;
+
+        return redirect()->route('admin.producto.edit', $productos)->with('info', 'el producto se creo con exito');
     }
 
     /**
@@ -47,7 +59,7 @@ class ProductoController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show($productos)
+    public function show(Producto $productos)
     {
         return view('admin.producto.show', compact('productos'));
     }
@@ -58,9 +70,9 @@ class ProductoController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function edit($productos)
+    public function edit(Producto $producto)
     {
-        return view('admin.producto.edit', compact('productos'));
+        return view('admin.producto.edit', compact('producto'));
     }
 
     /**
@@ -70,9 +82,20 @@ class ProductoController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $productos)
+    public function update(Request $request, Producto $producto)
     {
-        //
+        $request->validate([
+             
+            'nombre'=>'required',
+            'descripcion'=>'required',
+            'medidas'=>'required',
+            'colores'=>'required',
+            'precio'=>'required',
+            'stock'=>'required'
+
+        ]);
+        $producto->update($request->all());
+        return redirect()->route('admin.producto.edit', $producto)->with('info', 'el producto se actualizo');
     }
 
     /**
@@ -81,8 +104,10 @@ class ProductoController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function destroy($productos)
+    public function destroy(Producto $producto)
     {
-        //
+        $producto->delete();
+
+        return redirect()->route('admin.producto.index')->with('info', 'el producto se elimino con exito');
     }
 }
