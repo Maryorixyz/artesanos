@@ -12,11 +12,19 @@ class CatalogoController extends Controller
      *
      * @return \Illuminate\Contracts\Support\Renderable
      */
-    public function __invoke()
+    public function index()
     {
 
-        $productos = Producto::all(); //Extrae los productos de la bd
+        $productos = Producto::offset(0)->limit(16)->get(); //Extrae los productos de la bd
 
         return view('catalogo', compact('productos'));
+    }
+
+    public function productos()
+    {
+
+        $productos = Producto::with('imagenes')->offset(16)->limit(8)->get(); //Extrae los productos de la bd
+
+        return response()->json($productos);
     }
 }
