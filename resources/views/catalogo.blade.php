@@ -591,8 +591,9 @@
 				</div>
 			</div>
 
-			<div class="row isotope-grid">
+			<div id="filas-producto" class="row isotope-grid">
 				@foreach ($productos as $producto)
+					
 					<div class="col-sm-6 col-md-4 col-lg-3 p-b-35 isotope-item women">
 						<!-- Block2 -->
 						<div class="block2">
@@ -602,7 +603,6 @@
 									Vista Rápida
 								</a>
 							</div>
-	
 							<div class="block2-txt flex-w flex-t p-t-14">
 								<div class="block2-txt-child1 flex-col-l ">
 									<a href="product-detail.html" class="stext-104 cl4 hov-cl1 trans-04 js-name-b2 p-b-6">
@@ -613,13 +613,12 @@
 										<i>S/. {{$producto->precio}} </i>
 									</span>
 								</div>
-	
-								<div class="block2-txt-child2 flex-r p-t-3">
+								{{-- <div class="block2-txt-child2 flex-r p-t-3">
 									<a href="#" class="btn-addwish-b2 dis-block pos-relative js-addwish-b2">
 										<img class="icon-heart1 dis-block trans-04" src="images/icons/icon-heart-01.png" alt="ICON">
 										<img class="icon-heart2 dis-block trans-04 ab-t-l" src="images/icons/icon-heart-02.png" alt="ICON">
 									</a>
-								</div>
+								</div> --}}
 							</div>
 						</div>
 					</div>
@@ -630,7 +629,7 @@
 
 			<!-- Load more -->
 			<div class="flex-c-m flex-w w-full p-t-45">
-				<a href="#" class="flex-c-m stext-101 cl5 size-103 bg2 bor1 hov-btn1 p-lr-15 trans-04">
+				<a id="ver-mas" href="#" class="flex-c-m stext-101 cl5 size-103 bg2 bor1 hov-btn1 p-lr-15 trans-04">
 					Load More
 				</a>
 			</div>
@@ -869,7 +868,7 @@ Copyright &copy;<script>document.write(new Date().getFullYear());</script> All r
 							</div>
 
 							<!--  -->
-							<div class="flex-w flex-m p-l-100 p-t-40 respon7">
+							{{-- <div class="flex-w flex-m p-l-100 p-t-40 respon7">
 								<div class="flex-m bor9 p-r-10 m-r-11">
 									<a href="#" class="fs-14 cl3 hov-cl1 trans-04 lh-10 p-lr-5 p-tb-2 js-addwish-detail tooltip100" data-tooltip="Add to Wishlist">
 										<i class="zmdi zmdi-favorite"></i>
@@ -887,7 +886,7 @@ Copyright &copy;<script>document.write(new Date().getFullYear());</script> All r
 								<a href="#" class="fs-14 cl3 hov-cl1 trans-04 lh-10 p-lr-5 p-tb-2 m-r-8 tooltip100" data-tooltip="Google Plus">
 									<i class="fa fa-google-plus"></i>
 								</a>
-							</div>
+							</div> --}}
 						</div>
 					</div>
 				</div>
@@ -997,6 +996,8 @@ Copyright &copy;<script>document.write(new Date().getFullYear());</script> All r
 	</script>
 <!--===============================================================================================-->
 	<script src="js/main.js"></script>
+
+	<script src="js/catalogo.js"></script>
 
 </body>
 </html>

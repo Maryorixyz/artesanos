@@ -18,7 +18,9 @@ use Illuminate\Support\Facades\Auth;
 
 Route::get('/', App\Http\Controllers\Invitado\HomeController::class)->name('inicio');
 
-Route::get('/catalogo', App\Http\Controllers\Invitado\CatalogoController::class)->name('catalogo');
+Route::get('/catalogo', [App\Http\Controllers\Invitado\CatalogoController::class,'index'])->name('catalogo');
+
+Route::get('/catalogo/productos', [App\Http\Controllers\Invitado\CatalogoController::class,'productos'])->name('catalogo.productos');
 
 Route::get('/nosotros', [App\Http\Controllers\NosotrosController::class,'index'])
 ->name('nosotros');
