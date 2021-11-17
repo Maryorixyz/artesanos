@@ -272,7 +272,7 @@ return [
         ['header' => 'USUARIOS'],
         [
             'text' => 'Lista de Usuarios',
-            'url'  => 'admin/settings',
+            'route'  => 'admin.users.index',
             'icon' => 'fas fa-fw fa-users',
         ],
         

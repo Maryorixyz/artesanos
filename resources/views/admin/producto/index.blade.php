@@ -46,7 +46,7 @@
                             <td>{{$producto->colores}}</td>
                             <td>{{$producto->precio}}</td>
                             <td>{{$producto->stock}}</td>
-                            <td>{{$producto->user_id}}</td>
+                            <td>{{$producto->user->name}}</td>
                             <td width="10px">
                                 <a class="btn btn-primary btn-sm" href="{{route('admin.producto.edit', $producto)}}">Editar</a>
                             </td>

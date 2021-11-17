@@ -16,7 +16,8 @@ class ProductoController extends Controller
      */
     public function index()
     {
-        $productos = Producto::all();
+        $productos = Producto::where('user_id',auth()->user()->id)->with('user')->get();
+      //ph return $productos[0]->user->name;
         return view('admin.producto.index', compact('productos'));
     }
 
@@ -48,6 +49,7 @@ class ProductoController extends Controller
             'stock'=>'required'
 
         ]);
+        $request->offsetSet('user_id', auth()->user()->id);
         $productos = Producto::create($request->all()) ;
 
         return redirect()->route('admin.producto.edit', $productos)->with('info', 'el producto se creo con exito');
