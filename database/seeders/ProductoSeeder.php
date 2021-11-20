@@ -25,6 +25,8 @@ class ProductoSeeder extends Seeder
             'colores' => 'negro',
             'user_id' => 1
         ]);
+        
+        $producto->categorias()->sync([1, 2, 9]);
         // Agregar imagenes
         $producto->imagenes()->create([
             'url' => 'productos/WhatsApp Image 2021-09-23 at 10.26.54 PM (3).jpg'
@@ -50,6 +52,8 @@ class ProductoSeeder extends Seeder
             'colores' => 'blanco',
             'user_id' => 1
         ]);
+        
+        $producto->categorias()->sync([1, 2, 10]);
 
         $producto->imagenes()->create([
             'url' => 'productos/WhatsApp Image 2021-09-23 at 10.26.53 PM.jpg'
@@ -78,6 +82,8 @@ class ProductoSeeder extends Seeder
             'user_id' => 1
         ]);
         
+        $producto->categorias()->sync([2, 7]);
+        
         $producto->imagenes()->create([
             'url' => 'productos/WhatsApp Image 2021-09-23 at 10.26.56 PM (3).jpg'
         ]);
@@ -91,6 +97,8 @@ class ProductoSeeder extends Seeder
             'colores' => 'Variados',
             'user_id' => 1
         ]);
+        
+        $producto->categorias()->sync([2, 11]);
 
         $producto->imagenes()->create([
             'url' => 'productos/WhatsApp Image 2021-09-23 at 10.26.56 PM.jpg'
@@ -105,6 +113,8 @@ class ProductoSeeder extends Seeder
             'colores' => 'Guinda, Rojo, Plateado, Turquesa',
             'user_id' => 1
         ]);
+        
+        $producto->categorias()->sync([2, 6]);
 
         $producto->imagenes()->create([
             'url' => 'productos/WhatsApp Image 2021-09-23 at 10.26.57 PM (1).jpg'
@@ -123,6 +133,8 @@ class ProductoSeeder extends Seeder
             'colores' => 'Negro',
             'user_id' => 2
         ]);
+        
+        $producto->categorias()->sync([1, 2, 9]);
 
         $producto->imagenes()->create([
             'url' => 'productos/WhatsApp Image 2021-09-21 at 9.01.16 PM.jpg'
@@ -137,6 +149,8 @@ class ProductoSeeder extends Seeder
             'colores' => 'Blanco',
             'user_id' => 2
         ]);
+        
+        $producto->categorias()->sync([1, 2, 10]);
 
         $producto->imagenes()->create([
             'url' => 'productos/WhatsApp Image 2021-09-21 at 9.01.16 PM (2).jpg'

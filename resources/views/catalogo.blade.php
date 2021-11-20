@@ -355,25 +355,11 @@
 						Todos los Productos
 					</button>
 
-					<button class="stext-106 cl6 hov1 bor3 trans-04 m-r-32 m-tb-5" data-filter=".women">
-						Mascaras
-					</button>
-
-					<button class="stext-106 cl6 hov1 bor3 trans-04 m-r-32 m-tb-5" data-filter=".men">
-						Trajes
-					</button>
-
-					<button class="stext-106 cl6 hov1 bor3 trans-04 m-r-32 m-tb-5" data-filter=".bag">
-						Manualidades
-					</button>
-
-					{{-- <button class="stext-106 cl6 hov1 bor3 trans-04 m-r-32 m-tb-5" data-filter=".shoes">
-						Shoes
-					</button>
-
-					<button class="stext-106 cl6 hov1 bor3 trans-04 m-r-32 m-tb-5" data-filter=".watches">
-						Watches
-					</button> --}}
+					@foreach ($categorias as $categoria)
+						<button class="stext-106 cl6 hov1 bor3 trans-04 m-r-32 m-tb-5" data-filter=".{{ $categoria->slug }}">
+							{{ $categoria->descripcion }}
+						</button>
+					@endforeach
 				</div>
 
 				<div class="flex-w flex-c-m m-tb-10">
@@ -594,7 +580,7 @@
 			<div id="filas-producto" class="row isotope-grid">
 				@foreach ($productos as $producto)
 					
-					<div class="col-sm-6 col-md-4 col-lg-3 p-b-35 isotope-item women">
+					<div class="col-sm-6 col-md-4 col-lg-3 p-b-35 isotope-item @foreach($producto->categorias as $categoria){{ $categoria->slug }} @endforeach">
 						<!-- Block2 -->
 						<div class="block2">
 							<div class="block2-pic hov-img0">

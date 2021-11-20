@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers\Invitado;
 use App\Http\Controllers\Controller;
+use App\Models\Categoria;
 use App\Models\Producto;
 use Illuminate\Http\Request;
 
@@ -15,9 +16,12 @@ class CatalogoController extends Controller
     public function index()
     {
 
-        $productos = Producto::offset(0)->limit(16)->get(); //Extrae los productos de la bd
+        $productos = Producto::with('categorias')->offset(0)->limit(16)->get(); //Extrae los productos de la bd
 
-        return view('catalogo', compact('productos'));
+        $categorias = Categoria::withCount('productos')->orderBy('productos_count', 'DESC')->limit(4)->get();
+
+        
+        return view('catalogo', compact('productos', 'categorias'));
     }
 
     public function productos()
