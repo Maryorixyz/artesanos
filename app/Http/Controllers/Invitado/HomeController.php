@@ -15,7 +15,7 @@ class HomeController extends Controller
     public function __invoke()
     {
 
-        $productos = Producto::limit(10)->get(); //Extrae los productos de la bd
+        $productos = Producto::limit(16)->get(); //Extrae los productos de la bd
 
         $asociaciones = 'Asociacion 1';
 
