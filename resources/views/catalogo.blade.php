@@ -390,15 +390,15 @@
 				<!-- Filter -->
 				<div class="dis-none panel-filter w-full p-t-10">
 					<div class="wrap-filter flex-w bg6 w-full p-lr-40 p-t-27 p-lr-15-sm">
-						<div class="filter-col1 p-r-15 p-b-27">
+						<div class="order-link filter-col1 p-r-15 p-b-27">
 							<div class="mtext-102 cl2 p-b-15">
 								Sort By
 							</div>
 
 							<ul>
 								<li class="p-b-6">
-									<a href="#" class="filter-link stext-106 trans-04">
-										Default
+									<a href="#" class="filter-link stext-106 trans-04" data-sort-by="original-order">
+										Por defecto
 									</a>
 								</li>
 
@@ -421,58 +421,58 @@
 								</li>
 
 								<li class="p-b-6">
-									<a href="#" class="filter-link stext-106 trans-04">
+									<a href="#" class="filter-link stext-106 trans-04" data-sort-by="precioAsc">
 										Price: Low to High
 									</a>
 								</li>
 
 								<li class="p-b-6">
-									<a href="#" class="filter-link stext-106 trans-04">
+									<a href="#" class="filter-link stext-106 trans-04" data-sort-by="precioDesc">
 										Price: High to Low
 									</a>
 								</li>
 							</ul>
 						</div>
 
-						<div class="filter-col2 p-r-15 p-b-27">
+						<div class="filter-link-precio filter-col2 p-r-15 p-b-27">
 							<div class="mtext-102 cl2 p-b-15">
 								Precio
 							</div>
 
 							<ul>
 								<li class="p-b-6">
-									<a href="#" class="filter-link stext-106 trans-04 filter-link-active">
-										All
+									<a href="#" class="filter-link stext-106 trans-04 filter-link-active" data-filter="*">
+										Todo
 									</a>
 								</li>
 
 								<li class="p-b-6">
-									<a href="#" class="filter-link stext-106 trans-04">
-										<i>S/.</i> 00.00 - <i>S/.</i> 20.00
+									<a href="#" class="filter-link stext-106 trans-04" data-filter="preciosEntre0a30">
+										<i>S/. </i>00.00 - <i>S/. </i>30.00
 									</a>
 								</li>
 
 								<li class="p-b-6">
-									<a href="#" class="filter-link stext-106 trans-04">
-										<i>S/.</i> 30.00 - <i>S/.</i> 40.00
+									<a href="#" class="filter-link stext-106 trans-04" data-filter="preciosEntre30a60">
+										<i>S/. </i>30.00 - <i>S/. </i>60.00
 									</a>
 								</li>
 
 								<li class="p-b-6">
-									<a href="#" class="filter-link stext-106 trans-04">
-										<i>S/.</i> 50.00 - <i>S/.</i> 70.00
+									<a href="#" class="filter-link stext-106 trans-04" data-filter="preciosEntre60a90">
+										<i>S/. </i>60.00 - <i>S/. </i>90.00
 									</a>
 								</li>
 
 								<li class="p-b-6">
-									<a href="#" class="filter-link stext-106 trans-04">
-										<i>S/.</i> 80.00 - <i>S/.</i> 100.00
+									<a href="#" class="filter-link stext-106 trans-04" data-filter="preciosEntre90a120">
+										<i>S/. </i>90.00 - <i>S/. </i>120.00
 									</a>
 								</li>
 
 								<li class="p-b-6">
-									<a href="#" class="filter-link stext-106 trans-04">
-										<i>S/.</i> 120.00 + 
+									<a href="#" class="filter-link stext-106 trans-04" data-filter="preciosEntre120aMas">
+										<i>S/. </i>120.00 + 
 									</a>
 								</li>
 							</ul>
@@ -595,8 +595,8 @@
 										{{$producto->nombre}}
 									</a>
 	
-									<span class="stext-105 cl3">
-										<i>S/. {{$producto->precio}} </i>
+									<span class="precio-producto stext-105 cl3" data-precio="{{ $producto->precio }}">
+										<i>S/. {{ $producto->precio }} </i>
 									</span>
 								</div>
 								{{-- <div class="block2-txt-child2 flex-r p-t-3">

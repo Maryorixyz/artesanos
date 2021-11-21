@@ -151,6 +151,23 @@
                 animationEngine : 'best-available',
                 masonry: {
                     columnWidth: '.isotope-item'
+                },
+                getSortData: {
+                    // precio: '.precio-producto parseInt',
+                    // category: '[data-category]',
+
+                    precioAsc: function( itemElem ) {
+                        var precio = $( itemElem ).find('.precio-producto').attr('data-precio');
+                        return parseFloat(precio);
+                    },
+                    precioDesc: function( itemElem ) {
+                        var precio = $( itemElem ).find('.precio-producto').attr('data-precio');
+                        return parseFloat(precio);
+                    }
+                },
+                sortAscending: {
+                    precioAsc: true, 
+                    precioDesc: false 
                 }
             });
         });
@@ -159,6 +176,7 @@
     var isotopeButton = $('.filter-tope-group button');
 
     $(isotopeButton).each(function(){
+        
         $(this).on('click', function(){
             for(var i=0; i<isotopeButton.length; i++) {
                 $(isotopeButton[i]).removeClass('how-active1');
@@ -167,6 +185,84 @@
             $(this).addClass('how-active1');
         });
     });
+    /*================= Ordenar elementos ===================================*/
+
+    var isotopeButtonOrder= $('.order-link a');
+
+    // para marcar y desmarar la opcion en la que se encuentra
+    $(isotopeButtonOrder).each(function(){
+        
+        $(this).on('click', function(e){
+
+            e.preventDefault()
+
+            for(var i=0; i<isotopeButtonOrder.length; i++) {
+                $(isotopeButtonOrder[i]).removeClass('filter-link-active');
+            }
+
+            $(this).addClass('filter-link-active');
+
+            var sortByValue = $(this).attr('data-sort-by');
+            $topeContainer.isotope({ sortBy: sortByValue });
+
+        });
+    });
+    /*================= filtrador de precios ===================================*/
+
+    
+    var funcionesParaLosFiltros = {
+        preciosEntre0a30: function() {
+            var precio = $(this).find('.precio-producto').attr('data-precio');
+
+            return parseFloat(precio) >= 0 && parseFloat(precio) <= 30;
+        },
+        preciosEntre30a60: function() {
+            var precio = $(this).find('.precio-producto').attr('data-precio');
+
+            return parseFloat(precio) >= 30 && parseFloat(precio) <= 60;
+        },
+        preciosEntre60a90: function() {
+            var precio = $(this).find('.precio-producto').attr('data-precio');
+
+            return parseFloat(precio) >= 60 && parseFloat(precio) <= 90;
+        },
+        preciosEntre90a120: function() {
+            var precio = $(this).find('.precio-producto').attr('data-precio');
+
+            return parseFloat(precio) >= 90 && parseFloat(precio) <= 120;
+        },
+        preciosEntre120aMas: function() {
+            var precio = $(this).find('.precio-producto').attr('data-precio');
+
+            return parseFloat(precio) >= 120;
+        },
+    }
+    var isotopeButtonFilterPrice = $('.filter-link-precio a');
+
+    // para marcar y desmarar la opcion en la que se encuentra
+    $(isotopeButtonFilterPrice).each(function(){
+        
+        $(this).on('click', function(e){
+
+            e.preventDefault()
+
+            for(var i=0; i<isotopeButtonFilterPrice.length; i++) {
+                $(isotopeButtonFilterPrice[i]).removeClass('filter-link-active');
+            }
+
+            $(this).addClass('filter-link-active');
+
+            let filterValue = $(this).attr('data-filter');
+
+            filterValue = funcionesParaLosFiltros[ filterValue ] || filterValue;
+
+            $topeContainer.isotope({ filter: filterValue });
+
+        });
+    });
+
+
+
 
     /*==================================================================
     [ Filter / Search product ]*/
@@ -403,7 +499,7 @@
                                         ${producto.nombre}
                                     </a>
                     
-                                    <span class="stext-105 cl3">
+                                    <span class="precio-producto stext-105 cl3" data-precio="${producto.precio}">
                                         <i>S/. ${producto.precio} </i>
                                     </span>
                                 </div>
