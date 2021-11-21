@@ -333,31 +333,61 @@
         $('#modal-producto-limpiar').replaceWith(limpiar)
     });
 
+    //BOTON MOSTRAR MÁS
+    var inicio = 32
+    
+    
+    document.getElementById("ver-mas").addEventListener("click", function(e){
+
+        e.preventDefault()
+        
+        let cantidad_de_productos = e.target.dataset.cantidad
+        console.log($('#ver-mas'))       
+        console.log(inicio);
+        ajax();
+
+        if (inicio>=cantidad_de_productos) {
+            return $('#ver-mas').remove()
+        }
+
+        
+    });
 
     function ajax(){
 
         console.log($topeContainer)
 
         const http = new XMLHttpRequest();
-        const url = '/catalogo/productos';
+        const url = '/catalogo/productos/'+ (inicio-16);
     
         http.onreadystatechange = function(){
             if(this.readyState == 4 && this.status == 200){
     
+            
+                inicio += 16
+               
                 let productos = JSON.parse(this.responseText)
     
                 console.log(productos)
     
                 productos.forEach(producto => {
+                    
+                    
 
                     let productoTemp = JSON.stringify(producto)
 
                     let remplace = /"/gi
 
-                    let productWithNewFormat = productoTemp.replace(remplace, '&quot;') 
+                    let productWithNewFormat = productoTemp.replace(remplace, '&quot;')
+
+                    let categorias = ""
+
+                    producto.categorias.forEach(categoria => {
+                        categorias += categoria.slug + ' '
+                    });
 
                     let $fila = $(`
-                    <div class="col-sm-6 col-md-4 col-lg-3 p-b-35 isotope-item women">
+                    <div class="col-sm-6 col-md-4 col-lg-3 p-b-35 isotope-item ${categorias}" >
                     <!-- Block2 -->
                         <div class="block2">
                             <div class="block2-pic hov-img0">
@@ -393,13 +423,5 @@
         http.send();
     
     }
-    
-    document.getElementById("ver-mas").addEventListener("click", function(e){
-
-        e.preventDefault();
-        ajax();
-    });
-
-
 
 })(jQuery);

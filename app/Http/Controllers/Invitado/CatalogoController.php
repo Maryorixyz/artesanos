@@ -20,14 +20,17 @@ class CatalogoController extends Controller
 
         $categorias = Categoria::withCount('productos')->orderBy('productos_count', 'DESC')->limit(4)->get();
 
+        $cantidad_de_productos = Producto::count();
+
         
-        return view('catalogo', compact('productos', 'categorias'));
+        
+        return view('catalogo', compact('productos', 'categorias' , 'cantidad_de_productos'));
     }
 
-    public function productos()
+    public function productos($inicio)
     {
 
-        $productos = Producto::with('imagenes')->offset(16)->limit(8)->get(); //Extrae los productos de la bd
+        $productos = Producto::with('imagenes', 'categorias')->offset($inicio)->limit(8)->get(); //Extrae los productos de la bd
 
         return response()->json($productos);
     }

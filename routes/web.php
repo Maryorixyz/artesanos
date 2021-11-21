@@ -20,7 +20,7 @@ Route::get('/', App\Http\Controllers\Invitado\HomeController::class)->name('inic
 
 Route::get('/catalogo', [App\Http\Controllers\Invitado\CatalogoController::class,'index'])->name('catalogo');
 
-Route::get('/catalogo/productos', [App\Http\Controllers\Invitado\CatalogoController::class,'productos'])->name('catalogo.productos');
+Route::get('/catalogo/productos/{inicio}', [App\Http\Controllers\Invitado\CatalogoController::class,'productos'])->name('catalogo.productos');
 
 Route::get('/nosotros', [App\Http\Controllers\NosotrosController::class,'index'])
 ->name('nosotros');
