@@ -260,6 +260,7 @@ return [
             'text' => 'Lista de Productos',
             'route'  => 'admin.producto.index',
             'icon' => 'fas fa-box',
+            'can' => 'admin.producto.index'
         ],
 
         ['header' => 'ASOCIACIONES'],
@@ -274,6 +275,7 @@ return [
             'text' => 'Lista de Usuarios',
             'route'  => 'admin.users.index',
             'icon' => 'fas fa-fw fa-users',
+            'can' => 'admin.users.index',
         ],
         
     ],
