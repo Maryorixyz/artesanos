@@ -66,6 +66,16 @@
                 <span class="text-danger">{{$message}}</span>
                 @enderror
 
+                @foreach ($categorias as $categoria)
+                    <div>
+                        <label>
+                            {!! Form::checkbox('categorias[]', $categoria->id, null, ['class' => 'mr-1']) !!}
+                            {{$categoria->descripcion}}
+                        </label>
+                    </div>
+                    
+                @endforeach
+
                 {!! Form::submit('Crear Producto', ['class'=>'btn btn-primary']) !!}
 
             {!! Form::close() !!}

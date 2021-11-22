@@ -251,7 +251,7 @@ return [
         // Sidebar items:
         [
             'text' => 'profile',
-            'url'  => 'admin/settings',
+            'url'  => 'user/profile',
             'icon' => 'fas fa-fw fa-user',
         ],
 
@@ -270,7 +270,7 @@ return [
             'icon' => 'fas fa-hands-helping',
         ],
 
-        ['header' => 'USUARIOS'],
+        ['header' => 'USUARIOS', 'can' => 'admin.users.index'],
         [
             'text' => 'Lista de Usuarios',
             'route'  => 'admin.users.index',

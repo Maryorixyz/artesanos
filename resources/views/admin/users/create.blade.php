@@ -39,7 +39,6 @@
                     <span class="text-danger">{{$message}}</span>
                 @enderror
 
-
                     {!! Form::submit('Crear Artesano', ['class' => 'btn btn-primary ']) !!}
 
             {!! Form::close() !!}

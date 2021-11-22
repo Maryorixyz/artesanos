@@ -26,6 +26,7 @@ class CreateCategoriaProductoTable extends Migration
                 ->onDelete('cascade');
 
             $table->primary(['categoria_id', 'producto_id']);
+            
         });
     }
 

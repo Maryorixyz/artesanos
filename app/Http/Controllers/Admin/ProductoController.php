@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
+use App\Models\Categoria;
 use Illuminate\Http\Request;
 
 use App\Models\Producto;
@@ -16,9 +17,34 @@ class ProductoController extends Controller
      */
     public function index()
     {
-        $productos = Producto::where('user_id',auth()->user()->id)->with('user')->get();
-      //ph return $productos[0]->user->name;
-        return view('admin.producto.index', compact('productos'));
+        
+        $roles = auth()->user()->getRoleNames();
+
+        $isAdmin = false;
+
+        foreach ($roles as $rol) {
+            
+            if ($rol == 'Admin') {
+                $isAdmin = true;
+            }
+        }
+
+
+        if ($isAdmin) {
+
+            $productos = Producto::with('user')->get();
+            //ph return $productos[0]->user->name;
+            return view('admin.producto.index', compact('productos'));
+
+        }
+        else {
+
+            $productos = Producto::where('user_id',auth()->user()->id)->with('user')->get();
+            //ph return $productos[0]->user->name;
+            return view('admin.producto.index', compact('productos'));
+            
+        }
+        
     }
 
     /**
@@ -28,7 +54,8 @@ class ProductoController extends Controller
      */
     public function create()
     {
-        return view('admin.producto.create');
+        $categorias = Categoria::all();
+        return view('admin.producto.create', compact('categorias'));
     }
 
     /**
