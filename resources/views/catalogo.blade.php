@@ -5,36 +5,13 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 <!--===============================================================================================-->	
-    <link rel="icon" type="image/png" href="{{ asset("images/logo_amarilis.png") }}">
-<!--===============================================================================================-->
-    <link rel="stylesheet" type="text/css" href="{{ asset("vendor/bootstrap/css/bootstrap.min.css") }}">
-<!--===============================================================================================-->
-<link rel="stylesheet" type="text/css" href="{{ asset("fonts/font-awesome-4.7.0/css/font-awesome.min.css") }}">
-<!--===============================================================================================-->
-	<link rel="stylesheet" type="text/css" href="{{ asset("fonts/iconic/css/material-design-iconic-font.min.css") }}">
-<!--===============================================================================================-->
-	<link rel="stylesheet" type="text/css" href="{{ asset("fonts/linearicons-v1.0.0/icon-font.min.css") }}">
-<!--===============================================================================================-->
-	<link rel="stylesheet" type="text/css" href="{{ asset("vendor/animate/animate.css") }}">
+	<link rel="stylesheet" href="{{ asset('vendor/fontawesome-free/css/all.min.css') }}">
 <!--===============================================================================================-->	
-	<link rel="stylesheet" type="text/css" href="{{ asset("vendor/css-hamburgers/hamburgers.min.css") }}">
+	<link rel="icon" type="image/png" href="{{ asset("images/logo_amarilis.png") }}">
 <!--===============================================================================================-->
-	<link rel="stylesheet" type="text/css" href="{{ asset("vendor/animsition/css/animsition.min.css") }}">
-<!--===============================================================================================-->
-	<link rel="stylesheet" type="text/css" href="{{ asset("vendor/select2/select2.min.css") }}">
-<!--===============================================================================================-->	
-	<link rel="stylesheet" type="text/css" href="{{ asset("vendor/daterangepicker/daterangepicker.css") }}">
-<!--===============================================================================================-->
-	<link rel="stylesheet" type="text/css" href="{{ asset("vendor/slick/slick.css") }}">
-<!--===============================================================================================-->
-	<link rel="stylesheet" type="text/css" href="{{ asset("vendor/MagnificPopup/magnific-popup.css") }}">
-<!--===============================================================================================-->
-	<link rel="stylesheet" type="text/css" href="{{ asset("vendor/perfect-scrollbar/perfect-scrollbar.css") }}">
-<!--===============================================================================================-->
-	<link rel="stylesheet" type="text/css" href="{{ asset("css/util.css") }}">
-	<link rel="stylesheet" type="text/css" href="{{ asset("css/main.css") }}">
+	<link rel="stylesheet" type="text/css" href="{{ mix('css/vendor.css') }}">	
 
-	<link rel="stylesheet" type="text/css" href="{{ asset("css/custom.css") }}">
+    <link rel="stylesheet" type="text/css" href="{{ mix("css/catalogo.css") }}">
 <!--===============================================================================================-->
 </head>
 <body class="animsition">
@@ -43,32 +20,6 @@
 	<header class="header-v4">
 		<!-- Header desktop -->
 		<div class="container-menu-desktop">
-			<!-- Topbar -->
-			{{-- <div class="top-bar">
-				<div class="content-topbar flex-sb-m h-full container">
-					<div class="left-top-bar">
-						Free shipping for standard order over $100
-					</div>
-
-					<div class="right-top-bar flex-w h-full">
-						<a href="#" class="flex-c-m trans-04 p-lr-25">
-							Help & FAQs
-						</a>
-
-						<a href="#" class="flex-c-m trans-04 p-lr-25">
-							My Account
-						</a>
-
-						<a href="#" class="flex-c-m trans-04 p-lr-25">
-							EN
-						</a>
-
-						<a href="#" class="flex-c-m trans-04 p-lr-25">
-							USD
-						</a>
-					</div>
-				</div>
-			</div> --}}
 
 			<div class="wrap-menu-desktop how-shadow1">
 				<nav class="limiter-menu-desktop container">
@@ -88,27 +39,19 @@
 					<div class="menu-desktop">
 						<ul class="main-menu">
 							<li>
-								<a href="product.html">Asociaciones</a>
+								<a href="{{route('asociaciones')}}">Asociaciones</a>
 							</li>
-							{{-- <li class="active-menu">
-								<a href="index.html">Asociaciones</a>
-								<ul class="sub-menu"> ---Ctrl k + Ctrl C
-									<li><a href="index.html">Asociaciones 1</a></li>
-									<li><a href="home-02.html">Asociaciones 2</a></li>
-									<li><a href="home-03.html">Asociaciones 3</a></li>
-								</ul>
-							</li> --}}
 
 							<li class="active-menu">
 								<a href="{{ route('catalogo') }}">Catalogo</a>
 							</li>
 
-							<li class="label1">
-								<a href="shoping-cart.html">Nosotros</a>
+							<li>
+								<a href="{{ route('nosotros') }}">Nosotros</a>
 							</li>
 							
 							<li>
-								<a href="contact.html">Contactos</a>
+								<a href="{{ route('contactanos') }}">Contactos</a>
 							</li>
 							
 						</ul>
@@ -119,21 +62,30 @@
 						<div class="icon-header-item cl2 hov-nuevo trans-04 p-l-22 p-r-11 js-show-modal-search">
 							<i class="zmdi zmdi-search"></i>
 						</div>
-
-						{{-- <div class="icon-header-item cl2 hov-cl1 trans-04 p-l-22 p-r-11 icon-header-noti js-show-cart" data-notify="2">
-							<i class="zmdi zmdi-shopping-cart"></i>
-						</div> --}}
-
-                        {{-- <a href="#" class="dis-block icon-header-item cl2 hov-cl1 trans-04 p-l-22 p-r-11">
-                            <i class="fas fa-user"></i>
-                        </a>   --}}
                         
                         @if (Route::has('login'))
-                            @auth
-                                <a href="{{ url('/home') }}" class="dis-block cl2 hov-nuevo trans-04 p-l-22 p-r-11">Dashboard</a>
-                            @else
-                                <a href="{{ route('login') }}" class="dis-block sesion hov-nuevo trans-04 p-l-22 p-r-11">Inicia Sesión</a>
-                            @endauth
+							<ul class="main-menu">
+								@auth
+									<li>
+										<a class="sesion">{{ explode(' ', Auth::user()->name)[0] }}</a>
+										<ul class="sub-menu">
+											<li><a href="#">Perfil</a></li>
+											<li><a href="{{ route('admin.inicio') }}">Dashboard</a></li>
+											<li>
+												<a href="{{ route('logout') }}" onclick="event.preventDefault();
+													document.getElementById('logout-form').submit();">Cerrar Sesión</a>
+												<form method="POST" id="logout-form" action="{{ route('logout') }}">
+													@csrf
+												</form>
+											</li>
+										</ul>
+									</li>
+								@else
+									<li>
+										<a href="{{ route('login') }}" class="sesion">Inicia Sesión</a>
+									</li>
+								@endauth
+							</ul>
                         @endif
 
 					</div>
@@ -161,18 +113,11 @@
 					<i class="zmdi zmdi-search"></i>
 				</div>
 
-				{{-- <div class="icon-header-item cl2 hov-cl1 trans-04 p-r-11 p-l-10 icon-header-noti js-show-cart" data-notify="2">
-					<i class="zmdi zmdi-shopping-cart"></i>
-				</div>
-
-				<a href="#" class="dis-block icon-header-item cl2 hov-cl1 trans-04 p-r-11 p-l-10 icon-header-noti" data-notify="0">
-					<i class="zmdi zmdi-favorite-outline"></i>
-				</a> --}}
 				@if (Route::has('login'))
                     @auth
-                        <a href="{{ url('/home') }}" class="dis-block cl2 hov-nuevo trans-04 p-r-11 p-l-10">Dashboard</a>
+                        <a class="dis-block cl2 hov-nuevo trans-04 p-r-11 p-l-10">{{ explode(' ', Auth::user()->name)[0] }}</a>
                     @else
-                        <a href="{{ route('login') }}" class="dis-block cl2 sesion-mobile hov-nuevo trans-04 p-r-11 p-l-10">Inicia Sesión</a> <!--CAMBIO hov-cl1-->
+                        <a href="{{ route('login') }}" class="dis-block cl2 hov-nuevo trans-04 p-r-11 p-l-10">Inicia Sesión</a> <!--CAMBIO hov-cl1-->
                     @endauth
                 @endif
 			</div>
@@ -188,58 +133,51 @@
 
 		<!-- Menu Mobile -->
 		<div class="menu-mobile">
-			{{-- <ul class="topbar-mobile">
-				<li>
-					<div class="left-top-bar">
-						Free shipping for standard order over $100
-					</div>
-				</li>
-
-				<li>
-					<div class="right-top-bar flex-w h-full">
-						<a href="#" class="flex-c-m p-lr-10 trans-04">
-							Help & FAQs
-						</a>
-
-						<a href="#" class="flex-c-m p-lr-10 trans-04">
-							My Account
-						</a>
-
-						<a href="#" class="flex-c-m p-lr-10 trans-04">
-							EN
-						</a>
-
-						<a href="#" class="flex-c-m p-lr-10 trans-04">
-							USD
-						</a>
-					</div>
-				</li>
-			</ul> --}}
 
 			<ul class="main-menu-m">
-				<li>
-					<a href="index.html">Asociaciones</a>
-					{{-- <ul class="sub-menu-m">
-						<li><a href="index.html">Homepage 1</a></li>
-						<li><a href="home-02.html">Homepage 2</a></li>
-						<li><a href="home-03.html">Homepage 3</a></li>
-					</ul>
-					<span class="arrow-main-menu-m">
-						<i class="fa fa-angle-right" aria-hidden="true"></i>
-					</span> --}}
-				</li>
+				
+				@if (Route::has('login'))
+                    @auth
+						<li>
+							<a class="dis-block cl2 hov-nuevo trans-04 p-r-11 p-l-10">{{ explode(' ', Auth::user()->name)[0] }}</a>
+							<ul class="sub-menu-m">
+								<li><a href="#">Perfil</a></li>
+								<li><a href="{{ route('admin.inicio') }}">Dashboard</a></li>
+								<li>
+									<a href="{{ route('logout') }}" onclick="event.preventDefault();
+										document.getElementById('logout-form').submit();">Cerrar Sesión</a>
+									<form method="POST" id="logout-form" action="{{ route('logout') }}">
+										@csrf
+									</form>
+								</li>
+							</ul>
+							<span class="arrow-main-menu-m">
+								<i class="fa fa-angle-right" aria-hidden="true"></i>
+							</span>
+						</li>
+                    @else
+						<li>
+							<a href="{{ route('login') }}">Inicia Sesión</a>
+						</li>
+                    @endauth
+                @endif
 
 				<li>
-					<a href="product.html">Catalogo</a>
-				</li>
+                    <a href="{{route('asociaciones')}}">Asociaciones</a>
+                </li>
 
-				<li>
-					<a href="shoping-cart.html" class="label1 rs1">Nosotros</a>
-				</li>
+                <li>
+                    <a href="{{ route('catalogo') }}">Catalogo</a>
+                </li>
 
-				<li>
-					<a href="contact.html">Contactos</a>
-				</li>
+                <li>
+                    <a href="{{ route('nosotros')}}">Nosotros</a>
+                </li>
+                
+                <li>
+                    <a href="{{route('contactanos')}}">Contactos</a>
+                </li>
+
 			</ul>
 		</div>
 
@@ -663,13 +601,7 @@
 								Manualidades
 							</a>
 						</li>
-
-						{{-- <li class="p-b-10">
-							<a href="#" class="stext-107 cl7 hov-cl1 trans-04">
-								Watches
-							</a>
-						</li>
-					</ul> --}}
+					</ul>
 				</div>
 				<div class="col-sm-6 col-lg-3 p-b-50">
 					<h4 class="stext-301 cl0 p-b-30">
@@ -691,30 +623,6 @@
 						</li>
 					</ul>					
 				</div>
-
-				{{-- <div class="col-sm-6 col-lg-3 p-b-50">
-					<h4 class="stext-301 cl0 p-b-30">
-						GET IN TOUCH
-					</h4>
-
-					<p class="stext-107 cl7 size-201">
-						Any questions? Let us know in store at 8th floor, 379 Hudson St, New York, NY 10018 or call us on (+1) 96 716 6879
-					</p>
-
-					<div class="p-t-27">
-						<a href="#" class="fs-18 cl7 hov-cl1 trans-04 m-r-16">
-							<i class="fa fa-facebook"></i>
-						</a>
-
-						<a href="#" class="fs-18 cl7 hov-cl1 trans-04 m-r-16">
-							<i class="fa fa-instagram"></i>
-						</a>
-
-						<a href="#" class="fs-18 cl7 hov-cl1 trans-04 m-r-16">
-							<i class="fa fa-pinterest-p"></i>
-						</a>
-					</div>
-				</div> --}}
 
 				<div class="col-sm-6 col-lg-2 p-b-50">
 					<h4 class="stext-301 cl0 p-b-30">
@@ -852,27 +760,6 @@ Copyright &copy;<script>document.write(new Date().getFullYear());</script> All r
 									</div>
 								</div>	
 							</div>
-
-							<!--  -->
-							{{-- <div class="flex-w flex-m p-l-100 p-t-40 respon7">
-								<div class="flex-m bor9 p-r-10 m-r-11">
-									<a href="#" class="fs-14 cl3 hov-cl1 trans-04 lh-10 p-lr-5 p-tb-2 js-addwish-detail tooltip100" data-tooltip="Add to Wishlist">
-										<i class="zmdi zmdi-favorite"></i>
-									</a>
-								</div>
-
-								<a href="#" class="fs-14 cl3 hov-cl1 trans-04 lh-10 p-lr-5 p-tb-2 m-r-8 tooltip100" data-tooltip="Facebook">
-									<i class="fa fa-facebook"></i>
-								</a>
-
-								<a href="#" class="fs-14 cl3 hov-cl1 trans-04 lh-10 p-lr-5 p-tb-2 m-r-8 tooltip100" data-tooltip="Twitter">
-									<i class="fa fa-twitter"></i>
-								</a>
-
-								<a href="#" class="fs-14 cl3 hov-cl1 trans-04 lh-10 p-lr-5 p-tb-2 m-r-8 tooltip100" data-tooltip="Google Plus">
-									<i class="fa fa-google-plus"></i>
-								</a>
-							</div> --}}
 						</div>
 					</div>
 				</div>

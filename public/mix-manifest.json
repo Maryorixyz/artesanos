@@ -1,6 +1,10 @@
 {
     "/js/index.js": "/js/index.js",
     "/js/app.js": "/js/app.js",
+    "/css/vendor.css": "/css/vendor.css",
+    "/css/app.css": "/css/app.css",
+    "/css/nosotros.css": "/css/nosotros.css",
+    "/css/catalogo.css": "/css/catalogo.css",
     "/css/index.css": "/css/index.css",
-    "/css/app.css": "/css/app.css"
+    "/css/contactanos.css": "/css/contactanos.css"
 }

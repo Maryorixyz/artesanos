@@ -22,14 +22,11 @@ Route::get('/catalogo', [App\Http\Controllers\Invitado\CatalogoController::class
 
 Route::get('/catalogo/productos/{inicio}', [App\Http\Controllers\Invitado\CatalogoController::class,'productos'])->name('catalogo.productos');
 
-Route::get('/nosotros', [App\Http\Controllers\NosotrosController::class,'index'])
-->name('nosotros');
+Route::view('/nosotros', 'nosotros')->name('nosotros');
 
-Route::get('/contactanos', [App\Http\Controllers\ContactanosController::class,'index'])
-->name('contactanos');
+Route::view('/contactanos', 'contactanos')->name('contactanos');
 
-Route::get('/asociaciones', [App\Http\Controllers\AsociacionController::class,'index'])
-->name('asociaciones.index');
+Route::view('/asociaciones', 'asociaciones')->name('asociaciones');
 
 Route::get('asociaciones/create', [App\Http\Controllers\AsociacionController::class,'create'])
         ->name('asociaciones.create');

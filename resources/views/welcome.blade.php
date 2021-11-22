@@ -9,9 +9,9 @@
 <!--===============================================================================================-->	
 	<link rel="icon" type="image/png" href="{{ asset("images/logo_amarilis.png") }}">
 <!--===============================================================================================-->
-	<link rel="stylesheet" type="text/css" href="{{ mix('css/index.css') }}">		
+	<link rel="stylesheet" type="text/css" href="{{ mix('css/vendor.css') }}">		
 
-	<link rel="stylesheet" type="text/css" href="{{ asset("css/custom.css") }}">
+	<link rel="stylesheet" type="text/css" href="{{ mix("css/index.css") }}">
 <!--===============================================================================================-->
 </head>
 <body class="animsition">
@@ -32,23 +32,14 @@
                             <path id="Forma_6" data-name="Forma 6" class="cls-1" d="M114.027,126.505a6.091,6.091,0,0,0-2.886,5.622,5.968,5.968,0,0,0,2.886,4.819h21.642a6.7,6.7,0,0,0-.721-10.441H114.027Z"/>
                             <path id="Forma_4" data-name="Forma 4" class="cls-1" d="M60,156L112.024,43.008q24.2,50.488,48.4,100.975l16.615-.814L140.92,72.323l-2.889,5.7a6.63,6.63,0,0,1-7.225-.814,8.788,8.788,0,0,1-2.889-8.143l13-26.058L198,156H152q-19.987-41.838-39.976-83.677L79.516,143.169H90.352q10.475-20.358,20.95-40.716a6.557,6.557,0,0,1,7.224,0,8.461,8.461,0,0,1,3.612,7.329L98,156H60Z"/>
                         </svg>
-						{{-- <img src="images/icons/logo-01.png" alt="IMG-LOGO"> --}}
 					</a>
 
 					<!-- Menu desktop -->
 					<div class="menu-desktop">
 						<ul class="main-menu">
 							<li>
-								<a href="{{route('asociaciones.index')}}">Asociaciones</a>
+								<a href="{{route('asociaciones')}}">Asociaciones</a>
 							</li>
-							{{-- <li class="active-menu">
-								<a href="index.html">Asociaciones</a>
-								<ul class="sub-menu"> ---Ctrl k + Ctrl C
-									<li><a href="index.html">Asociaciones 1</a></li>
-									<li><a href="home-02.html">Asociaciones 2</a></li>
-									<li><a href="home-03.html">Asociaciones 3</a></li>
-								</ul>
-							</li> --}}
 
 							<li>
 								<a href="{{ route('catalogo') }}">Catalogo</a>
@@ -70,14 +61,6 @@
 						<div class="icon-header-item cl2 hov-nuevo trans-04 p-l-22 p-r-11 js-show-modal-search">
 							<i class="zmdi zmdi-search"></i>
 						</div>
-
-						{{-- <div class="icon-header-item cl2 hov-cl1 trans-04 p-l-22 p-r-11 icon-header-noti js-show-cart" data-notify="2">
-							<i class="zmdi zmdi-shopping-cart"></i>
-						</div> --}}
-
-                        {{-- <a href="#" class="dis-block icon-header-item cl2 hov-cl1 trans-04 p-l-22 p-r-11">
-                            <i class="fas fa-user"></i>
-                        </a>   --}}
                         
                         @if (Route::has('login'))
 							<ul class="main-menu">
@@ -129,14 +112,6 @@
 					<i class="zmdi zmdi-search"></i>
 				</div>
 
-				{{-- <div class="icon-header-item cl2 hov-cl1 trans-04 p-r-11 p-l-10 icon-header-noti js-show-cart" data-notify="2">
-					<i class="zmdi zmdi-shopping-cart"></i>
-				</div>
-
-				<a href="#" class="dis-block icon-header-item cl2 hov-cl1 trans-04 p-r-11 p-l-10 icon-header-noti" data-notify="0">
-					<i class="zmdi zmdi-favorite-outline"></i>
-				</a> --}}
-
                 @if (Route::has('login'))
                     @auth
                         <a class="dis-block cl2 hov-nuevo trans-04 p-r-11 p-l-10">{{ explode(' ', Auth::user()->name)[0] }}</a>
@@ -185,27 +160,19 @@
                     @endauth
                 @endif
 				<li>
-					<a href="{{ route('asociaciones.index') }}">Asociaciones</a>
-					{{-- <ul class="sub-menu-m">
-						<li><a href="index.html">Homepage 1</a></li>
-						<li><a href="home-02.html">Homepage 2</a></li>
-						<li><a href="home-03.html">Homepage 3</a></li>
-					</ul> --}}
-					{{-- <span class="arrow-main-menu-m">
-						<i class="fa fa-angle-right" aria-hidden="true"></i>
-					</span> --}}
+					<a href="{{route('asociaciones')}}">Asociaciones</a>
 				</li>
 
 				<li>
-					<a href="product.html">Catalogo</a>
+					<a href="{{ route('catalogo') }}">Catalogo</a>
 				</li>
 
 				<li>
-					<a href="shoping-cart.html" class="label1 rs1">Nosotros</a>
+					<a href="{{ route('nosotros')}}">Nosotros</a>
 				</li>
-
+				
 				<li>
-					<a href="contact.html">Contactos</a>
+					<a href="{{route('contactanos')}}">Contactos</a>
 				</li>
 			</ul>
 		</div>
@@ -273,7 +240,7 @@
 							</div>
 								
 							<div class="layer-slick1 animated visible-false" data-appear="slideInUp" data-delay="1600">
-								<a href="{{route('asociaciones.index')}}" class="flex-c-m stext-101 cl0 size-101 cambio-home bor1 hov-btn1 p-lr-15 trans-04">
+								<a href="{{route('asociaciones')}}" class="flex-c-m stext-101 cl0 size-101 cambio-home bor1 hov-btn1 p-lr-15 trans-04">
 									Descubrelo
 								</a>
 							</div>
@@ -323,7 +290,7 @@
 					<div class="block1 wrap-pic-w">
 						<img src="images/banner-01.jpg" alt="IMG-BANNER">
 
-						<a href="{{route('asociaciones.index')}}" class="block1-txt ab-t-l s-full flex-col-l-sb p-lr-38 p-tb-34 trans-03 respon3">
+						<a href="{{route('asociaciones')}}" class="block1-txt ab-t-l s-full flex-col-l-sb p-lr-38 p-tb-34 trans-03 respon3">
 							<div class="block1-txt-child1 flex-col-l">
 								<span class="block1-name ltext-102 trans-04 p-b-8">
 									Asociacion
