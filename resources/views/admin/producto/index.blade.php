@@ -30,7 +30,7 @@
                         <th>Colores</th>
                         <th>Precio</th>
                         <th>Stock</th>
-                        <th>User_id</th>
+                        <th>Artesano</th>
                         <th colspan="2"></th>
 
                     </tr>

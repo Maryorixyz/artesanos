@@ -9,6 +9,13 @@ use App\Models\Producto;
 
 class ProductoController extends Controller
 {
+    public function __construct()
+    {
+        $this->middleware('can:admin.producto.index')->only('index');
+        $this->middleware('can:admin.producto.create')->only('create', 'store');
+        $this->middleware('can:admin.producto.edit')->only('edit','update');
+        $this->middleware('can:admin.producto.destroy')->only('destroy');
+    }
     /**
      * Display a listing of the resource.
      *
@@ -52,7 +59,7 @@ class ProductoController extends Controller
         $request->offsetSet('user_id', auth()->user()->id);
         $productos = Producto::create($request->all()) ;
 
-        return redirect()->route('admin.producto.edit', $productos)->with('info', 'el producto se creo con exito');
+        return redirect()->route('admin.producto.index', $productos)->with('info', 'el producto se creo con exito');
     }
 
     /**
