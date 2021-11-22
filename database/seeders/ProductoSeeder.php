@@ -934,14 +934,5 @@ class ProductoSeeder extends Seeder
             'url' => 'productos/WhatsApp Image 2021-09-27 at 8.06.40 AM (2).jpg'
         ]);
 
-        $producto=Producto::create([
-            'nombre' => 'Botaszzzzzzzzzzz',
-            'descripcion' => 'Hecho de terciopelo, carton prensado, hilos bañados en oro, piedras, lentejuelas, mostacilla y grecas',
-            'medidas' => 'Grande',
-            'precio' => 350,
-            'stock' => 10,
-            'colores' => 'Variado',
-            'user_id' => 10
-        ]);
     }
 }

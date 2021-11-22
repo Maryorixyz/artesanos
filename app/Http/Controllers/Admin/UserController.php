@@ -10,6 +10,14 @@ use Spatie\Permission\Models\Role;
 
 class UserController extends Controller
 {
+    public function __construct()
+    {
+        $this->middleware('can:admin.users.index')->only('index');
+        $this->middleware('can:admin.users.create')->only('create', 'store');
+        $this->middleware('can:admin.users.edit')->only('edit','update');
+        $this->middleware('can:admin.users.destroy')->only('destroy');
+    }
+
     /**
      * Display a listing of the resource.
      *
@@ -48,7 +56,7 @@ class UserController extends Controller
 
         
         $user = User::create($request->all());
-        return redirect()->route('admin.users.index');
+        return redirect()->route('admin.users.index', $user)->with('info', 'Se creo un artesano correctamente');
     }
 
     /**
@@ -114,6 +122,7 @@ class UserController extends Controller
      */
     public function destroy(User $user)
     {
-        //
+        $user->delete();
+        return redirect()->route('admin.users.index');
     }
 }
