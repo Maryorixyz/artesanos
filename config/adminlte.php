@@ -260,7 +260,14 @@ return [
             'text' => 'Lista de Productos',
             'route'  => 'admin.producto.index',
             'icon' => 'fas fa-box',
-            'can' => 'admin.producto.index'
+            'can' => 'admin.producto.index',
+        ],
+
+        [
+            'text' => 'Lista de Categorias',
+            'route'  => 'admin.categorias.index',
+            'icon' => 'fab fa-fw fa-buffer',
+            //'can' => 'admin.categorias.index'
         ],
 
         ['header' => 'ASOCIACIONES'],
