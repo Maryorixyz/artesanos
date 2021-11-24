@@ -34,3 +34,10 @@
   font-size: 17px;
   color: #333;
 }
+
+.wrap-pic-w img{
+  max-height: 350px;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+

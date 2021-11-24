@@ -11,12 +11,16 @@ const mix = require('laravel-mix');
  |
  */
 
-mix.js('resources/js/index.js', 'public/js')
+mix.js('resources/js/vendor.js', 'public/js')
     .css('resources/css/vendor.css', 'public/css')
 
+    .js('resources/js/index.js', 'public/js')
     .css('resources/css/index.css', 'public/css')
 
+    .js('resources/js/asociaciones.js', 'public/js')
+    .css('resources/css/asociaciones.css', 'public/css')
 
+    .js('resources/js/catalogo.js', 'public/js')
     .css('resources/css/catalogo.css', 'public/css')
 
     .css('resources/css/nosotros.css', 'public/css')

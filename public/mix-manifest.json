@@ -1,10 +1,14 @@
 {
+    "/js/vendor.js": "/js/vendor.js",
     "/js/index.js": "/js/index.js",
+    "/js/asociaciones.js": "/js/asociaciones.js",
+    "/js/catalogo.js": "/js/catalogo.js",
     "/js/app.js": "/js/app.js",
     "/css/vendor.css": "/css/vendor.css",
     "/css/app.css": "/css/app.css",
-    "/css/nosotros.css": "/css/nosotros.css",
     "/css/catalogo.css": "/css/catalogo.css",
+    "/css/asociaciones.css": "/css/asociaciones.css",
     "/css/index.css": "/css/index.css",
-    "/css/contactanos.css": "/css/contactanos.css"
+    "/css/contactanos.css": "/css/contactanos.css",
+    "/css/nosotros.css": "/css/nosotros.css"
 }
