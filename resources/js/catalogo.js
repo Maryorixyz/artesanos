@@ -201,10 +201,30 @@
         });
     });
 
+    /*=================================================================
 
+    /*------------------buscador--------------------------- */
+    $('#buscar-productos').on('keyup',function(){
+            var buscar = this.value;
+            let filterValue =  function(buscar) {
+                var name = $(this).find('.producto-nombre').text();
+                var expresion = new RegExp(buscar, 'i');
+                console.log(this)
+                return name.match(expresion);
+              }
 
+           $topeContainer.isotope({ filter: filterValue });
 
-    /*==================================================================
+    });
+
+    function valorRegExp(dato){
+        var name = $(this).find('.producto-nombre').text();
+        var expresion = new RegExp(dato, 'i');
+        console.log(this)
+        return name.match(expresion);
+    }
+    /*-----------------------------------------------------------------
+
     [ Filter / Search product ]*/
     $('.js-show-filter').on('click',function(){
         $(this).toggleClass('show-filter');
@@ -460,5 +480,7 @@
         http.send();
     
     }
+
+
 
 })(jQuery);

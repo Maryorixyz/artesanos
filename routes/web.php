@@ -26,7 +26,7 @@ Route::view('/nosotros', 'nosotros')->name('nosotros');
 
 Route::view('/contactanos', 'contactanos')->name('contactanos');
 
-Route::view('/asociaciones', 'asociaciones')->name('asociaciones');
+Route::get('/asociaciones', App\Http\Controllers\Invitado\AsociacionController::class)->name('asociaciones');
 
 Route::get('asociaciones/create', [App\Http\Controllers\AsociacionController::class,'create'])
         ->name('asociaciones.create');
