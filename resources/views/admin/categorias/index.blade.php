@@ -3,6 +3,11 @@
 @section('title', 'Dashboard')
 
 @section('content_header')
+
+    @can('admin.categorias.create')
+        <a class="btn btn-secondary btn-sm float-right" href="{{route('admin.categorias.create')}}">Agregar Categoria</a>
+    @endcan
+
     <h1>Lista de Categorias</h1>
 @stop
 
@@ -13,9 +18,7 @@
         </div>
     @endif
         <div class="card">
-            <div class="card-header">
-                <a class="btn btn-secondary" href="{{route('admin.categorias.create')}}">Agregar Categoria</a>
-            </div>
+            
             <div class="card-body">
                 <table class="table table-striped">
                     <thead>
@@ -32,15 +35,19 @@
                                 <td>{{$categoria->id}}</td>
                                 <td>{{$categoria->descripcion}}</td>
                                 <td width="10px">
-                                    <a class="btn btn-primary btn-sm" href="{{route('admin.categorias.edit', $categoria)}}">Editar</a>
+                                    @can('admin.categorias.edit')
+                                        <a class="btn btn-primary btn-sm" href="{{route('admin.categorias.edit', $categoria)}}">Editar</a>
+                                    @endcan
                                 </td>
                                 <td width="10px">
-                                    <form action="{{route('admin.categorias.destroy', $categoria)}}" method="POST">
-                                        @csrf
-                                        @method('delete')
+                                    @can('admin.categorias.destroy', )
+                                        <form action="{{route('admin.categorias.destroy', $categoria)}}" method="POST">
+                                            @csrf
+                                            @method('delete')
 
-                                        <button type="submit" class="btn btn-danger btn-sm">Eliminar</button>
-                                    </form>
+                                            <button type="submit" class="btn btn-danger btn-sm">Eliminar</button>
+                                        </form>  
+                                    @endcan
                                 </td>
                             </tr>
                         @endforeach

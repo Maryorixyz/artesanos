@@ -267,7 +267,7 @@ return [
             'text' => 'Lista de Categorias',
             'route'  => 'admin.categorias.index',
             'icon' => 'fab fa-fw fa-buffer',
-            //'can' => 'admin.categorias.index'
+            'can' => 'admin.categorias.index'
         ],
 
         ['header' => 'ASOCIACIONES'],
