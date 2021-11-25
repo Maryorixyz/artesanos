@@ -82,6 +82,36 @@ class UserSeeder extends Seeder
             'email' => 'prueba@gmail.com',
             'password' => Hash::make('123456789'),
         ])->syncRoles(['Admin']);
+        
+        User::create([
+            'name' => 'Erlandez Ortiz Santacruz',
+            'email' => 'artesano2@gmail.com',
+            'password' => Hash::make('artesano2'),
+        ])->syncRoles(['Artesano']);
 
+        User::create([
+            'name' => 'Jerson Emer Duran Vara',
+            'email' => 'artesano25@gmail.com',
+            'password' => Hash::make('artesano25'),
+        ])->syncRoles(['Artesano']);
+
+        User::create([
+            'name' => 'Gianina Vanesa Ayala Rosales',
+            'email' => 'artesano5@gmail.com',
+            'password' => Hash::make('artesano5'),
+        ])->syncRoles(['Artesano']);
+
+        User::create([
+            'name' => 'Clérigos Ventura Casimiro',
+            'email' => 'artesano1@gmail.com',
+            'password' => Hash::make('artesano1'),
+        ])->syncRoles(['Artesano']);
+
+        User::create([
+            'name' => 'Miguel Ángel Vilca Ramírez',
+            'email' => 'artesano16@gmail.com',
+            'password' => Hash::make('artesano16'),
+        ])->syncRoles(['Artesano']);
+        
     }
 }

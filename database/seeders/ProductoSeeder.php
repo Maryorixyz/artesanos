@@ -934,5 +934,552 @@ class ProductoSeeder extends Seeder
             'url' => 'productos/WhatsApp Image 2021-09-27 at 8.06.40 AM (2).jpg'
         ]);
 
+        $producto=Producto::create([
+            'nombre' => 'Matracas',
+            'descripcion' => 'Hecho de madera barnizado',
+            'medidas' => 'Pequeño',
+            'precio' => 35,
+            'stock' => 10,
+            'colores' => 'Variado',
+            'user_id' => 12
+        ]);
+
+        $producto->imagenes()->create([
+            'url' => 'productos/WhatsApp Image 2021-09-21 at 8.40.00 PM (1).jpg'
+        ]);
+
+        $producto=Producto::create([
+            'nombre' => 'Mascara de Negritos',
+            'descripcion' => 'Hecho de cuerina enfranelado, enperlado de vidrio, nariz y ojos de madera',
+            'medidas' => 'Grande',
+            'precio' => 150,
+            'stock' => 10,
+            'colores' => 'Rojo o Azul',
+            'user_id' => 12
+        ]);
+
+        $producto->imagenes()->create([
+            'url' => 'productos/WhatsApp Image 2021-09-21 at 8.40.01 PM (1).jpg'
+        ]);
+
+        $producto->imagenes()->create([
+            'url' => 'productos/WhatsApp Image 2021-09-21 at 8.40.01 PM (2).jpg'
+        ]);
+
+        $producto=Producto::create([
+            'nombre' => 'Mascara de Corochano',
+            'descripcion' => 'Hecho de cuerina enfranelado, enperlado de vidrio, barba de cola de toro, nariz y ojos de madera',
+            'medidas' => 'Grande',
+            'precio' => 200,
+            'stock' => 10,
+            'colores' => 'Unico',
+            'user_id' => 12
+        ]);
+
+        $producto->imagenes()->create([
+            'url' => 'productos/WhatsApp Image 2021-09-21 at 8.40.02 PM.jpg'
+        ]);
+
+        $producto=Producto::create([
+            'nombre' => 'Muñeco',
+            'descripcion' => 'Hecho de alambre, relleno de esponja, tela, perlas y grecas',
+            'medidas' => 'Pequeño y Grande',
+            'precio' => 25,
+            'stock' => 10,
+            'colores' => 'Variado',
+            'user_id' => 12
+        ]);
+
+        $producto->imagenes()->create([
+            'url' => 'productos/WhatsApp Image 2021-09-21 at 8.40.03 PM (2).jpg'
+        ]);
+
+        $producto->imagenes()->create([
+            'url' => 'productos/WhatsApp Image 2021-09-21 at 8.40.00 PM.jpg'
+        ]);
+
+        $producto->imagenes()->create([
+            'url' => 'productos/WhatsApp Image 2021-09-21 at 8.40.04 PM.jpg'
+        ]);
+
+        $producto->imagenes()->create([
+            'url' => 'productos/WhatsApp Image 2021-09-21 at 8.40.02 PM (1).jpg'
+        ]);
+
+        $producto=Producto::create([
+            'nombre' => 'Mascarilla',
+            'descripcion' => 'Hecho de tela drill, tres capas, notex y diseño de maquina coputalizada',
+            'medidas' => 'Pequeño y Grande',
+            'precio' => 10,
+            'stock' => 10,
+            'colores' => 'Blanco, rojo, negro y morado',
+            'user_id' => 12
+        ]);
+
+        $producto->imagenes()->create([
+            'url' => 'productos/WhatsApp Image 2021-09-21 at 8.40.03 PM (4).jpg'
+        ]);
+
+        $producto=Producto::create([
+            'nombre' => 'Fajas',
+            'descripcion' => 'Hecho de terciopelo, hilos metalicos y perlas',
+            'medidas' => 'Pequeño y Grande',
+            'precio' => 150,
+            'stock' => 10,
+            'colores' => 'Variado',
+            'user_id' => 12
+        ]);
+
+        $producto->imagenes()->create([
+            'url' => 'productos/WhatsApp Image 2021-09-21 at 8.40.04 PM (1).jpg'
+        ]);
+
+        $producto->imagenes()->create([
+            'url' => 'productos/WhatsApp Image 2021-09-21 at 8.40.05 PM.jpg'
+        ]);
+
+        $producto=Producto::create([
+            'nombre' => 'Mascara Negrito',
+            'descripcion' => 'Hecho de biocuero y perlas doradas',
+            'medidas' => 'Pequeño y Grande',
+            'precio' => 120,
+            'stock' => 10,
+            'colores' => 'Unico',
+            'user_id' => 13
+        ]);
+
+        $producto->imagenes()->create([
+            'url' => 'productos/WhatsApp Image 2021-09-21 at 8.51.38 PM (1).jpg'
+        ]);
+
+        $producto=Producto::create([
+            'nombre' => 'Pañuelos',
+            'descripcion' => 'Hecho de corrospun, hilo de bordar y grecas',
+            'medidas' => 'Pequeño y Grande',
+            'precio' => 15,
+            'stock' => 10,
+            'colores' => 'Variado',
+            'user_id' => 13
+        ]);
+
+        $producto->imagenes()->create([
+            'url' => 'productos/WhatsApp Image 2021-09-21 at 8.51.38 PM.jpg'
+        ]);
+
+        $producto=Producto::create([
+            'nombre' => 'Botas',
+            'descripcion' => 'Hecho de terciopelo, hilo de bordar y biocuero',
+            'medidas' => 'Pequeño y Grande',
+            'precio' => 250,
+            'stock' => 10,
+            'colores' => 'Variado',
+            'user_id' => 13
+        ]);
+
+        $producto->imagenes()->create([
+            'url' => 'productos/WhatsApp Image 2021-09-21 at 8.51.39 PM.jpg'
+        ]);
+
+        $producto=Producto::create([
+            'nombre' => 'Mascara de Negritos',
+            'descripcion' => 'Hecho de biocuero y perlas doradas',
+            'medidas' => 'Pequeño y Grande',
+            'precio' => 80,
+            'stock' => 10,
+            'colores' => 'Variado',
+            'user_id' => 14
+        ]);
+
+        $producto->imagenes()->create([
+            'url' => 'productos/WhatsApp Image 2021-09-21 at 8.48.25 PM (2).jpg'
+        ]);
+
+        $producto=Producto::create([
+            'nombre' => 'Cotones',
+            'descripcion' => 'Hecho de tela terciopelo, perlas, piedras brillantes y lentejuelas',
+            'medidas' => 'Pequeño y Grande',
+            'precio' => 1500,
+            'stock' => 10,
+            'colores' => 'Variado',
+            'user_id' => 14
+        ]);
+
+        $producto->imagenes()->create([
+            'url' => 'productos/WhatsApp Image 2021-09-21 at 8.48.25 PM (1).jpg'
+        ]);
+
+        $producto->imagenes()->create([
+            'url' => 'productos/WhatsApp Image 2021-09-21 at 8.48.25 PM.jpg'
+        ]);
+
+        $producto->imagenes()->create([
+            'url' => 'productos/WhatsApp Image 2021-09-21 at 8.48.26 PM.jpg'
+        ]);
+
+        $producto->imagenes()->create([
+            'url' => 'productos/WhatsApp Image 2021-09-21 at 8.48.27 PM (1).jpg'
+        ]);
+
+        $producto=Producto::create([
+            'nombre' => 'Matraca',
+            'descripcion' => 'Hecho de madera y pintada',
+            'medidas' => 'Pequeño y Grande',
+            'precio' => 25,
+            'stock' => 10,
+            'colores' => 'Variado',
+            'user_id' => 14
+        ]);
+
+        $producto->imagenes()->create([
+            'url' => 'productos/WhatsApp Image 2021-09-21 at 8.48.25 PM (3).jpg'
+        ]);
+        
+        $producto=Producto::create([
+            'nombre' => 'Mascarilla de Corochano',
+            'descripcion' => 'Hecho de tela, nariz de madera, barba tela peluche o pelo de chivo, perlas, mostacilla y forrado polipima',
+            'medidas' => 'Pequeño y Grande',
+            'precio' => 25,
+            'stock' => 10,
+            'colores' => 'Blanco',
+            'user_id' => 15
+        ]);
+
+        $producto->imagenes()->create([
+            'url' => 'productos/WhatsApp Image 2021-09-21 at 8.29.09 PM.jpg'
+        ]);
+
+        $producto->imagenes()->create([
+            'url' => 'productos/WhatsApp Image 2021-09-21 at 8.29.09 PM (1).jpg'
+        ]);
+
+        $producto->imagenes()->create([
+            'url' => 'productos/WhatsApp Image 2021-09-21 at 8.29.09 PM (2).jpg'
+        ]);
+
+        $producto=Producto::create([
+            'nombre' => 'Mascarilla de Negritos',
+            'descripcion' => 'Hecho de tela, nariz de madera, barba tela peluche o pelo de chivo, perlas, mostacilla y forrado polipima',
+            'medidas' => 'Pequeño y Grande',
+            'precio' => 25,
+            'stock' => 10,
+            'colores' => 'Negro',
+            'user_id' => 15
+        ]);
+
+        $producto->imagenes()->create([
+            'url' => 'productos/WhatsApp Image 2021-09-21 at 8.29.10 PM.jpg'
+        ]);
+
+        $producto->imagenes()->create([
+            'url' => 'productos/WhatsApp Image 2021-09-21 at 8.29.09 PM (4).jpg'
+        ]);
+
+        $producto->imagenes()->create([
+            'url' => 'productos/WhatsApp Image 2021-09-21 at 8.29.10 PM (1).jpg'
+        ]);
+
+        $producto->imagenes()->create([
+            'url' => 'productos/WhatsApp Image 2021-09-21 at 8.29.10 PM (5).jpg'
+        ]);
+
+        $producto=Producto::create([
+            'nombre' => 'Gorras',
+            'descripcion' => 'Hecho de tela drill, bordado en maquina computalizadacon hilos de colores',
+            'medidas' => 'Pequeño y Grande',
+            'precio' => 20,
+            'stock' => 10,
+            'colores' => 'Blanco, Negro, Rosado Bebe, azulino, azul presidencial y verde Jade',
+            'user_id' => 15
+        ]);
+
+        $producto->imagenes()->create([
+            'url' => 'productos/WhatsApp Image 2021-09-21 at 8.29.11 PM (3).jpg'
+        ]);
+
+        $producto->imagenes()->create([
+            'url' => 'productos/WhatsApp Image 2021-09-21 at 8.29.10 PM (2).jpg'
+        ]);
+
+        $producto->imagenes()->create([
+            'url' => 'productos/WhatsApp Image 2021-09-21 at 8.29.11 PM.jpg'
+        ]);
+
+        $producto->imagenes()->create([
+            'url' => 'productos/WhatsApp Image 2021-09-21 at 8.29.10 PM (4).jpg'
+        ]);
+
+        $producto=Producto::create([
+            'nombre' => 'Mascara de Corochano',
+            'descripcion' => 'Hecho de adornos con perlas, barba de cola de ganado, nariz y ojos de madera ',
+            'medidas' => 'Pequeño y Grande',
+            'precio' => 150,
+            'stock' => 10,
+            'colores' => 'Unico',
+            'user_id' => 15
+        ]);
+
+        $producto->imagenes()->create([
+            'url' => 'productos/WhatsApp Image 2021-09-21 at 8.29.12 PM (2).jpg'
+        ]);
+
+        $producto->imagenes()->create([
+            'url' => 'productos/WhatsApp Image 2021-09-21 at 8.29.12 PM (3).jpg'
+        ]);
+
+        $producto->imagenes()->create([
+            'url' => 'productos/WhatsApp Image 2021-09-21 at 8.29.13 PM.jpg'
+        ]);
+
+        $producto->imagenes()->create([
+            'url' => 'productos/WhatsApp Image 2021-09-21 at 8.29.12 PM (4).jpg'
+        ]);
+
+        $producto=Producto::create([
+            'nombre' => 'Mascara de Negritos',
+            'descripcion' => 'Hecho de adornos con perlas, nariz y ojos de madera ',
+            'medidas' => 'Pequeño y Grande',
+            'precio' => 150,
+            'stock' => 10,
+            'colores' => 'Unico',
+            'user_id' => 15
+        ]);
+
+        $producto->imagenes()->create([
+            'url' => 'productos/WhatsApp Image 2021-09-21 at 8.29.13 PM (1).jpg'
+        ]);
+
+        $producto->imagenes()->create([
+            'url' => 'productos/WhatsApp Image 2021-09-21 at 8.29.13 PM (2).jpg'
+        ]);
+
+        $producto->imagenes()->create([
+            'url' => 'productos/WhatsApp Image 2021-09-21 at 8.29.14 PM.jpg'
+        ]);
+
+        $producto->imagenes()->create([
+            'url' => 'productos/WhatsApp Image 2021-09-21 at 8.29.12 PM (4).jpg'
+        ]);
+
+        $producto=Producto::create([
+            'nombre' => 'Matracas',
+            'descripcion' => 'Hecho de madera, esmalte y barnizado',
+            'medidas' => 'Pequeño, Mediano y Grande',
+            'precio' => 35,
+            'stock' => 10,
+            'colores' => 'Variado',
+            'user_id' => 15
+        ]);
+
+        $producto->imagenes()->create([
+            'url' => 'productos/WhatsApp Image 2021-09-21 at 8.29.14 PM (3).jpg'
+        ]);
+
+        $producto->imagenes()->create([
+            'url' => 'productos/WhatsApp Image 2021-09-21 at 8.29.15 PM (1).jpg'
+        ]);
+
+        $producto->imagenes()->create([
+            'url' => 'productos/WhatsApp Image 2021-09-21 at 8.29.15 PM.jpg'
+        ]);
+
+        $producto->imagenes()->create([
+            'url' => 'productos/WhatsApp Image 2021-09-21 at 8.30.17 PM.jpg'
+        ]);
+
+        $producto=Producto::create([
+            'nombre' => 'Botas',
+            'descripcion' => 'Hecho de mTela terciopelo, hilo dorado, adornado con perlas, mostacilla y lentejuelas',
+            'medidas' => 'Pequeño y Grande',
+            'precio' => 300,
+            'stock' => 10,
+            'colores' => 'Variado',
+            'user_id' => 15
+        ]);
+
+        $producto->imagenes()->create([
+            'url' => 'productos/WhatsApp Image 2021-09-21 at 8.35.56 PM (1).jpg'
+        ]);
+
+        $producto=Producto::create([
+            'nombre' => 'Ceramicas Corochano y Negritos',
+            'descripcion' => 'Hecho de ceramica al frio o en horno y pintura acrilica',
+            'medidas' => 'Pequeño',
+            'precio' => 15,
+            'stock' => 10,
+            'colores' => 'Unicos',
+            'user_id' => 16
+        ]);
+
+        $producto->imagenes()->create([
+            'url' => 'productos/WhatsApp Image 2021-09-23 at 10.00.34 PM.jpg'
+        ]);
+
+        $producto=Producto::create([
+            'nombre' => 'Recordatorio',
+            'descripcion' => 'Hecho de materiales MDF con hornos y con lacer',
+            'medidas' => 'Pequeño',
+            'precio' => 18,
+            'stock' => 10,
+            'colores' => 'Unico',
+            'user_id' => 16
+        ]);
+
+        $producto->imagenes()->create([
+            'url' => 'productos/WhatsApp Image 2021-09-23 at 10.00.37 PM (3).jpg'
+        ]);
+
+        $producto->imagenes()->create([
+            'url' => 'productos/WhatsApp Image 2021-09-23 at 10.00.38 PM.jpg'
+        ]);
+
+        $producto->imagenes()->create([
+            'url' => 'productos/WhatsApp Image 2021-09-23 at 10.00.38 PM (1).jpg'
+        ]);
+
+        $producto=Producto::create([
+            'nombre' => 'Florero',
+            'descripcion' => 'Hecho de materiales MDF con hornos y con lacer',
+            'medidas' => 'Pequeño',
+            'precio' => 5,
+            'stock' => 10,
+            'colores' => 'Unico',
+            'user_id' => 16
+        ]);
+
+        $producto->imagenes()->create([
+            'url' => 'productos/WhatsApp Image 2021-09-23 at 10.00.37 PM (2).jpg'
+        ]);
+
+        $producto=Producto::create([
+            'nombre' => 'Cajitas',
+            'descripcion' => 'Hecho de materiales MDF con hornos y con lacer',
+            'medidas' => 'Pequeño',
+            'precio' => 5,
+            'stock' => 10,
+            'colores' => 'Unico',
+            'user_id' => 16
+        ]);
+
+        $producto->imagenes()->create([
+            'url' => 'productos/WhatsApp Image 2021-09-23 at 10.00.35 PM (2).jpg'
+        ]);
+
+        $producto->imagenes()->create([
+            'url' => 'productos/WhatsApp Image 2021-09-23 at 10.00.35 PM (1).jpg'
+        ]);
+
+        $producto->imagenes()->create([
+            'url' => 'productos/WhatsApp Image 2021-09-23 at 10.00.35 PM.jpg'
+        ]);
+
+        $producto->imagenes()->create([
+            'url' => 'productos/WhatsApp Image 2021-09-23 at 10.00.37 PM.jpg'
+        ]);
+
+        $producto=Producto::create([
+            'nombre' => 'Caja de Paneton',
+            'descripcion' => 'Hecho de materiales MDF con hornos y con lacer',
+            'medidas' => 'Mediano',
+            'precio' => 15,
+            'stock' => 10,
+            'colores' => 'Unico',
+            'user_id' => 16
+        ]);
+
+        $producto->imagenes()->create([
+            'url' => 'productos/WhatsApp Image 2021-09-23 at 10.00.39 PM (2).jpg'
+        ]);
+
+        $producto->imagenes()->create([
+            'url' => 'productos/WhatsApp Image 2021-09-23 at 10.00.38 PM (3).jpg'
+        ]);
+
+        $producto->imagenes()->create([
+            'url' => 'productos/WhatsApp Image 2021-09-23 at 10.00.40 PM.jpg'
+        ]);
+
+        $producto->imagenes()->create([
+            'url' => 'productos/WhatsApp Image 2021-09-23 at 10.00.39 PM (1).jpg'
+        ]);
+
+        $producto=Producto::create([
+            'nombre' => 'Porta Vinos',
+            'descripcion' => 'Hecho de materiales MDF con hornos y con lacer',
+            'medidas' => 'Mediano',
+            'precio' => 7,
+            'stock' => 10,
+            'colores' => 'Unico',
+            'user_id' => 16
+        ]);
+
+        $producto->imagenes()->create([
+            'url' => 'productos/WhatsApp Image 2021-09-23 at 10.00.40 PM (3).jpg'
+        ]);
+
+        $producto->imagenes()->create([
+            'url' => 'productos/WhatsApp Image 2021-09-23 at 10.01.37 PM (3).jpg'
+        ]);
+
+        $producto->imagenes()->create([
+            'url' => 'productos/WhatsApp Image 2021-09-23 at 10.01.37 PM (4).jpg'
+        ]);
+
+        $producto=Producto::create([
+            'nombre' => 'Caja para Cerveza',
+            'descripcion' => 'Hecho de materiales MDF con hornos y con lacer',
+            'medidas' => 'Mediano',
+            'precio' => 15,
+            'stock' => 10,
+            'colores' => 'Unico',
+            'user_id' => 16
+        ]);
+
+        $producto->imagenes()->create([
+            'url' => 'productos/WhatsApp Image 2021-09-23 at 10.00.41 PM.jpg'
+        ]);
+
+        $producto->imagenes()->create([
+            'url' => 'productos/WhatsApp Image 2021-09-23 at 10.01.37 PM (2).jpg'
+        ]);
+
+        $producto->imagenes()->create([
+            'url' => 'productos/WhatsApp Image 2021-09-23 at 10.01.37 PM (1).jpg'
+        ]);
+
+        $producto=Producto::create([
+            'nombre' => 'Trapecista',
+            'descripcion' => 'Hecho de materiales MDF con hornos y con lacer',
+            'medidas' => 'Chico',
+            'precio' => 10,
+            'stock' => 10,
+            'colores' => 'Unico',
+            'user_id' => 16
+        ]);
+
+        $producto->imagenes()->create([
+            'url' => 'productos/WhatsApp Image 2021-09-23 at 10.01.39 PM (1).jpg'
+        ]);
+
+        $producto->imagenes()->create([
+            'url' => 'productos/WhatsApp Image 2021-09-23 at 10.01.39 PM.jpg'
+        ]);
+
+        $producto->imagenes()->create([
+            'url' => 'productos/WhatsApp Image 2021-09-23 at 10.01.38 PM (2).jpg'
+        ]);
+
+        $producto=Producto::create([
+            'nombre' => 'Botas',
+            'descripcion' => 'Hecho de tela terciopelo, hilo dorado, piedras brillantes y perlas',
+            'medidas' => 'Chico',
+            'precio' => 350,
+            'stock' => 10,
+            'colores' => 'Variado',
+            'user_id' => 16
+        ]);
+
+        $producto->imagenes()->create([
+            'url' => 'productos/WhatsApp Image 2021-09-23 at 10.01.41 PM.jpg'
+        ]);
     }
 }
