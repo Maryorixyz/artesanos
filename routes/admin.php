@@ -9,7 +9,7 @@ use App\Http\Controllers\Admin\UserController;
 use App\Http\Controllers\Admin\CategoriaController;
 
 Route::get('/', [App\Http\Controllers\Admin\HomeController::class, 'index'])->middleware('can:admin.inicio')->name('admin.inicio');
-Route::resource('Asociacion', AsociacionController::class)->names('admin.asociacion');
+Route::resource('asociacion', AsociacionController::class)->names('admin.asociacion');
 Route::resource('producto', ProductoController::class)->names('admin.producto');
 Route::resource('categorias', CategoriaController::class)->names('admin.categorias');
 

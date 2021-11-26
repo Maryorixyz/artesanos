@@ -5,6 +5,8 @@ namespace App\Http\Controllers\Admin;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 
+use App\Models\Asociacion;
+
 class AsociacionController extends Controller
 {
     /**
@@ -14,7 +16,8 @@ class AsociacionController extends Controller
      */
     public function index()
     {
-        //
+        $asociaciones = Asociacion::all();
+        return view('admin.asociacion.index', compact('asociaciones'));
     }
 
     /**
@@ -24,7 +27,7 @@ class AsociacionController extends Controller
      */
     public function create()
     {
-        //
+        return view('admin.asociacion.create');
     }
 
     /**
@@ -34,8 +37,14 @@ class AsociacionController extends Controller
      * @return \Illuminate\Http\Response
      */
     public function store(Request $request)
-    {
-        //
+    {   
+        $request->validate([
+            'nombre' => 'required',
+            'descripcion' => 'required'
+
+        ]);
+        $asociacion = Asociacion::create( $request->all());
+        return redirect()->route('admin.asociacion.edit', $asociacion)->with('info', 'La Asociación se creo con exito');
     }
 
     /**
@@ -44,9 +53,9 @@ class AsociacionController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show($asociacion)
+    public function show(Asociacion $asociacion)
     {
-        //
+        return view('admin.asociacion.show', compact('asociacion'));
     }
 
     /**
@@ -55,9 +64,9 @@ class AsociacionController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function edit($asociacion)
+    public function edit(Asociacion $asociacion)
     {
-        //
+        return view('admin.asociacion.edit', compact('asociacion'));
     }
 
     /**
@@ -67,9 +76,16 @@ class AsociacionController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $asociacion)
+    public function update(Request $request, Asociacion $asociacion)
     {
-        //
+        $request->validate([
+            'nombre' => 'required',
+            'descripcion' => 'required'
+
+        ]);
+
+        $asociacion->update($request->all());
+        return redirect()->route('admin.asociacion.edit', $asociacion)->with('info', 'La Asociación se actualizo con exito');
     }
 
     /**
@@ -78,8 +94,9 @@ class AsociacionController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function destroy($asociacion)
+    public function destroy(Asociacion $asociacion)
     {
-        //
+        $asociacion->delete();
+        return redirect()->route('admin.asociacion.index')->with('info', 'La Asociación se elimino con exito');
     }
 }

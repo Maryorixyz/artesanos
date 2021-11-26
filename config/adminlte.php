@@ -270,11 +270,12 @@ return [
             'can' => 'admin.categorias.index'
         ],
 
-        ['header' => 'ASOCIACIONES'],
+        ['header' => 'ASOCIACIONES', 'can' => 'admin.asociacion.index'],
         [
             'text' => 'Lista de Asociaciones',
-            'url'  => 'admin/settings',
+            'route'  => 'admin.asociacion.index',
             'icon' => 'fas fa-hands-helping',
+            'can' => 'admin.asociacion.index',
         ],
 
         ['header' => 'USUARIOS', 'can' => 'admin.users.index'],

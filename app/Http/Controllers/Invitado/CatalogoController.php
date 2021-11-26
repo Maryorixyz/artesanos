@@ -16,7 +16,7 @@ class CatalogoController extends Controller
     public function index()
     {
 
-        $productos = Producto::with('categorias')->offset(0)->limit(16)->get(); //Extrae los productos de la bd
+        $productos = Producto::with('categorias')->offset(0)->latest('id')->take(16)->get(); //Extrae los productos de la bd
 
         $categorias = Categoria::withCount('productos')->orderBy('productos_count', 'DESC')->limit(4)->get();
 
