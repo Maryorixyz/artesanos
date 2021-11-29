@@ -179,7 +179,14 @@ var __webpack_exports__ = {};
 
   $('#buscar-productos').on('keyup', function () {
     var buscar = this.value;
-    var filterValue = valorRegExp(buscar);
+
+    var filterValue = function filterValue(buscar) {
+      var name = $(this).find('.producto-nombre').text();
+      var expresion = new RegExp(buscar, 'i');
+      console.log(this);
+      return name.match(expresion);
+    };
+
     $topeContainer.isotope({
       filter: filterValue
     });
