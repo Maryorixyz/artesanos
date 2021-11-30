@@ -172,19 +172,23 @@
 							<div class="block2-txt flex-w flex-t p-t-14">
 								<div class="block2-txt-child1 flex-col-l ">
 									<a href="product-detail.html" class="stext-104 cl4 hov-cl1 trans-04 js-name-b2 p-b-6 producto-nombre">
-										{{ $producto->nombre }} - <b>{{ $producto->user->name }}</b>
+										<img src="{{asset('images/icons/producto-2.png')}}" width="25"> {{ $producto->nombre }}
+									</a>
+
+									<a href="product-detail.html" class="stext-104 cl4 hov-cl1 trans-04 js-name-b2 p-b-6 producto-nombre">
+										<img src="{{asset('images/icons/artesano-hombre.png')}}" width="25"> {{ $producto->user->name }}
 									</a>
 	
 									<span class="precio-producto stext-105 cl3" data-precio="{{ $producto->precio }}">
-										<i>S/. {{ $producto->precio }} </i>
+										<img src="{{asset('images/icons/precio-2.png')}}" width="25"> <i>S/. {{ $producto->precio }} </i>
 									</span>
 								</div>
-								{{-- <div class="block2-txt-child2 flex-r p-t-3">
+								<div class="block2-txt-child2 flex-r p-t-3">
 									<a href="#" class="btn-addwish-b2 dis-block pos-relative js-addwish-b2">
 										<img class="icon-heart1 dis-block trans-04" src="images/icons/icon-heart-01.png" alt="ICON">
 										<img class="icon-heart2 dis-block trans-04 ab-t-l" src="images/icons/icon-heart-02.png" alt="ICON">
 									</a>
-								</div> --}}
+								</div>
 							</div>
 						</div>
 					</div>
