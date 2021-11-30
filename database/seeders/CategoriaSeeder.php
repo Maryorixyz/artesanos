@@ -26,6 +26,7 @@ class CategoriaSeeder extends Seeder
             ['descripcion' => 'Mascaras de Negritos', 'slug' => 'mascaras-de-negritos'],            // 9
             ['descripcion' => 'Mascaras de Corochanos', 'slug' => 'mascaras-de-corochanos'],        // 10
             ['descripcion' => 'Campanas', 'slug' => 'campanas'],                                    // 11
+            ['descripcion' => 'Otros', 'slug' => 'otros'],                                          // 12
         ]);
     }
 }

@@ -29,7 +29,7 @@
 								
 						<!-- Cart -->	
 						<div class="layer-slick1 animated visible-false" data-appear="zoomIn" data-delay="1600">
-								<a href="product.html" class="flex-c-m stext-101 cl0 size-101 cambio-home bor1 hov-btn1 p-lr-15 trans-04">
+								<a href="{{ route('nosotros') }}" class="flex-c-m stext-101 cl0 size-101 cambio-home bor1 hov-btn1 p-lr-15 trans-04">
 									Descubrelo
 								</a>
 							</div>
@@ -54,7 +54,7 @@
 							</div>
 								
 							<div class="layer-slick1 animated visible-false" data-appear="slideInUp" data-delay="1600">
-								<a href="{{route('asociaciones')}}" class="flex-c-m stext-101 cl0 size-101 cambio-home bor1 hov-btn1 p-lr-15 trans-04">
+								<a href="{{ route('asociaciones.index') }}" class="flex-c-m stext-101 cl0 size-101 cambio-home bor1 hov-btn1 p-lr-15 trans-04">
 									Descubrelo
 								</a>
 							</div>
@@ -78,7 +78,7 @@
 							</div>
 								
 							<div class="layer-slick1 animated visible-false" data-appear="rotateIn" data-delay="1600">
-								<a href="product.html" class="flex-c-m stext-101 cl0 size-101 cambio-home bor1 hov-btn1 p-lr-15 trans-04">
+								<a href="{{ route('catalogo') }}" class="flex-c-m stext-101 cl0 size-101 cambio-home bor1 hov-btn1 p-lr-15 trans-04">
 									Descubrelo
 								</a>
 							</div>
@@ -103,7 +103,7 @@
 					<div class="block1 wrap-pic-w">
 						<img src="images/asociacion.jpg" alt="IMG-ASOCIACION">
 
-						<a href="{{route('asociaciones')}}" class="block1-txt ab-t-l s-full flex-col-l-sb p-lr-38 p-tb-34 trans-03 respon3">
+						<a href="{{route('asociaciones.index')}}" class="block1-txt ab-t-l s-full flex-col-l-sb p-lr-38 p-tb-34 trans-03 respon3">
 							<div class="block1-txt-child1 flex-col-l">
 								<span class="block1-name ltext-102 trans-04 p-b-8">
 									Asociacion
@@ -372,7 +372,7 @@
 						<!-- Block2 -->
 						<div class="block2">
 							<div class="block2-pic hov-img0">
-								<img src="/storage/@foreach ($producto->imagenes as $imagen)@if ($loop->first){{ $imagen->url }}@endif @endforeach" alt="{{ $producto->nombre }}">
+								<img src="{{ $producto->imagenes[0]->url }}" alt="{{ $producto->nombre }}">
 
 								<a href="#" class="block2-btn flex-c-m stext-103 cl2 size-102 bg0 bor2 hov-btn1 p-lr-15 trans-04 js-show-modal1" data-producto="{{ $producto }}">
 									Vista Rapida

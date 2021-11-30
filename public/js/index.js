@@ -197,13 +197,13 @@ $('.wrap-rating').each(function () {
 [ Show modal1 ]*/
 
 $('#filas-producto').on('click', '.js-show-modal1', function (e) {
-  /*GUARDAR DATOS DE PRODUCTO-MEJORAR IMAGEN*/
+  /* GUARDAR DATOS DE PRODUCTO-MEJORAR IMAGEN*/
   var producto = JSON.parse(e.target.dataset.producto);
   $('#modal-producto-nombre').text(producto.nombre);
   $('#modal-producto-precio').text('S/. ' + producto.precio);
   $('#modal-producto-descripcion').text(producto.descripcion);
   producto.imagenes.forEach(function (imagen) {
-    var img = "\n        <div class=\"item-slick3\" data-thumb=\"storage/".concat(imagen.url, "\">\n            <div class=\"wrap-pic-w pos-relative\">\n                <img src=\"storage/").concat(imagen.url, "\" alt=\"IMG-PRODUCT\">\n\n                <a class=\"flex-c-m size-108 how-pos1 bor0 fs-16 cl10 bg0 hov-btn3 trans-04\" href=\"storage/").concat(imagen.url, "\">\n                    <i class=\"fa fa-expand\"></i>\n                </a>\n            </div>\n        </div>");
+    var img = "\n        <div class=\"item-slick3\" data-thumb=\"".concat(imagen.url, "\">\n            <div class=\"wrap-pic-w pos-relative\">\n                <img src=\"").concat(imagen.url, "\" alt=\"IMG-PRODUCT\">\n\n                <a class=\"flex-c-m size-108 how-pos1 bor0 fs-16 cl10 bg0 hov-btn3 trans-04\" href=\"").concat(imagen.url, "\">\n                    <i class=\"fa fa-expand\"></i>\n                </a>\n            </div>\n        </div>");
     $('#modal-producto-imagenes').append(img);
   });
   $('.wrap-slick3').each(function () {

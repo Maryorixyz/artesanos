@@ -29,16 +29,16 @@ class ProductoSeeder extends Seeder
         $producto->categorias()->sync([1, 2, 9]);
         // Agregar imagenes
         $producto->imagenes()->create([
-            'url' => 'productos/WhatsApp Image 2021-09-23 at 10.26.54 PM (3).jpg'
+            'url' => 'storage/productos/WhatsApp Image 2021-09-23 at 10.26.54 PM (3).jpg'
         ]);
         $producto->imagenes()->create([
-            'url' => 'productos/WhatsApp Image 2021-09-23 at 10.26.54 PM (4).jpg'
+            'url' => 'storage/productos/WhatsApp Image 2021-09-23 at 10.26.54 PM (4).jpg'
         ]);
         $producto->imagenes()->create([
-            'url' => 'productos/WhatsApp Image 2021-09-23 at 10.26.55 PM (1).jpg'
+            'url' => 'storage/productos/WhatsApp Image 2021-09-23 at 10.26.55 PM (1).jpg'
         ]);
         $producto->imagenes()->create([
-            'url' => 'productos/WhatsApp Image 2021-09-23 at 10.26.55 PM.jpg'
+            'url' => 'storage/productos/WhatsApp Image 2021-09-23 at 10.26.55 PM.jpg'
         ]);
 
 
@@ -56,15 +56,15 @@ class ProductoSeeder extends Seeder
         $producto->categorias()->sync([1, 2, 10]);
 
         $producto->imagenes()->create([
-            'url' => 'productos/WhatsApp Image 2021-09-23 at 10.26.53 PM.jpg'
+            'url' => 'storage/productos/WhatsApp Image 2021-09-23 at 10.26.53 PM.jpg'
         ]);
 
         $producto->imagenes()->create([
-            'url' => 'productos/WhatsApp Image 2021-09-23 at 10.26.54 PM (1).jpg'
+            'url' => 'storage/productos/WhatsApp Image 2021-09-23 at 10.26.54 PM (1).jpg'
         ]);
 
         $producto->imagenes()->create([
-            'url' => 'productos/WhatsApp Image 2021-09-23 at 10.26.54 PM.jpg'
+            'url' => 'storage/productos/WhatsApp Image 2021-09-23 at 10.26.54 PM.jpg'
         ]);
 
        // DB::table('productos')->insert([
@@ -85,7 +85,7 @@ class ProductoSeeder extends Seeder
         $producto->categorias()->sync([2, 7]);
         
         $producto->imagenes()->create([
-            'url' => 'productos/WhatsApp Image 2021-09-23 at 10.26.56 PM (3).jpg'
+            'url' => 'storage/productos/WhatsApp Image 2021-09-23 at 10.26.56 PM (3).jpg'
         ]);
 
         $producto=Producto::create([
@@ -101,7 +101,7 @@ class ProductoSeeder extends Seeder
         $producto->categorias()->sync([2, 11]);
 
         $producto->imagenes()->create([
-            'url' => 'productos/WhatsApp Image 2021-09-23 at 10.26.56 PM.jpg'
+            'url' => 'storage/productos/WhatsApp Image 2021-09-23 at 10.26.56 PM.jpg'
         ]);
 
         $producto=Producto::create([
@@ -117,11 +117,11 @@ class ProductoSeeder extends Seeder
         $producto->categorias()->sync([2, 6]);
 
         $producto->imagenes()->create([
-            'url' => 'productos/WhatsApp Image 2021-09-23 at 10.26.57 PM (1).jpg'
+            'url' => 'storage/productos/WhatsApp Image 2021-09-23 at 10.26.57 PM (1).jpg'
         ]);
 
         $producto->imagenes()->create([
-            'url' => 'productos/WhatsApp Image 2021-09-23 at 10.26.57 PM.jpg'
+            'url' => 'storage/productos/WhatsApp Image 2021-09-23 at 10.26.57 PM.jpg'
         ]);
 
         $producto=Producto::create([
@@ -137,7 +137,7 @@ class ProductoSeeder extends Seeder
         $producto->categorias()->sync([1, 2, 9]);
 
         $producto->imagenes()->create([
-            'url' => 'productos/WhatsApp Image 2021-09-21 at 9.01.16 PM.jpg'
+            'url' => 'storage/productos/WhatsApp Image 2021-09-21 at 9.01.16 PM.jpg'
         ]);
 
         $producto=Producto::create([
@@ -153,7 +153,7 @@ class ProductoSeeder extends Seeder
         $producto->categorias()->sync([1, 2, 10]);
 
         $producto->imagenes()->create([
-            'url' => 'productos/WhatsApp Image 2021-09-21 at 9.01.16 PM (2).jpg'
+            'url' => 'storage/productos/WhatsApp Image 2021-09-21 at 9.01.16 PM (2).jpg'
         ]);
 
         $producto=Producto::create([
@@ -167,15 +167,15 @@ class ProductoSeeder extends Seeder
         ]);
 
         $producto->imagenes()->create([
-            'url' => 'productos/WhatsApp Image 2021-09-21 at 9.01.17 PM (2).jpg'
+            'url' => 'storage/productos/WhatsApp Image 2021-09-21 at 9.01.17 PM (2).jpg'
         ]);
 
         $producto->imagenes()->create([
-            'url' => 'productos/WhatsApp Image 2021-09-21 at 9.01.17 PM (3).jpg'
+            'url' => 'storage/productos/WhatsApp Image 2021-09-21 at 9.01.17 PM (3).jpg'
         ]);
 
         $producto->imagenes()->create([
-            'url' => 'productos/WhatsApp Image 2021-09-21 at 9.01.17 PM.jpg'
+            'url' => 'storage/productos/WhatsApp Image 2021-09-21 at 9.01.17 PM.jpg'
         ]);
 
         $producto=Producto::create([
@@ -189,7 +189,7 @@ class ProductoSeeder extends Seeder
         ]);
 
         $producto->imagenes()->create([
-            'url' => 'productos/WhatsApp Image 2021-09-21 at 9.01.18 PM.jpg'
+            'url' => 'storage/productos/WhatsApp Image 2021-09-21 at 9.01.18 PM.jpg'
         ]);
 
         $producto=Producto::create([
@@ -203,7 +203,7 @@ class ProductoSeeder extends Seeder
         ]);
 
         $producto->imagenes()->create([
-            'url' => 'productos/WhatsApp Image 2021-09-21 at 9.01.41 PM.jpg'
+            'url' => 'storage/productos/WhatsApp Image 2021-09-21 at 9.01.41 PM.jpg'
         ]);
       
         $producto=Producto::create([
@@ -217,7 +217,7 @@ class ProductoSeeder extends Seeder
         ]);
 
         $producto->imagenes()->create([
-            'url' => 'productos/WhatsApp Image 2021-09-21 at 9.01.42 PM.jpg'
+            'url' => 'storage/productos/WhatsApp Image 2021-09-21 at 9.01.42 PM.jpg'
         ]);
         
         $producto=Producto::create([
@@ -231,7 +231,7 @@ class ProductoSeeder extends Seeder
         ]);
 
         $producto->imagenes()->create([
-            'url' => 'productos/WhatsApp Image 2021-09-27 at 8.00.58 AM.jpg'
+            'url' => 'storage/productos/WhatsApp Image 2021-09-27 at 8.00.58 AM.jpg'
         ]);
 
         $producto=Producto::create([
@@ -245,7 +245,7 @@ class ProductoSeeder extends Seeder
         ]);
 
         $producto->imagenes()->create([
-            'url' => 'productos/WhatsApp Image 2021-09-27 at 8.00.57 AM.jpg'
+            'url' => 'storage/productos/WhatsApp Image 2021-09-27 at 8.00.57 AM.jpg'
         ]);
 
         $producto=Producto::create([
@@ -259,7 +259,7 @@ class ProductoSeeder extends Seeder
         ]);
 
         $producto->imagenes()->create([
-            'url' => 'productos/WhatsApp Image 2021-09-27 at 8.01.00 AM.jpg'
+            'url' => 'storage/productos/WhatsApp Image 2021-09-27 at 8.01.00 AM.jpg'
         ]);
 
         $producto=Producto::create([
@@ -273,11 +273,11 @@ class ProductoSeeder extends Seeder
         ]);
 
         $producto->imagenes()->create([
-            'url' => 'productos/WhatsApp Image 2021-09-27 at 8.01.00 AM (1).jpg'
+            'url' => 'storage/productos/WhatsApp Image 2021-09-27 at 8.01.00 AM (1).jpg'
         ]);
 
         $producto->imagenes()->create([
-            'url' => 'productos/WhatsApp Image 2021-09-27 at 8.01.00 AM (3).jpg'
+            'url' => 'storage/productos/WhatsApp Image 2021-09-27 at 8.01.00 AM (3).jpg'
         ]);
 
         $producto=Producto::create([
@@ -291,7 +291,7 @@ class ProductoSeeder extends Seeder
         ]);
 
         $producto->imagenes()->create([
-            'url' => 'productos/WhatsApp Image 2021-09-27 at 8.01.01 AM (1).jpg'
+            'url' => 'storage/productos/WhatsApp Image 2021-09-27 at 8.01.01 AM (1).jpg'
         ]);
 
         $producto=Producto::create([
@@ -305,7 +305,7 @@ class ProductoSeeder extends Seeder
         ]);
 
         $producto->imagenes()->create([
-            'url' => 'productos/WhatsApp Image 2021-09-27 at 8.01.00 AM (7).jpg'
+            'url' => 'storage/productos/WhatsApp Image 2021-09-27 at 8.01.00 AM (7).jpg'
         ]);
 
         $producto=Producto::create([
@@ -319,15 +319,15 @@ class ProductoSeeder extends Seeder
         ]);
 
         $producto->imagenes()->create([
-            'url' => 'productos/WhatsApp Image 2021-09-27 at 8.00.59 AM (3).jpg'
+            'url' => 'storage/productos/WhatsApp Image 2021-09-27 at 8.00.59 AM (3).jpg'
         ]);
 
         $producto->imagenes()->create([
-            'url' => 'productos/WhatsApp Image 2021-09-27 at 8.00.59 AM (4).jpg'
+            'url' => 'storage/productos/WhatsApp Image 2021-09-27 at 8.00.59 AM (4).jpg'
         ]);
 
         $producto->imagenes()->create([
-            'url' => 'productos/WhatsApp Image 2021-09-27 at 8.00.58 AM (3).jpg'
+            'url' => 'storage/productos/WhatsApp Image 2021-09-27 at 8.00.58 AM (3).jpg'
         ]);
 
         $producto=Producto::create([
@@ -341,19 +341,19 @@ class ProductoSeeder extends Seeder
         ]);
 
         $producto->imagenes()->create([
-            'url' => 'productos/WhatsApp Image 2021-09-23 at 10.02.39 PM.jpg'
+            'url' => 'storage/productos/WhatsApp Image 2021-09-23 at 10.02.39 PM.jpg'
         ]);
 
         $producto->imagenes()->create([
-            'url' => 'productos/WhatsApp Image 2021-09-23 at 10.02.38 PM (2).jpg'
+            'url' => 'storage/productos/WhatsApp Image 2021-09-23 at 10.02.38 PM (2).jpg'
         ]);
 
         $producto->imagenes()->create([
-            'url' => 'productos/WhatsApp Image 2021-09-23 at 10.02.38 PM.jpg'
+            'url' => 'storage/productos/WhatsApp Image 2021-09-23 at 10.02.38 PM.jpg'
         ]);
 
         $producto->imagenes()->create([
-            'url' => 'productos/WhatsApp Image 2021-09-23 at 10.02.39 PM (1).jpg'
+            'url' => 'storage/productos/WhatsApp Image 2021-09-23 at 10.02.39 PM (1).jpg'
         ]);
 
         $producto=Producto::create([
@@ -367,19 +367,19 @@ class ProductoSeeder extends Seeder
         ]);
 
         $producto->imagenes()->create([
-            'url' => 'productos/WhatsApp Image 2021-09-23 at 10.02.40 PM.jpg'
+            'url' => 'storage/productos/WhatsApp Image 2021-09-23 at 10.02.40 PM.jpg'
         ]);
 
         $producto->imagenes()->create([
-            'url' => 'productos/WhatsApp Image 2021-09-23 at 10.02.39 PM (2).jpg'
+            'url' => 'storage/productos/WhatsApp Image 2021-09-23 at 10.02.39 PM (2).jpg'
         ]);
 
         $producto->imagenes()->create([
-            'url' => 'productos/WhatsApp Image 2021-09-23 at 10.02.39 PM (3).jpg'
+            'url' => 'storage/productos/WhatsApp Image 2021-09-23 at 10.02.39 PM (3).jpg'
         ]);
 
         $producto->imagenes()->create([
-            'url' => 'productos/WhatsApp Image 2021-09-23 at 10.02.40 PM (2).jpg'
+            'url' => 'storage/productos/WhatsApp Image 2021-09-23 at 10.02.40 PM (2).jpg'
         ]);
         
        $producto=Producto::create([
@@ -393,15 +393,15 @@ class ProductoSeeder extends Seeder
         ]);
 
         $producto->imagenes()->create([
-            'url' => 'productos/WhatsApp Image 2021-09-23 at 10.02.42 PM.jpg'
+            'url' => 'storage/productos/WhatsApp Image 2021-09-23 at 10.02.42 PM.jpg'
         ]);
 
         $producto->imagenes()->create([
-            'url' => 'productos/WhatsApp Image 2021-09-23 at 10.02.41 PM.jpg'
+            'url' => 'storage/productos/WhatsApp Image 2021-09-23 at 10.02.41 PM.jpg'
         ]);
 
         $producto->imagenes()->create([
-            'url' => 'productos/WhatsApp Image 2021-09-23 at 10.02.40 PM (3).jpg'
+            'url' => 'storage/productos/WhatsApp Image 2021-09-23 at 10.02.40 PM (3).jpg'
         ]);
 
         $producto=Producto::create([
@@ -415,11 +415,11 @@ class ProductoSeeder extends Seeder
         ]);
 
         $producto->imagenes()->create([
-            'url' => 'productos/WhatsApp Image 2021-09-23 at 10.02.44 PM.jpg'
+            'url' => 'storage/productos/WhatsApp Image 2021-09-23 at 10.02.44 PM.jpg'
         ]);
 
         $producto->imagenes()->create([
-            'url' => 'productos/WhatsApp Image 2021-09-23 at 10.02.43 PM.jpg'
+            'url' => 'storage/productos/WhatsApp Image 2021-09-23 at 10.02.43 PM.jpg'
         ]);
 
         $producto=Producto::create([
@@ -433,7 +433,7 @@ class ProductoSeeder extends Seeder
         ]);
 
         $producto->imagenes()->create([
-            'url' => 'productos/WhatsApp Image 2021-09-23 at 10.02.43 PM (1).jpg'
+            'url' => 'storage/productos/WhatsApp Image 2021-09-23 at 10.02.43 PM (1).jpg'
         ]);
 
         $producto=Producto::create([
@@ -447,15 +447,15 @@ class ProductoSeeder extends Seeder
         ]);
 
         $producto->imagenes()->create([
-            'url' => 'productos/WhatsApp Image 2021-09-23 at 10.02.45 PM.jpg'
+            'url' => 'storage/productos/WhatsApp Image 2021-09-23 at 10.02.45 PM.jpg'
         ]);
 
         $producto->imagenes()->create([
-            'url' => 'productos/WhatsApp Image 2021-09-23 at 10.02.59 PM (2).jpg'
+            'url' => 'storage/productos/WhatsApp Image 2021-09-23 at 10.02.59 PM (2).jpg'
         ]);
 
         $producto->imagenes()->create([
-            'url' => 'productos/WhatsApp Image 2021-09-23 at 10.03.00 PM (1).jpg'
+            'url' => 'storage/productos/WhatsApp Image 2021-09-23 at 10.03.00 PM (1).jpg'
         ]);
 
         $producto=Producto::create([
@@ -469,11 +469,11 @@ class ProductoSeeder extends Seeder
         ]);
 
         $producto->imagenes()->create([
-            'url' => 'productos/WhatsApp Image 2021-09-23 at 10.03.01 PM (1).jpg'
+            'url' => 'storage/productos/WhatsApp Image 2021-09-23 at 10.03.01 PM (1).jpg'
         ]);
 
         $producto->imagenes()->create([
-            'url' => 'productos/WhatsApp Image 2021-09-23 at 10.03.02 PM.jpg'
+            'url' => 'storage/productos/WhatsApp Image 2021-09-23 at 10.03.02 PM.jpg'
         ]);
 
         $producto=Producto::create([
@@ -487,19 +487,19 @@ class ProductoSeeder extends Seeder
         ]);
 
         $producto->imagenes()->create([
-            'url' => 'productos/WhatsApp Image 2021-09-23 at 10.04.35 PM.jpg'
+            'url' => 'storage/productos/WhatsApp Image 2021-09-23 at 10.04.35 PM.jpg'
         ]);
 
         $producto->imagenes()->create([
-            'url' => 'productos/WhatsApp Image 2021-09-23 at 10.04.36 PM.jpg'
+            'url' => 'storage/productos/WhatsApp Image 2021-09-23 at 10.04.36 PM.jpg'
         ]);
 
         $producto->imagenes()->create([
-            'url' => 'productos/WhatsApp Image 2021-09-23 at 7.10.05 PM (2).jpg'
+            'url' => 'storage/productos/WhatsApp Image 2021-09-23 at 7.10.05 PM (2).jpg'
         ]);
 
         $producto->imagenes()->create([
-            'url' => 'productos/WhatsApp Image 2021-09-23 at 6.51.35 PM.jpg'
+            'url' => 'storage/productos/WhatsApp Image 2021-09-23 at 6.51.35 PM.jpg'
         ]);
 
         $producto=Producto::create([
@@ -513,19 +513,19 @@ class ProductoSeeder extends Seeder
         ]);
 
         $producto->imagenes()->create([
-            'url' => 'productos/WhatsApp Image 2021-09-23 at 7.10.05 PM (1).jpg'
+            'url' => 'storage/productos/WhatsApp Image 2021-09-23 at 7.10.05 PM (1).jpg'
         ]);
 
         $producto->imagenes()->create([
-            'url' => 'productos/WhatsApp Image 2021-09-23 at 10.04.34 PM (2).jpg'
+            'url' => 'storage/productos/WhatsApp Image 2021-09-23 at 10.04.34 PM (2).jpg'
         ]);
 
         $producto->imagenes()->create([
-            'url' => 'productos/WhatsApp Image 2021-09-23 at 4.20.42 PM (2).jpg'
+            'url' => 'storage/productos/WhatsApp Image 2021-09-23 at 4.20.42 PM (2).jpg'
         ]);
 
         $producto->imagenes()->create([
-            'url' => 'productos/WhatsApp Image 2021-09-23 at 7.10.06 PM (4).jpg'
+            'url' => 'storage/productos/WhatsApp Image 2021-09-23 at 7.10.06 PM (4).jpg'
         ]);
 
         $producto=Producto::create([
@@ -539,11 +539,11 @@ class ProductoSeeder extends Seeder
         ]);
 
         $producto->imagenes()->create([
-            'url' => 'productos/WhatsApp Image 2021-09-23 at 7.10.05 PM (3).jpg'
+            'url' => 'storage/productos/WhatsApp Image 2021-09-23 at 7.10.05 PM (3).jpg'
         ]);
 
         $producto->imagenes()->create([
-            'url' => 'productos/WhatsApp Image 2021-09-23 at 10.04.32 PM (1).jpg'
+            'url' => 'storage/productos/WhatsApp Image 2021-09-23 at 10.04.32 PM (1).jpg'
         ]);
 
         $producto=Producto::create([
@@ -557,15 +557,15 @@ class ProductoSeeder extends Seeder
         ]);
 
         $producto->imagenes()->create([
-            'url' => 'productos/WhatsApp Image 2021-09-23 at 10.04.29 PM (2).jpg'
+            'url' => 'storage/productos/WhatsApp Image 2021-09-23 at 10.04.29 PM (2).jpg'
         ]);
 
         $producto->imagenes()->create([
-            'url' => 'productos/WhatsApp Image 2021-09-23 at 10.04.30 PM (2).jpg'
+            'url' => 'storage/productos/WhatsApp Image 2021-09-23 at 10.04.30 PM (2).jpg'
         ]);
 
         $producto->imagenes()->create([
-            'url' => 'productos/WhatsApp Image 2021-09-23 at 10.04.31 PM (3).jpg'
+            'url' => 'storage/productos/WhatsApp Image 2021-09-23 at 10.04.31 PM (3).jpg'
         ]);
 
         $producto=Producto::create([
@@ -579,19 +579,19 @@ class ProductoSeeder extends Seeder
         ]);
 
         $producto->imagenes()->create([
-            'url' => 'productos/WhatsApp Image 2021-09-23 at 10.04.33 PM.jpg'
+            'url' => 'storage/productos/WhatsApp Image 2021-09-23 at 10.04.33 PM.jpg'
         ]);
 
         $producto->imagenes()->create([
-            'url' => 'productos/WhatsApp Image 2021-09-23 at 10.04.33 PM (4).jpg'
+            'url' => 'storage/productos/WhatsApp Image 2021-09-23 at 10.04.33 PM (4).jpg'
         ]);
 
         $producto->imagenes()->create([
-            'url' => 'productos/WhatsApp Image 2021-09-23 at 10.04.33 PM (1).jpg'
+            'url' => 'storage/productos/WhatsApp Image 2021-09-23 at 10.04.33 PM (1).jpg'
         ]);
 
         $producto->imagenes()->create([
-            'url' => 'productos/WhatsApp Image 2021-09-23 at 4.20.42 PM (1).jpg'
+            'url' => 'storage/productos/WhatsApp Image 2021-09-23 at 4.20.42 PM (1).jpg'
         ]);
 
         $producto=Producto::create([
@@ -605,7 +605,7 @@ class ProductoSeeder extends Seeder
         ]);
 
         $producto->imagenes()->create([
-            'url' => 'productos/WhatsApp Image 2021-09-21 at 8.55.31 PM.jpg'
+            'url' => 'storage/productos/WhatsApp Image 2021-09-21 at 8.55.31 PM.jpg'
         ]);
 
         $producto=Producto::create([
@@ -619,7 +619,7 @@ class ProductoSeeder extends Seeder
         ]);
 
         $producto->imagenes()->create([
-            'url' => 'productos/WhatsApp Image 2021-09-21 at 8.55.32 PM.jpg'
+            'url' => 'storage/productos/WhatsApp Image 2021-09-21 at 8.55.32 PM.jpg'
         ]);
 
         $producto=Producto::create([
@@ -633,11 +633,11 @@ class ProductoSeeder extends Seeder
         ]);
 
         $producto->imagenes()->create([
-            'url' => 'productos/WhatsApp Image 2021-09-21 at 8.55.31 PM (1).jpg'
+            'url' => 'storage/productos/WhatsApp Image 2021-09-21 at 8.55.31 PM (1).jpg'
         ]);
 
         $producto->imagenes()->create([
-            'url' => 'productos/WhatsApp Image 2021-09-21 at 8.55.35 PM (1).jpg'
+            'url' => 'storage/productos/WhatsApp Image 2021-09-21 at 8.55.35 PM (1).jpg'
         ]);
 
         $producto=Producto::create([
@@ -651,15 +651,15 @@ class ProductoSeeder extends Seeder
         ]);
 
         $producto->imagenes()->create([
-            'url' => 'productos/WhatsApp Image 2021-09-21 at 8.55.32 PM (1).jpg'
+            'url' => 'storage/productos/WhatsApp Image 2021-09-21 at 8.55.32 PM (1).jpg'
         ]);
 
         $producto->imagenes()->create([
-            'url' => 'productos/WhatsApp Image 2021-09-21 at 8.55.33 PM (2).jpg'
+            'url' => 'storage/productos/WhatsApp Image 2021-09-21 at 8.55.33 PM (2).jpg'
         ]);
 
         $producto->imagenes()->create([
-            'url' => 'productos/WhatsApp Image 2021-09-21 at 8.55.33 PM.jpg'
+            'url' => 'storage/productos/WhatsApp Image 2021-09-21 at 8.55.33 PM.jpg'
         ]);
 
         $producto=Producto::create([
@@ -673,11 +673,11 @@ class ProductoSeeder extends Seeder
         ]);
 
         $producto->imagenes()->create([
-            'url' => 'productos/WhatsApp Image 2021-09-21 at 8.55.34 PM.jpg'
+            'url' => 'storage/productos/WhatsApp Image 2021-09-21 at 8.55.34 PM.jpg'
         ]);
 
         $producto->imagenes()->create([
-            'url' => 'productos/WhatsApp Image 2021-09-21 at 8.55.34 PM (2).jpg'
+            'url' => 'storage/productos/WhatsApp Image 2021-09-21 at 8.55.34 PM (2).jpg'
         ]);
 
         $producto=Producto::create([
@@ -691,7 +691,7 @@ class ProductoSeeder extends Seeder
         ]);
 
         $producto->imagenes()->create([
-            'url' => 'productos/WhatsApp Image 2021-09-23 at 10.26.58 PM.jpg'
+            'url' => 'storage/productos/WhatsApp Image 2021-09-23 at 10.26.58 PM.jpg'
         ]);
 
         $producto=Producto::create([
@@ -705,19 +705,19 @@ class ProductoSeeder extends Seeder
         ]);
 
         $producto->imagenes()->create([
-            'url' => 'productos/WhatsApp Image 2021-09-23 at 10.26.59 PM (2).jpg'
+            'url' => 'storage/productos/WhatsApp Image 2021-09-23 at 10.26.59 PM (2).jpg'
         ]);
 
         $producto->imagenes()->create([
-            'url' => 'productos/WhatsApp Image 2021-09-23 at 10.27.02 PM.jpg'
+            'url' => 'storage/productos/WhatsApp Image 2021-09-23 at 10.27.02 PM.jpg'
         ]);
 
         $producto->imagenes()->create([
-            'url' => 'productos/WhatsApp Image 2021-09-23 at 10.27.00 PM (1).jpg'
+            'url' => 'storage/productos/WhatsApp Image 2021-09-23 at 10.27.00 PM (1).jpg'
         ]);
 
         $producto->imagenes()->create([
-            'url' => 'productos/WhatsApp Image 2021-09-23 at 10.27.00 PM.jpg'
+            'url' => 'storage/productos/WhatsApp Image 2021-09-23 at 10.27.00 PM.jpg'
         ]);
 
         $producto=Producto::create([
@@ -731,11 +731,11 @@ class ProductoSeeder extends Seeder
         ]);
 
         $producto->imagenes()->create([
-            'url' => 'productos/WhatsApp Image 2021-09-23 at 10.26.58 PM (1).jpg'
+            'url' => 'storage/productos/WhatsApp Image 2021-09-23 at 10.26.58 PM (1).jpg'
         ]);
 
         $producto->imagenes()->create([
-            'url' => 'productos/WhatsApp Image 2021-09-23 at 10.26.58 PM (2).jpg'
+            'url' => 'storage/productos/WhatsApp Image 2021-09-23 at 10.26.58 PM (2).jpg'
         ]);
 
         $producto=Producto::create([
@@ -749,15 +749,15 @@ class ProductoSeeder extends Seeder
         ]);
 
         $producto->imagenes()->create([
-            'url' => 'productos/WhatsApp Image 2021-09-27 at 8.10.36 AM.jpg'
+            'url' => 'storage/productos/WhatsApp Image 2021-09-27 at 8.10.36 AM.jpg'
         ]);
 
         $producto->imagenes()->create([
-            'url' => 'productos/WhatsApp Image 2021-09-27 at 8.10.36 AM (2).jpg'
+            'url' => 'storage/productos/WhatsApp Image 2021-09-27 at 8.10.36 AM (2).jpg'
         ]);
 
         $producto->imagenes()->create([
-            'url' => 'productos/WhatsApp Image 2021-09-27 at 8.10.37 AM.jpg'
+            'url' => 'storage/productos/WhatsApp Image 2021-09-27 at 8.10.37 AM.jpg'
         ]);
 
         $producto=Producto::create([
@@ -771,19 +771,19 @@ class ProductoSeeder extends Seeder
         ]);
 
         $producto->imagenes()->create([
-            'url' => 'productos/WhatsApp Image 2021-09-27 at 8.10.37 AM (3).jpg'
+            'url' => 'storage/productos/WhatsApp Image 2021-09-27 at 8.10.37 AM (3).jpg'
         ]);
 
         $producto->imagenes()->create([
-            'url' => 'productos/WhatsApp Image 2021-09-27 at 8.10.37 AM (2).jpg'
+            'url' => 'storage/productos/WhatsApp Image 2021-09-27 at 8.10.37 AM (2).jpg'
         ]);
 
         $producto->imagenes()->create([
-            'url' => 'productos/WhatsApp Image 2021-09-27 at 8.10.38 AM (3).jpg'
+            'url' => 'storage/productos/WhatsApp Image 2021-09-27 at 8.10.38 AM (3).jpg'
         ]);
 
         $producto->imagenes()->create([
-            'url' => 'productos/WhatsApp Image 2021-09-27 at 8.10.38 AM (1).jpg'
+            'url' => 'storage/productos/WhatsApp Image 2021-09-27 at 8.10.38 AM (1).jpg'
         ]);
 
         $producto=Producto::create([
@@ -797,19 +797,19 @@ class ProductoSeeder extends Seeder
         ]);
 
         $producto->imagenes()->create([
-            'url' => 'productos/WhatsApp Image 2021-09-27 at 8.10.40 AM (1).jpg'
+            'url' => 'storage/productos/WhatsApp Image 2021-09-27 at 8.10.40 AM (1).jpg'
         ]);
 
         $producto->imagenes()->create([
-            'url' => 'productos/WhatsApp Image 2021-09-27 at 8.10.39 AM (5).jpg'
+            'url' => 'storage/productos/WhatsApp Image 2021-09-27 at 8.10.39 AM (5).jpg'
         ]);
 
         $producto->imagenes()->create([
-            'url' => 'productos/WhatsApp Image 2021-09-27 at 8.10.41 AM.jpg'
+            'url' => 'storage/productos/WhatsApp Image 2021-09-27 at 8.10.41 AM.jpg'
         ]);
 
         $producto->imagenes()->create([
-            'url' => 'productos/WhatsApp Image 2021-09-27 at 8.11.11 AM (2).jpg'
+            'url' => 'storage/productos/WhatsApp Image 2021-09-27 at 8.11.11 AM (2).jpg'
         ]);
 
         $producto=Producto::create([
@@ -823,7 +823,7 @@ class ProductoSeeder extends Seeder
         ]);
 
         $producto->imagenes()->create([
-            'url' => 'productos/WhatsApp Image 2021-09-27 at 8.10.42 AM.jpg'
+            'url' => 'storage/productos/WhatsApp Image 2021-09-27 at 8.10.42 AM.jpg'
         ]);
 
         $producto=Producto::create([
@@ -837,15 +837,15 @@ class ProductoSeeder extends Seeder
         ]);
 
         $producto->imagenes()->create([
-            'url' => 'productos/WhatsApp Image 2021-09-27 at 8.06.39 AM.jpg'
+            'url' => 'storage/productos/WhatsApp Image 2021-09-27 at 8.06.39 AM.jpg'
         ]);
 
         $producto->imagenes()->create([
-            'url' => 'productos/WhatsApp Image 2021-09-27 at 8.06.39 AM (1).jpg'
+            'url' => 'storage/productos/WhatsApp Image 2021-09-27 at 8.06.39 AM (1).jpg'
         ]);
 
         $producto->imagenes()->create([
-            'url' => 'productos/WhatsApp Image 2021-09-27 at 8.06.37 AM.jpg'
+            'url' => 'storage/productos/WhatsApp Image 2021-09-27 at 8.06.37 AM.jpg'
         ]);
 
         $producto=Producto::create([
@@ -859,11 +859,11 @@ class ProductoSeeder extends Seeder
         ]);
 
         $producto->imagenes()->create([
-            'url' => 'productos/WhatsApp Image 2021-09-27 at 8.06.36 AM (2).jpg'
+            'url' => 'storage/productos/WhatsApp Image 2021-09-27 at 8.06.36 AM (2).jpg'
         ]);
 
         $producto->imagenes()->create([
-            'url' => 'productos/WhatsApp Image 2021-09-27 at 8.06.36 AM.jpg'
+            'url' => 'storage/productos/WhatsApp Image 2021-09-27 at 8.06.36 AM.jpg'
         ]);
 
         $producto=Producto::create([
@@ -877,7 +877,7 @@ class ProductoSeeder extends Seeder
         ]);
 
         $producto->imagenes()->create([
-            'url' => 'productos/WhatsApp Image 2021-09-27 at 8.06.38 AM (2).jpg'
+            'url' => 'storage/productos/WhatsApp Image 2021-09-27 at 8.06.38 AM (2).jpg'
         ]);
 
         $producto=Producto::create([
@@ -891,7 +891,7 @@ class ProductoSeeder extends Seeder
         ]);
 
         $producto->imagenes()->create([
-            'url' => 'productos/WhatsApp Image 2021-09-27 at 8.06.38 AM.jpg'
+            'url' => 'storage/productos/WhatsApp Image 2021-09-27 at 8.06.38 AM.jpg'
         ]);
 
         $producto=Producto::create([
@@ -905,11 +905,11 @@ class ProductoSeeder extends Seeder
         ]);
 
         $producto->imagenes()->create([
-            'url' => 'productos/WhatsApp Image 2021-09-27 at 8.06.39 AM (3).jpg'
+            'url' => 'storage/productos/WhatsApp Image 2021-09-27 at 8.06.39 AM (3).jpg'
         ]);
 
         $producto->imagenes()->create([
-            'url' => 'productos/WhatsApp Image 2021-09-27 at 8.06.39 AM (5).jpg'
+            'url' => 'storage/productos/WhatsApp Image 2021-09-27 at 8.06.39 AM (5).jpg'
         ]);
 
         $producto=Producto::create([
@@ -923,15 +923,15 @@ class ProductoSeeder extends Seeder
         ]);
 
         $producto->imagenes()->create([
-            'url' => 'productos/WhatsApp Image 2021-09-27 at 8.06.40 AM.jpg'
+            'url' => 'storage/productos/WhatsApp Image 2021-09-27 at 8.06.40 AM.jpg'
         ]);
 
         $producto->imagenes()->create([
-            'url' => 'productos/WhatsApp Image 2021-09-27 at 8.06.40 AM (1).jpg'
+            'url' => 'storage/productos/WhatsApp Image 2021-09-27 at 8.06.40 AM (1).jpg'
         ]);
 
         $producto->imagenes()->create([
-            'url' => 'productos/WhatsApp Image 2021-09-27 at 8.06.40 AM (2).jpg'
+            'url' => 'storage/productos/WhatsApp Image 2021-09-27 at 8.06.40 AM (2).jpg'
         ]);
 
         $producto=Producto::create([
@@ -945,7 +945,7 @@ class ProductoSeeder extends Seeder
         ]);
 
         $producto->imagenes()->create([
-            'url' => 'productos/WhatsApp Image 2021-09-21 at 8.40.00 PM (1).jpg'
+            'url' => 'storage/productos/WhatsApp Image 2021-09-21 at 8.40.00 PM (1).jpg'
         ]);
 
         $producto=Producto::create([
@@ -959,11 +959,11 @@ class ProductoSeeder extends Seeder
         ]);
 
         $producto->imagenes()->create([
-            'url' => 'productos/WhatsApp Image 2021-09-21 at 8.40.01 PM (1).jpg'
+            'url' => 'storage/productos/WhatsApp Image 2021-09-21 at 8.40.01 PM (1).jpg'
         ]);
 
         $producto->imagenes()->create([
-            'url' => 'productos/WhatsApp Image 2021-09-21 at 8.40.01 PM (2).jpg'
+            'url' => 'storage/productos/WhatsApp Image 2021-09-21 at 8.40.01 PM (2).jpg'
         ]);
 
         $producto=Producto::create([
@@ -977,7 +977,7 @@ class ProductoSeeder extends Seeder
         ]);
 
         $producto->imagenes()->create([
-            'url' => 'productos/WhatsApp Image 2021-09-21 at 8.40.02 PM.jpg'
+            'url' => 'storage/productos/WhatsApp Image 2021-09-21 at 8.40.02 PM.jpg'
         ]);
 
         $producto=Producto::create([
@@ -991,19 +991,19 @@ class ProductoSeeder extends Seeder
         ]);
 
         $producto->imagenes()->create([
-            'url' => 'productos/WhatsApp Image 2021-09-21 at 8.40.03 PM (2).jpg'
+            'url' => 'storage/productos/WhatsApp Image 2021-09-21 at 8.40.03 PM (2).jpg'
         ]);
 
         $producto->imagenes()->create([
-            'url' => 'productos/WhatsApp Image 2021-09-21 at 8.40.00 PM.jpg'
+            'url' => 'storage/productos/WhatsApp Image 2021-09-21 at 8.40.00 PM.jpg'
         ]);
 
         $producto->imagenes()->create([
-            'url' => 'productos/WhatsApp Image 2021-09-21 at 8.40.04 PM.jpg'
+            'url' => 'storage/productos/WhatsApp Image 2021-09-21 at 8.40.04 PM.jpg'
         ]);
 
         $producto->imagenes()->create([
-            'url' => 'productos/WhatsApp Image 2021-09-21 at 8.40.02 PM (1).jpg'
+            'url' => 'storage/productos/WhatsApp Image 2021-09-21 at 8.40.02 PM (1).jpg'
         ]);
 
         $producto=Producto::create([
@@ -1017,7 +1017,7 @@ class ProductoSeeder extends Seeder
         ]);
 
         $producto->imagenes()->create([
-            'url' => 'productos/WhatsApp Image 2021-09-21 at 8.40.03 PM (4).jpg'
+            'url' => 'storage/productos/WhatsApp Image 2021-09-21 at 8.40.03 PM (4).jpg'
         ]);
 
         $producto=Producto::create([
@@ -1031,11 +1031,11 @@ class ProductoSeeder extends Seeder
         ]);
 
         $producto->imagenes()->create([
-            'url' => 'productos/WhatsApp Image 2021-09-21 at 8.40.04 PM (1).jpg'
+            'url' => 'storage/productos/WhatsApp Image 2021-09-21 at 8.40.04 PM (1).jpg'
         ]);
 
         $producto->imagenes()->create([
-            'url' => 'productos/WhatsApp Image 2021-09-21 at 8.40.05 PM.jpg'
+            'url' => 'storage/productos/WhatsApp Image 2021-09-21 at 8.40.05 PM.jpg'
         ]);
 
         $producto=Producto::create([
@@ -1049,7 +1049,7 @@ class ProductoSeeder extends Seeder
         ]);
 
         $producto->imagenes()->create([
-            'url' => 'productos/WhatsApp Image 2021-09-21 at 8.51.38 PM (1).jpg'
+            'url' => 'storage/productos/WhatsApp Image 2021-09-21 at 8.51.38 PM (1).jpg'
         ]);
 
         $producto=Producto::create([
@@ -1063,7 +1063,7 @@ class ProductoSeeder extends Seeder
         ]);
 
         $producto->imagenes()->create([
-            'url' => 'productos/WhatsApp Image 2021-09-21 at 8.51.38 PM.jpg'
+            'url' => 'storage/productos/WhatsApp Image 2021-09-21 at 8.51.38 PM.jpg'
         ]);
 
         $producto=Producto::create([
@@ -1077,7 +1077,7 @@ class ProductoSeeder extends Seeder
         ]);
 
         $producto->imagenes()->create([
-            'url' => 'productos/WhatsApp Image 2021-09-21 at 8.51.39 PM.jpg'
+            'url' => 'storage/productos/WhatsApp Image 2021-09-21 at 8.51.39 PM.jpg'
         ]);
 
         $producto=Producto::create([
@@ -1091,7 +1091,7 @@ class ProductoSeeder extends Seeder
         ]);
 
         $producto->imagenes()->create([
-            'url' => 'productos/WhatsApp Image 2021-09-21 at 8.48.25 PM (2).jpg'
+            'url' => 'storage/productos/WhatsApp Image 2021-09-21 at 8.48.25 PM (2).jpg'
         ]);
 
         $producto=Producto::create([
@@ -1105,19 +1105,19 @@ class ProductoSeeder extends Seeder
         ]);
 
         $producto->imagenes()->create([
-            'url' => 'productos/WhatsApp Image 2021-09-21 at 8.48.25 PM (1).jpg'
+            'url' => 'storage/productos/WhatsApp Image 2021-09-21 at 8.48.25 PM (1).jpg'
         ]);
 
         $producto->imagenes()->create([
-            'url' => 'productos/WhatsApp Image 2021-09-21 at 8.48.25 PM.jpg'
+            'url' => 'storage/productos/WhatsApp Image 2021-09-21 at 8.48.25 PM.jpg'
         ]);
 
         $producto->imagenes()->create([
-            'url' => 'productos/WhatsApp Image 2021-09-21 at 8.48.26 PM.jpg'
+            'url' => 'storage/productos/WhatsApp Image 2021-09-21 at 8.48.26 PM.jpg'
         ]);
 
         $producto->imagenes()->create([
-            'url' => 'productos/WhatsApp Image 2021-09-21 at 8.48.27 PM (1).jpg'
+            'url' => 'storage/productos/WhatsApp Image 2021-09-21 at 8.48.27 PM (1).jpg'
         ]);
 
         $producto=Producto::create([
@@ -1131,7 +1131,7 @@ class ProductoSeeder extends Seeder
         ]);
 
         $producto->imagenes()->create([
-            'url' => 'productos/WhatsApp Image 2021-09-21 at 8.48.25 PM (3).jpg'
+            'url' => 'storage/productos/WhatsApp Image 2021-09-21 at 8.48.25 PM (3).jpg'
         ]);
         
         $producto=Producto::create([
@@ -1145,15 +1145,15 @@ class ProductoSeeder extends Seeder
         ]);
 
         $producto->imagenes()->create([
-            'url' => 'productos/WhatsApp Image 2021-09-21 at 8.29.09 PM.jpg'
+            'url' => 'storage/productos/WhatsApp Image 2021-09-21 at 8.29.09 PM.jpg'
         ]);
 
         $producto->imagenes()->create([
-            'url' => 'productos/WhatsApp Image 2021-09-21 at 8.29.09 PM (1).jpg'
+            'url' => 'storage/productos/WhatsApp Image 2021-09-21 at 8.29.09 PM (1).jpg'
         ]);
 
         $producto->imagenes()->create([
-            'url' => 'productos/WhatsApp Image 2021-09-21 at 8.29.09 PM (2).jpg'
+            'url' => 'storage/productos/WhatsApp Image 2021-09-21 at 8.29.09 PM (2).jpg'
         ]);
 
         $producto=Producto::create([
@@ -1167,19 +1167,19 @@ class ProductoSeeder extends Seeder
         ]);
 
         $producto->imagenes()->create([
-            'url' => 'productos/WhatsApp Image 2021-09-21 at 8.29.10 PM.jpg'
+            'url' => 'storage/productos/WhatsApp Image 2021-09-21 at 8.29.10 PM.jpg'
         ]);
 
         $producto->imagenes()->create([
-            'url' => 'productos/WhatsApp Image 2021-09-21 at 8.29.09 PM (4).jpg'
+            'url' => 'storage/productos/WhatsApp Image 2021-09-21 at 8.29.09 PM (4).jpg'
         ]);
 
         $producto->imagenes()->create([
-            'url' => 'productos/WhatsApp Image 2021-09-21 at 8.29.10 PM (1).jpg'
+            'url' => 'storage/productos/WhatsApp Image 2021-09-21 at 8.29.10 PM (1).jpg'
         ]);
 
         $producto->imagenes()->create([
-            'url' => 'productos/WhatsApp Image 2021-09-21 at 8.29.10 PM (5).jpg'
+            'url' => 'storage/productos/WhatsApp Image 2021-09-21 at 8.29.10 PM (5).jpg'
         ]);
 
         $producto=Producto::create([
@@ -1193,19 +1193,19 @@ class ProductoSeeder extends Seeder
         ]);
 
         $producto->imagenes()->create([
-            'url' => 'productos/WhatsApp Image 2021-09-21 at 8.29.11 PM (3).jpg'
+            'url' => 'storage/productos/WhatsApp Image 2021-09-21 at 8.29.11 PM (3).jpg'
         ]);
 
         $producto->imagenes()->create([
-            'url' => 'productos/WhatsApp Image 2021-09-21 at 8.29.10 PM (2).jpg'
+            'url' => 'storage/productos/WhatsApp Image 2021-09-21 at 8.29.10 PM (2).jpg'
         ]);
 
         $producto->imagenes()->create([
-            'url' => 'productos/WhatsApp Image 2021-09-21 at 8.29.11 PM.jpg'
+            'url' => 'storage/productos/WhatsApp Image 2021-09-21 at 8.29.11 PM.jpg'
         ]);
 
         $producto->imagenes()->create([
-            'url' => 'productos/WhatsApp Image 2021-09-21 at 8.29.10 PM (4).jpg'
+            'url' => 'storage/productos/WhatsApp Image 2021-09-21 at 8.29.10 PM (4).jpg'
         ]);
 
         $producto=Producto::create([
@@ -1219,19 +1219,19 @@ class ProductoSeeder extends Seeder
         ]);
 
         $producto->imagenes()->create([
-            'url' => 'productos/WhatsApp Image 2021-09-21 at 8.29.12 PM (2).jpg'
+            'url' => 'storage/productos/WhatsApp Image 2021-09-21 at 8.29.12 PM (2).jpg'
         ]);
 
         $producto->imagenes()->create([
-            'url' => 'productos/WhatsApp Image 2021-09-21 at 8.29.12 PM (3).jpg'
+            'url' => 'storage/productos/WhatsApp Image 2021-09-21 at 8.29.12 PM (3).jpg'
         ]);
 
         $producto->imagenes()->create([
-            'url' => 'productos/WhatsApp Image 2021-09-21 at 8.29.13 PM.jpg'
+            'url' => 'storage/productos/WhatsApp Image 2021-09-21 at 8.29.13 PM.jpg'
         ]);
 
         $producto->imagenes()->create([
-            'url' => 'productos/WhatsApp Image 2021-09-21 at 8.29.12 PM (4).jpg'
+            'url' => 'storage/productos/WhatsApp Image 2021-09-21 at 8.29.12 PM (4).jpg'
         ]);
 
         $producto=Producto::create([
@@ -1245,19 +1245,19 @@ class ProductoSeeder extends Seeder
         ]);
 
         $producto->imagenes()->create([
-            'url' => 'productos/WhatsApp Image 2021-09-21 at 8.29.13 PM (1).jpg'
+            'url' => 'storage/productos/WhatsApp Image 2021-09-21 at 8.29.13 PM (1).jpg'
         ]);
 
         $producto->imagenes()->create([
-            'url' => 'productos/WhatsApp Image 2021-09-21 at 8.29.13 PM (2).jpg'
+            'url' => 'storage/productos/WhatsApp Image 2021-09-21 at 8.29.13 PM (2).jpg'
         ]);
 
         $producto->imagenes()->create([
-            'url' => 'productos/WhatsApp Image 2021-09-21 at 8.29.14 PM.jpg'
+            'url' => 'storage/productos/WhatsApp Image 2021-09-21 at 8.29.14 PM.jpg'
         ]);
 
         $producto->imagenes()->create([
-            'url' => 'productos/WhatsApp Image 2021-09-21 at 8.29.12 PM (4).jpg'
+            'url' => 'storage/productos/WhatsApp Image 2021-09-21 at 8.29.12 PM (4).jpg'
         ]);
 
         $producto=Producto::create([
@@ -1271,19 +1271,19 @@ class ProductoSeeder extends Seeder
         ]);
 
         $producto->imagenes()->create([
-            'url' => 'productos/WhatsApp Image 2021-09-21 at 8.29.14 PM (3).jpg'
+            'url' => 'storage/productos/WhatsApp Image 2021-09-21 at 8.29.14 PM (3).jpg'
         ]);
 
         $producto->imagenes()->create([
-            'url' => 'productos/WhatsApp Image 2021-09-21 at 8.29.15 PM (1).jpg'
+            'url' => 'storage/productos/WhatsApp Image 2021-09-21 at 8.29.15 PM (1).jpg'
         ]);
 
         $producto->imagenes()->create([
-            'url' => 'productos/WhatsApp Image 2021-09-21 at 8.29.15 PM.jpg'
+            'url' => 'storage/productos/WhatsApp Image 2021-09-21 at 8.29.15 PM.jpg'
         ]);
 
         $producto->imagenes()->create([
-            'url' => 'productos/WhatsApp Image 2021-09-21 at 8.30.17 PM.jpg'
+            'url' => 'storage/productos/WhatsApp Image 2021-09-21 at 8.30.17 PM.jpg'
         ]);
 
         $producto=Producto::create([
@@ -1296,8 +1296,10 @@ class ProductoSeeder extends Seeder
             'user_id' => 15
         ]);
 
+        $producto->categorias()->sync([2, 4]);
+
         $producto->imagenes()->create([
-            'url' => 'productos/WhatsApp Image 2021-09-21 at 8.35.56 PM (1).jpg'
+            'url' => 'storage/productos/WhatsApp Image 2021-09-21 at 8.35.56 PM (1).jpg'
         ]);
 
         $producto=Producto::create([
@@ -1310,8 +1312,10 @@ class ProductoSeeder extends Seeder
             'user_id' => 16
         ]);
 
+        $producto->categorias()->sync([3, 12]);
+
         $producto->imagenes()->create([
-            'url' => 'productos/WhatsApp Image 2021-09-23 at 10.00.34 PM.jpg'
+            'url' => 'storage/productos/WhatsApp Image 2021-09-23 at 10.00.34 PM.jpg'
         ]);
 
         $producto=Producto::create([
@@ -1324,16 +1328,18 @@ class ProductoSeeder extends Seeder
             'user_id' => 16
         ]);
 
+        $producto->categorias()->sync([3, 12]);
+
         $producto->imagenes()->create([
-            'url' => 'productos/WhatsApp Image 2021-09-23 at 10.00.37 PM (3).jpg'
+            'url' => 'storage/productos/WhatsApp Image 2021-09-23 at 10.00.37 PM (3).jpg'
         ]);
 
         $producto->imagenes()->create([
-            'url' => 'productos/WhatsApp Image 2021-09-23 at 10.00.38 PM.jpg'
+            'url' => 'storage/productos/WhatsApp Image 2021-09-23 at 10.00.38 PM.jpg'
         ]);
 
         $producto->imagenes()->create([
-            'url' => 'productos/WhatsApp Image 2021-09-23 at 10.00.38 PM (1).jpg'
+            'url' => 'storage/productos/WhatsApp Image 2021-09-23 at 10.00.38 PM (1).jpg'
         ]);
 
         $producto=Producto::create([
@@ -1346,8 +1352,10 @@ class ProductoSeeder extends Seeder
             'user_id' => 16
         ]);
 
+        $producto->categorias()->sync([3, 12]);
+
         $producto->imagenes()->create([
-            'url' => 'productos/WhatsApp Image 2021-09-23 at 10.00.37 PM (2).jpg'
+            'url' => 'storage/productos/WhatsApp Image 2021-09-23 at 10.00.37 PM (2).jpg'
         ]);
 
         $producto=Producto::create([
@@ -1360,20 +1368,22 @@ class ProductoSeeder extends Seeder
             'user_id' => 16
         ]);
 
+        $producto->categorias()->sync([3, 12]);
+
         $producto->imagenes()->create([
-            'url' => 'productos/WhatsApp Image 2021-09-23 at 10.00.35 PM (2).jpg'
+            'url' => 'storage/productos/WhatsApp Image 2021-09-23 at 10.00.35 PM (2).jpg'
         ]);
 
         $producto->imagenes()->create([
-            'url' => 'productos/WhatsApp Image 2021-09-23 at 10.00.35 PM (1).jpg'
+            'url' => 'storage/productos/WhatsApp Image 2021-09-23 at 10.00.35 PM (1).jpg'
         ]);
 
         $producto->imagenes()->create([
-            'url' => 'productos/WhatsApp Image 2021-09-23 at 10.00.35 PM.jpg'
+            'url' => 'storage/productos/WhatsApp Image 2021-09-23 at 10.00.35 PM.jpg'
         ]);
 
         $producto->imagenes()->create([
-            'url' => 'productos/WhatsApp Image 2021-09-23 at 10.00.37 PM.jpg'
+            'url' => 'storage/productos/WhatsApp Image 2021-09-23 at 10.00.37 PM.jpg'
         ]);
 
         $producto=Producto::create([
@@ -1386,20 +1396,22 @@ class ProductoSeeder extends Seeder
             'user_id' => 16
         ]);
 
+        $producto->categorias()->sync([3, 12]);
+
         $producto->imagenes()->create([
-            'url' => 'productos/WhatsApp Image 2021-09-23 at 10.00.39 PM (2).jpg'
+            'url' => 'storage/productos/WhatsApp Image 2021-09-23 at 10.00.39 PM (2).jpg'
         ]);
 
         $producto->imagenes()->create([
-            'url' => 'productos/WhatsApp Image 2021-09-23 at 10.00.38 PM (3).jpg'
+            'url' => 'storage/productos/WhatsApp Image 2021-09-23 at 10.00.38 PM (3).jpg'
         ]);
 
         $producto->imagenes()->create([
-            'url' => 'productos/WhatsApp Image 2021-09-23 at 10.00.40 PM.jpg'
+            'url' => 'storage/productos/WhatsApp Image 2021-09-23 at 10.00.40 PM.jpg'
         ]);
 
         $producto->imagenes()->create([
-            'url' => 'productos/WhatsApp Image 2021-09-23 at 10.00.39 PM (1).jpg'
+            'url' => 'storage/productos/WhatsApp Image 2021-09-23 at 10.00.39 PM (1).jpg'
         ]);
 
         $producto=Producto::create([
@@ -1412,16 +1424,18 @@ class ProductoSeeder extends Seeder
             'user_id' => 16
         ]);
 
+        $producto->categorias()->sync([3, 12]);
+
         $producto->imagenes()->create([
-            'url' => 'productos/WhatsApp Image 2021-09-23 at 10.00.40 PM (3).jpg'
+            'url' => 'storage/productos/WhatsApp Image 2021-09-23 at 10.00.40 PM (3).jpg'
         ]);
 
         $producto->imagenes()->create([
-            'url' => 'productos/WhatsApp Image 2021-09-23 at 10.01.37 PM (3).jpg'
+            'url' => 'storage/productos/WhatsApp Image 2021-09-23 at 10.01.37 PM (3).jpg'
         ]);
 
         $producto->imagenes()->create([
-            'url' => 'productos/WhatsApp Image 2021-09-23 at 10.01.37 PM (4).jpg'
+            'url' => 'storage/productos/WhatsApp Image 2021-09-23 at 10.01.37 PM (4).jpg'
         ]);
 
         $producto=Producto::create([
@@ -1434,16 +1448,18 @@ class ProductoSeeder extends Seeder
             'user_id' => 16
         ]);
 
+        $producto->categorias()->sync([3, 12]);
+
         $producto->imagenes()->create([
-            'url' => 'productos/WhatsApp Image 2021-09-23 at 10.00.41 PM.jpg'
+            'url' => 'storage/productos/WhatsApp Image 2021-09-23 at 10.00.41 PM.jpg'
         ]);
 
         $producto->imagenes()->create([
-            'url' => 'productos/WhatsApp Image 2021-09-23 at 10.01.37 PM (2).jpg'
+            'url' => 'storage/productos/WhatsApp Image 2021-09-23 at 10.01.37 PM (2).jpg'
         ]);
 
         $producto->imagenes()->create([
-            'url' => 'productos/WhatsApp Image 2021-09-23 at 10.01.37 PM (1).jpg'
+            'url' => 'storage/productos/WhatsApp Image 2021-09-23 at 10.01.37 PM (1).jpg'
         ]);
 
         $producto=Producto::create([
@@ -1456,16 +1472,18 @@ class ProductoSeeder extends Seeder
             'user_id' => 16
         ]);
 
+        $producto->categorias()->sync([3, 12]);
+
         $producto->imagenes()->create([
-            'url' => 'productos/WhatsApp Image 2021-09-23 at 10.01.39 PM (1).jpg'
+            'url' => 'storage/productos/WhatsApp Image 2021-09-23 at 10.01.39 PM (1).jpg'
         ]);
 
         $producto->imagenes()->create([
-            'url' => 'productos/WhatsApp Image 2021-09-23 at 10.01.39 PM.jpg'
+            'url' => 'storage/productos/WhatsApp Image 2021-09-23 at 10.01.39 PM.jpg'
         ]);
 
         $producto->imagenes()->create([
-            'url' => 'productos/WhatsApp Image 2021-09-23 at 10.01.38 PM (2).jpg'
+            'url' => 'storage/productos/WhatsApp Image 2021-09-23 at 10.01.38 PM (2).jpg'
         ]);
 
         $producto=Producto::create([
@@ -1478,8 +1496,10 @@ class ProductoSeeder extends Seeder
             'user_id' => 16
         ]);
 
+        $producto->categorias()->sync([2, 4]);
+
         $producto->imagenes()->create([
-            'url' => 'productos/WhatsApp Image 2021-09-23 at 10.01.41 PM.jpg'
+            'url' => 'storage/productos/WhatsApp Image 2021-09-23 at 10.01.41 PM.jpg'
         ]);
     }
 }

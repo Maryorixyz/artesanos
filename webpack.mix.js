@@ -20,6 +20,9 @@ mix.js('resources/js/vendor.js', 'public/js')
     .js('resources/js/asociaciones.js', 'public/js')
     .css('resources/css/asociaciones.css', 'public/css')
 
+    .js('resources/js/asociacion-detalle.js', 'public/js')
+    .css('resources/css/asociacion-detalle.css', 'public/css')
+
     .js('resources/js/catalogo.js', 'public/js')
     .css('resources/css/catalogo.css', 'public/css')
 

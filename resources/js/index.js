@@ -217,7 +217,7 @@ $('.wrap-rating').each(function(){
 /*==================================================================
 [ Show modal1 ]*/
 $('#filas-producto').on('click','.js-show-modal1',function(e){
-    /*GUARDAR DATOS DE PRODUCTO-MEJORAR IMAGEN*/
+    /* GUARDAR DATOS DE PRODUCTO-MEJORAR IMAGEN*/
     let producto = JSON.parse(e.target.dataset.producto)
     
     $('#modal-producto-nombre').text(producto.nombre)
@@ -226,11 +226,11 @@ $('#filas-producto').on('click','.js-show-modal1',function(e){
 
     producto.imagenes.forEach(imagen => {
         let img = `
-        <div class="item-slick3" data-thumb="storage/${imagen.url}">
+        <div class="item-slick3" data-thumb="${imagen.url}">
             <div class="wrap-pic-w pos-relative">
-                <img src="storage/${imagen.url}" alt="IMG-PRODUCT">
+                <img src="${imagen.url}" alt="IMG-PRODUCT">
 
-                <a class="flex-c-m size-108 how-pos1 bor0 fs-16 cl10 bg0 hov-btn3 trans-04" href="storage/${imagen.url}">
+                <a class="flex-c-m size-108 how-pos1 bor0 fs-16 cl10 bg0 hov-btn3 trans-04" href="${imagen.url}">
                     <i class="fa fa-expand"></i>
                 </a>
             </div>

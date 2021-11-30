@@ -29,7 +29,7 @@
 						@foreach ($asociaciones as  $i => $asociacion)
 
 							<div class="p-b-63">
-								<a href="blog-detail.html" class="hov-img0 how-pos5-parent">
+								<a href="{{ route('asociaciones.detalle', $asociacion->id) }}" class="hov-img0 how-pos5-parent">
 									<img src="{{ $asociacion->imagenes[0]->url }}" alt="IMG-BLOG">
 
 									<div class="flex-col-c-m size-123 bg9 how-pos5">
@@ -41,7 +41,7 @@
 
 								<div class="p-t-32">
 									<h4 class="p-b-15">
-										<a href="blog-detail.html" class="ltext-108 cl2 hov-cl1 trans-04">
+										<a href="{{ route('asociaciones.detalle', $asociacion->id) }}" class="ltext-108 cl2 hov-cl1 trans-04">
 											{{ $asociacion->nombre }}
 
 										</a>
@@ -68,7 +68,7 @@
 											</span>
 										</span> --}}
 
-										<a href="blog-detail.html" class="stext-101 cl2 hov-cl1 trans-04 m-tb-10">
+										<a href="{{ route('asociaciones.detalle', $asociacion->id) }}" class="stext-101 cl2 hov-cl1 trans-04 m-tb-10">
 											Continue Reading
 
 											<i class="fa fa-long-arrow-right m-l-9"></i>

@@ -3368,3 +3368,41 @@ input.num-product::-webkit-inner-spin-button {
   }
 
 }
+
+
+/*CUSTOM*/
+
+.cambio-home {
+  background-color: #56A85E;
+}
+
+.sesion{
+  font-family: Poppins-Medium;
+  font-size: 14px !important;
+  color: #333;
+}
+
+.hov-nuevo:hover{
+  color: #56A85E;
+}
+
+.cls-1 {
+  fill: none;
+  stroke: #56A85E;
+  stroke-width: 5.5px;
+  fill-rule: evenodd;
+}
+
+.cls-2{
+  fill: none;
+  stroke: #56A85E;
+  stroke-width: 5.5px;
+  fill-rule: evenodd;
+  padding: auto;
+}
+
+.sesion-mobile{
+  font-family: Poppins-Medium;
+  font-size: 17px;
+  color: #333;
+}

@@ -300,7 +300,7 @@ var __webpack_exports__ = {};
     $('#modal-producto-precio').text('S/. ' + producto.precio);
     $('#modal-producto-descripcion').text(producto.descripcion);
     producto.imagenes.forEach(function (imagen) {
-      var img = "\n            <div class=\"item-slick3\" data-thumb=\"storage/".concat(imagen.url, "\">\n                <div class=\"wrap-pic-w pos-relative\">\n                    <img src=\"storage/").concat(imagen.url, "\" alt=\"IMG-PRODUCT\">\n\n                    <a class=\"flex-c-m size-108 how-pos1 bor0 fs-16 cl10 bg0 hov-btn3 trans-04\" href=\"storage/").concat(imagen.url, "\">\n                        <i class=\"fa fa-expand\"></i>\n                    </a>\n                </div>\n            </div>");
+      var img = "\n            <div class=\"item-slick3\" data-thumb=\"".concat(imagen.url, "\">\n                <div class=\"wrap-pic-w pos-relative\">\n                    <img src=\"").concat(imagen.url, "\" alt=\"IMG-PRODUCT\">\n\n                    <a class=\"flex-c-m size-108 how-pos1 bor0 fs-16 cl10 bg0 hov-btn3 trans-04\" href=\"").concat(imagen.url, "\" >\n                        <i class=\"fa fa-expand\"></i>\n                    </a>\n                </div>\n            </div>");
       $('#modal-producto-imagenes').append(img);
     });
     $('.wrap-slick3').each(function () {
@@ -322,6 +322,18 @@ var __webpack_exports__ = {};
           var portrait = $(slick.$slides[index]).data('thumb');
           return '<img src=" ' + portrait + ' "/><div class="slick3-dot-overlay"></div>';
         }
+      });
+    });
+    $('.gallery-lb').each(function () {
+      // the containers for all your galleries
+      $(this).magnificPopup({
+        delegate: 'a',
+        // the selector for gallery item
+        type: 'image',
+        gallery: {
+          enabled: true
+        },
+        mainClass: 'mfp-fade'
       });
     });
     e.preventDefault();
@@ -349,11 +361,11 @@ var __webpack_exports__ = {};
   function ajax() {
     console.log($topeContainer);
     var http = new XMLHttpRequest();
-    var url = '/catalogo/productos/' + (inicio - 16);
+    var url = '/catalogo/productos/' + (inicio - 8);
 
     http.onreadystatechange = function () {
       if (this.readyState == 4 && this.status == 200) {
-        inicio += 16;
+        inicio += 8;
         var productos = JSON.parse(this.responseText);
         console.log(productos);
         productos.forEach(function (producto) {
@@ -364,7 +376,7 @@ var __webpack_exports__ = {};
           producto.categorias.forEach(function (categoria) {
             categorias += categoria.slug + ' ';
           });
-          var $fila = $("\n                    <div class=\"col-sm-6 col-md-4 col-lg-3 p-b-35 isotope-item ".concat(categorias, "\" >\n                    <!-- Block2 -->\n                        <div class=\"block2\">\n                            <div class=\"block2-pic hov-img0\">\n                                <img src=\"storage/").concat(producto.imagenes[0].url, "\" alt=\"IMG-PRODUCT\">\n                                <a href=\"#\" class=\"block2-btn flex-c-m stext-103 cl2 size-102 bg0 bor2 hov-btn1 p-lr-15 trans-04 js-show-modal1\" data-producto=\"").concat(productWithNewFormat, "\">\n                                    Vista R\xE1pida\n                                </a>\n                            </div>\n            \n                            <div class=\"block2-txt flex-w flex-t p-t-14\">\n                                <div class=\"block2-txt-child1 flex-col-l \">\n                                    <a href=\"product-detail.html\" class=\"stext-104 cl4 hov-cl1 trans-04 js-name-b2 p-b-6\">\n                                        ").concat(producto.nombre, "\n                                    </a>\n                    \n                                    <span class=\"precio-producto stext-105 cl3\" data-precio=\"").concat(producto.precio, "\">\n                                        <i>S/. ").concat(producto.precio, " </i>\n                                    </span>\n                                </div>\n                            </div>\n                        </div>\n                    </div>")); // $('#filas-producto').append(filas)
+          var $fila = $("\n                    <div class=\"col-sm-6 col-md-4 col-lg-3 p-b-35 isotope-item ".concat(categorias, "\" >\n                    <!-- Block2 -->\n                        <div class=\"block2\">\n                            <div class=\"block2-pic hov-img0\">\n                                <img src=\"").concat(producto.imagenes[0].url, "\" alt=\"IMG-PRODUCT\">\n                                <a href=\"#\" class=\"block2-btn flex-c-m stext-103 cl2 size-102 bg0 bor2 hov-btn1 p-lr-15 trans-04 js-show-modal1\" data-producto=\"").concat(productWithNewFormat, "\">\n                                    Vista R\xE1pida\n                                </a>\n                            </div>\n            \n                            <div class=\"block2-txt flex-w flex-t p-t-14\">\n                                <div class=\"block2-txt-child1 flex-col-l \">\n                                    <a href=\"product-detail.html\" class=\"stext-104 cl4 hov-cl1 trans-04 js-name-b2 p-b-6\">\n                                        ").concat(producto.nombre, "\n                                    </a>\n                    \n                                    <span class=\"precio-producto stext-105 cl3\" data-precio=\"").concat(producto.precio, "\">\n                                        <i>S/. ").concat(producto.precio, " </i>\n                                    </span>\n                                </div>\n                            </div>\n                        </div>\n                    </div>")); // $('#filas-producto').append(filas)
 
           $topeContainer.append($fila).isotope('appended', $fila);
         });

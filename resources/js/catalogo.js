@@ -335,11 +335,11 @@
 
         producto.imagenes.forEach(imagen => {
             let img = `
-            <div class="item-slick3" data-thumb="storage/${imagen.url}">
+            <div class="item-slick3" data-thumb="${imagen.url}">
                 <div class="wrap-pic-w pos-relative">
-                    <img src="storage/${imagen.url}" alt="IMG-PRODUCT">
+                    <img src="${imagen.url}" alt="IMG-PRODUCT">
 
-                    <a class="flex-c-m size-108 how-pos1 bor0 fs-16 cl10 bg0 hov-btn3 trans-04" href="storage/${imagen.url}">
+                    <a class="flex-c-m size-108 how-pos1 bor0 fs-16 cl10 bg0 hov-btn3 trans-04" href="${imagen.url}" >
                         <i class="fa fa-expand"></i>
                     </a>
                 </div>
@@ -371,6 +371,17 @@
                 },  
             });
         });
+
+        $('.gallery-lb').each(function() { // the containers for all your galleries
+			$(this).magnificPopup({
+		        delegate: 'a', // the selector for gallery item
+		        type: 'image',
+		        gallery: {
+		        	enabled:true
+		        },
+		        mainClass: 'mfp-fade'
+		    });
+		});
 
         e.preventDefault();
         $('.js-modal1').addClass('show-modal1');
@@ -415,13 +426,13 @@
         console.log($topeContainer)
 
         const http = new XMLHttpRequest();
-        const url = '/catalogo/productos/'+ (inicio-16);
+        const url = '/catalogo/productos/'+ (inicio-8);
     
         http.onreadystatechange = function(){
             if(this.readyState == 4 && this.status == 200){
     
             
-                inicio += 16
+                inicio += 8
                
                 let productos = JSON.parse(this.responseText)
     
@@ -448,7 +459,7 @@
                     <!-- Block2 -->
                         <div class="block2">
                             <div class="block2-pic hov-img0">
-                                <img src="storage/${producto.imagenes[0].url}" alt="IMG-PRODUCT">
+                                <img src="${producto.imagenes[0].url}" alt="IMG-PRODUCT">
                                 <a href="#" class="block2-btn flex-c-m stext-103 cl2 size-102 bg0 bor2 hov-btn1 p-lr-15 trans-04 js-show-modal1" data-producto="${productWithNewFormat}">
                                     Vista Rápida
                                 </a>

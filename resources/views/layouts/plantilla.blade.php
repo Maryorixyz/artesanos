@@ -37,8 +37,8 @@
 					<!-- Menu desktop -->
 					<div class="menu-desktop">
 						<ul class="main-menu">
-							<li class="{{ request()->routeIs('asociaciones') ? 'active-menu' : '' }}">
-								<a href="{{route('asociaciones')}}">Asociaciones</a>
+							<li class="{{ request()->routeIs('asociaciones.index') ? 'active-menu' : '' }}">
+								<a href="{{ route('asociaciones.index') }}">Asociaciones</a>
 							</li>
 
 							<li class="{{ request()->routeIs('catalogo') ? 'active-menu' : '' }}">
@@ -160,7 +160,7 @@
                     @endauth
                 @endif
 				<li>
-					<a href="{{route('asociaciones')}}">Asociaciones</a>
+					<a href="{{route('asociaciones.index')}}">Asociaciones</a>
 				</li>
 
 				<li>

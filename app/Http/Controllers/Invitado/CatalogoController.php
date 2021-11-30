@@ -16,7 +16,7 @@ class CatalogoController extends Controller
     public function index()
     {
 
-        $productos = Producto::with('categorias')->offset(0)->limit(24)->get(); //Extrae los productos de la bd
+        $productos = Producto::with('imagenes', 'categorias', 'user')->offset(0)->limit(24)->get(); //Extrae los productos de la bd
 
         $categorias = Categoria::withCount('productos')->orderBy('productos_count', 'DESC')->limit(4)->get();
 
@@ -30,7 +30,7 @@ class CatalogoController extends Controller
     public function productos($inicio)
     {
 
-        $productos = Producto::with('imagenes', 'categorias')->offset($inicio)->limit(8)->get(); //Extrae los productos de la bd
+        $productos = Producto::with('imagenes', 'categorias', 'user')->offset($inicio)->limit(8)->get(); //Extrae los productos de la bd
 
         return response()->json($productos);
     }

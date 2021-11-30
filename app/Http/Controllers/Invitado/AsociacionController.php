@@ -12,11 +12,19 @@ class AsociacionController extends Controller
      *
      * @return \Illuminate\Contracts\Support\Renderable
      */
-    public function __invoke()
+    public function index()
     {
 
         $asociaciones = Asociacion::with('imagenes')->get();
 
         return view('asociaciones', compact('asociaciones'));
+    }
+
+    public function detalle($id)
+    {
+
+        $asociacion = Asociacion::where('id', $id)->with('imagenes')->firstOrFail();
+
+        return view('asociacion-detalle', compact('asociacion'));
     }
 }

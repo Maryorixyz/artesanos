@@ -26,7 +26,9 @@ Route::view('/nosotros', 'nosotros')->name('nosotros');
 
 Route::view('/contactanos', 'contactanos')->name('contactanos');
 
-Route::get('/asociaciones', App\Http\Controllers\Invitado\AsociacionController::class)->name('asociaciones');
+Route::get('/asociaciones', [App\Http\Controllers\Invitado\AsociacionController::class, 'index'])->name('asociaciones.index');
+
+Route::get('/asociaciones/{id}', [App\Http\Controllers\Invitado\AsociacionController::class, 'detalle'])->name('asociaciones.detalle');
 
 Route::get('asociaciones/create', [App\Http\Controllers\AsociacionController::class,'create'])
         ->name('asociaciones.create');
