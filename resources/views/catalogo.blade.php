@@ -172,15 +172,15 @@
 							<div class="block2-txt flex-w flex-t p-t-14">
 								<div class="block2-txt-child1 flex-col-l ">
 									<a href="product-detail.html" class="stext-104 cl4 hov-cl1 trans-04 js-name-b2 p-b-6 producto-nombre">
-										<img src="{{asset('images/icons/producto-2.png')}}" width="25"> {{ $producto->nombre }}
+										<img src="{{asset('images/icons/producto-2.png')}}" width="22"> {{ $producto->nombre }}
 									</a>
 
 									<a href="product-detail.html" class="stext-104 cl4 hov-cl1 trans-04 js-name-b2 p-b-6 producto-nombre">
-										<img src="{{asset('images/icons/artesano-hombre.png')}}" width="25"> {{ $producto->user->name }}
+										<img src="{{ $producto->user->sexo == 'M' ? asset('images/icons/artesano-hombre.png') : asset('images/icons/artesano-mujer.png') }}" width="22"> {{ $producto->user->name }}
 									</a>
 	
 									<span class="precio-producto stext-105 cl3" data-precio="{{ $producto->precio }}">
-										<img src="{{asset('images/icons/precio-2.png')}}" width="25"> <i>S/. {{ $producto->precio }} </i>
+										<img src="{{asset('images/icons/precio-2.png')}}" width="22"> <i>S/. {{ $producto->precio }} </i>
 									</span>
 								</div>
 								<div class="block2-txt-child2 flex-r p-t-3">
