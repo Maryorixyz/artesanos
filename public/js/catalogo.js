@@ -302,18 +302,19 @@ var __webpack_exports__ = {};
 
   $('#filas-producto').on('click', '.js-show-modal1', function (e) {
     /*GUARDAR DATOS DE PRODUCTO-MEJORAR IMAGEN*/
-    var producto = JSON.parse(e.target.dataset.producto);
-    /*PRODUCTO NOMBRE*/
+    var producto = JSON.parse(e.target.dataset.producto); //todo PRODUCTO NOMBRE*/
 
     var productoNombre = "\n\t\t\t<h1 class=\"mtext-105 cl2 js-name-detail p-b-14 edit-nombre-modal\">".concat(producto.nombre, "</h1>\n\t\t\t");
-    $('#modal-producto-nombre').empty().append(productoNombre);
-    /*PRODUCTO PRECIO*/
+    $('#modal-producto-nombre').empty().append(productoNombre); //todo PRODUCTO PRECIO
 
     var productoPrecio = "\n            <span class=\"precio-producto mtext-108 cl5 precio-size\">\n                <img class=\"iconos\" src='images/icons/precio-1.png'>S/. ".concat(producto.precio, "\n            </span>\n\t\t\t    ");
     $('#modal-producto-precio').empty().append(productoPrecio); //todo:PRODUCTO DESCRIPCION
 
     var productoDescripcion = "\n            <span>".concat(producto.descripcion, "</span>\n            ");
     $('#modal-producto-descripcion').empty().append(productoDescripcion); //todo:PRODUCTO DESCRIPCION ARTESANO
+
+    var productoartesanoFoto = "\n            <img src= \"".concat(producto.user.profile_photo_url, "\">\n        ");
+    $('#modal-producto-usuario-foto').empty().append(productoartesanoFoto); //todo:PRODUCTO DESCRIPCION ARTESANO
 
     var productoartesanoNombre = "\n        <span>".concat(producto.user.name, "</span>\n        ");
     $('#modal-producto-user-name').empty().append(productoartesanoNombre);

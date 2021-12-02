@@ -340,14 +340,14 @@
         /*GUARDAR DATOS DE PRODUCTO-MEJORAR IMAGEN*/
         let producto = JSON.parse(e.target.dataset.producto)
 
-        /*PRODUCTO NOMBRE*/
+        //todo PRODUCTO NOMBRE*/
         let productoNombre = `
 			<h1 class="mtext-105 cl2 js-name-detail p-b-14 edit-nombre-modal">${producto.nombre}</h1>
 			`
 
         $('#modal-producto-nombre').empty().append(productoNombre)
         
-        /*PRODUCTO PRECIO*/
+        //todo PRODUCTO PRECIO
         let productoPrecio = `
             <span class="precio-producto mtext-108 cl5 precio-size">
                 <img class="iconos" src='images/icons/precio-1.png'>S/. ${producto.precio}
@@ -362,12 +362,16 @@
         $('#modal-producto-descripcion').empty().append(productoDescripcion)
 
         //todo:PRODUCTO DESCRIPCION ARTESANO
+        let productoartesanoFoto = `
+            <img src= "${producto.user.profile_photo_url}">
+        `
+        $('#modal-producto-usuario-foto').empty().append(productoartesanoFoto)
+
+        //todo:PRODUCTO DESCRIPCION ARTESANO
         let productoartesanoNombre = `
         <span>${producto.user.name}</span>
         `
         $('#modal-producto-user-name').empty().append(productoartesanoNombre)
-
-
         
         producto.imagenes.forEach(imagen => {
             let img = `

@@ -239,27 +239,27 @@
 							<div  id = "modal-producto-nombre">
 								<h1 class="mtext-105 cl2 js-name-detail p-b-14 edit-nombre-modal">nombre</h1>
 							</div>
+							<div class="modal-cabecera">
+								<div id ="modal-producto-precio" class="modal-producto-precio">
+									<span class="mtext-106 cl2">Precio</span>
+								</div>
 
-							<div id ="modal-producto-precio" class="modal-producto-precio">
-								<span class="mtext-106 cl2">Precio</span>
+								<h4>Descripción:</h4>
+								<div id="modal-producto-descripcion" class="modal-producto-descripcion">
+									<p class="stext-102 cl3 p-t-23">descripcion 2</p>
+								</div>
 							</div>
-
-							<h4>Descripcion:</h4>
-							<div id="modal-producto-descripcion" class="modal-producto-descripcion">
-								<p class="stext-102 cl3 p-t-23">descripcion 2</p>
+							<div class="modal-informacion-artesano">
+								<h4>Informacion del artesano</h4>
+								<div class="informacion-usuario">
+										<div id="modal-producto-usuario-foto" class="foto-artesano" ></div>
+										<div id="modal-producto-user-name" class="nombre-artesano">NOMBRE</div>
+								</div>
 							</div>
-							
-							<h4>Informacion del artesano</h4>
-
-							<div class="informacion-usuario">
-									<div id="modal-producto-usuario-foto"  class="foto-artesano" ></div>
-									<div id="modal-producto-user-name" class="nombre-artesano">NOMBRE</div>
+							<div class="modal-detalle-mapa">
+								<h4>Ubicacion:</h4>
+								<div id="modal-producto-usuario-map" class="modal-mapa">MAPA</div>
 							</div>
-
-							<h4>Ubicacion:</h4>
-
-							<div id="modal-producto-usuario-map" class="modal-mapa">MAPA</div>
-
 						</div>
 					</div>
 				</div>

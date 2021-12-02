@@ -58,6 +58,11 @@
 
 }
 
+.foto-artesano img{
+    width: 100%;
+    border-radius: 50%;
+}
+
 .nombre-artesano{
     margin-left: 2rem;
 }
@@ -70,4 +75,34 @@
 .modal-producto-precio{
     margin-top: 0.5rem;
     margin-bottom: 0.5rem;
+}
+
+.modal-cabecera{
+    display:inline-block;
+    width:100%;
+    margin-top: 5px;
+    border: 2px solid;
+    border-color: rgba(0, 0, 0, 0.1);
+    padding: 10px;
+    border-radius: 20px;
+}
+
+.modal-informacion-artesano{
+    display:inline-block;
+    width:100%;
+    border: 2px solid;
+    margin-top: 5px;
+    border-color: rgba(0, 0, 0, 0.1);
+    padding: 15px 10px 10px 10px;
+    border-radius: 20px;
+}
+
+.modal-detalle-mapa{
+    display:inline-block;
+    width:100%;
+    border: 2px solid;
+    margin-top: 5px;
+    border-color: rgba(0, 0, 0, 0.1);
+    padding: 15px 10px 10px 10px;
+    border-radius: 20px;
 }

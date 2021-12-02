@@ -84,9 +84,9 @@ class ProductoController extends Controller
 
         ]);
         $request->offsetSet('user_id', auth()->user()->id);
-        $productos = Producto::create($request->all()) ;
-
-        return redirect()->route('admin.producto.index', $productos)->with('info', 'el producto se creo con exito');
+        $producto = Producto::create($request->all()) ;
+        $producto->categorias()->sync($request->categorias);
+        return redirect()->route('admin.producto.index', $producto)->with('info', 'El producto se creo con exito');
     }
 
     /**
@@ -132,7 +132,8 @@ class ProductoController extends Controller
 
         ]);
         $producto->update($request->all());
-        return redirect()->route('admin.producto.edit', $producto)->with('info', 'el producto se actualizo');
+        $producto->categorias()->sync($request->categorias);
+        return redirect()->route('admin.producto.edit', $producto)->with('info', 'El producto se actualizo');
     }
 
     /**
@@ -145,6 +146,6 @@ class ProductoController extends Controller
     {
         $producto->delete();
 
-        return redirect()->route('admin.producto.index')->with('info', 'el producto se elimino con exito');
+        return redirect()->route('admin.producto.index')->with('info', 'El producto se elimino con exito');
     }
 }
