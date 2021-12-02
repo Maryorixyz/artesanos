@@ -1,16 +1,16 @@
 <x-jet-form-section submit="updateProfileInformation">
     <x-slot name="title">
-        {{ __('Profile Information') }}
+        {{ __('Información del perfil') }}
     </x-slot>
 
     <x-slot name="description">
-        {{ __('Update your account\'s profile information and email address.') }}
+        {{ __('Actualice la información de perfil y la dirección de correo electrónico de su cuenta.') }}
     </x-slot>
 
     <x-slot name="form">
 
         <x-jet-action-message on="saved">
-            {{ __('Saved.') }}
+            {{ __('Guardado.') }}
         </x-jet-action-message>
 
         <!-- Profile Photo -->
@@ -62,7 +62,7 @@
         <div class="w-md-75">
             <!-- Name -->
             <div class="mb-3">
-                <x-jet-label for="name" value="{{ __('Name') }}" />
+                <x-jet-label for="name" value="{{ __('Nombre') }}" />
                 <x-jet-input id="name" type="text" class="{{ $errors->has('name') ? 'is-invalid' : '' }}" wire:model.defer="state.name" autocomplete="name" />
                 <x-jet-input-error for="name" />
             </div>
@@ -72,6 +72,20 @@
                 <x-jet-label for="email" value="{{ __('Email') }}" />
                 <x-jet-input id="email" type="email" class="{{ $errors->has('email') ? 'is-invalid' : '' }}" wire:model.defer="state.email" />
                 <x-jet-input-error for="email" />
+            </div>
+
+            <!-- Teléfono -->
+            <div class="mb-3">
+                <x-jet-label for="telefono" value="{{ __('Teléfono') }}" />
+                <x-jet-input id="telefono" type="telefono" class="{{ $errors->has('telefono') ? 'is-invalid' : '' }}" wire:model.defer="state.telefono" />
+                <x-jet-input-error for="telefono" />
+            </div>
+
+            <!-- Dirección -->
+            <div class="mb-3">
+                <x-jet-label for="direccion" value="{{ __('Dirección') }}" />
+                <x-jet-input id="direccion" type="direccion" class="{{ $errors->has('direccion') ? 'is-invalid' : '' }}" wire:model.defer="state.direccion" />
+                <x-jet-input-error for="telefono" />
             </div>
         </div>
     </x-slot>
@@ -83,7 +97,7 @@
                     <span class="visually-hidden">Loading...</span>
                 </div>
 
-				{{ __('Save') }}
+				{{ __('Guardar') }}
 			</x-jet-button>
 		</div>
     </x-slot>

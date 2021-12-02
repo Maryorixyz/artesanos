@@ -67,8 +67,8 @@
 									<li>
 										<a class="sesion">{{ explode(' ', Auth::user()->name)[0] }}</a>
 										<ul class="sub-menu">
-											<li><a href="#">Perfil</a></li>
-											<li><a href="{{ route('admin.inicio') }}">Dashboard</a></li>
+											<li><a href="user/profile">Perfil</a></li>
+											<li><a href="{{ route('admin.producto.index') }}">Dashboard</a></li>
 											<li>
 												<a href="{{ route('logout') }}" onclick="event.preventDefault();
 													document.getElementById('logout-form').submit();">Cerrar Sesión</a>
@@ -145,8 +145,8 @@
 						<li>
 							<a class="dis-block cl2 hov-nuevo trans-04 p-r-11 p-l-10">{{ explode(' ', Auth::user()->name)[0] }}</a>
 							<ul class="sub-menu-m">
-								<li><a href="#">Perfil</a></li>
-								<li><a href="{{ route('admin.inicio') }}">Dashboard</a></li>
+								<li><a href="user/profile">Perfil</a></li>
+								<li><a href="{{ route('admin.producto.index') }}">Dashboard</a></li>
 								<li>
 									<a href="{{ route('logout') }}" onclick="event.preventDefault();
 										document.getElementById('logout-form').submit();">Cerrar Sesión</a>

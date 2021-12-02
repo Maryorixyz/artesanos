@@ -250,7 +250,7 @@ return [
 
         // Sidebar items:
         [
-            'text' => 'profile',
+            'text' => 'Perfil',
             'url'  => 'user/profile',
             'icon' => 'fas fa-fw fa-user',
         ],

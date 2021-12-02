@@ -99,6 +99,8 @@ class UserSeeder extends Seeder
             'name' => 'Usuario de prueba',
             'email' => 'prueba@gmail.com',
             'sexo' => 'M',
+            'telefono'=>'999999999',
+            'direccion'=>'-',
             'password' => Hash::make('123456789'),
         ])->syncRoles(['Admin']);
         

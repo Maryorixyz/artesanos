@@ -166,6 +166,8 @@ class ProductoSeeder extends Seeder
             'user_id' => 2
         ]);
 
+        $producto->categorias()->sync([5,12]);
+
         $producto->imagenes()->create([
             'url' => 'storage/productos/WhatsApp Image 2021-09-21 at 9.01.17 PM (2).jpg'
         ]);
@@ -188,6 +190,8 @@ class ProductoSeeder extends Seeder
             'user_id' => 2
         ]);
 
+        $producto->categorias()->sync([12]);
+
         $producto->imagenes()->create([
             'url' => 'storage/productos/WhatsApp Image 2021-09-21 at 9.01.18 PM.jpg'
         ]);
@@ -201,6 +205,8 @@ class ProductoSeeder extends Seeder
             'colores' => 'Morado, Rojo, Verde, Jade, Negro',
             'user_id' => 3
         ]);
+
+        $producto->categorias()->sync([2, 6]);
 
         $producto->imagenes()->create([
             'url' => 'storage/productos/WhatsApp Image 2021-09-21 at 9.01.41 PM.jpg'
@@ -216,6 +222,8 @@ class ProductoSeeder extends Seeder
             'user_id' => 3
         ]);
 
+        $producto->categorias()->sync([2, 6]);
+
         $producto->imagenes()->create([
             'url' => 'storage/productos/WhatsApp Image 2021-09-21 at 9.01.42 PM.jpg'
         ]);
@@ -230,12 +238,14 @@ class ProductoSeeder extends Seeder
             'user_id' => 4
         ]);
 
+        $producto->categorias()->sync([5,12]);
+
         $producto->imagenes()->create([
             'url' => 'storage/productos/WhatsApp Image 2021-09-27 at 8.00.58 AM.jpg'
         ]);
 
         $producto=Producto::create([
-            'nombre' => 'Macarilla de Negritos',
+            'nombre' => 'Mascarilla de Negritos',
             'descripcion' => 'Hecho de cuerina, perlas, elastico y nariz de madera',
             'medidas' => 'Grande',
             'precio' => 20,
@@ -243,6 +253,8 @@ class ProductoSeeder extends Seeder
             'colores' => 'Variados',
             'user_id' => 4
         ]);
+
+        $producto->categorias()->sync([5,12]);
 
         $producto->imagenes()->create([
             'url' => 'storage/productos/WhatsApp Image 2021-09-27 at 8.00.57 AM.jpg'
@@ -258,6 +270,8 @@ class ProductoSeeder extends Seeder
             'user_id' => 4
         ]);
 
+        $producto->categorias()->sync([2, 7]);
+
         $producto->imagenes()->create([
             'url' => 'storage/productos/WhatsApp Image 2021-09-27 at 8.01.00 AM.jpg'
         ]);
@@ -271,6 +285,8 @@ class ProductoSeeder extends Seeder
             'colores' => 'Variados',
             'user_id' => 4
         ]);
+
+        $producto->categorias()->sync([5,12]);
 
         $producto->imagenes()->create([
             'url' => 'storage/productos/WhatsApp Image 2021-09-27 at 8.01.00 AM (1).jpg'
@@ -290,6 +306,8 @@ class ProductoSeeder extends Seeder
             'user_id' => 4
         ]);
 
+        $producto->categorias()->sync([1, 2, 10]);
+
         $producto->imagenes()->create([
             'url' => 'storage/productos/WhatsApp Image 2021-09-27 at 8.01.01 AM (1).jpg'
         ]);
@@ -304,6 +322,8 @@ class ProductoSeeder extends Seeder
             'user_id' => 4
         ]);
 
+        $producto->categorias()->sync([1, 2, 9]);
+
         $producto->imagenes()->create([
             'url' => 'storage/productos/WhatsApp Image 2021-09-27 at 8.01.00 AM (7).jpg'
         ]);
@@ -317,6 +337,8 @@ class ProductoSeeder extends Seeder
             'colores' => 'Rosado, azul, melanch, plomo rota y blanco',
             'user_id' => 4
         ]);
+
+        $producto->categorias()->sync([12]);
 
         $producto->imagenes()->create([
             'url' => 'storage/productos/WhatsApp Image 2021-09-27 at 8.00.59 AM (3).jpg'
@@ -339,6 +361,8 @@ class ProductoSeeder extends Seeder
             'colores' => 'Negro y blanco',
             'user_id' => 5
         ]);
+
+        $producto->categorias()->sync([12]);
 
         $producto->imagenes()->create([
             'url' => 'storage/productos/WhatsApp Image 2021-09-23 at 10.02.39 PM.jpg'
@@ -366,6 +390,8 @@ class ProductoSeeder extends Seeder
             'user_id' => 5
         ]);
 
+        $producto->categorias()->sync([12]);
+
         $producto->imagenes()->create([
             'url' => 'storage/productos/WhatsApp Image 2021-09-23 at 10.02.40 PM.jpg'
         ]);
@@ -392,6 +418,8 @@ class ProductoSeeder extends Seeder
             'user_id' => 5
         ]);
 
+        $producto->categorias()->sync([3,12]);
+
         $producto->imagenes()->create([
             'url' => 'storage/productos/WhatsApp Image 2021-09-23 at 10.02.42 PM.jpg'
         ]);
@@ -414,6 +442,8 @@ class ProductoSeeder extends Seeder
             'user_id' => 5
         ]);
 
+        $producto->categorias()->sync([5,12]);
+
         $producto->imagenes()->create([
             'url' => 'storage/productos/WhatsApp Image 2021-09-23 at 10.02.44 PM.jpg'
         ]);
@@ -423,7 +453,7 @@ class ProductoSeeder extends Seeder
         ]);
 
         $producto=Producto::create([
-            'nombre' => 'Macara de Negritos',
+            'nombre' => 'Mascara de Negritos',
             'descripcion' => 'Hecho de biocuro, perlas, ojos y nariz de madera',
             'medidas' => 'Grande',
             'precio' => 100,
@@ -431,6 +461,8 @@ class ProductoSeeder extends Seeder
             'colores' => 'Unico',
             'user_id' => 5
         ]);
+
+        $producto->categorias()->sync([1, 2, 9]);
 
         $producto->imagenes()->create([
             'url' => 'storage/productos/WhatsApp Image 2021-09-23 at 10.02.43 PM (1).jpg'
@@ -445,6 +477,8 @@ class ProductoSeeder extends Seeder
             'colores' => 'Negro, rojo y blanco',
             'user_id' => 5
         ]);
+
+        $producto->categorias()->sync([12]);
 
         $producto->imagenes()->create([
             'url' => 'storage/productos/WhatsApp Image 2021-09-23 at 10.02.45 PM.jpg'
@@ -468,6 +502,8 @@ class ProductoSeeder extends Seeder
             'user_id' => 5
         ]);
 
+        $producto->categorias()->sync([12]);
+
         $producto->imagenes()->create([
             'url' => 'storage/productos/WhatsApp Image 2021-09-23 at 10.03.01 PM (1).jpg'
         ]);
@@ -485,6 +521,8 @@ class ProductoSeeder extends Seeder
             'colores' => 'Variados',
             'user_id' => 6
         ]);
+
+        $producto->categorias()->sync([5,12]);
 
         $producto->imagenes()->create([
             'url' => 'storage/productos/WhatsApp Image 2021-09-23 at 10.04.35 PM.jpg'
@@ -512,6 +550,8 @@ class ProductoSeeder extends Seeder
             'user_id' => 6
         ]);
 
+        $producto->categorias()->sync([5,12]);
+
         $producto->imagenes()->create([
             'url' => 'storage/productos/WhatsApp Image 2021-09-23 at 7.10.05 PM (1).jpg'
         ]);
@@ -538,6 +578,8 @@ class ProductoSeeder extends Seeder
             'user_id' => 6
         ]);
 
+        $producto->categorias()->sync([3,12]);
+
         $producto->imagenes()->create([
             'url' => 'storage/productos/WhatsApp Image 2021-09-23 at 7.10.05 PM (3).jpg'
         ]);
@@ -555,6 +597,8 @@ class ProductoSeeder extends Seeder
             'colores' => 'Amarillo, azul, celeste, rosado',
             'user_id' => 6
         ]);
+
+        $producto->categorias()->sync([3, 12]);
 
         $producto->imagenes()->create([
             'url' => 'storage/productos/WhatsApp Image 2021-09-23 at 10.04.29 PM (2).jpg'
@@ -577,6 +621,8 @@ class ProductoSeeder extends Seeder
             'colores' => 'Unico',
             'user_id' => 6
         ]);
+
+        $producto->categorias()->sync([3,12]);
 
         $producto->imagenes()->create([
             'url' => 'storage/productos/WhatsApp Image 2021-09-23 at 10.04.33 PM.jpg'
@@ -604,12 +650,14 @@ class ProductoSeeder extends Seeder
             'user_id' => 7
         ]);
 
+        $producto->categorias()->sync([1, 2, 10]);
+
         $producto->imagenes()->create([
             'url' => 'storage/productos/WhatsApp Image 2021-09-21 at 8.55.31 PM.jpg'
         ]);
 
         $producto=Producto::create([
-            'nombre' => 'Mascara de Negrito',
+            'nombre' => 'Mascara de Negritos',
             'descripcion' => 'Hecho de Cuero Sintetico, perlas de vidrio y ojos y nariz de madera',
             'medidas' => 'Chico y Grande',
             'precio' => 180,
@@ -617,6 +665,8 @@ class ProductoSeeder extends Seeder
             'colores' => 'Unico',
             'user_id' => 7
         ]);
+
+        $producto->categorias()->sync([1, 2, 9]);
 
         $producto->imagenes()->create([
             'url' => 'storage/productos/WhatsApp Image 2021-09-21 at 8.55.32 PM.jpg'
@@ -631,6 +681,8 @@ class ProductoSeeder extends Seeder
             'colores' => 'Unico',
             'user_id' => 7
         ]);
+
+        $producto->categorias()->sync([3,12]);
 
         $producto->imagenes()->create([
             'url' => 'storage/productos/WhatsApp Image 2021-09-21 at 8.55.31 PM (1).jpg'
@@ -649,6 +701,8 @@ class ProductoSeeder extends Seeder
             'colores' => 'Variados',
             'user_id' => 7
         ]);
+
+        $producto->categorias()->sync([2, 7]);
 
         $producto->imagenes()->create([
             'url' => 'storage/productos/WhatsApp Image 2021-09-21 at 8.55.32 PM (1).jpg'
@@ -672,6 +726,8 @@ class ProductoSeeder extends Seeder
             'user_id' => 7
         ]);
 
+        $producto->categorias()->sync([12]);
+
         $producto->imagenes()->create([
             'url' => 'storage/productos/WhatsApp Image 2021-09-21 at 8.55.34 PM.jpg'
         ]);
@@ -690,6 +746,8 @@ class ProductoSeeder extends Seeder
             'user_id' => 8
         ]);
 
+        $producto->categorias()->sync([1, 2, 10]);
+
         $producto->imagenes()->create([
             'url' => 'storage/productos/WhatsApp Image 2021-09-23 at 10.26.58 PM.jpg'
         ]);
@@ -703,6 +761,8 @@ class ProductoSeeder extends Seeder
             'colores' => 'Variado',
             'user_id' => 8
         ]);
+
+        $producto->categorias()->sync([8,12]);
 
         $producto->imagenes()->create([
             'url' => 'storage/productos/WhatsApp Image 2021-09-23 at 10.26.59 PM (2).jpg'
@@ -730,6 +790,8 @@ class ProductoSeeder extends Seeder
             'user_id' => 8
         ]);
 
+        $producto->categorias()->sync([2,12]);
+
         $producto->imagenes()->create([
             'url' => 'storage/productos/WhatsApp Image 2021-09-23 at 10.26.58 PM (1).jpg'
         ]);
@@ -747,6 +809,8 @@ class ProductoSeeder extends Seeder
             'colores' => 'Variado',
             'user_id' => 9
         ]);
+
+        $producto->categorias()->sync([2,4]);
 
         $producto->imagenes()->create([
             'url' => 'storage/productos/WhatsApp Image 2021-09-27 at 8.10.36 AM.jpg'
@@ -769,6 +833,8 @@ class ProductoSeeder extends Seeder
             'colores' => 'Blanco, pseudo-rosa y negro',
             'user_id' => 9
         ]);
+
+        $producto->categorias()->sync([12]);
 
         $producto->imagenes()->create([
             'url' => 'storage/productos/WhatsApp Image 2021-09-27 at 8.10.37 AM (3).jpg'
@@ -796,6 +862,8 @@ class ProductoSeeder extends Seeder
             'user_id' => 9
         ]);
 
+        $producto->categorias()->sync([12]);
+
         $producto->imagenes()->create([
             'url' => 'storage/productos/WhatsApp Image 2021-09-27 at 8.10.40 AM (1).jpg'
         ]);
@@ -822,6 +890,8 @@ class ProductoSeeder extends Seeder
             'user_id' => 9
         ]);
 
+        $producto->categorias()->sync([2,12]);
+
         $producto->imagenes()->create([
             'url' => 'storage/productos/WhatsApp Image 2021-09-27 at 8.10.42 AM.jpg'
         ]);
@@ -835,6 +905,8 @@ class ProductoSeeder extends Seeder
             'colores' => 'Variado',
             'user_id' => 10
         ]);
+
+        $producto->categorias()->sync([5,12]);
 
         $producto->imagenes()->create([
             'url' => 'storage/productos/WhatsApp Image 2021-09-27 at 8.06.39 AM.jpg'
@@ -858,6 +930,8 @@ class ProductoSeeder extends Seeder
             'user_id' => 10
         ]);
 
+        $producto->categorias()->sync([5,12]);
+
         $producto->imagenes()->create([
             'url' => 'storage/productos/WhatsApp Image 2021-09-27 at 8.06.36 AM (2).jpg'
         ]);
@@ -876,6 +950,8 @@ class ProductoSeeder extends Seeder
             'user_id' => 10
         ]);
 
+        $producto->categorias()->sync([5,12]);
+
         $producto->imagenes()->create([
             'url' => 'storage/productos/WhatsApp Image 2021-09-27 at 8.06.38 AM (2).jpg'
         ]);
@@ -890,6 +966,8 @@ class ProductoSeeder extends Seeder
             'user_id' => 10
         ]);
 
+        $producto->categorias()->sync([3,12]);
+
         $producto->imagenes()->create([
             'url' => 'storage/productos/WhatsApp Image 2021-09-27 at 8.06.38 AM.jpg'
         ]);
@@ -903,6 +981,8 @@ class ProductoSeeder extends Seeder
             'colores' => 'Variado',
             'user_id' => 10
         ]);
+
+        $producto->categorias()->sync([1, 2, 9]);
 
         $producto->imagenes()->create([
             'url' => 'storage/productos/WhatsApp Image 2021-09-27 at 8.06.39 AM (3).jpg'
@@ -921,6 +1001,8 @@ class ProductoSeeder extends Seeder
             'colores' => 'Variado',
             'user_id' => 10
         ]);
+
+        $producto->categorias()->sync([2,4]);
 
         $producto->imagenes()->create([
             'url' => 'storage/productos/WhatsApp Image 2021-09-27 at 8.06.40 AM.jpg'
@@ -944,6 +1026,8 @@ class ProductoSeeder extends Seeder
             'user_id' => 12
         ]);
 
+        $producto->categorias()->sync([2, 7]);
+
         $producto->imagenes()->create([
             'url' => 'storage/productos/WhatsApp Image 2021-09-21 at 8.40.00 PM (1).jpg'
         ]);
@@ -957,6 +1041,8 @@ class ProductoSeeder extends Seeder
             'colores' => 'Rojo o Azul',
             'user_id' => 12
         ]);
+
+        $producto->categorias()->sync([1, 2, 9]);
 
         $producto->imagenes()->create([
             'url' => 'storage/productos/WhatsApp Image 2021-09-21 at 8.40.01 PM (1).jpg'
@@ -976,6 +1062,8 @@ class ProductoSeeder extends Seeder
             'user_id' => 12
         ]);
 
+        $producto->categorias()->sync([1, 2, 10]);
+
         $producto->imagenes()->create([
             'url' => 'storage/productos/WhatsApp Image 2021-09-21 at 8.40.02 PM.jpg'
         ]);
@@ -989,6 +1077,8 @@ class ProductoSeeder extends Seeder
             'colores' => 'Variado',
             'user_id' => 12
         ]);
+
+        $producto->categorias()->sync([3,12]);
 
         $producto->imagenes()->create([
             'url' => 'storage/productos/WhatsApp Image 2021-09-21 at 8.40.03 PM (2).jpg'
@@ -1016,6 +1106,8 @@ class ProductoSeeder extends Seeder
             'user_id' => 12
         ]);
 
+        $producto->categorias()->sync([5,12]);
+
         $producto->imagenes()->create([
             'url' => 'storage/productos/WhatsApp Image 2021-09-21 at 8.40.03 PM (4).jpg'
         ]);
@@ -1030,6 +1122,8 @@ class ProductoSeeder extends Seeder
             'user_id' => 12
         ]);
 
+        $producto->categorias()->sync([2,12]);
+
         $producto->imagenes()->create([
             'url' => 'storage/productos/WhatsApp Image 2021-09-21 at 8.40.04 PM (1).jpg'
         ]);
@@ -1039,7 +1133,7 @@ class ProductoSeeder extends Seeder
         ]);
 
         $producto=Producto::create([
-            'nombre' => 'Mascara Negrito',
+            'nombre' => 'Mascara de Negrito',
             'descripcion' => 'Hecho de biocuero y perlas doradas',
             'medidas' => 'Pequeño y Grande',
             'precio' => 120,
@@ -1047,6 +1141,8 @@ class ProductoSeeder extends Seeder
             'colores' => 'Unico',
             'user_id' => 13
         ]);
+
+        $producto->categorias()->sync([1,2,9]);
 
         $producto->imagenes()->create([
             'url' => 'storage/productos/WhatsApp Image 2021-09-21 at 8.51.38 PM (1).jpg'
@@ -1062,6 +1158,8 @@ class ProductoSeeder extends Seeder
             'user_id' => 13
         ]);
 
+        $producto->categorias()->sync([8,12]);
+
         $producto->imagenes()->create([
             'url' => 'storage/productos/WhatsApp Image 2021-09-21 at 8.51.38 PM.jpg'
         ]);
@@ -1075,6 +1173,8 @@ class ProductoSeeder extends Seeder
             'colores' => 'Variado',
             'user_id' => 13
         ]);
+
+        $producto->categorias()->sync([2,4]);
 
         $producto->imagenes()->create([
             'url' => 'storage/productos/WhatsApp Image 2021-09-21 at 8.51.39 PM.jpg'
@@ -1090,6 +1190,8 @@ class ProductoSeeder extends Seeder
             'user_id' => 14
         ]);
 
+        $producto->categorias()->sync([1, 2, 9]);
+
         $producto->imagenes()->create([
             'url' => 'storage/productos/WhatsApp Image 2021-09-21 at 8.48.25 PM (2).jpg'
         ]);
@@ -1103,6 +1205,8 @@ class ProductoSeeder extends Seeder
             'colores' => 'Variado',
             'user_id' => 14
         ]);
+
+        $producto->categorias()->sync([2, 6]);
 
         $producto->imagenes()->create([
             'url' => 'storage/productos/WhatsApp Image 2021-09-21 at 8.48.25 PM (1).jpg'
@@ -1130,6 +1234,8 @@ class ProductoSeeder extends Seeder
             'user_id' => 14
         ]);
 
+        $producto->categorias()->sync([2, 7]);
+
         $producto->imagenes()->create([
             'url' => 'storage/productos/WhatsApp Image 2021-09-21 at 8.48.25 PM (3).jpg'
         ]);
@@ -1143,6 +1249,8 @@ class ProductoSeeder extends Seeder
             'colores' => 'Blanco',
             'user_id' => 15
         ]);
+
+        $producto->categorias()->sync([5,12]);
 
         $producto->imagenes()->create([
             'url' => 'storage/productos/WhatsApp Image 2021-09-21 at 8.29.09 PM.jpg'
@@ -1165,6 +1273,8 @@ class ProductoSeeder extends Seeder
             'colores' => 'Negro',
             'user_id' => 15
         ]);
+
+        $producto->categorias()->sync([5,12]);
 
         $producto->imagenes()->create([
             'url' => 'storage/productos/WhatsApp Image 2021-09-21 at 8.29.10 PM.jpg'
@@ -1192,6 +1302,8 @@ class ProductoSeeder extends Seeder
             'user_id' => 15
         ]);
 
+        $producto->categorias()->sync([12]);
+
         $producto->imagenes()->create([
             'url' => 'storage/productos/WhatsApp Image 2021-09-21 at 8.29.11 PM (3).jpg'
         ]);
@@ -1217,6 +1329,8 @@ class ProductoSeeder extends Seeder
             'colores' => 'Unico',
             'user_id' => 15
         ]);
+
+        $producto->categorias()->sync([1, 2, 10]);
 
         $producto->imagenes()->create([
             'url' => 'storage/productos/WhatsApp Image 2021-09-21 at 8.29.12 PM (2).jpg'
@@ -1244,6 +1358,8 @@ class ProductoSeeder extends Seeder
             'user_id' => 15
         ]);
 
+        $producto->categorias()->sync([1, 2, 9]);
+
         $producto->imagenes()->create([
             'url' => 'storage/productos/WhatsApp Image 2021-09-21 at 8.29.13 PM (1).jpg'
         ]);
@@ -1269,6 +1385,8 @@ class ProductoSeeder extends Seeder
             'colores' => 'Variado',
             'user_id' => 15
         ]);
+
+        $producto->categorias()->sync([2, 7]);
 
         $producto->imagenes()->create([
             'url' => 'storage/productos/WhatsApp Image 2021-09-21 at 8.29.14 PM (3).jpg'
