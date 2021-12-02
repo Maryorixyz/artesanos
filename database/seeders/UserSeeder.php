@@ -21,6 +21,8 @@ class UserSeeder extends Seeder
             'name' => 'Alicia Aida Reynaga Fabian',
             'email' => 'artesano13@gmail.com',
             'sexo' => 'F',
+            'telefono'=>'962609225',
+            'direccion'=>'Av. Esteban Pabletich Mz I Lt-3',
             'password' => Hash::make('artesano13'),
         ])->syncRoles(['Artesano']);
 
@@ -28,6 +30,8 @@ class UserSeeder extends Seeder
             'name' => 'Gloria Nieto Santamaria',
             'email' => 'artesano24@gmail.com',
             'sexo' => 'F',
+            'telefono'=>'976700788',
+            'direccion'=>'Jr. Majes Mz C Tc-9',
             'password' => Hash::make('artesano24'),
         ])->syncRoles(['Artesano']);
 
@@ -35,6 +39,8 @@ class UserSeeder extends Seeder
             'name' => 'Jose Luis Manuel Nieto',
             'email' => 'artesano4@gmail.com',
             'sexo' => 'M',
+            'telefono'=>'931058027',
+            'direccion'=>'-',
             'password' => Hash::make('artesano4'),
         ])->syncRoles(['Artesano']);
 
@@ -42,6 +48,8 @@ class UserSeeder extends Seeder
             'name' => 'Edwin Ventura Casimiro',
             'email' => 'artesano23@gmail.com',
             'sexo' => 'M',
+            'telefono'=>'979992185',
+            'direccion'=>'Jr. Pastasa Mz I Lte-7',
             'password' => Hash::make('artesano23'),
         ])->syncRoles(['Artesano']);
 

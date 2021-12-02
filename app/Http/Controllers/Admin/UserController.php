@@ -52,6 +52,7 @@ class UserController extends Controller
             'email' => 'required|unique:users',
             'password' => 'required',
 
+
         ]);
 
         

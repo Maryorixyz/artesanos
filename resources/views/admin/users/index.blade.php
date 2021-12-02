@@ -25,6 +25,8 @@
                         <th>Id</th>
                         <th>Name</th>
                         <th>Email</th>
+                        <th>Telefono</th>
+                        <th>Direccion</th>
                         <th colspan="3"></th>
                     </tr>
                 </thead>
@@ -34,6 +36,8 @@
                             <td>{{$user->id}}</td>
                             <td>{{$user->name}}</td>
                             <td>{{$user->email}}</td>
+                            <td>{{$user->telefono}}</td>
+                            <td>{{$user->direccion}}</td>
                             <td width="10px">
                                 <a class="btn btn-warning btn-sm" href="{{route('admin.users.editRoles', $user)}}">Roles</a>
                             </td>

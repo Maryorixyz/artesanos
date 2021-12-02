@@ -30,6 +30,7 @@
                         <th>Colores</th>
                         <th>Precio</th>
                         <th>Categorias</th>
+                        <th>Imagen</th>
                         <th>Artesano</th>
                         <th colspan="2"></th>
 
@@ -48,6 +49,13 @@
                             <td>
                                 @foreach($producto->categorias as $categoria){{ $categoria->slug }} @endforeach
                             
+                            </td>
+                            <td>
+                                @foreach ($producto->imagenes as $imagen)
+                
+                                    <img src="{{ $imagen->url }}" alt="IMG-PRODUCT">
+                               
+                                @endforeach
                             </td>
                             <td>{{$producto->user->name}}</td>
                             <td width="10px">

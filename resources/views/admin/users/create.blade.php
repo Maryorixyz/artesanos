@@ -45,6 +45,24 @@
                     <span class="text-danger">{{$message}}</span>
                 @enderror
 
+                <div class="form-group">
+                    {!! Form::label('telefono', 'Telefono') !!}
+                    {!! Form::text('telefono', null, ['class' => 'form-control', 'placeholder' => 'Ingrese una Telefono']) !!}
+                </div>
+
+                @error('contacto')
+                    <span class="text-danger">{{$message}}</span>
+                @enderror
+
+                <div class="form-group">
+                    {!! Form::label('direccion', 'Dirección') !!}
+                    {!! Form::text('direccion', null, ['class' => 'form-control', 'placeholder' => 'Ingrese una Telefono']) !!}
+                </div>
+
+                @error('direccion')
+                    <span class="text-danger">{{$message}}</span>
+                @enderror
+
                     {!! Form::submit('Crear Artesano', ['class' => 'btn btn-primary ']) !!}
 
             {!! Form::close() !!}
