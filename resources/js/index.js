@@ -227,7 +227,7 @@ $('#filas-producto').on('click','.js-show-modal1',function(e){
     producto.imagenes.forEach(imagen => {
         let img = `
         <div class="item-slick3" data-thumb="${imagen.url}">
-            <div class="wrap-pic-w pos-relative">
+            <div class="wrap-pic-w pos-relative detalle-imagen-modal">
                 <img src="${imagen.url}" alt="IMG-PRODUCT">
 
                 <a class="flex-c-m size-108 how-pos1 bor0 fs-16 cl10 bg0 hov-btn3 trans-04" href="${imagen.url}">
@@ -253,6 +253,8 @@ $('#filas-producto').on('click','.js-show-modal1',function(e){
             prevArrow:'<button class="arrow-slick3 prev-slick3"><i class="fa fa-angle-left" aria-hidden="true"></i></button>',
             nextArrow:'<button class="arrow-slick3 next-slick3"><i class="fa fa-angle-right" aria-hidden="true"></i></button>',
 
+            adaptiveHeight: true,
+            
             dots: true,
             appendDots: $(this).find('.wrap-slick3-dots'),
             dotsClass:'slick3-dots',
@@ -260,6 +262,17 @@ $('#filas-producto').on('click','.js-show-modal1',function(e){
                 var portrait = $(slick.$slides[index]).data('thumb');
                 return '<img src=" ' + portrait + ' "/><div class="slick3-dot-overlay"></div>';
             },  
+        });
+    });
+
+    $('.gallery-lb').each(function() { // the containers for all your galleries
+        $(this).magnificPopup({
+            delegate: 'a', // the selector for gallery item
+            type: 'image',
+            gallery: {
+                enabled:true
+            },
+            mainClass: 'mfp-fade'
         });
     });
 

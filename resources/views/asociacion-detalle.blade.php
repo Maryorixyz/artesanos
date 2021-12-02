@@ -34,27 +34,7 @@
 						</div>
 
 						<div class="p-t-32">
-							<span class="flex-w flex-m stext-111 cl2 p-b-19">
-								<span>
-									<span class="cl4">By</span> Admin  
-									<span class="cl12 m-l-4 m-r-6">|</span>
-								</span>
-
-								<span>
-									22 Jan, 2018
-									<span class="cl12 m-l-4 m-r-6">|</span>
-								</span>
-
-								<span>
-									StreetStyle, Fashion, Couple  
-									<span class="cl12 m-l-4 m-r-6">|</span>
-								</span>
-
-								<span>
-									8 Comments
-								</span>
-							</span>
-
+							
 							<h4 class="ltext-109 cl2 p-b-28">
 								8 Inspiring Ways to Wear Dresses in the Winter
 							</h4>
@@ -68,7 +48,7 @@
 							</p>
 						</div>
 
-						<div class="flex-w flex-t p-t-16">
+						{{-- <div class="flex-w flex-t p-t-16">
 							<span class="size-216 stext-116 cl8 p-t-4">
 								Tags
 							</span>
@@ -82,7 +62,7 @@
 									Crafts
 								</a>
 							</div>
-						</div>
+						</div> --}}
 
 						<!--  -->
 						<div class="p-t-40">
@@ -223,7 +203,7 @@
 							</ul>
 						</div>
 
-						<div class="p-t-55">
+						{{-- <div class="p-t-55">
 							<h4 class="mtext-112 cl2 p-b-20">
 								Archive
 							</h4>
@@ -325,9 +305,9 @@
 									</a>
 								</li>
 							</ul>
-						</div>
+						</div> --}}
 
-						<div class="p-t-50">
+						{{-- <div class="p-t-50">
 							<h4 class="mtext-112 cl2 p-b-27">
 								Tags
 							</h4>
@@ -353,7 +333,7 @@
 									Crafts
 								</a>
 							</div>
-						</div>
+						</div> --}}
 					</div>
 				</div>
 			</div>

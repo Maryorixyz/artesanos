@@ -201,12 +201,6 @@
 									</a>
 								</li>
 
-								{{-- <li class="p-b-6">
-									<a href="#" class="filter-link stext-106 trans-04 filter-link-active">
-										Newness
-									</a>
-								</li> --}}
-
 								<li class="p-b-6">
 									<a href="#" class="filter-link stext-106 trans-04">
 										Precio: Menor a Mayor
@@ -256,140 +250,40 @@
 										S/.100.00 - S/.200.00
 									</a>
 								</li>
-
-								{{-- <li class="p-b-6">
-									<a href="#" class="filter-link stext-106 trans-04">
-										$200.00+
-									</a>
-								</li> --}}
 							</ul>
-						</div>
-
-						<div class="filter-col3 p-r-15 p-b-27">
-							<div class="mtext-102 cl2 p-b-15">
-								Colores
-							</div>
-
-							<ul>
-								<li class="p-b-6">
-									<span class="fs-15 lh-12 m-r-6" style="color: #222;">
-										<i class="zmdi zmdi-circle"></i>
-									</span>
-
-									<a href="#" class="filter-link stext-106 trans-04">
-										Negro
-									</a>
-								</li>
-
-								<li class="p-b-6">
-									<span class="fs-15 lh-12 m-r-6" style="color: #4272d7;">
-										<i class="zmdi zmdi-circle"></i>
-									</span>
-
-									<a href="#" class="filter-link stext-106 trans-04 filter-link-active">
-										Blue
-									</a>
-								</li>
-
-								{{-- <li class="p-b-6">
-									<span class="fs-15 lh-12 m-r-6" style="color: #b3b3b3;">
-										<i class="zmdi zmdi-circle"></i>
-									</span>
-
-									<a href="#" class="filter-link stext-106 trans-04">
-										Grey
-									</a>
-								</li> --}}
-
-								<li class="p-b-6">
-									<span class="fs-15 lh-12 m-r-6" style="color: #00ad5f;">
-										<i class="zmdi zmdi-circle"></i>
-									</span>
-
-									<a href="#" class="filter-link stext-106 trans-04">
-										Verde
-									</a>
-								</li>
-
-								<li class="p-b-6">
-									<span class="fs-15 lh-12 m-r-6" style="color: #fa4251;">
-										<i class="zmdi zmdi-circle"></i>
-									</span>
-
-									<a href="#" class="filter-link stext-106 trans-04">
-										Rojo
-									</a>
-								</li>
-
-								<li class="p-b-6">
-									<span class="fs-15 lh-12 m-r-6" style="color: #aaa;">
-										<i class="zmdi zmdi-circle-o"></i>
-									</span>
-
-									<a href="#" class="filter-link stext-106 trans-04">
-										Blanco
-									</a>
-								</li>
-							</ul>
-						</div>
-
-						<div class="filter-col4 p-b-27">
-							<div class="mtext-102 cl2 p-b-15">
-								Tags
-							</div>
-
-							<div class="flex-w p-t-4 m-r--5">
-								<a href="#" class="flex-c-m stext-107 cl6 size-301 bor7 p-lr-15 hov-tag1 trans-04 m-r-5 m-b-5">
-									Fashion
-								</a>
-
-								<a href="#" class="flex-c-m stext-107 cl6 size-301 bor7 p-lr-15 hov-tag1 trans-04 m-r-5 m-b-5">
-									Lifestyle
-								</a>
-
-								<a href="#" class="flex-c-m stext-107 cl6 size-301 bor7 p-lr-15 hov-tag1 trans-04 m-r-5 m-b-5">
-									Denim
-								</a>
-
-								<a href="#" class="flex-c-m stext-107 cl6 size-301 bor7 p-lr-15 hov-tag1 trans-04 m-r-5 m-b-5">
-									Streetstyle
-								</a>
-
-								<a href="#" class="flex-c-m stext-107 cl6 size-301 bor7 p-lr-15 hov-tag1 trans-04 m-r-5 m-b-5">
-									Crafts
-								</a>
-							</div>
 						</div>
 					</div>
 				</div>
 			</div>
 
-			<div  id="filas-producto"  class="row isotope-grid">
-
+			<div id="filas-producto" class="row isotope-grid">
 				@foreach ($productos as $producto)
-
-					<div class="col-sm-6 col-md-4 col-lg-3 p-b-35 isotope-item women">
+					
+					<div class="col-sm-6 col-md-4 col-lg-3 p-b-35 isotope-item @foreach($producto->categorias as $categoria){{ $categoria->slug }} @endforeach">
 						<!-- Block2 -->
 						<div class="block2">
 							<div class="block2-pic hov-img0">
-								<img src="{{ $producto->imagenes[0]->url }}" alt="{{ $producto->nombre }}">
-
+								<img src="{{ $producto->imagenes[0]->url }}" alt="IMG-PRODUCT">
 								<a href="#" class="block2-btn flex-c-m stext-103 cl2 size-102 bg0 bor2 hov-btn1 p-lr-15 trans-04 js-show-modal1" data-producto="{{ $producto }}">
-									Vista Rapida
+									Vista Rápida
 								</a>
 							</div>
-							
 							<div class="block2-txt flex-w flex-t p-t-14">
-								<div class="block2-txt-child1 flex-col-l ">
-									<a href="product-detail.html" class="stext-104 cl4 hov-cl1 trans-04 js-name-b2 p-b-6">
-										{{ $producto->nombre }}
-									</a>
+								<div class="block2-txt-child1 flex-col-l">
+									<div class="producto-center"">
+										<a title="{{ strtoupper($producto->nombre) }}" href="product-detail.html" class="stext-104 hov-cl1 trans-04 js-name-b2 p-b-6 producto-nombre edit">
+											{{ $producto->nombre }}
+										</a>
+									</div>
 
-									<span class="stext-105 cl3">
-										S/. {{ $producto->precio }}
+									<a href="product-detail.html" class="stext-104 cl3 hov-cl1 trans-04 js-name-b2 p-b-6 producto-nombre">
+										<img class="iconos" src="{{ $producto->user->sexo == 'M' ? asset('images/icons/artesano-hombre.png') : asset('images/icons/artesano-mujer.png') }}"> {{ $producto->user->name }}
+									</a>
+	
+									<span class="precio-producto stext-105 cl5" data-precio="{{ $producto->precio }}">
+										<img class="iconos" src="{{asset('images/icons/precio-1.png')}}"> <i>S/. {{ $producto->precio }} </i>
 									</span>
 								</div>
-
 								<div class="block2-txt-child2 flex-r p-t-3">
 									<a href="#" class="btn-addwish-b2 dis-block pos-relative js-addwish-b2">
 										<img class="icon-heart1 dis-block trans-04" src="images/icons/icon-heart-01.png" alt="ICON">
@@ -399,6 +293,8 @@
 							</div>
 						</div>
 					</div>
+
+					
 				@endforeach
 			</div>
 
@@ -450,7 +346,7 @@
 							</p>
 							
 							<!--  -->
-							<div class="p-t-33">
+							{{-- <div class="p-t-33">
 								<div class="flex-w flex-r-m p-b-10">
 									<div class="size-203 flex-c-m respon6">
 										Size
@@ -508,7 +404,7 @@
 										</button>
 									</div>
 								</div>	
-							</div>
+							</div> --}}
 
 							<!--  -->
 							{{-- <div class="flex-w flex-m p-l-100 p-t-40 respon7">

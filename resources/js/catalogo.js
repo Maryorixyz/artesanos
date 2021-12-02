@@ -30,7 +30,16 @@
     $('.js-addwish-b2').each(function(){
         var nameProduct = $(this).parent().parent().find('.js-name-b2').html();
         $(this).on('click', function(){
-            swal(nameProduct, "is added to wishlist !", "success");
+
+            swal({
+                title: nameProduct,
+                text: "Añadido a tu lista de deseos",
+                icon: "success",
+                customClass: { 
+                    confirmButton: "btn-success"
+                },
+                buttonsStyling:false
+              })
 
             $(this).addClass('js-addedwish-b2');
             $(this).off('click');
@@ -206,14 +215,16 @@
     /*------------------buscador--------------------------- */
     $('#buscar-productos').on('keyup',function(){
             var buscar = this.value;
-            let filterValue =  function(buscar) {
+            let filterValue =  function() {
                 var name = $(this).find('.producto-nombre').text();
                 var expresion = new RegExp(buscar, 'i');
-                console.log(this)
+                
                 return name.match(expresion);
               }
 
-           $topeContainer.isotope({ filter: filterValue });
+           $topeContainer.isotope({
+               filter: filterValue
+            });
 
     });
 
@@ -328,15 +339,40 @@
     $('#filas-producto').on('click','.js-show-modal1',function(e){
         /*GUARDAR DATOS DE PRODUCTO-MEJORAR IMAGEN*/
         let producto = JSON.parse(e.target.dataset.producto)
-        
-        $('#modal-producto-nombre').text(producto.nombre)
-        $('#modal-producto-precio').text('S/. '+ producto.precio)
-        $('#modal-producto-descripcion').text(producto.descripcion)
 
+        /*PRODUCTO NOMBRE*/
+        let productoNombre = `
+			<h1 class="mtext-105 cl2 js-name-detail p-b-14 edit-nombre-modal">${producto.nombre}</h1>
+			`
+
+        $('#modal-producto-nombre').empty().append(productoNombre)
+        
+        /*PRODUCTO PRECIO*/
+        let productoPrecio = `
+            <span class="precio-producto mtext-108 cl5 precio-size">
+                <img class="iconos" src='images/icons/precio-1.png'>S/. ${producto.precio}
+            </span>
+			    `
+        $('#modal-producto-precio').empty().append(productoPrecio)
+
+        //todo:PRODUCTO DESCRIPCION
+        let productoDescripcion = `
+            <span>${producto.descripcion}</span>
+            `
+        $('#modal-producto-descripcion').empty().append(productoDescripcion)
+
+        //todo:PRODUCTO DESCRIPCION ARTESANO
+        let productoartesanoNombre = `
+        <span>${producto.user.name}</span>
+        `
+        $('#modal-producto-user-name').empty().append(productoartesanoNombre)
+
+
+        
         producto.imagenes.forEach(imagen => {
             let img = `
             <div class="item-slick3" data-thumb="${imagen.url}">
-                <div class="wrap-pic-w pos-relative">
+                <div class="wrap-pic-w pos-relative detalle-imagen-modal">
                     <img src="${imagen.url}" alt="IMG-PRODUCT">
 
                     <a class="flex-c-m size-108 how-pos1 bor0 fs-16 cl10 bg0 hov-btn3 trans-04" href="${imagen.url}" >
@@ -361,6 +397,8 @@
                 appendArrows: $(this).find('.wrap-slick3-arrows'),
                 prevArrow:'<button class="arrow-slick3 prev-slick3"><i class="fa fa-angle-left" aria-hidden="true"></i></button>',
                 nextArrow:'<button class="arrow-slick3 next-slick3"><i class="fa fa-angle-right" aria-hidden="true"></i></button>',
+
+                adaptiveHeight: true,
 
                 dots: true,
                 appendDots: $(this).find('.wrap-slick3-dots'),
@@ -454,30 +492,46 @@
                         categorias += categoria.slug + ' '
                     });
 
-                    let $fila = $(`
-                    <div class="col-sm-6 col-md-4 col-lg-3 p-b-35 isotope-item ${categorias}" >
-                    <!-- Block2 -->
-                        <div class="block2">
-                            <div class="block2-pic hov-img0">
-                                <img src="${producto.imagenes[0].url}" alt="IMG-PRODUCT">
-                                <a href="#" class="block2-btn flex-c-m stext-103 cl2 size-102 bg0 bor2 hov-btn1 p-lr-15 trans-04 js-show-modal1" data-producto="${productWithNewFormat}">
-                                    Vista Rápida
-                                </a>
-                            </div>
-            
-                            <div class="block2-txt flex-w flex-t p-t-14">
-                                <div class="block2-txt-child1 flex-col-l ">
-                                    <a href="product-detail.html" class="stext-104 cl4 hov-cl1 trans-04 js-name-b2 p-b-6">
-                                        ${producto.nombre}
-                                    </a>
-                    
-                                    <span class="precio-producto stext-105 cl3" data-precio="${producto.precio}">
-                                        <i>S/. ${producto.precio} </i>
-                                    </span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>`)
+                    let $fila =$(`
+                        <div class="col-sm-6 col-md-4 col-lg-3 p-b-35 isotope-item ${categorias}">
+						<!-- Block2 -->
+						<div class="block2">
+							<div class="block2-pic hov-img0">
+								<img src="${producto.imagenes[0].url}" alt="IMG-PRODUCT">
+								<a href="#" class="block2-btn flex-c-m stext-103 cl2 size-102 bg0 bor2 hov-btn1 p-lr-15 trans-04 js-show-modal1" data-producto="${productWithNewFormat}">
+									Vista Rápida
+								</a>
+							</div>
+
+							<div class="block2-txt flex-w flex-t p-t-14">
+								<div class="block2-txt-child1 flex-col-l">
+									<div class="producto-center"">
+										<a title="${producto.nombre.toUpperCase()}" href="product-detail.html" class="stext-104 hov-cl1 trans-04 js-name-b2 p-b-6 producto-nombre edit">
+                                            ${producto.nombre}
+										</a>
+									</div>
+
+									<a href="product-detail.html" class="stext-104 cl3 hov-cl1 trans-04 js-name-b2 p-b-6 producto-nombre">
+										<img class="iconos" src=" ${producto.user.sexo == 'M' ? 'images/icons/artesano-hombre.png' : 'images/icons/artesano-mujer.png'}">
+                                        ${producto.user.name}
+									</a>
+	
+									<span class="precio-producto stext-105 cl5" data-precio="${producto.precio}">
+										<img class="iconos" src="images/icons/precio-1.png">
+                                        S/. ${producto.precio}
+									</span>
+								</div>
+								<div class="block2-txt-child2 flex-r p-t-3">
+									<a href="#" class="btn-addwish-b2 dis-block pos-relative js-addwish-b2">
+										<img class="icon-heart1 dis-block trans-04" src="images/icons/icon-heart-01.png" alt="ICON">
+										<img class="icon-heart2 dis-block trans-04 ab-t-l" src="images/icons/icon-heart-02.png" alt="ICON">
+									</a>
+								</div>
+							</div>
+						</div>
+					</div>
+
+                    `)
             
                         
                     // $('#filas-producto').append(filas)

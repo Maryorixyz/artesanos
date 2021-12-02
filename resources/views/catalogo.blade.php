@@ -170,17 +170,19 @@
 								</a>
 							</div>
 							<div class="block2-txt flex-w flex-t p-t-14">
-								<div class="block2-txt-child1 flex-col-l ">
-									<a href="product-detail.html" class="stext-104 cl4 hov-cl1 trans-04 js-name-b2 p-b-6 producto-nombre">
-										<img src="{{asset('images/icons/producto-2.png')}}" width="22"> {{ $producto->nombre }}
-									</a>
+								<div class="block2-txt-child1 flex-col-l">
+									<div class="producto-center"">
+										<a title="{{ strtoupper($producto->nombre) }}" href="product-detail.html" class="stext-104 hov-cl1 trans-04 js-name-b2 p-b-6 producto-nombre edit">
+											{{ $producto->nombre }}
+										</a>
+									</div>
 
-									<a href="product-detail.html" class="stext-104 cl4 hov-cl1 trans-04 js-name-b2 p-b-6 producto-nombre">
-										<img src="{{ $producto->user->sexo == 'M' ? asset('images/icons/artesano-hombre.png') : asset('images/icons/artesano-mujer.png') }}" width="22"> {{ $producto->user->name }}
+									<a href="product-detail.html" class="stext-104 cl3 hov-cl1 trans-04 js-name-b2 p-b-6 producto-nombre">
+										<img class="iconos" src="{{ $producto->user->sexo == 'M' ? asset('images/icons/artesano-hombre.png') : asset('images/icons/artesano-mujer.png') }}"> {{ $producto->user->name }}
 									</a>
 	
-									<span class="precio-producto stext-105 cl3" data-precio="{{ $producto->precio }}">
-										<img src="{{asset('images/icons/precio-2.png')}}" width="22"> <i>S/. {{ $producto->precio }} </i>
+									<span class="precio-producto stext-105 cl5" data-precio="{{ $producto->precio }}">
+										<img class="iconos" src="{{asset('images/icons/precio-1.png')}}"> S/. {{ $producto->precio }}
 									</span>
 								</div>
 								<div class="block2-txt-child2 flex-r p-t-3">
@@ -231,79 +233,33 @@
 					</div>
 					
 					<div class="col-md-6 col-lg-5 p-b-30">
+
 						<div class="p-r-50 p-t-5 p-lr-0-lg">
-							<h4 id="modal-producto-nombre" class="mtext-105 cl2 js-name-detail p-b-14">
-							
-							</h4>
 
-							<span id="modal-producto-precio"class="mtext-106 cl2">
-
-							</span>
-
-							<p id="modal-producto-descripcion" class="stext-102 cl3 p-t-23">
-
-							</p>
-							
-							<!--  -->
-							<div class="p-t-33">
-								<div class="flex-w flex-r-m p-b-10">
-									<div class="size-203 flex-c-m respon6">
-										Size
-									</div>
-
-									<div class="size-204 respon6-next">
-										<div class="rs1-select2 bor8 bg0">
-											<select class="js-select2" name="time">
-												<option>Choose an option</option>
-												<option>Size S</option>
-												<option>Size M</option>
-												<option>Size L</option>
-												<option>Size XL</option>
-											</select>
-											<div class="dropDownSelect2"></div>
-										</div>
-									</div>
-								</div>
-
-								<div class="flex-w flex-r-m p-b-10">
-									<div class="size-203 flex-c-m respon6">
-										Color
-									</div>
-
-									<div class="size-204 respon6-next">
-										<div class="rs1-select2 bor8 bg0">
-											<select class="js-select2" name="time">
-												<option>Choose an option</option>
-												<option>Red</option>
-												<option>Blue</option>
-												<option>White</option>
-												<option>Grey</option>
-											</select>
-											<div class="dropDownSelect2"></div>
-										</div>
-									</div>
-								</div>
-
-								<div class="flex-w flex-r-m p-b-10">
-									<div class="size-204 flex-w flex-m respon6-next">
-										<div class="wrap-num-product flex-w m-r-20 m-tb-10">
-											<div class="btn-num-product-down cl8 hov-btn3 trans-04 flex-c-m">
-												<i class="fs-16 zmdi zmdi-minus"></i>
-											</div>
-
-											<input class="mtext-104 cl3 txt-center num-product" type="number" name="num-product" value="1">
-
-											<div class="btn-num-product-up cl8 hov-btn3 trans-04 flex-c-m">
-												<i class="fs-16 zmdi zmdi-plus"></i>
-											</div>
-										</div>
-
-										<button class="flex-c-m stext-101 cl0 size-101 bg1 bor1 hov-btn1 p-lr-15 trans-04 js-addcart-detail">
-											Add to cart
-										</button>
-									</div>
-								</div>	
+							<div  id = "modal-producto-nombre">
+								<h1 class="mtext-105 cl2 js-name-detail p-b-14 edit-nombre-modal">nombre</h1>
 							</div>
+
+							<div id ="modal-producto-precio" class="modal-producto-precio">
+								<span class="mtext-106 cl2">Precio</span>
+							</div>
+
+							<h4>Descripcion:</h4>
+							<div id="modal-producto-descripcion" class="modal-producto-descripcion">
+								<p class="stext-102 cl3 p-t-23">descripcion 2</p>
+							</div>
+							
+							<h4>Informacion del artesano</h4>
+
+							<div class="informacion-usuario">
+									<div id="modal-producto-usuario-foto"  class="foto-artesano" ></div>
+									<div id="modal-producto-user-name" class="nombre-artesano">NOMBRE</div>
+							</div>
+
+							<h4>Ubicacion:</h4>
+
+							<div id="modal-producto-usuario-map" class="modal-mapa">MAPA</div>
+
 						</div>
 					</div>
 				</div>

@@ -161,3 +161,7 @@ $('.js-hide-modal-search').on('click', function(){
 $('.container-search-header').on('click', function(e){
     e.stopPropagation();
 });
+
+
+/*==================MENSAJE=========================================*/
+console.log("%cSi est\xe1s leyendo este mensaje es que eres demasiado inteligente, CRACK!", "color: #bada55; font-weight: bold; font-size: 16px")

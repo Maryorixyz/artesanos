@@ -52,22 +52,6 @@
 									</p>
 
 									<div class="flex-w flex-sb-m p-t-18">
-										{{-- <span class="flex-w flex-m stext-111 cl2 p-r-30 m-tb-10">
-											<span>
-												<span class="cl4">By</span> Admin  
-												<span class="cl12 m-l-4 m-r-6">|</span>
-											</span>
-
-											<span>
-												StreetStyle, Fashion, Couple  
-												<span class="cl12 m-l-4 m-r-6">|</span>
-											</span>
-
-											<span>
-												8 Comments
-											</span>
-										</span> --}}
-
 										<a href="{{ route('asociaciones.detalle', $asociacion->id) }}" class="stext-101 cl2 hov-cl1 trans-04 m-tb-10">
 											Continue Reading
 

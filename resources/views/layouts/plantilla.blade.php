@@ -58,10 +58,9 @@
 
 					<!-- Icon header -->
 					<div class="wrap-icon-header flex-w flex-r-m">
-						<div class="icon-header-item cl2 hov-nuevo trans-04 p-l-22 p-r-11 js-show-modal-search">
+						{{-- <div class="icon-header-item cl2 hov-nuevo trans-04 p-l-22 p-r-11 js-show-modal-search">
 							<i class="zmdi zmdi-search"></i>
-						</div>
-                        
+						</div> --}}
                         @if (Route::has('login'))
 							<ul class="main-menu">
 								@auth
@@ -81,7 +80,10 @@
 									</li>
 								@else
 									<li>
-										<a href="{{ route('login') }}" class="sesion">Inicia Sesión</a>
+										<a href="{{ route('login') }}" class="sesion">
+											<i class="fas fa-user-circle"></i>
+											Inicia Sesión
+										</a>
 									</li>
 								@endauth
 							</ul>
@@ -108,15 +110,19 @@
 
 			<!-- Icon header -->
 			<div class="wrap-icon-header flex-w flex-r-m m-r-15">
-				<div class="icon-header-item cl2 hov-nuevo trans-04 p-r-11 js-show-modal-search">
+				{{-- <div class="icon-header-item cl2 hov-nuevo trans-04 p-r-11 js-show-modal-search">
 					<i class="zmdi zmdi-search"></i>
-				</div>
+				</div> --}}
 
                 @if (Route::has('login'))
                     @auth
                         <a class="dis-block cl2 hov-nuevo trans-04 p-r-11 p-l-10">{{ explode(' ', Auth::user()->name)[0] }}</a>
                     @else
-                        <a href="{{ route('login') }}" class="dis-block cl2 hov-nuevo trans-04 p-r-11 p-l-10">Inicia Sesión</a> <!--CAMBIO hov-cl1-->
+                        <a href="{{ route('login') }}" class="dis-block cl2 hov-nuevo trans-04 p-r-11 p-l-10 sesion">
+							<i class="fas fa-user-circle"></i>
+							Inicia Sesión
+						</a>
+						<!--CAMBIO hov-cl1-->
                     @endauth
                 @endif
 			</div>
@@ -155,6 +161,7 @@
 						</li>
                     @else
 						<li>
+							
 							<a href="{{ route('login') }}">Inicia Sesión</a>
 						</li>
                     @endauth

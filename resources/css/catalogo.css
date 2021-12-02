@@ -1,0 +1,73 @@
+.iconos{
+    width: 22px;
+    opacity: 0.9;
+    margin-right: 6px;
+}
+
+.edit{
+    text-transform: uppercase;
+    font-weight: bold;
+    color: #000;
+    font-size: 16px;
+    text-align: center;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    width: 74%;
+    
+}
+.producto-center{
+    display: flex;
+    justify-content: center;
+    width: calc(100% + 30px);
+}
+
+.swal-button--confirm{
+    background-color: #56A85E;
+}
+
+.edit-nombre-modal{
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 22px;
+    width: 74%;
+    
+}
+
+.informacion-usuario{
+    display: flex;
+    width: 100%;
+    margin-top: 0.5rem;
+    margin-bottom: 0.5rem;
+    align-items: center;
+}
+
+.modal-mapa{
+    border: 2px solid #56A85E;
+    width: 100%;
+    min-height: 200px;
+    margin-top: 1rem;
+
+}
+
+.foto-artesano{
+    border-radius: 50%;
+    border: 2px solid #56A85E;
+    width: 120px;
+    height: 120px;
+
+}
+
+.nombre-artesano{
+    margin-left: 2rem;
+}
+
+.modal-producto-descripcion{
+    margin-top: 0.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.modal-producto-precio{
+    margin-top: 0.5rem;
+    margin-bottom: 0.5rem;
+}
