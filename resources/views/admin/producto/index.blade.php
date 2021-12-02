@@ -29,7 +29,8 @@
                         <th>Medidas</th>
                         <th>Colores</th>
                         <th>Precio</th>
-                        <th>Stock</th>
+                        <th>Categorias</th>
+                        <th>Imagen</th>
                         <th>Artesano</th>
                         <th colspan="2"></th>
 
@@ -45,7 +46,17 @@
                             <td>{{$producto->medidas}}</td>
                             <td>{{$producto->colores}}</td>
                             <td>{{$producto->precio}}</td>
-                            <td>{{$producto->stock}}</td>
+                            <td>
+                                @foreach($producto->categorias as $categoria){{ $categoria->slug }} @endforeach
+                            
+                            </td>
+                            <td>
+                                @foreach ($producto->imagenes as $imagen)
+                
+                                    <img src="{{ $imagen->url }}" alt="IMG-PRODUCT">
+                               
+                                @endforeach
+                            </td>
                             <td>{{$producto->user->name}}</td>
                             <td width="10px">
                                 <a class="btn btn-primary btn-sm" href="{{route('admin.producto.edit', $producto)}}">Editar</a>

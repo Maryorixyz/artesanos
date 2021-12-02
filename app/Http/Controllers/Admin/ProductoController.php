@@ -39,7 +39,7 @@ class ProductoController extends Controller
 
         if ($isAdmin) {
 
-            $productos = Producto::with('user')->get();
+            $productos = Producto::with('user', 'imagenes')->get();
             //ph return $productos[0]->user->name;
             return view('admin.producto.index', compact('productos'));
 
@@ -108,7 +108,8 @@ class ProductoController extends Controller
      */
     public function edit(Producto $producto)
     {
-        return view('admin.producto.edit', compact('producto'));
+        $categorias = Categoria::all();
+        return view('admin.producto.edit', compact('producto', 'categorias'));
     }
 
     /**
