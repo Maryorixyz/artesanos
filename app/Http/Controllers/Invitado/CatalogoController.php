@@ -30,7 +30,7 @@ class CatalogoController extends Controller
     public function productos($inicio)
     {
 
-        $productos = Producto::with('imagenes', 'categorias', 'user')->offset($inicio)->limit(8)->get(); //Extrae los productos de la bd
+        $productos = Producto::with('imagenes', 'categorias', 'user.asociacion')->offset($inicio)->limit(8)->get(); //Extrae los productos de la bd
 
         return response()->json($productos);
     }
