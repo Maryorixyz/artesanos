@@ -61,6 +61,8 @@ class UserSeeder extends Seeder
             'name' => 'Hilda FeliX Huanuco',
             'email' => 'artesano21@gmail.com',
             'sexo' => 'F',
+            'telefono'=>'918350147',
+            'direccion'=>'Jr. Carlos Augusto Salaverri MZ W LTe-2',
             'password' => Hash::make('artesano21'),
             'asociacion_id' => 1,
         ])->syncRoles(['Artesano']);
@@ -69,6 +71,8 @@ class UserSeeder extends Seeder
             'name' => 'Ines Falcon Molina',
             'email' => 'artesano36@gmail.com',
             'sexo' => 'F',
+            'telefono'=>'986923095',
+            'direccion'=>'Jr. Abrahan Valdelomar Mz T Lte-4',
             'password' => Hash::make('artesano36'),
             'asociacion_id' => 1,
         ])->syncRoles(['Artesano']);
@@ -77,6 +81,8 @@ class UserSeeder extends Seeder
             'name' => 'Ivan Sacramento Ramirez',
             'email' => 'artesano3@gmail.com',
             'sexo' => 'M',
+            'telefono'=>'916027931',
+            'direccion'=>'Jr. Los Anceles Mz C Lte-4 Pillco Marca',
             'password' => Hash::make('artesano3'),
             'asociacion_id' => 1,
         ])->syncRoles(['Artesano']);
@@ -85,6 +91,8 @@ class UserSeeder extends Seeder
             'name' => 'Lusmila Gonzales Rumi',
             'email' => 'artesano12@gmail.com',
             'sexo' => 'F',
+            'telefono'=>'991731453',
+            'direccion'=>'Jr. Perene Mz O Lte-8',
             'password' => Hash::make('artesano12'),
             'asociacion_id' => 1,
         ])->syncRoles(['Artesano']);
@@ -93,6 +101,8 @@ class UserSeeder extends Seeder
             'name' => 'Walter Bonilla Basilio',
             'email' => 'artesano37@gmail.com',
             'sexo' => 'M',
+            'telefono'=>'921001910',
+            'direccion'=>'Jr. Los Alisos con Jr. Pillco Marca 201',
             'password' => Hash::make('artesano37'),
             'asociacion_id' => 1,
         ])->syncRoles(['Artesano']);
@@ -101,6 +111,8 @@ class UserSeeder extends Seeder
             'name' => 'Fernando Alfredo Aguirre Valdivia',
             'email' => 'artesano35@gmail.com',
             'sexo' => 'M',
+            'telefono'=>'937614190',
+            'direccion'=>'Jr. Perene Mz O Lte-7',
             'password' => Hash::make('artesano35'),
             'asociacion_id' => 1,
         ])->syncRoles(['Artesano']);
@@ -118,6 +130,8 @@ class UserSeeder extends Seeder
             'name' => 'Erlandez Ortiz Santacruz',
             'email' => 'artesano2@gmail.com',
             'sexo' => 'M',
+            'telefono'=>'962076778',
+            'direccion'=>'Jr. Estaban Pabletich 337',
             'password' => Hash::make('artesano2'),
             'asociacion_id' => 1,
         ])->syncRoles(['Artesano']);
@@ -126,6 +140,8 @@ class UserSeeder extends Seeder
             'name' => 'Jerson Emer Duran Vara',
             'email' => 'artesano25@gmail.com',
             'sexo' => 'M',
+            'telefono'=>'973961969',
+            'direccion'=>'-',
             'password' => Hash::make('artesano25'),
             'asociacion_id' => 1,
         ])->syncRoles(['Artesano']);
@@ -134,6 +150,8 @@ class UserSeeder extends Seeder
             'name' => 'Gianina Vanesa Ayala Rosales',
             'email' => 'artesano5@gmail.com',
             'sexo' => 'F',
+            'telefono'=>'943703211',
+            'direccion'=>'Jr. Pataza Mz T Lte--5',
             'password' => Hash::make('artesano5'),
             'asociacion_id' => 1,
         ])->syncRoles(['Artesano']);
@@ -142,6 +160,8 @@ class UserSeeder extends Seeder
             'name' => 'Clérigos Ventura Casimiro',
             'email' => 'artesano1@gmail.com',
             'sexo' => 'M',
+            'telefono'=>'962526589',
+            'direccion'=>'Jr. Mantaro Mz 2 Lte-3',
             'password' => Hash::make('artesano1'),
             'asociacion_id' => 1,
         ])->syncRoles(['Artesano']);
@@ -150,6 +170,8 @@ class UserSeeder extends Seeder
             'name' => 'Miguel Ángel Vilca Ramírez',
             'email' => 'artesano16@gmail.com',
             'sexo' => 'M',
+            'telefono'=>'995592623',
+            'direccion'=>'Jr. Junin 172',
             'password' => Hash::make('artesano16'),
             'asociacion_id' => 1,
         ])->syncRoles(['Artesano']);
