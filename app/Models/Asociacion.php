@@ -19,4 +19,8 @@ class Asociacion extends Model
     public function imagenes(){
         return $this->morphMany(Imagen::class, 'modelo');
     }
+
+    public function users(){
+        return $this->hasMany(User::class);
+    }
 }

@@ -33,6 +33,7 @@ class User extends Authenticatable
         'telefono',
         'direccion',
         'password',
+        'asociacion_id'
     ];
 
     /**
@@ -68,5 +69,10 @@ class User extends Authenticatable
     public function productos()
     {
         return $this->hasMany(Producto::class);
+    }
+
+    public function asociacion()
+    {
+        return $this->belongsTo(Asociacion::class);
     }
 }

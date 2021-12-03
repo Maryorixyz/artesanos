@@ -16,9 +16,9 @@ class CatalogoController extends Controller
     public function index()
     {
 
-        $productos = Producto::with('imagenes', 'categorias', 'user')->offset(0)->limit(24)->get(); //Extrae los productos de la bd
+        $productos = Producto::with('imagenes', 'categorias', 'user.asociacion')->offset(0)->limit(24)->get(); //Extrae los productos de la bd
 
-        $categorias = Categoria::withCount('productos')->orderBy('productos_count', 'DESC')->limit(4)->get();
+        $categorias = Categoria::withCount('productos')->orderBy('productos_count', 'DESC')->limit(5)->get();
 
         $cantidad_de_productos = Producto::count();
 

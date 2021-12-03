@@ -219,10 +219,269 @@ $('.wrap-rating').each(function(){
 $('#filas-producto').on('click','.js-show-modal1',function(e){
     /* GUARDAR DATOS DE PRODUCTO-MEJORAR IMAGEN*/
     let producto = JSON.parse(e.target.dataset.producto)
+
+    //todo PRODUCTO NOMBRE*/
+    let productoNombre = `
+        <h1 class="mtext-105 cl2 js-name-detail p-b-14 edit-nombre-modal">${producto.nombre}</h1>
+        `
+
+    $('#modal-producto-nombre').empty().append(productoNombre)
     
-    $('#modal-producto-nombre').text(producto.nombre)
-    $('#modal-producto-precio').text('S/. '+ producto.precio)
-    $('#modal-producto-descripcion').text(producto.descripcion)
+    //todo PRODUCTO PRECIO
+    let productoPrecio = `
+        <span class="precio-producto mtext-108 cl5 precio-size">
+            <img class="iconos" src='images/icons/precio-1.png'>S/. ${producto.precio}
+        </span>
+            `
+    $('#modal-producto-precio').empty().append(productoPrecio)
+
+    //todo:PRODUCTO DESCRIPCION
+    let productoDescripcion = `
+        <span>${producto.descripcion}</span>
+        `
+    $('#modal-producto-descripcion').empty().append(productoDescripcion)
+
+    //todo:PRODUCTO DESCRIPCION ARTESANO
+    let productoartesanoFoto = `
+        <img src= "${producto.user.profile_photo_url}">
+    `
+    $('#modal-producto-usuario-foto').empty().append(productoartesanoFoto)
+
+    //todo:PRODUCTO DESCRIPCION ARTESANO
+    let productoartesanoNombre = `
+    <span>${producto.user.name}</span>
+    `
+    $('#modal-producto-user-name').empty().append(productoartesanoNombre)
+
+    //todo:PRODUCTO DESCRIPCION ARTESANO
+    let productoartesanoAsociacion = `
+    <span>${producto.user.asociacion.nombre}</span>
+    `
+    $('#modal-producto-user-asociacion').empty().append(productoartesanoAsociacion)
+
+    //todo:MAPA    
+    var style = [
+        {
+            "featureType": "water",
+            "elementType": "geometry",
+            "stylers": [
+            {
+                "color": "#e9e9e9"
+            },
+            {
+                "lightness": 17
+            }
+            ]
+        },
+        {
+            "featureType": "landscape",
+            "elementType": "geometry",
+            "stylers": [
+            {
+                "color": "#f5f5f5"
+            },
+            {
+                "lightness": 20
+            }
+            ]
+        },
+        {
+            "featureType": "road.highway",
+            "elementType": "geometry.fill",
+            "stylers": [
+            {
+                "color": "#ffffff"
+            },
+            {
+                "lightness": 17
+            }
+            ]
+        },
+        {
+            "featureType": "road.highway",
+            "elementType": "geometry.stroke",
+            "stylers": [
+            {
+                "color": "#ffffff"
+            },
+            {
+                "lightness": 29
+            },
+            {
+                "weight": 0.2
+            }
+            ]
+        },
+        {
+            "featureType": "road.arterial",
+            "elementType": "geometry",
+            "stylers": [
+            {
+                "color": "#ffffff"
+            },
+            {
+                "lightness": 18
+            }
+            ]
+        },
+        {
+            "featureType": "road.local",
+            "elementType": "geometry",
+            "stylers": [
+            {
+                "color": "#ffffff"
+            },
+            {
+                "lightness": 16
+            }
+            ]
+        },
+        {
+            "featureType": "poi",
+            "elementType": "geometry",
+            "stylers": [
+            {
+                "color": "#f5f5f5"
+            },
+            {
+                "lightness": 21
+            }
+            ]
+        },
+        {
+            "featureType": "poi.park",
+            "elementType": "geometry",
+            "stylers": [
+            {
+                "color": "#dedede"
+            },
+            {
+                "lightness": 21
+            }
+            ]
+        },
+        {
+            "elementType": "labels.text.stroke",
+            "stylers": [
+            {
+                "visibility": "on"
+            },
+            {
+                "color": "#ffffff"
+            },
+            {
+                "lightness": 16
+            }
+            ]
+        },
+        {
+            "elementType": "labels.text.fill",
+            "stylers": [
+            {
+                "saturation": 36
+            },
+            {
+                "color": "#333333"
+            },
+            {
+                "lightness": 40
+            }
+            ]
+        },
+        {
+            "elementType": "labels.icon",
+            "stylers": [
+            {
+                "visibility": "off"
+            }
+            ]
+        },
+        {
+            "featureType": "transit",
+            "elementType": "geometry",
+            "stylers": [
+            {
+                "color": "#f2f2f2"
+            },
+            {
+                "lightness": 19
+            }
+            ]
+        },
+        {
+            "featureType": "administrative",
+            "elementType": "geometry.fill",
+            "stylers": [
+            {
+                "color": "#fefefe"
+            },
+            {
+                "lightness": 20
+            }
+            ]
+        },
+        {
+            "featureType": "administrative",
+            "elementType": "geometry.stroke",
+            "stylers": [
+            {
+                "color": "#fefefe"
+            },
+            {
+                "lightness": 17
+            },
+            {
+                "weight": 1.2
+            }
+            ]
+        }
+    ];
+    var img_pin = 'images/icons/pin-1.png';
+
+    var latitude = -9.917102;
+    var longitude = -76.237605;
+    var scrollwhell = 1;
+    var draggable = 1;
+    var map_zoom = 18;
+    var locations = [
+        ['<div class="infobox"><h4>Hola.!!</h4><p>Encuentrame en este punto, te espero.</p></div>'
+            , latitude, longitude, 2]
+    ];
+
+    var map = new google.maps.Map(document.getElementById('modal-producto-usuario-map'), {
+        zoom: Number(map_zoom),
+        zoomControl: false,  
+        disableDoubleClickZoom: true,
+        scrollwheel: scrollwhell,
+        navigationControl: true,
+        mapTypeControl: false,
+        scaleControl: false,
+        draggable: draggable,
+        styles: style,
+        center: new google.maps.LatLng(latitude, longitude),
+        mapTypeId: google.maps.MapTypeId.ROADMAP
+    });
+
+    var infowindow = new google.maps.InfoWindow();
+
+        var marker, i;
+
+        for (i = 0; i < locations.length; i++) {
+
+            marker = new google.maps.Marker({
+                position: new google.maps.LatLng(locations[i][1], locations[i][2]),
+                map: map,
+                icon: img_pin
+            });
+
+            google.maps.event.addListener(marker, 'click', (function(marker, i) {
+                return function() {
+                    infowindow.setContent(locations[i][0]);
+                    infowindow.open(map, marker);
+                }
+            })(marker, i));
+        }
+
 
     producto.imagenes.forEach(imagen => {
         let img = `
