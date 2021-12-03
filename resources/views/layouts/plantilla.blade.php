@@ -312,6 +312,9 @@
     <!-- Scripts -->	
 	<script src="{{ mix('js/vendor.js') }}"></script>
 
+	<!--API GOOGLE MAPS-->
+	<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCVC1S2qxpJi-LBZlgAe3cfDyY4HbGc1TA"></script>
+
     <!-- Custom scripts -->
     @yield('js')
 	

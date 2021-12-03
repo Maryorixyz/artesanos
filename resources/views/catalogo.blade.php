@@ -244,20 +244,23 @@
 									<span class="mtext-106 cl2">Precio</span>
 								</div>
 
-								<h4>Descripción:</h4>
+								<h4>Descripción</h4>
 								<div id="modal-producto-descripcion" class="modal-producto-descripcion">
-									<p class="stext-102 cl3 p-t-23">descripcion 2</p>
+									<p class="stext-102 cl3 p-t-23">descripcion del producto</p>
 								</div>
 							</div>
 							<div class="modal-informacion-artesano">
 								<h4>Informacion del artesano</h4>
 								<div class="informacion-usuario">
 										<div id="modal-producto-usuario-foto" class="foto-artesano" ></div>
-										<div id="modal-producto-user-name" class="nombre-artesano">NOMBRE</div>
+										<div>
+											<div id="modal-producto-user-name" class="nombre-artesano">NOMBRE</div>
+											<div id="modal-producto-user-asociacion" class="artesano-asociacion">ASOCIACION</div>
+										</div>
 								</div>
 							</div>
 							<div class="modal-detalle-mapa">
-								<h4>Ubicacion:</h4>
+								<h4>Ubicación</h4>
 								<div id="modal-producto-usuario-map" class="modal-mapa">MAPA</div>
 							</div>
 						</div>

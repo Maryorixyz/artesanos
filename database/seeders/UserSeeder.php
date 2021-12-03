@@ -24,6 +24,7 @@ class UserSeeder extends Seeder
             'telefono'=>'962609225',
             'direccion'=>'Av. Esteban Pabletich Mz I Lt-3',
             'password' => Hash::make('artesano13'),
+            'asociacion_id' => 1,
         ])->syncRoles(['Artesano']);
 
         User::create([
@@ -33,6 +34,7 @@ class UserSeeder extends Seeder
             'telefono'=>'976700788',
             'direccion'=>'Jr. Majes Mz C Tc-9',
             'password' => Hash::make('artesano24'),
+            'asociacion_id' => 1,
         ])->syncRoles(['Artesano']);
 
         User::create([
@@ -42,6 +44,7 @@ class UserSeeder extends Seeder
             'telefono'=>'931058027',
             'direccion'=>'-',
             'password' => Hash::make('artesano4'),
+            'asociacion_id' => 1,
         ])->syncRoles(['Artesano']);
 
         User::create([
@@ -51,6 +54,7 @@ class UserSeeder extends Seeder
             'telefono'=>'979992185',
             'direccion'=>'Jr. Pastasa Mz I Lte-7',
             'password' => Hash::make('artesano23'),
+            'asociacion_id' => 1,
         ])->syncRoles(['Artesano']);
 
         User::create([
@@ -58,6 +62,7 @@ class UserSeeder extends Seeder
             'email' => 'artesano21@gmail.com',
             'sexo' => 'F',
             'password' => Hash::make('artesano21'),
+            'asociacion_id' => 1,
         ])->syncRoles(['Artesano']);
 
         User::create([
@@ -65,6 +70,7 @@ class UserSeeder extends Seeder
             'email' => 'artesano36@gmail.com',
             'sexo' => 'F',
             'password' => Hash::make('artesano36'),
+            'asociacion_id' => 1,
         ])->syncRoles(['Artesano']);
 
         User::create([
@@ -72,6 +78,7 @@ class UserSeeder extends Seeder
             'email' => 'artesano3@gmail.com',
             'sexo' => 'M',
             'password' => Hash::make('artesano3'),
+            'asociacion_id' => 1,
         ])->syncRoles(['Artesano']);
 
         User::create([
@@ -79,6 +86,7 @@ class UserSeeder extends Seeder
             'email' => 'artesano12@gmail.com',
             'sexo' => 'F',
             'password' => Hash::make('artesano12'),
+            'asociacion_id' => 1,
         ])->syncRoles(['Artesano']);
 
         User::create([
@@ -86,6 +94,7 @@ class UserSeeder extends Seeder
             'email' => 'artesano37@gmail.com',
             'sexo' => 'M',
             'password' => Hash::make('artesano37'),
+            'asociacion_id' => 1,
         ])->syncRoles(['Artesano']);
 
         User::create([
@@ -93,6 +102,7 @@ class UserSeeder extends Seeder
             'email' => 'artesano35@gmail.com',
             'sexo' => 'M',
             'password' => Hash::make('artesano35'),
+            'asociacion_id' => 1,
         ])->syncRoles(['Artesano']);
 
         User::create([
@@ -109,6 +119,7 @@ class UserSeeder extends Seeder
             'email' => 'artesano2@gmail.com',
             'sexo' => 'M',
             'password' => Hash::make('artesano2'),
+            'asociacion_id' => 1,
         ])->syncRoles(['Artesano']);
 
         User::create([
@@ -116,6 +127,7 @@ class UserSeeder extends Seeder
             'email' => 'artesano25@gmail.com',
             'sexo' => 'M',
             'password' => Hash::make('artesano25'),
+            'asociacion_id' => 1,
         ])->syncRoles(['Artesano']);
 
         User::create([
@@ -123,6 +135,7 @@ class UserSeeder extends Seeder
             'email' => 'artesano5@gmail.com',
             'sexo' => 'F',
             'password' => Hash::make('artesano5'),
+            'asociacion_id' => 1,
         ])->syncRoles(['Artesano']);
 
         User::create([
@@ -130,6 +143,7 @@ class UserSeeder extends Seeder
             'email' => 'artesano1@gmail.com',
             'sexo' => 'M',
             'password' => Hash::make('artesano1'),
+            'asociacion_id' => 1,
         ])->syncRoles(['Artesano']);
 
         User::create([
@@ -137,6 +151,7 @@ class UserSeeder extends Seeder
             'email' => 'artesano16@gmail.com',
             'sexo' => 'M',
             'password' => Hash::make('artesano16'),
+            'asociacion_id' => 1,
         ])->syncRoles(['Artesano']);
         
     }

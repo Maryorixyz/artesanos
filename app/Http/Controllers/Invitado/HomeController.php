@@ -15,8 +15,9 @@ class HomeController extends Controller
     public function __invoke()
     {
 
-        $productos = Producto::latest('id')->take(16)->get(); //Extrae los productos de la bd
+        $productos = Producto::with('imagenes', 'categorias', 'user.asociacion')->latest('id')->take(16)->get(); //Extrae los productos de la bd
 
+        
         $asociaciones = 'Asociacion 1';
 
         return view('welcome', compact('productos', 'asociaciones'));

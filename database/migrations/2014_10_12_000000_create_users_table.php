@@ -27,6 +27,13 @@ class CreateUsersTable extends Migration
             $table->rememberToken();
             $table->foreignId('current_team_id')->nullable();
             $table->string('profile_photo_path', 2048)->nullable();
+
+            $table->unsignedBigInteger('asociacion_id')->nullable();
+            $table->foreign('asociacion_id')
+                ->references('id')
+                ->on('asociaciones')
+                ->onUpdate('cascade')
+                ->onDelete('cascade');
             $table->timestamps();
         });
     }

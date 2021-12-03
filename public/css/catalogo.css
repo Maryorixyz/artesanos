@@ -43,19 +43,16 @@
 }
 
 .modal-mapa{
-    border: 2px solid #56A85E;
+    border: 2px solid transparent;
     width: 100%;
-    min-height: 200px;
+    min-height: 250px;
     margin-top: 1rem;
 
 }
 
 .foto-artesano{
-    border-radius: 50%;
-    border: 2px solid #56A85E;
     width: 120px;
     height: 120px;
-
 }
 
 .foto-artesano img{
@@ -105,4 +102,8 @@
     border-color: rgba(0, 0, 0, 0.1);
     padding: 15px 10px 10px 10px;
     border-radius: 20px;
+}
+
+.artesano-asociacion{
+    margin-left: 2rem;
 }
