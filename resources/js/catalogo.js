@@ -361,23 +361,36 @@
             `
         $('#modal-producto-descripcion').empty().append(productoDescripcion)
 
-        //todo:PRODUCTO DESCRIPCION ARTESANO
+        //todo:PRODUCTO DESCRIPCION ARTESANO FOTO
         let productoartesanoFoto = `
             <img src= "${producto.user.profile_photo_url}">
         `
         $('#modal-producto-usuario-foto').empty().append(productoartesanoFoto)
 
-        //todo:PRODUCTO DESCRIPCION ARTESANO
+        //todo:PRODUCTO DESCRIPCION ARTESANO NOMBREEE
         let productoartesanoNombre = `
         <span>${producto.user.name}</span>
         `
         $('#modal-producto-user-name').empty().append(productoartesanoNombre)
 
-        //todo:PRODUCTO DESCRIPCION ARTESANO
+        //todo:PRODUCTO DESCRIPCION ARTESANO ASOCIACION
         let productoartesanoAsociacion = `
         <span>${producto.user.asociacion.nombre}</span>
         `
         $('#modal-producto-user-asociacion').empty().append(productoartesanoAsociacion)
+
+        
+        //todo:PRODUCTO DESCRIPCION ARTESANO DIRECCION
+        let productoartesanoDireccion = `
+        <span>${producto.user.direccion ?? '-'}</span>
+        `
+        $('#modal-producto-user-direccion').empty().append(productoartesanoDireccion)
+
+        //todo:PRODUCTO DESCRIPCION ARTESANO DIRECCION
+        let productoartesanoTelefono = `
+        <span>${producto.user.telefono ?? '-'}</span>
+        `
+        $('#modal-producto-user-telefono').empty().append(productoartesanoTelefono)
         
         //todo:MAPA
         var style = [

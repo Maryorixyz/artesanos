@@ -301,6 +301,8 @@ var __webpack_exports__ = {};
   [ Show modal1 ]*/
 
   $('#filas-producto').on('click', '.js-show-modal1', function (e) {
+    var _producto$user$direcc, _producto$user$telefo;
+
     /*GUARDAR DATOS DE PRODUCTO-MEJORAR IMAGEN*/
     var producto = JSON.parse(e.target.dataset.producto); //todo PRODUCTO NOMBRE*/
 
@@ -311,16 +313,22 @@ var __webpack_exports__ = {};
     $('#modal-producto-precio').empty().append(productoPrecio); //todo:PRODUCTO DESCRIPCION
 
     var productoDescripcion = "\n            <span>".concat(producto.descripcion, "</span>\n            ");
-    $('#modal-producto-descripcion').empty().append(productoDescripcion); //todo:PRODUCTO DESCRIPCION ARTESANO
+    $('#modal-producto-descripcion').empty().append(productoDescripcion); //todo:PRODUCTO DESCRIPCION ARTESANO FOTO
 
     var productoartesanoFoto = "\n            <img src= \"".concat(producto.user.profile_photo_url, "\">\n        ");
-    $('#modal-producto-usuario-foto').empty().append(productoartesanoFoto); //todo:PRODUCTO DESCRIPCION ARTESANO
+    $('#modal-producto-usuario-foto').empty().append(productoartesanoFoto); //todo:PRODUCTO DESCRIPCION ARTESANO NOMBREEE
 
     var productoartesanoNombre = "\n        <span>".concat(producto.user.name, "</span>\n        ");
-    $('#modal-producto-user-name').empty().append(productoartesanoNombre); //todo:PRODUCTO DESCRIPCION ARTESANO
+    $('#modal-producto-user-name').empty().append(productoartesanoNombre); //todo:PRODUCTO DESCRIPCION ARTESANO ASOCIACION
 
     var productoartesanoAsociacion = "\n        <span>".concat(producto.user.asociacion.nombre, "</span>\n        ");
-    $('#modal-producto-user-asociacion').empty().append(productoartesanoAsociacion); //todo:MAPA
+    $('#modal-producto-user-asociacion').empty().append(productoartesanoAsociacion); //todo:PRODUCTO DESCRIPCION ARTESANO DIRECCION
+
+    var productoartesanoDireccion = "\n        <span>".concat((_producto$user$direcc = producto.user.direccion) !== null && _producto$user$direcc !== void 0 ? _producto$user$direcc : '-', "</span>\n        ");
+    $('#modal-producto-user-direccion').empty().append(productoartesanoDireccion); //todo:PRODUCTO DESCRIPCION ARTESANO DIRECCION
+
+    var productoartesanoTelefono = "\n        <span>".concat((_producto$user$telefo = producto.user.telefono) !== null && _producto$user$telefo !== void 0 ? _producto$user$telefo : '-', "</span>\n        ");
+    $('#modal-producto-user-telefono').empty().append(productoartesanoTelefono); //todo:MAPA
 
     var style = [{
       "featureType": "water",

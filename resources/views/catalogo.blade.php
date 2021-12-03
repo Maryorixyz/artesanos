@@ -256,6 +256,8 @@
 										<div>
 											<div id="modal-producto-user-name" class="nombre-artesano">NOMBRE</div>
 											<div id="modal-producto-user-asociacion" class="artesano-asociacion">ASOCIACION</div>
+											<div id="modal-producto-user-direccion" class="artesano-direccion">DIRECCION</div>
+											<div id="modal-producto-user-telefono" class="artesano-telefono">TELEFONO</div>
 										</div>
 								</div>
 							</div>

@@ -259,6 +259,20 @@ $('#filas-producto').on('click','.js-show-modal1',function(e){
     `
     $('#modal-producto-user-asociacion').empty().append(productoartesanoAsociacion)
 
+    
+    //todo:PRODUCTO DESCRIPCION ARTESANO DIRECCION
+    let productoartesanoDireccion = `
+    <span>${producto.user.direccion ?? '-'}</span>
+
+    `
+    $('#modal-producto-user-direccion').empty().append(productoartesanoDireccion)
+
+    //todo:PRODUCTO DESCRIPCION ARTESANO DIRECCION
+    let productoartesanoTelefono = `
+    <span>${producto.user.telefono ?? '-'}</span>
+    `
+    $('#modal-producto-user-telefono').empty().append(productoartesanoTelefono)
+
     //todo:MAPA    
     var style = [
         {
