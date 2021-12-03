@@ -63,8 +63,19 @@
                     <span class="text-danger">{{$message}}</span>
                 @enderror
 
+                <div class="form-group">
+                    <label class="label">Sexo</label>
+                    <div class="form-check">
+                            {!! Form::radio('sexo', 'F', null, ['class' => "form-check-input"]) !!}
+                            <label> F</label>
+                    </div>
+                    <div class="form-check">
+                            {!! Form::radio('sexo', 'M', null, ['class' => "form-check-input"]) !!}
+                            <label> M</label>
+                    </div>
+                </div> 
                     {!! Form::submit('Crear Artesano', ['class' => 'btn btn-primary ']) !!}
-
+                    
             {!! Form::close() !!}
         </div>
     </div>

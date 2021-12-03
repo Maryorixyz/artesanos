@@ -2,6 +2,8 @@
 
 @section('title', 'Dashboard')
 
+@section('plugins.Datatables', true)
+
 @section('content_header')
     <h1>Listado de Usuarios</h1>
 @stop
@@ -18,68 +20,51 @@
             <a class="btn btn-secondary" href="{{route('admin.users.create')}}">Crear Usuario</a>
         </div>
 
-        <div class="card-body">
-            <table class="table table-striped">
-                <thead>
-                    <tr>
-                        <th>Id</th>
-                        <th>Name</th>
-                        <th>Email</th>
-                        <th>Telefono</th>
-                        <th>Direccion</th>
-                        <th colspan="3"></th>
-                    </tr>
-                </thead>
-                <tbody>
-                    @foreach ($users as $user)
+        <div class="card-body ">
+            <div class="table-responsive">
+                <table class="table table-striped" id="tabla-usuarios">
+                    <thead>
                         <tr>
-                            <td>{{$user->id}}</td>
-                            <td>{{$user->name}}</td>
-                            <td>{{$user->email}}</td>
-                            <td>{{$user->telefono}}</td>
-                            <td>{{$user->direccion}}</td>
-                            <td width="10px">
-                                <a class="btn btn-warning btn-sm" href="{{route('admin.users.editRoles', $user)}}">Roles</a>
-                            </td>
-                            <td width="10px">
-                                <a class="btn btn-primary btn-sm" href="{{route('admin.users.edit', $user)}}">Editar</a>
-                            </td>
-                            <td width="10px">
-                                <form action="{{route('admin.users.destroy', $user)}}" method="POST">
-                                    @csrf
-                                    @method('delete')
-
-                                    <button type="submit" class="btn btn-danger btn-sm">Eliminar</button>
-                                </form>
-                            </td>
+                            <th>Name</th>
+                            <th>Email</th>
+                            <th>Telefono</th>
+                            <th>Direccion</th>
+                            <th >Acciones</th>
                         </tr>
-                    @endforeach
-                </tbody>
-            </table>
+                    </thead>
+                    <tbody>
+                        @foreach ($users as $user)
+                            <tr>
+                                <td>{{$user->name}}</td>
+                                <td>{{$user->email}}</td>
+                                <td>{{$user->telefono}}</td>
+                                <td>{{$user->direccion}}</td>
+                                <td width="10px" class="text-center">
+    
+                                    <a class="btn btn-warning btn-sm mb-1 btn-block" href="{{route('admin.users.editRoles', $user)}}">Roles</a>          
+                                    <div class="d-flex justify-content-between"> 
+                                        <a class="btn btn-primary btn-sm" href="{{route('admin.users.edit', $user)}}"><i class="fas fa-edit"></i></a>
+                                    
+                                    
+                                        <form action="{{route('admin.users.destroy', $user)}}" method="POST">
+                                            @csrf
+                                            @method('delete')
+    
+                                            <button type="submit" class="btn btn-danger btn-sm"><i class="fas fa-trash"></i></button>
+                                        </form>
+                                    </div>   
+                                    
+                                </td>
+                            </tr>
+                        @endforeach
+                    </tbody>
+                </table>
+            </div>
+            
         </div>
     </div>
 
 @stop
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 @section('css')
@@ -87,5 +72,22 @@
 @stop
 
 @section('js')
-    <script> console.log('Hi!'); </script>
+    <script> 
+
+        $(function () {
+            $("#tabla-usuarios").DataTable({
+                paging: true,
+                lengthChange: false,
+                searching: true,
+                ordering: true,
+                info: true,
+                autoWidth: false,
+                responsive: true,
+                language: {
+                    url: '//cdn.datatables.net/plug-ins/1.11.3/i18n/es-mx.json'
+                }
+            });
+        });
+
+    </script>
 @stop

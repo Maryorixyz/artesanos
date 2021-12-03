@@ -7,6 +7,7 @@ use App\Models\Categoria;
 use Illuminate\Http\Request;
 
 use App\Models\Producto;
+use Illuminate\Support\Facades\Storage;
 
 class ProductoController extends Controller
 {
@@ -79,13 +80,17 @@ class ProductoController extends Controller
             'descripcion'=>'required',
             'medidas'=>'required',
             'colores'=>'required',
-            'precio'=>'required',
-            'stock'=>'required'
+            'precio'=>'required'
 
         ]);
         $request->offsetSet('user_id', auth()->user()->id);
         $producto = Producto::create($request->all()) ;
         $producto->categorias()->sync($request->categorias);
+        
+        $url = Storage::disk('public')->put('productos', $request->file('file'));
+        $producto->imagenes()->create([
+            'url' => 'storage/' . $url
+        ]);
         return redirect()->route('admin.producto.index', $producto)->with('info', 'El producto se creo con exito');
     }
 
