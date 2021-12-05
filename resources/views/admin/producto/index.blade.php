@@ -53,6 +53,7 @@
                                 
                                 
                                 <td class="align-middle">{{$producto->user->name}}</td>
+                                
                                 <td width="10px" class="align-middle">
                                     <div class="d-flex">
                                         <a class="btn btn-primary btn-sm m-2" href="{{route('admin.producto.edit', $producto)}}"><i class="fas fa-edit"></i></a>

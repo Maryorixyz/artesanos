@@ -35,17 +35,17 @@
                     <tbody>
                         @foreach ($users as $user)
                             <tr>
-                                <td>{{$user->name}}</td>
-                                <td>{{$user->email}}</td>
-                                <td>{{$user->telefono}}</td>
-                                <td>{{$user->direccion}}</td>
+                                <td class="align-middle">{{$user->name}}</td>
+                                <td class="align-middle">{{$user->email}}</td>
+                                <td class="align-middle">{{$user->telefono}}</td>
+                                <td class="align-middle">{{$user->direccion}}</td>
                                 <td width="10px" class="text-center">
     
                                     <a class="btn btn-warning btn-sm mb-1 btn-block" href="{{route('admin.users.editRoles', $user)}}">Roles</a>          
                                     <div class="d-flex justify-content-between"> 
+
                                         <a class="btn btn-primary btn-sm" href="{{route('admin.users.edit', $user)}}"><i class="fas fa-edit"></i></a>
-                                    
-                                    
+
                                         <form action="{{route('admin.users.destroy', $user)}}" method="POST">
                                             @csrf
                                             @method('delete')

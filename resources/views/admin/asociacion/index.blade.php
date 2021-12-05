@@ -2,6 +2,8 @@
 
 @section('title', 'Dashboard')
 
+@section('plugins.Datatables', true)
+
 @section('content_header')
     <h1>Lista de Asociaciones</h1>
 @stop
@@ -21,41 +23,40 @@
     </div>
 
     <div class="card-body">
-        <table class="table table-striped">
-            <thead>
-                <tr>
-                    <th>ID</th>
-                    <th>Nombre</th>
-                    <th>Descripción</th>
-                    <th colspan="2"></th>
-                </tr>
-            </thead>
-            
-            <tbody>
-                @foreach ($asociaciones as $asociacion)
+        <div class="table-responsive">
+            <table class="table table-striped" id="tabla-asociaciones">
+                <thead>
                     <tr>
-                        <td>{{$asociacion->id}}</td>
-                        <td>{{$asociacion->nombre}}</td>
-                        <td>{{$asociacion->descripcion}}</td>
-                        <td width="10px">
-            
-                                <a class="btn btn-primary btn-sm" href="{{route('admin.asociacion.edit', $asociacion)}}">Editar</a>
-                            
-                        </td>
-                        <td width="10px">
-                            
-                                <form action="{{route('admin.asociacion.destroy', $asociacion)}}" method="POST">
-                                    @csrf
-                                    @method('delete')
-
-                                    <button type="submit" class="btn btn-danger btn-sm">Eliminar</button>
-                                </form>  
-                           
-                        </td>
+                        <th>ID</th>
+                        <th>Nombre</th>
+                        <th>Descripción</th>
+                        <th>Acciones</th>
                     </tr>
-                @endforeach
-            </tbody>
-        </table>
+                </thead>
+                
+                <tbody>
+                    @foreach ($asociaciones as $asociacion)
+                        <tr>
+                            <td class="align-middle">{{$asociacion->id}}</td>
+                            <td class="align-middle">{{$asociacion->nombre}}</td>
+                            <td class="align-middle">{{$asociacion->descripcion}}</td>
+                            <td width="10px" class="align-middle">
+                
+                                    <a class="btn btn-primary btn-sm m-2" href="{{route('admin.asociacion.edit', $asociacion)}}"><i class="fas fa-edit"></i></a>
+                                
+                                    <form action="{{route('admin.asociacion.destroy', $asociacion)}}" method="POST">
+                                        @csrf
+                                        @method('delete')
+    
+                                        <button type="submit" class="btn btn-danger btn-sm m-2"><i class="fas fa-trash"></i></button>
+                                    </form>  
+                               
+                            </td>
+                        </tr>
+                    @endforeach
+                </tbody>
+            </table>
+        </div>
     </div>
 </div>
 
@@ -68,5 +69,23 @@
 @stop
 
 @section('js')
-    <script> console.log('Hi!'); </script>
+    <script> 
+        
+        $(function () {
+            $("#tabla-asociaciones").DataTable({
+                paging: true,
+                lengthChange: false,
+                searching: true,
+                ordering: true,
+                info: true,
+                autoWidth: false,
+                responsive: true,
+                language: {
+                    url: '//cdn.datatables.net/plug-ins/1.11.3/i18n/es-mx.json'
+                }
+            });
+            
+        });
+
+    </script>
 @stop
