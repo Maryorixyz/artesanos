@@ -24,7 +24,7 @@
                 <div class="card-body">
                     <table class="table table-striped" id="tabla-categorias">
                         <thead>
-                            <tr>
+                            <tr class="bg-gray">
                                 <th>ID</th>
                                 <th>Nombre</th>
                                 <th>Acciones</th>

@@ -26,7 +26,7 @@
         <div class="table-responsive">
             <table class="table table-striped" id="tabla-asociaciones">
                 <thead>
-                    <tr>
+                    <tr class="bg-gray">
                         <th>ID</th>
                         <th>Nombre</th>
                         <th>Descripción</th>

@@ -24,7 +24,7 @@
             <div class="table-responsive">
                 <table class="table table-striped" id="tabla-usuarios">
                     <thead>
-                        <tr>
+                        <tr class="bg-gray">
                             <th>Name</th>
                             <th>Email</th>
                             <th>Telefono</th>

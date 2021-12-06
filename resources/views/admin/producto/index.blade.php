@@ -25,7 +25,7 @@
             <div class="table-responsive">
                 <table class="table table-striped" id="tabla-productos">
                     <thead>
-                        <tr>
+                        <tr class="bg-gray">
                             <th class="align-middle text-center">Imagen</th>
                             <th class="align-middle text-center">Nombre</th>
                             <th class="align-middle text-center">Medidas</th>
@@ -47,7 +47,7 @@
                                 <td class="align-middle">S/ {{round($producto->precio, 2)}}</td>
                                 <td class="align-middle">
                                     @foreach($producto->categorias as $categoria)
-                                       <span class="badge bg-green text-uppercase">{{ $categoria->slug }}</span>  
+                                       <span class="badge bg-secondary text-uppercase">{{ $categoria->slug }}</span>  
                                     @endforeach
                                 </td>
                                 
