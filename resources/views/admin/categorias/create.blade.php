@@ -11,24 +11,30 @@
         <div class="card">
             <div class="card-body">
                 {!! Form::open(['route' => 'admin.categorias.store']) !!}
+                    
+                    <div class="row">
+                        <div class="col">
+                            <div class="form-group">
+                                {!! Form::label('descripcion', 'Nombre') !!}
+                                {!! Form::text('descripcion', null, ['class' => 'form-control', 'placeholder' => 'Ingrese el nombre de la categoria']) !!}
+                            
+                                @error('descripcion')
+                                    <span class="text-danger">{{$message}}</span>
+                                @enderror
+                            </div>
+                        </div>
 
-                    <div class="form-group">
-                        {!! Form::label('descripcion', 'Nombre') !!}
-                        {!! Form::text('descripcion', null, ['class' => 'form-control', 'placeholder' => 'Ingrese el nombre de la categoria']) !!}
-                    
-                        @error('descripcion')
-                            <span class="text-danger">{{$message}}</span>
-                        @enderror
-                    
-                    </div>
-                    <div class="form-group">
-                        {!! Form::label('slug', 'Slug') !!}
-                        {!! Form::text('slug', null, ['class' => 'form-control', 'placeholder' => 'Ingrese el slug de la categoria', 'readonly']) !!}
-                    
-                        @error('slug')
-                            <span class="text-danger">{{$message}}</span>
-                        @enderror
-
+                        <div class="col">
+                            <div class="form-group">
+                                {!! Form::label('slug', 'Slug') !!}
+                                {!! Form::text('slug', null, ['class' => 'form-control', 'placeholder' => 'Ingrese el slug de la categoria', 'readonly']) !!}
+                            
+                                @error('slug')
+                                    <span class="text-danger">{{$message}}</span>
+                                @enderror
+        
+                            </div>
+                        </div>
                     </div>
 
                     {!! Form::submit('Crear Categoria', ['class' => 'btn btn-primary']) !!}

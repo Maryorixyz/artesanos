@@ -27,7 +27,6 @@
             <table class="table table-striped" id="tabla-asociaciones">
                 <thead>
                     <tr class="bg-gray">
-                        <th>ID</th>
                         <th>Nombre</th>
                         <th>Descripción</th>
                         <th>Acciones</th>
@@ -37,7 +36,6 @@
                 <tbody>
                     @foreach ($asociaciones as $asociacion)
                         <tr>
-                            <td class="align-middle">{{$asociacion->id}}</td>
                             <td class="align-middle">{{$asociacion->nombre}}</td>
                             <td class="align-middle">{{$asociacion->descripcion}}</td>
                             <td width="10px" class="align-middle">

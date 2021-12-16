@@ -15,7 +15,7 @@ Route::resource('producto', ProductoController::class)->names('admin.producto');
 Route::resource('categorias', CategoriaController::class)->names('admin.categorias');
 
 Route::get('users/{user}/edit-roles', [UserController::class, 'editRoles'])->name('admin.users.editRoles');
-Route::put('users/{user}', [UserController::class, 'updateRoles'])->name('admin.users.updateRoles');
+Route::put('users/{user}/edit-roles', [UserController::class, 'updateRoles'])->name('admin.users.updateRoles');
 Route::resource('users', UserController::class)->except('show')->names('admin.users');
 
 Route::resource('roles', RoleController::class)->names('admin.roles');

@@ -6,6 +6,7 @@ use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 
 use App\Models\User;
+use Illuminate\Validation\Rule;
 use Spatie\Permission\Models\Role;
 
 class UserController extends Controller
@@ -51,10 +52,9 @@ class UserController extends Controller
             'name' => 'required',
             'email' => 'required|unique:users',
             'password' => 'required',
-
-
+            'latitud' => 'required',
+            'longitud' => 'required'
         ]);
-
         
         $user = User::create($request->all());
         return redirect()->route('admin.users.index', $user)->with('info', 'Se creo un artesano correctamente');
@@ -102,9 +102,17 @@ class UserController extends Controller
     {
 
         // Para actualizar el usuario
-        $user->roles()->sync($request->roles);
+        $request->validate([
+            'name' => 'required',
+            'email' => ['required', Rule::unique('users')->ignore($user->id)],
+            'password' => 'required',
+            'latitud' => 'required',
+            'longitud' => 'required'
+        ]);
 
-        return redirect()->route('admin.users.edit', $user)->with('info', 'Se asigno los roles correctamente');
+        $user->update($request->all());
+
+        return redirect()->route('admin.users.edit', $user)->with('info', 'Se actualizo el usuario correctamente');
     }
 
     //actualizar roles
@@ -112,7 +120,7 @@ class UserController extends Controller
     {
         $user->roles()->sync($request->roles);
 
-        return redirect()->route('admin.users.edit', $user)->with('info', 'Se asigno los roles correctamente');
+        return redirect()->route('admin.users.editRoles', $user)->with('info', 'Se asigno los roles correctamente');
     }
 
     /**

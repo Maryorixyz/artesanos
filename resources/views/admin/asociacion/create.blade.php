@@ -23,7 +23,7 @@
 
                 <div class="form-group">
                     {!! Form::label('descripcion', 'Descripción') !!}
-                    {!! Form::text('descripcion', null, ['class' => 'form-control', 'placeholder' => 'Ingrese el descripcion de la asociación']) !!}
+                    {!! Form::textarea('descripcion', null, ['class' => 'form-control', 'rows'=>'4', 'placeholder' => 'Ingrese el descripcion de la asociación']) !!}
                 </div>
 
                 @error('descripcion ')
