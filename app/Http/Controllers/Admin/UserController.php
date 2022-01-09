@@ -6,6 +6,7 @@ use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 
 use App\Models\User;
+use Illuminate\Support\Facades\Hash;
 use Illuminate\Validation\Rule;
 use Spatie\Permission\Models\Role;
 
@@ -56,7 +57,19 @@ class UserController extends Controller
             'longitud' => 'required'
         ]);
         
-        $user = User::create($request->all());
+        $user = User::create([
+            'name' => $request->name,
+            'email' => $request->email,
+            'password' => Hash::make($request->password),
+
+            'sexo' => $request->sexo,
+            'telefono' => $request->telefono,
+            'direccion' => $request->direccion,
+
+            'longitud' => $request->longitud,
+            'latitud' => $request->latitud,
+        ])->syncRoles(['Artesano']);
+
         return redirect()->route('admin.users.index', $user)->with('info', 'Se creo un artesano correctamente');
     }
 
@@ -79,8 +92,8 @@ class UserController extends Controller
      */
     public function edit(User $user)
     {   
-        $roles = Role::all(); 
-
+        $roles = Role::all();
+        $user->password = "";
         return view('admin.users.edit', compact('user', 'roles'));
     }
 
@@ -105,12 +118,29 @@ class UserController extends Controller
         $request->validate([
             'name' => 'required',
             'email' => ['required', Rule::unique('users')->ignore($user->id)],
-            'password' => 'required',
             'latitud' => 'required',
             'longitud' => 'required'
         ]);
 
-        $user->update($request->all());
+        $user->update([
+            'name' => $request->name,
+            'email' => $request->email,
+
+            'sexo' => $request->sexo,
+            'telefono' => $request->telefono,
+            'direccion' => $request->direccion,
+
+            'longitud' => $request->longitud,
+            'latitud' => $request->latitud,
+        ]);
+
+        if (isset($request->password)) {
+
+            $user->update([
+                'password' => Hash::make($request->password),
+            ]);
+
+        }
 
         return redirect()->route('admin.users.edit', $user)->with('info', 'Se actualizo el usuario correctamente');
     }

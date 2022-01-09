@@ -53,7 +53,6 @@
                             <span class="text-danger">{{$message}}</span>
                         @enderror
                     </div>
-
                     <div class="col">
                         <div class="form-group">
                             {!! Form::label('password', 'Contraseña') !!}

@@ -150,7 +150,7 @@ const { functions } = require("lodash");
         let buscar = this.value.toLowerCase()
         let asociaciones = buscadorAsociaciones;
         let asociacionesFiltradas;
-        let mostrarResultados = '';
+        let mostrarResultados = '';     
 
         asociacionesFiltradas = asociaciones.filter(
             (asociacion) =>   asociacion.nombre.toLowerCase().indexOf(buscar) !== -1

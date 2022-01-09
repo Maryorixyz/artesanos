@@ -452,8 +452,8 @@ $('#filas-producto').on('click','.js-show-modal1',function(e){
     ];
     var img_pin = 'images/icons/pin-1.png';
 
-    var latitude = -9.917102;
-    var longitude = -76.237605;
+    var latitude = producto.user.latitud;
+    var longitude = producto.user.longitud;
     var scrollwhell = 1;
     var draggable = 1;
     var map_zoom = 18;
