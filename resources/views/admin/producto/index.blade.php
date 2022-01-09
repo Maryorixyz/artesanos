@@ -18,7 +18,9 @@
     <div class="card">
         
         <div class="card-header">
-            <a class="btn btn-secondary" href="{{route('admin.producto.create')}}">Agregar Producto</a>
+            @can('admin.producto.create')
+            <a class="btn btn-secondary" href="{{route('admin.producto.create')}}">Agregar Producto</a> 
+            @endcan       
         </div>
 
         <div class="card-body">

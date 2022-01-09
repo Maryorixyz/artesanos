@@ -25,7 +25,6 @@
                     <table class="table table-striped" id="tabla-categorias">
                         <thead>
                             <tr class="bg-gray">
-                                <th>ID</th>
                                 <th>Nombre</th>
                                 <th>Acciones</th>
                             </tr>
@@ -34,7 +33,6 @@
                         <tbody>
                             @foreach ($categorias as $categoria)
                                 <tr>
-                                    <td class="align-middle">{{$categoria->id}}</td>
                                     <td class="align-middle">{{$categoria->descripcion}}</td>
                                     <td width="10px" class="align-middle">
                                         @can('admin.categorias.edit')
