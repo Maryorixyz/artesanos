@@ -30,7 +30,7 @@
 
 							<div class="p-b-63">
 								<a href="{{ route('asociaciones.detalle', $asociacion->id) }}" class="hov-img0 how-pos5-parent">
-									<img src="{{ $asociacion->imagenes[0]->url }}" alt="IMG-BLOG">
+									<img src="{{ count($asociacion->imagenes) > 0 ? $asociacion->imagenes[0]->url : '#' }}" alt="IMG-BLOG">
 
 									<div class="flex-col-c-m size-123 bg9 how-pos5">
 										<span class="ltext-107 cl2 txt-center">
@@ -62,28 +62,25 @@
 							</div>
 
 						@endforeach
-						
-						<!-- Pagination -->
-						{{-- <div class="flex-l-m flex-w w-full p-t-10 m-lr--7">
-							<a href="#" class="flex-c-m how-pagination1 trans-04 m-all-7 active-pagination1">
-								1
-							</a>
 
-							<a href="#" class="flex-c-m how-pagination1 trans-04 m-all-7">
-								2
-							</a>
-						</div> --}}
 					</div>
 				</div>
 
 				<div class="col-md-4 col-lg-3 p-b-80">
 					<div class="side-menu">
-						<div class="bor17 of-hidden pos-relative">
-							<input class="stext-103 cl2 plh4 size-116 p-l-28 p-r-55" type="text" name="search" placeholder="Buscar">
-
+						<div class="bor17 pos-relative">
+							<input id="buscador_asociaciones" class="stext-103 cl2 plh4 size-116 p-l-28 p-r-55" type="text" name="search" placeholder="Buscar...">
 							<button class="flex-c-m size-122 ab-t-r fs-18 cl4 hov-cl1 trans-04">
 								<i class="zmdi zmdi-search"></i>
 							</button>
+						
+							<div class="opcion_relativo">
+								<div class="opcion_contenedor">
+									<div id="mostrar_resultados">
+									</div>
+								</div>
+							</div>
+
 						</div>
 
 						<div class="p-t-55">

@@ -27,4 +27,11 @@ class AsociacionController extends Controller
 
         return view('asociacion-detalle', compact('asociacion'));
     }
+
+    public function buscadorAsociaciones()
+    {
+        $buscadorAsociaciones = Asociacion::select('id', 'nombre')->get();
+    
+        return response()->json($buscadorAsociaciones);
+    }
 }

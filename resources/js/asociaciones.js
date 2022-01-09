@@ -1,3 +1,5 @@
+const { default: axios } = require("axios");
+const { functions } = require("lodash");
 
 (function ($) {
     "use strict";
@@ -130,5 +132,43 @@
         });
     });
 
+    var buscadorAsociaciones;
 
+    console.log(buscadorAsociaciones);
+    obtenerAsociaciones()
+    
+
+    async function obtenerAsociaciones () {
+        await axios.get(`api/buscador_asociaciones`)   
+        .then(respuesta => {
+            buscadorAsociaciones = respuesta.data
+            console.log(buscadorAsociaciones)
+        }) 
+    }
+
+    $('#buscador_asociaciones').on('keyup', function() {
+        let buscar = this.value.toLowerCase()
+        let asociaciones = buscadorAsociaciones;
+        let asociacionesFiltradas;
+        let mostrarResultados = '';
+
+        asociacionesFiltradas = asociaciones.filter(
+            (asociacion) =>   asociacion.nombre.toLowerCase().indexOf(buscar) !== -1
+        ).slice(0, 10)
+        
+        asociacionesFiltradas.forEach(asociacionFiltrada => {
+            mostrarResultados += `
+                <p>
+                    <a href="/asociaciones/${ asociacionFiltrada.id }">${ asociacionFiltrada.nombre } </a>
+                </p>
+            `            
+        });
+
+        if (buscar === '') {
+            $('#mostrar_resultados').empty()        
+        } else{
+            $('#mostrar_resultados').empty().append(mostrarResultados)
+    
+        }
+    })
 })(jQuery);

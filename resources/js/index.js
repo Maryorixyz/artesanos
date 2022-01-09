@@ -267,7 +267,7 @@ $('#filas-producto').on('click','.js-show-modal1',function(e){
     `
     $('#modal-producto-user-direccion').empty().append(productoartesanoDireccion)
 
-    //todo:PRODUCTO DESCRIPCION ARTESANO DIRECCION
+    //todo:PRODUCTO DESCRIPCION ARTESANO TELEFONO
     let productoartesanoTelefono = `
     <span>${producto.user.telefono ?? '-'}</span>
     `

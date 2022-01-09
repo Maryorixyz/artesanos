@@ -221,7 +221,7 @@ $('#filas-producto').on('click', '.js-show-modal1', function (e) {
   $('#modal-producto-user-asociacion').empty().append(productoartesanoAsociacion); //todo:PRODUCTO DESCRIPCION ARTESANO DIRECCION
 
   var productoartesanoDireccion = "\n    <span>".concat((_producto$user$direcc = producto.user.direccion) !== null && _producto$user$direcc !== void 0 ? _producto$user$direcc : '-', "</span>\n\n    ");
-  $('#modal-producto-user-direccion').empty().append(productoartesanoDireccion); //todo:PRODUCTO DESCRIPCION ARTESANO DIRECCION
+  $('#modal-producto-user-direccion').empty().append(productoartesanoDireccion); //todo:PRODUCTO DESCRIPCION ARTESANO TELEFONO
 
   var productoartesanoTelefono = "\n    <span>".concat((_producto$user$telefo = producto.user.telefono) !== null && _producto$user$telefo !== void 0 ? _producto$user$telefo : '-', "</span>\n    ");
   $('#modal-producto-user-telefono').empty().append(productoartesanoTelefono); //todo:MAPA    
