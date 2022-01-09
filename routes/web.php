@@ -36,6 +36,7 @@ Route::get('asociaciones/create', [App\Http\Controllers\AsociacionController::cl
 Route::get('asociaciones/{asociacion}', [App\Http\Controllers\AsociacionController::class,'show'])
         ->name('asociaciones.show');
 
+Route::get('artesanos/{id}', [App\Http\Controllers\Invitado\ArtesanoController::class, 'perfil'])->name('artesanos.perfil');
 
 
 Auth::routes();

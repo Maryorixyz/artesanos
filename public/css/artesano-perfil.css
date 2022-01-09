@@ -1,0 +1,30 @@
+.header-v4 .container-menu-desktop {
+    height: 85px;
+}
+
+.banner{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    background-color: #1f1f1fc2;
+}
+
+.banner:before{
+    position: absolute;
+    opacity: 0.5;
+    content: '';
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: url(/images/nosotros.png?53265227ace2d8b9c772f6ecf3461c8e) center / cover;
+}
+
+.banner h2{
+    position: relative;
+}
+
+.iconos{
+    width: 22px;
+    opacity: 0.9;
+    margin-right: 6px;
+}

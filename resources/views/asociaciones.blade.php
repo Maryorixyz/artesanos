@@ -47,13 +47,15 @@
 										</a>
 									</h4>
 
-									<p class="stext-117 cl6">
-										Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dolorum eum sunt, dolor debitis deserunt beatae possimus placeat doloribus saepe, facilis, velit minima dignissimos reiciendis? Incidunt, nam ab. Expedita, fugit inventore?
-									</p>
+									<div class="d-flex w-100">
+										<p class="stext-117 cl6 cortar-descripcion">
+											{{ $asociacion->descripcion }}
+										</p>
+									</div>
 
 									<div class="flex-w flex-sb-m p-t-18">
 										<a href="{{ route('asociaciones.detalle', $asociacion->id) }}" class="stext-101 cl2 hov-cl1 trans-04 m-tb-10">
-											Continue Reading
+											Más información
 
 											<i class="fa fa-long-arrow-right m-l-9"></i>
 										</a>
@@ -89,121 +91,50 @@
 							</h4>
 
 							<ul>
-								<li class="bor18">
-									<a href="{{route('catalogo')}}" class="dis-block stext-115 cl6 hov-cl1 trans-04 p-tb-8 p-lr-4">
-										Indumentaria
-									</a>
-								</li>
 
-								<li class="bor18">
-									<a href="{{route('catalogo')}}" class="dis-block stext-115 cl6 hov-cl1 trans-04 p-tb-8 p-lr-4">
-										Mascaras
-									</a>
-								</li>
+								@foreach ($categorias as $categoria)
 
-								<li class="bor18">
-									<a href="{{route('catalogo')}}" class="dis-block stext-115 cl6 hov-cl1 trans-04 p-tb-8 p-lr-4">
-										Mascara de Negrito
-									</a>
-								</li>
+									<li class="bor18">
+										<a href="{{route('catalogo')}}" class="dis-block stext-115 cl6 hov-cl1 trans-04 p-tb-8 p-lr-4">
+											{{ $categoria->descripcion }}
+										</a>
+									</li>
 
-								<li class="bor18">
-									<a href="{{route('catalogo')}}"" class="dis-block stext-115 cl6 hov-cl1 trans-04 p-tb-8 p-lr-4">
-										Mascara de Corochano
-									</a>
-								</li>
+								@endforeach
 
-								<li class="bor18">
-									<a href="{{route('catalogo')}}" class="dis-block stext-115 cl6 hov-cl1 trans-04 p-tb-8 p-lr-4">
-										Artesania
-									</a>
-								</li>
 							</ul>
 						</div>
 
-						{{-- <div class="p-t-65">
+						<div class="p-t-65">
 							<h4 class="mtext-112 cl2 p-b-33">
-								Featured Products
+								Ultimos Productos
 							</h4>
 
 							<ul>
-								<li class="flex-w flex-t p-b-30">
-									<a href="#" class="wrao-pic-w size-214 hov-ovelay1 m-r-20">
-										<img src="images/product-min-01.jpg" alt="PRODUCT">
-									</a>
 
-									<div class="size-215 flex-col-t p-t-8">
-										<a href="#" class="stext-116 cl8 hov-cl1 trans-04">
-											White Shirt With Pleat Detail Back
+								@foreach ($productos as $producto)
+									
+									<li class="flex-w flex-t p-b-30">
+										<a href="#" class="wrao-pic-w size-214 hov-ovelay1 m-r-20">
+											<img height="150" src="{{ asset($producto->imagenes[0]->url) }}" alt="PRODUCT" style="object-fit: cover; width: 100%;">
 										</a>
 
-										<span class="stext-116 cl6 p-t-20">
-											$19.00
-										</span>
-									</div>
-								</li>
+										<div class="size-215 flex-col-t p-t-8">
+											<a href="#" class="stext-116 cl8 hov-cl1 trans-04">
+												{{ $producto->nombre }}
+											</a>
 
-								<li class="flex-w flex-t p-b-30">
-									<a href="#" class="wrao-pic-w size-214 hov-ovelay1 m-r-20">
-										<img src="images/product-min-02.jpg" alt="PRODUCT">
-									</a>
+											<span class="stext-116 cl6 p-t-20">
+												S/. {{ $producto->precio }}
+											</span>
+										</div>
+									</li>
 
-									<div class="size-215 flex-col-t p-t-8">
-										<a href="#" class="stext-116 cl8 hov-cl1 trans-04">
-											Converse All Star Hi Black Canvas
-										</a>
-
-										<span class="stext-116 cl6 p-t-20">
-											$39.00
-										</span>
-									</div>
-								</li>
-
-								<li class="flex-w flex-t p-b-30">
-									<a href="#" class="wrao-pic-w size-214 hov-ovelay1 m-r-20">
-										<img src="images/product-min-03.jpg" alt="PRODUCT">
-									</a>
-
-									<div class="size-215 flex-col-t p-t-8">
-										<a href="#" class="stext-116 cl8 hov-cl1 trans-04">
-											Nixon Porter Leather Watch In Tan
-										</a>
-
-										<span class="stext-116 cl6 p-t-20">
-											$17.00
-										</span>
-									</div>
-								</li>
+								@endforeach
+								
 							</ul>
-						</div> --}}
-
-						<div class="p-t-50">
-							<h4 class="mtext-112 cl2 p-b-27">
-								Tags
-							</h4>
-
-							<div class="flex-w m-r--5">
-								<a href="#" class="flex-c-m stext-107 cl6 size-301 bor7 p-lr-15 hov-tag1 trans-04 m-r-5 m-b-5">
-									Mascaras
-								</a>
-
-								<a href="#" class="flex-c-m stext-107 cl6 size-301 bor7 p-lr-15 hov-tag1 trans-04 m-r-5 m-b-5">
-									Artesania
-								</a>
-
-								<a href="#" class="flex-c-m stext-107 cl6 size-301 bor7 p-lr-15 hov-tag1 trans-04 m-r-5 m-b-5">
-									Indumentaria
-								</a>
-
-								<a href="#" class="flex-c-m stext-107 cl6 size-301 bor7 p-lr-15 hov-tag1 trans-04 m-r-5 m-b-5">
-									Botines
-								</a>
-
-								<a href="#" class="flex-c-m stext-107 cl6 size-301 bor7 p-lr-15 hov-tag1 trans-04 m-r-5 m-b-5">
-									Cotones
-								</a>
-							</div>
 						</div>
+
 					</div>
 				</div>
 			</div>

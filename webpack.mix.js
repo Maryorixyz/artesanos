@@ -26,6 +26,9 @@ mix.js('resources/js/vendor.js', 'public/js')
     .js('resources/js/catalogo.js', 'public/js')
     .css('resources/css/catalogo.css', 'public/css')
 
+    .js('resources/js/artesano-perfil.js', 'public/js')
+    .css('resources/css/artesano-perfil.css', 'public/css')
+
     .css('resources/css/nosotros.css', 'public/css')
 
     .css('resources/css/contactanos.css', 'public/css')

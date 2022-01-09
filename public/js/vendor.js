@@ -45681,6 +45681,19 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
+/***/ "./resources/css/artesano-perfil.css":
+/*!*******************************************!*\
+  !*** ./resources/css/artesano-perfil.css ***!
+  \*******************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+// extracted by mini-css-extract-plugin
+
+
+/***/ }),
+
 /***/ "./resources/css/nosotros.css":
 /*!************************************!*\
   !*** ./resources/css/nosotros.css ***!
@@ -50102,6 +50115,7 @@ module.exports = JSON.parse('{"_args":[["axios@0.21.4","D:\\\\laragon\\\\www\\\\
 /******/ 			"css/index": 0,
 /******/ 			"css/contactanos": 0,
 /******/ 			"css/nosotros": 0,
+/******/ 			"css/artesano-perfil": 0,
 /******/ 			"css/catalogo": 0
 /******/ 		};
 /******/ 		
@@ -50152,15 +50166,16 @@ module.exports = JSON.parse('{"_args":[["axios@0.21.4","D:\\\\laragon\\\\www\\\\
 /******/ 	// startup
 /******/ 	// Load entry module and return exports
 /******/ 	// This entry module depends on other loaded chunks and execution need to be delayed
-/******/ 	__webpack_require__.O(undefined, ["css/vendor","css/app","css/asociacion-detalle","css/asociaciones","css/index","css/contactanos","css/nosotros","css/catalogo"], () => (__webpack_require__("./resources/js/vendor.js")))
-/******/ 	__webpack_require__.O(undefined, ["css/vendor","css/app","css/asociacion-detalle","css/asociaciones","css/index","css/contactanos","css/nosotros","css/catalogo"], () => (__webpack_require__("./resources/sass/app.scss")))
-/******/ 	__webpack_require__.O(undefined, ["css/vendor","css/app","css/asociacion-detalle","css/asociaciones","css/index","css/contactanos","css/nosotros","css/catalogo"], () => (__webpack_require__("./resources/css/vendor.css")))
-/******/ 	__webpack_require__.O(undefined, ["css/vendor","css/app","css/asociacion-detalle","css/asociaciones","css/index","css/contactanos","css/nosotros","css/catalogo"], () => (__webpack_require__("./resources/css/index.css")))
-/******/ 	__webpack_require__.O(undefined, ["css/vendor","css/app","css/asociacion-detalle","css/asociaciones","css/index","css/contactanos","css/nosotros","css/catalogo"], () => (__webpack_require__("./resources/css/asociaciones.css")))
-/******/ 	__webpack_require__.O(undefined, ["css/vendor","css/app","css/asociacion-detalle","css/asociaciones","css/index","css/contactanos","css/nosotros","css/catalogo"], () => (__webpack_require__("./resources/css/asociacion-detalle.css")))
-/******/ 	__webpack_require__.O(undefined, ["css/vendor","css/app","css/asociacion-detalle","css/asociaciones","css/index","css/contactanos","css/nosotros","css/catalogo"], () => (__webpack_require__("./resources/css/catalogo.css")))
-/******/ 	__webpack_require__.O(undefined, ["css/vendor","css/app","css/asociacion-detalle","css/asociaciones","css/index","css/contactanos","css/nosotros","css/catalogo"], () => (__webpack_require__("./resources/css/nosotros.css")))
-/******/ 	var __webpack_exports__ = __webpack_require__.O(undefined, ["css/vendor","css/app","css/asociacion-detalle","css/asociaciones","css/index","css/contactanos","css/nosotros","css/catalogo"], () => (__webpack_require__("./resources/css/contactanos.css")))
+/******/ 	__webpack_require__.O(undefined, ["css/vendor","css/app","css/asociacion-detalle","css/asociaciones","css/index","css/contactanos","css/nosotros","css/artesano-perfil","css/catalogo"], () => (__webpack_require__("./resources/js/vendor.js")))
+/******/ 	__webpack_require__.O(undefined, ["css/vendor","css/app","css/asociacion-detalle","css/asociaciones","css/index","css/contactanos","css/nosotros","css/artesano-perfil","css/catalogo"], () => (__webpack_require__("./resources/sass/app.scss")))
+/******/ 	__webpack_require__.O(undefined, ["css/vendor","css/app","css/asociacion-detalle","css/asociaciones","css/index","css/contactanos","css/nosotros","css/artesano-perfil","css/catalogo"], () => (__webpack_require__("./resources/css/vendor.css")))
+/******/ 	__webpack_require__.O(undefined, ["css/vendor","css/app","css/asociacion-detalle","css/asociaciones","css/index","css/contactanos","css/nosotros","css/artesano-perfil","css/catalogo"], () => (__webpack_require__("./resources/css/index.css")))
+/******/ 	__webpack_require__.O(undefined, ["css/vendor","css/app","css/asociacion-detalle","css/asociaciones","css/index","css/contactanos","css/nosotros","css/artesano-perfil","css/catalogo"], () => (__webpack_require__("./resources/css/asociaciones.css")))
+/******/ 	__webpack_require__.O(undefined, ["css/vendor","css/app","css/asociacion-detalle","css/asociaciones","css/index","css/contactanos","css/nosotros","css/artesano-perfil","css/catalogo"], () => (__webpack_require__("./resources/css/asociacion-detalle.css")))
+/******/ 	__webpack_require__.O(undefined, ["css/vendor","css/app","css/asociacion-detalle","css/asociaciones","css/index","css/contactanos","css/nosotros","css/artesano-perfil","css/catalogo"], () => (__webpack_require__("./resources/css/catalogo.css")))
+/******/ 	__webpack_require__.O(undefined, ["css/vendor","css/app","css/asociacion-detalle","css/asociaciones","css/index","css/contactanos","css/nosotros","css/artesano-perfil","css/catalogo"], () => (__webpack_require__("./resources/css/artesano-perfil.css")))
+/******/ 	__webpack_require__.O(undefined, ["css/vendor","css/app","css/asociacion-detalle","css/asociaciones","css/index","css/contactanos","css/nosotros","css/artesano-perfil","css/catalogo"], () => (__webpack_require__("./resources/css/nosotros.css")))
+/******/ 	var __webpack_exports__ = __webpack_require__.O(undefined, ["css/vendor","css/app","css/asociacion-detalle","css/asociaciones","css/index","css/contactanos","css/nosotros","css/artesano-perfil","css/catalogo"], () => (__webpack_require__("./resources/css/contactanos.css")))
 /******/ 	__webpack_exports__ = __webpack_require__.O(__webpack_exports__);
 /******/ 	
 /******/ })()
