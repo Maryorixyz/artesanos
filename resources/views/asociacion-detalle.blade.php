@@ -57,14 +57,14 @@
 										<div class="block2" style="width: 100%">
 											<div class="block2-pic hov-img0" style="width: 100%; height: 250px;">
 												<img src="{{ $user->profile_photo_url }}" alt="IMG-ARTESANO" style="height: 250px; width: 100%; object-fit: cover;">
-												<a href="#" class="block2-btn flex-c-m stext-103 cl2 size-102 bg0 bor2 hov-btn1 p-lr-15 trans-04">
+												<a href="{{ route('artesanos.perfil', $user->id) }}" class="block2-btn flex-c-m stext-103 cl2 size-102 bg0 bor2 hov-btn1 p-lr-15 trans-04">
 													Ver productos
 												</a>
 											</div>
 											<div class="block2-txt flex-w flex-t p-t-14">
 												<div class="block2-txt-child1 flex-col-l" style="width: 100%">
 													<div class="producto-center">
-														<a title="{{ strtoupper($user->name) }}" href="product-detail.html" class="stext-104 hov-cl1 trans-04 js-name-b2 p-b-6 producto-nombre edit">
+														<a title="{{ strtoupper($user->name) }}" href="{{ route('artesanos.perfil', $user->id) }}" class="stext-104 hov-cl1 trans-04 js-name-b2 p-b-6 producto-nombre edit">
 															{{ $user->name }}
 														</a>
 													</div>

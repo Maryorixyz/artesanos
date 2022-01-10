@@ -276,7 +276,7 @@
 										</a>
 									</div>
 
-									<a href="product-detail.html" class="stext-104 cl3 hov-cl1 trans-04 js-name-b2 p-b-6 producto-nombre">
+									<a href="{{ route('artesanos.perfil', $producto->user->id) }}" class="stext-104 cl3 hov-cl1 trans-04 js-name-b2 p-b-6 producto-nombre">
 										<img class="iconos" src="{{ $producto->user->sexo == 'M' ? asset('images/icons/artesano-hombre.png') : asset('images/icons/artesano-mujer.png') }}"> {{ $producto->user->name }}
 									</a>
 	
