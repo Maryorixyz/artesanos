@@ -5,6 +5,7 @@
     "/js/asociacion-detalle.js": "/js/asociacion-detalle.js",
     "/js/catalogo.js": "/js/catalogo.js",
     "/js/artesano-perfil.js": "/js/artesano-perfil.js",
+    "/js/producto-detalle.js": "/js/producto-detalle.js",
     "/js/app.js": "/js/app.js",
     "/css/vendor.css": "/css/vendor.css",
     "/css/app.css": "/css/app.css",
@@ -13,6 +14,7 @@
     "/css/index.css": "/css/index.css",
     "/css/contactanos.css": "/css/contactanos.css",
     "/css/nosotros.css": "/css/nosotros.css",
+    "/css/producto-detalle.css": "/css/producto-detalle.css",
     "/css/artesano-perfil.css": "/css/artesano-perfil.css",
     "/css/catalogo.css": "/css/catalogo.css"
 }

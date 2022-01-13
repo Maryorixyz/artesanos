@@ -24,11 +24,11 @@
 
 							<div class="flex-col-c-m size-123 bg9 how-pos5">
 								<span class="ltext-107 cl2 txt-center">
-									22
+									{{ count($asociacion->users) }}
 								</span>
 
 								<span class="stext-109 cl3 txt-center">
-									Jan 2018
+									Artesanos
 								</span>
 							</div>
 						</div>
@@ -84,17 +84,26 @@
 
 				<div class="col-md-4 col-lg-3 p-b-80">
 					<div class="side-menu">
-						<div class="bor17 of-hidden pos-relative">
-							<input class="stext-103 cl2 plh4 size-116 p-l-28 p-r-55" type="text" name="search" placeholder="Search">
+						<div class="bor17 pos-relative">
+							<input id="buscador_artesanos" class="stext-103 cl2 plh4 size-116 p-l-28 p-r-55" type="text" name="Search" placeholder="Buscar Artesano" autocomplete="off">
 
 							<button class="flex-c-m size-122 ab-t-r fs-18 cl4 hov-cl1 trans-04">
 								<i class="zmdi zmdi-search"></i>
 							</button>
+
+							<div class="opcion_relativo">
+								<div class="opcion_contenedor">
+									<div id="mostrar_resultados">
+									</div>
+								</div>
+							</div>
 						</div>
+
+						
 
 						<div class="p-t-55">
 							<h4 class="mtext-112 cl2 p-b-33">
-								Categories
+								Categorias
 							</h4>
 
 							<ul>
@@ -122,12 +131,12 @@
 								@foreach ($productos as $producto)
 									
 									<li class="flex-w flex-t p-b-30">
-										<a href="#" class="wrao-pic-w size-214 hov-ovelay1 m-r-20">
+										<a href="{{ route('productos.detalle', $producto->id) }}" class="wrao-pic-w size-214 hov-ovelay1 m-r-20">
 											<img height="150" src="{{ asset($producto->imagenes[0]->url) }}" alt="PRODUCT" style="object-fit: cover; width: 100%;">
 										</a>
 
 										<div class="size-215 flex-col-t p-t-8">
-											<a href="#" class="stext-116 cl8 hov-cl1 trans-04">
+											<a href="{{ route('productos.detalle', $producto->id) }}" class="stext-116 cl8 hov-cl1 trans-04">
 												{{ $producto->nombre }}
 											</a>
 

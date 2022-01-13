@@ -30,13 +30,17 @@ Route::get('/asociaciones', [App\Http\Controllers\Invitado\AsociacionController:
 
 Route::get('/asociaciones/{id}', [App\Http\Controllers\Invitado\AsociacionController::class, 'detalle'])->name('asociaciones.detalle');
 
-Route::get('asociaciones/create', [App\Http\Controllers\AsociacionController::class,'create'])
-        ->name('asociaciones.create');
+Route::get('asociaciones/create', [App\Http\Controllers\AsociacionController::class,'create'])->name('asociaciones.create');
 
-Route::get('asociaciones/{asociacion}', [App\Http\Controllers\AsociacionController::class,'show'])
-        ->name('asociaciones.show');
+Route::get('asociaciones/{asociacion}', [App\Http\Controllers\AsociacionController::class,'show'])->name('asociaciones.show');
 
 Route::get('artesanos/{id}', [App\Http\Controllers\Invitado\ArtesanoController::class, 'perfil'])->name('artesanos.perfil');
+
+Route::get('artesanos/{id}', [App\Http\Controllers\Invitado\ArtesanoController::class, 'perfil'])->name('artesanos.perfil');
+
+
+
+Route::get('productos/{id}', [App\Http\Controllers\Invitado\ProductoController::class, 'detalle'])->name('productos.detalle');
 
 
 Auth::routes();

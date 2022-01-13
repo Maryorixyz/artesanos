@@ -12,8 +12,16 @@ class ArtesanoController extends Controller
     public function perfil($id)
     {
 
-        $artesano = User::with('productos')->findOrFail($id);
+        $artesano = User::with('productos.user.asociacion', 'productos.imagenes')->findOrFail($id);
         
         return view('artesano-perfil', compact('artesano'));
+    }
+
+    public function buscadorArtesanos($idAsociacion)
+    {
+        $buscadorArtesanos = User::select('id', 'name')->where('asociacion_id', $idAsociacion)->get();
+    
+        return response()->json($buscadorArtesanos);
+
     }
 }

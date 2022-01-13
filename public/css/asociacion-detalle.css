@@ -22,3 +22,43 @@
     width: 100%;
 }
 
+.opcion_relativo{
+    position: relative;
+    z-index: 99;
+  }
+  
+  .opcion_contenedor{
+    box-sizing: border-box;
+    border-radius: 5px;
+    width: 100%;
+    max-height: 200px;
+    background-color: #ffff;
+    box-sizing: border-box;
+    cursor: pointer;
+    overflow-y: scroll;
+    position: absolute;
+    z-index: 100;
+  }
+  
+  .opcion_contenedor p{
+    padding: 8px 10px;
+    margin:0;
+  }
+  
+  .opcion_contenedor p:hover{
+    background-color: #8bb88f;
+    color: #ffffff;
+  
+  }
+  
+  .opcion_contenedor::-webkit-scrollbar{
+    width: 7px;
+    background-color: rgb(0, 0, 0)
+  }
+  .opcion_contenedor::-webkit-scrollbar-thumb{
+    background-color: rgb(255, 255, 255);
+    border-radius: 10px;
+    border-right: 1px solid rgb(0, 0, 0);
+    border-left: 1px solid rgb(0, 0, 0);
+  }
+

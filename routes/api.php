@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\Invitado\ArtesanoController;
 use App\Http\Controllers\Invitado\AsociacionController;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
@@ -20,3 +21,5 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
 });
 
 Route::get('/buscador_asociaciones', [AsociacionController::class, 'buscadorAsociaciones']);
+
+Route::get('/buscador_artesanos/{idAsociacion}', [ArtesanoController::class, 'buscadorArtesanos']);

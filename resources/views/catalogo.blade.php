@@ -172,7 +172,7 @@
 							<div class="block2-txt flex-w flex-t p-t-14">
 								<div class="block2-txt-child1 flex-col-l">
 									<div class="producto-center"">
-										<a title="{{ strtoupper($producto->nombre) }}" href="product-detail.html" class="stext-104 hov-cl1 trans-04 js-name-b2 p-b-6 producto-nombre edit">
+										<a title="{{ strtoupper($producto->nombre) }}" href="{{ route('productos.detalle', $producto->id) }}" class="stext-104 hov-cl1 trans-04 js-name-b2 p-b-6 producto-nombre edit">
 											{{ $producto->nombre }}
 										</a>
 									</div>
@@ -279,6 +279,3 @@
 	<script src="{{ mix('js/catalogo.js') }}"></script>
 	
 @endsection
-
-	
-
