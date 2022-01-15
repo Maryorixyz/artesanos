@@ -79,12 +79,23 @@
                     </div>
                     <div class="col">
                         <div class="form-group">
-                            {!! Form::hidden('latitud', null, [ 'id' => 'latitud']) !!}
-                            {!! Form::hidden('longitud', null, [ 'id' => 'longitud']) !!}
+                            {!! Form::label('empresa', 'Empresa') !!}
+                            {!! Form::text('empresa', null, ['class' => 'form-control', 'placeholder' => 'Ingrese el nombre de la Empresa']) !!}
                         </div>
+        
+                        @error('direccion')
+                            <span class="text-danger">{{$message}}</span>
+                        @enderror
                     </div>
                 </div>
 
+                <div class="col">
+                    <div class="form-group">
+                        {!! Form::hidden('latitud', null, [ 'id' => 'latitud']) !!}
+                        {!! Form::hidden('longitud', null, [ 'id' => 'longitud']) !!}
+                    </div>
+                </div>
+                
                 <div class="form-group">
                     <div id="mapa" class="mapa">
                         

@@ -27,6 +27,7 @@
                         <tr class="bg-gray">
                             <th>Name</th>
                             <th>Email</th>
+                            <th>Empresa</th>
                             <th>Telefono</th>
                             <th>Direccion</th>
                             <th >Acciones</th>
@@ -37,6 +38,7 @@
                             <tr>
                                 <td class="align-middle">{{$user->name}}</td>
                                 <td class="align-middle">{{$user->email}}</td>
+                                <td class="align-middle">{{$user->empresa}}</td>
                                 <td class="align-middle">{{$user->telefono}}</td>
                                 <td class="align-middle">{{$user->direccion}}</td>
                                 <td width="10px" class="text-center">

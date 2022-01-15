@@ -63,6 +63,7 @@ class UserController extends Controller
             'password' => Hash::make($request->password),
 
             'sexo' => $request->sexo,
+            'empresa' => $request->empresa,
             'telefono' => $request->telefono,
             'direccion' => $request->direccion,
 
@@ -127,6 +128,7 @@ class UserController extends Controller
             'email' => $request->email,
 
             'sexo' => $request->sexo,
+            'empresa' => $request->empresa,
             'telefono' => $request->telefono,
             'direccion' => $request->direccion,
 
