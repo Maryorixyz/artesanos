@@ -232,25 +232,6 @@ $('.js-hide-modal1').on('click', function () {
   $('.js-modal1').removeClass('show-modal1');
   var limpiar = "\n    <div id=\"modal-producto-limpiar\" class=\"wrap-slick3 flex-sb flex-w\">\n        <div class=\"wrap-slick3-dots\"></div>\n        <div class=\"wrap-slick3-arrows flex-sb-m flex-w\"></div>\n        <div id=\"modal-producto-imagenes\" class=\"slick3 gallery-lb\"></div>\n    </div>";
   $('#modal-producto-limpiar').replaceWith(limpiar);
-});
-$('.js-addwish-b2').on('click', function (e) {
-  e.preventDefault();
-});
-$('.js-addwish-b2').each(function () {
-  var nameProduct = $(this).parent().parent().find('.js-name-b2').html();
-  $(this).on('click', function () {
-    swal(nameProduct, "Añadido a tus Favoritos!", "success");
-    $(this).addClass('js-addedwish-b2');
-    $(this).off('click');
-  });
-});
-$('.js-addwish-detail').each(function () {
-  var nameProduct = $(this).parent().parent().parent().find('.js-name-detail').html();
-  $(this).on('click', function () {
-    swal(nameProduct, "Añadido a tus Favoritos!", "success");
-    $(this).addClass('js-addedwish-detail');
-    $(this).off('click');
-  });
 }); //todo:MAPA
 
 var style = [{

@@ -347,32 +347,6 @@ $('.js-hide-modal1').on('click',function(){
     $('#modal-producto-limpiar').replaceWith(limpiar)
 });
 
-
-$('.js-addwish-b2').on('click', function(e){
-    e.preventDefault();
-});
-
-$('.js-addwish-b2').each(function(){
-    var nameProduct = $(this).parent().parent().find('.js-name-b2').html();
-    $(this).on('click', function(){
-        swal(nameProduct, "Añadido a tus Favoritos!", "success");
-
-        $(this).addClass('js-addedwish-b2');
-        $(this).off('click');
-    });
-});
-
-$('.js-addwish-detail').each(function(){
-    var nameProduct = $(this).parent().parent().parent().find('.js-name-detail').html();
-
-    $(this).on('click', function(){
-        swal(nameProduct, "Añadido a tus Favoritos!", "success");
-
-        $(this).addClass('js-addedwish-detail');
-        $(this).off('click');
-    });
-});
-
 //todo:MAPA
 var style = [
     {

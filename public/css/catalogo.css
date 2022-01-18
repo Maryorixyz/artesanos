@@ -22,10 +22,6 @@
     width: calc(100% + 30px);
 }
 
-.swal-button--confirm{
-    background-color: #56A85E;
-}
-
 .edit-nombre-modal{
     text-transform: uppercase;
     font-weight: bold;

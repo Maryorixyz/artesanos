@@ -30,15 +30,17 @@
 						</h3>
 
 						<p class="stext-113 cl6 p-b-26">
-							Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris consequat consequat enim, non auctor massa ultrices non. Morbi sed odio massa. Quisque at vehicula tellus, sed tincidunt augue. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Maecenas varius egestas diam, eu sodales metus scelerisque congue. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Maecenas gravida justo eu arcu egestas convallis. Nullam eu erat bibendum, tempus ipsum eget, dictum enim. Donec non neque ut enim dapibus tincidunt vitae nec augue. Suspendisse potenti. Proin ut est diam. Donec condimentum euismod tortor, eget facilisis diam faucibus et. Morbi a tempor elit.
+							El alcalde del Distrito de Amarilis señaló que Amarilis alberga al 90 % de bordadores de la región Huánuco, los artesanos, a los tejedores y es importante reconocer su labor, visibilizando el trabajo que a diario realizan.
+							Teniendo en cuenta que se considera a una asociacion de artesanos como:
+							Organización sin fines lucrativos, legalmente constituida, cuyos miembros son artesanos o empresas de la actividad artesanal, o ambos, que tiene por objeto principal, el fomento y la defensa de la artesanía, y que se encuentra inscrita en el Registro Nacional del Artesano.
 						</p>
 
 						<p class="stext-113 cl6 p-b-26">
-							Donec gravida lorem elit, quis condimentum ex semper sit amet. Fusce eget ligula magna. Aliquam aliquam imperdiet sodales. Ut fringilla turpis in vehicula vehicula. Pellentesque congue ac orci ut gravida. Aliquam erat volutpat. Donec iaculis lectus a arcu facilisis, eu sodales lectus sagittis. Etiam pellentesque, magna vel dictum rutrum, neque justo eleifend elit, vel tincidunt erat arcu ut sem. Sed rutrum, turpis ut commodo efficitur, quam velit convallis ipsum, et maximus enim ligula ac ligula. 
+							La Municipalidad Distrital de Amarilis reconocerá y promocionará trabajos de los artesanos del distrito con más de 50 años de experiencia en el rubro, ofreciendo sus productos elaborados a mano con recursos naturales del distrito y la región.
 						</p>
 
 						<p class="stext-113 cl6 p-b-26">
-							Any questions? Let us know in store at 8th floor, 379 Hudson St, New York, NY 10018 or call us on (+1) 96 716 6879
+							Las diferentes Asociaciones que se encuentran inscritas en en el RNA contarán con un espacio dentro de esta plataforma donde mostraran todos sus productos y así poder ampliar su conexión con posibles clientes que requieran sus productos artesanales, logrando generar más ventas y de esta manera estaría descentralizando la gran cantidad de artesanos sin trabajos frecuentes para un sustento económico continuo en su calidad de vida.
 						</p>
 					</div>
 				</div>
@@ -60,16 +62,22 @@
 						</h3>
 
 						<p class="stext-113 cl6 p-b-26">
-							Mauris non lacinia magna. Sed nec lobortis dolor. Vestibulum rhoncus dignissim risus, sed consectetur erat. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Nullam maximus mauris sit amet odio convallis, in pharetra magna gravida. Praesent sed nunc fermentum mi molestie tempor. Morbi vitae viverra odio. Pellentesque ac velit egestas, luctus arcu non, laoreet mauris. Sed in ipsum tempor, consequat odio in, porttitor ante. Ut mauris ligula, volutpat in sodales in, porta non odio. Pellentesque tempor urna vitae mi vestibulum, nec venenatis nulla lobortis. Proin at gravida ante. Mauris auctor purus at lacus maximus euismod. Pellentesque vulputate massa ut nisl hendrerit, eget elementum libero iaculis.
+							La Gerencia Municipal es el órgano responsable de dirigir la administración municipal, de conducir y articular el planeamiento, organización, ejecución, evaluación y supervisión de las acciones y actividades que se desarrollan en la Municipalidad Distrital de Amarilis, dentro del marco de los dispositivos legales vigentes.
+							La Gerencia Municipal está a cargo de un Gerente Municipal quien depende del Alcalde  Distrital de Amarilis.
 						</p>
 
 						<div class="bor16 p-l-29 p-b-9 m-t-22">
 							<p class="stext-114 cl6 p-r-40 p-b-11">
-								Creativity is just connecting things. When you ask creative people how they did something, they feel a little guilty because they didn't really do it, they just saw something. It seemed obvious to them after a while.
+								Funciones:
 							</p>
 
 							<span class="stext-111 cl8">
-								- Steve Job’s 
+								<li>
+									<ul>- Supervisar la formulación, ejecución y evaluación del Presupuesto Participativo Institucional de la Municipalidad Distrital de Amarilis, elevándolo al Alcalde Metropolitano para su presentación al Concejo Distrital</ul>
+									<ul>- Supervisar el cumplimiento de las actividades, programas y prestación de los servicios públicos que brinda la Municipalidad Distrital de Amarilis, propiciando el trabajo coordinado entre las gerencias municipales. </ul>
+									<ul>- Emitir Resoluciones de Gerencia Municipal Metropolitana en los asuntos materia de su competencia.</ul>
+									<ul>- Coordinar y supervisar la función administrativa y gestión de la Sociedad de Beneficencia Pública de Amarilis Metropolitana, sin perjuicio de la función de fiscalización que corresponde al Concejo Metropolitano.</ul>
+								</li>
 							</span>
 						</div>
 					</div>

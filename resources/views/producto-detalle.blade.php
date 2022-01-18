@@ -216,7 +216,7 @@
                                             </a>
                                         </div>
 
-                                        <a href="{{ route('artesanos.perfil', $productoRelacionado->user->id) }}" class="stext-104 cl3 hov-cl1 trans-04 js-name-b2 p-b-6 producto-nombre" style="display: flex">
+                                        <a href="{{ route('artesanos.perfil', $productoRelacionado->user->id) }}" class="stext-104 cl3 hov-cl1 trans-04 p-b-6 producto-nombre" style="display: flex">
                                             <img class="iconos" src="{{ $productoRelacionado->user->sexo == 'M' ? asset('images/icons/artesano-hombre.png') : asset('images/icons/artesano-mujer.png') }}"> {{ $productoRelacionado->user->name }}
                                         </a>
         

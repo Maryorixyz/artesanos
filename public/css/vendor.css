@@ -15055,7 +15055,9 @@ Input, textarea : 14px/1.6 '', Arial, sans-serif;
 .slick-slide {outline: none !important;}
 
 
-
+.swal-button--confirm{
+  background-color: #56A85E !important;
+}
 
 
 /*//////////////////////////////////////////////////////////////////
@@ -15430,7 +15432,7 @@ Input, textarea : 14px/1.6 '', Arial, sans-serif;
   min-width: 15px;
   height: 15px;
   padding: 0 3px;
-  background-color: #717fe0;
+  background-color: #56A85E;
 }
 
 /*---------------------------------------------*/

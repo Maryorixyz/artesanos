@@ -22,42 +22,6 @@
     });
 
 
-    //sweetalert.min.js
-    $('.js-addwish-b2').on('click', function(e){
-        e.preventDefault();
-    });
-
-    $('.js-addwish-b2').each(function(){
-        var nameProduct = $(this).parent().parent().find('.js-name-b2').html();
-        $(this).on('click', function(){
-
-            swal({
-                title: nameProduct,
-                text: "Añadido a tu lista de deseos",
-                icon: "success",
-                customClass: { 
-                    confirmButton: "btn-success"
-                },
-                buttonsStyling:false
-              })
-
-            $(this).addClass('js-addedwish-b2');
-            $(this).off('click');
-        });
-    });
-
-    $('.js-addwish-detail').each(function(){
-        var nameProduct = $(this).parent().parent().parent().find('.js-name-detail').html();
-
-        $(this).on('click', function(){
-            swal(nameProduct, "is added to wishlist !", "success");
-
-            $(this).addClass('js-addedwish-detail');
-            $(this).off('click');
-        });
-    });
-
-
     /*==================================================================
     [ Show / hide modal search ]*/
     $('.js-show-modal-search').on('click', function(){
@@ -724,7 +688,6 @@
     
                 productos.forEach(producto => {
                     
-                    
 
                     let productoTemp = JSON.stringify(producto)
 
@@ -752,12 +715,12 @@
 							<div class="block2-txt flex-w flex-t p-t-14">
 								<div class="block2-txt-child1 flex-col-l">
 									<div class="producto-center"">
-										<a title="${producto.nombre.toUpperCase()}" href="product-detail.html" class="stext-104 hov-cl1 trans-04 js-name-b2 p-b-6 producto-nombre edit">
+										<a title="${producto.nombre.toUpperCase()}" href="productos/${producto.id}" class="stext-104 hov-cl1 trans-04 js-name-b2 p-b-6 producto-nombre edit">
                                             ${producto.nombre}
 										</a>
 									</div>
 
-									<a href="product-detail.html" class="stext-104 cl3 hov-cl1 trans-04 js-name-b2 p-b-6 producto-nombre">
+									<a href="product-detail.html" class="stext-104 cl3 hov-cl1 trans-04 p-b-6 producto-nombre">
 										<img class="iconos" src=" ${producto.user.sexo == 'M' ? 'images/icons/artesano-hombre.png' : 'images/icons/artesano-mujer.png'}">
                                         ${producto.user.name}
 									</a>
@@ -768,9 +731,9 @@
 									</span>
 								</div>
 								<div class="block2-txt-child2 flex-r p-t-3">
-									<a href="#" class="btn-addwish-b2 dis-block pos-relative js-addwish-b2">
-										<img class="icon-heart1 dis-block trans-04" src="images/icons/icon-heart-01.png" alt="ICON">
-										<img class="icon-heart2 dis-block trans-04 ab-t-l" src="images/icons/icon-heart-02.png" alt="ICON">
+									<a href="#" class="btn-addwish-b2 dis-block pos-relative js-addwish-b2" data-producto="${producto.id}" >
+										<img class="icon-heart1 dis-block trans-04" src="images/icons/icon-heart-01.png" alt="ICON" data-producto="${producto.id}">
+										<img class="icon-heart2 dis-block trans-04 ab-t-l" src="images/icons/icon-heart-02.png" alt="ICON" data-producto="${producto.id}">
 									</a>
 								</div>
 							</div>
@@ -784,12 +747,151 @@
                     $topeContainer.append( $fila ).isotope( 'appended', $fila );
                     
                 });
+
+                var $grid = $('.isotope-grid');
+
+
+                $grid.find('.btn-addwish-b2').each( function () {
+
+
+                    let productoId = $(this)[0].dataset.producto
+
+                    let productosFavoritos = localStorage.getItem('favoritos')
+
+                    productosFavoritos = productosFavoritos ? JSON.parse(productosFavoritos) : []
+
+
+                    let index = productosFavoritos.findIndex(
+                        (element) => element == productoId
+                    );
+
+
+                    if (index !== -1) {
+
+
+                        $(this).addClass('js-addedwish-b2');
+
+                        
+                    }
+
+                })
+
+                $grid.find('.js-addwish-b2').each(function(){
+
+                    var nameProduct = $(this).parent().parent().find('.js-name-b2').html();
+                
+                    $(this).on('click', function(e){
+                
+                        e.preventDefault();
+                
+                        let productoId = e.target.dataset.producto
+                
+                        let productosFavoritos = localStorage.getItem('favoritos')
+                
+                        productosFavoritos = productosFavoritos ? JSON.parse(productosFavoritos) : []
+                
+                        let index = productosFavoritos.findIndex(
+                            (element) => element == productoId
+                        );
+
+                        console.log(index)
+                
+                
+                        if (index == -1) {
+                
+                            swal({
+                                title: nameProduct,
+                                text: "Añadido a tu lista de deseos.",
+                                icon: "success",    
+                            })    
+                    
+                            $(this).addClass('js-addedwish-b2');
+                            
+                            let nuevosFavoritos = productosFavoritos
+                            nuevosFavoritos.push(productoId)
+                
+                            localStorage.setItem('favoritos', JSON.stringify(nuevosFavoritos))
+
+                            let cantidad = nuevosFavoritos.length
+
+
+                            $('#favoritos-desktop').attr('data-notify', cantidad)
+                            $('#favoritos-mobile').attr('data-notify', cantidad)
+                
+                            obtenerFavoritos(nuevosFavoritos)
+                            
+                        } else if (index !== -1) {
+                            
+                            swal({
+                                title: nameProduct,
+                                text: "Se ha quitado de tu lista de deseos.",
+                                icon: "success",    
+                            })
+                
+                            $(this).removeClass('js-addedwish-b2');
+                
+                            let nuevosFavoritos = productosFavoritos
+                            nuevosFavoritos.splice(index, 1)
+                    
+                            localStorage.setItem('favoritos', JSON.stringify(nuevosFavoritos))
+                            
+                            let cantidad = nuevosFavoritos.length
+
+
+                            $('#favoritos-desktop').attr('data-notify', cantidad)
+                            $('#favoritos-mobile').attr('data-notify', cantidad)
+                
+                            obtenerFavoritos(nuevosFavoritos)
+                        }
+                
+                    });
+                });
             }
         }
     
         http.open("GET", url);
         http.send();
     
+    }
+
+    async function obtenerFavoritos(productos) {
+
+        console.log('hola')
+    
+        let productosFavoritos = {
+            favoritos: productos
+        }
+        await axios.post(`/api/obtener_favoritos`, productosFavoritos)   
+            .then(respuesta => {
+    
+                let limpiar = `<ul class="header-cart-wrapitem w-full" id="productos-favoritos">
+                        
+                </ul>`
+                $('#productos-favoritos').replaceWith(limpiar)
+    
+                respuesta.data.forEach(e => {
+                    
+                    let $fila =$(`
+                                <li class="header-cart-item flex-w flex-t m-b-12">
+                                    <div class="header-cart-item-img">
+                                        <img src="${window.location.origin}/${e.imagenes ? e.imagenes[0].url : ''}" alt="IMG">
+                                    </div>
+    
+                                    <div class="header-cart-item-txt p-t-8">
+                                        <a href="${window.location.origin}/productos/${e.id}" class="header-cart-item-name m-b-18 hov-cl1 trans-04">
+                                            ${e.nombre}
+                                        </a>
+    
+                                        <span class="header-cart-item-info">
+                                            S/. ${e.precio}
+                                        </span>
+                                    </div>
+                                </li>
+                            `)
+                    $('#productos-favoritos').append($fila)
+                }) 
+    
+            }) 
     }
 
 

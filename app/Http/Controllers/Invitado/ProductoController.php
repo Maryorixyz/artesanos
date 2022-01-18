@@ -22,4 +22,13 @@ class ProductoController extends Controller
 
         return view('producto-detalle', compact('producto', 'productosRelacionados'));
     }
+
+    public function obtenerFavoritos(Request $request)
+    {
+
+        $productos = Producto::with('imagenes')->whereIn('id', $request->favoritos)->get();
+
+        return response()->json($productos);
+
+    }
 }

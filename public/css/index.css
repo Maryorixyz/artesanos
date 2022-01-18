@@ -24,9 +24,6 @@
     width: calc(100% + 30px);
 }
 
-.swal-button--confirm{
-    background-color: #56A85E;
-}
 
 .iconos{
     width: 22px;
@@ -50,10 +47,6 @@
     display: flex;
     justify-content: center;
     width: calc(100% + 30px);
-}
-
-.swal-button--confirm{
-    background-color: #56A85E;
 }
 
 .edit-nombre-modal{
