@@ -38,14 +38,14 @@
             <div class="row">
                 <div class="col-md-6 col-lg-7 p-b-30">
                     <div class="p-l-25 p-r-30 p-lr-0-lg">
-                        <div class="wrap-slick3 flex-sb flex-w">
-                            <div class="wrap-slick3-dots"></div>
-                            <div class="wrap-slick3-arrows flex-sb-m flex-w"></div>
+                        <div class="wrap-slick4 flex-sb flex-w">
+                            <div class="wrap-slick4-dots"></div>
+                            <div class="wrap-slick4-arrows flex-sb-m flex-w"></div>
 
-                            <div class="slick3 gallery-lb">
+                            <div class="slick4 gallery-lb4">
 
                                 @foreach ($producto->imagenes as $imagen)
-                                    <div class="item-slick3" data-thumb="{{ asset($imagen->url) }}">
+                                    <div class="item-slick4" data-thumb="{{ asset($imagen->url) }}">
                                         <div class="wrap-pic-w pos-relative detalle-imagen-modal">
                                             <img src="{{ asset($imagen->url) }}" alt="IMG-PRODUCT">
 
@@ -204,7 +204,7 @@
 
             <!-- Slide2 -->
             <div class="wrap-slick2">
-                <div class="slick2">
+                <div class="slick2" id="filas-producto">
                     @foreach ($productosRelacionados as $productoRelacionado)
                         <div class="item-slick2 p-l-15 p-r-15 p-t-15 p-b-15">
                             <!-- Block2 -->
@@ -212,14 +212,14 @@
                                 <div class="block2-pic hov-img0">
                                     <img src="{{ asset($productoRelacionado->imagenes[0]->url) }}" alt="IMG-PRODUCT">
 
-                                    <a href="#" class="block2-btn flex-c-m stext-103 cl2 size-102 bg0 bor2 hov-btn1 p-lr-15 trans-04 js-show-modal1">
+                                    <a href="#" class="block2-btn flex-c-m stext-103 cl2 size-102 bg0 bor2 hov-btn1 p-lr-15 trans-04 js-show-modal1" data-producto="{{ $productoRelacionado }}">
                                         Vista Rápida
                                     </a>
                                 </div>
 
                                 <div class="block2-txt flex-w flex-t p-t-14">
                                     <div class="block2-txt-child1 flex-col-l ">
-                                        <div class="producto-center"">
+                                        <div class="producto-center">
                                             <a title="{{ strtoupper($productoRelacionado->nombre) }}" href="{{ route('productos.detalle', $productoRelacionado->id) }}" class="stext-104 hov-cl1 trans-04 js-name-b2 p-b-6 producto-nombre edit">
                                                 {{ $productoRelacionado->nombre }}
                                             </a>
@@ -235,9 +235,9 @@
                                     </div>
 
                                     <div class="block2-txt-child2 flex-r p-t-3">
-                                        <a href="#" class="btn-addwish-b2 dis-block pos-relative js-addwish-b2">
-                                            <img class="icon-heart1 dis-block trans-04" src="{{ asset('images/icons/icon-heart-01.png') }}" alt="ICON">
-                                            <img class="icon-heart2 dis-block trans-04 ab-t-l" src="{{ asset('images/icons/icon-heart-02.png') }}" alt="ICON">
+                                        <a href="#" class="btn-addwish-b2 dis-block pos-relative js-addwish-b2" data-producto="{{ $productoRelacionado->id }}">
+                                            <img class="icon-heart1 dis-block trans-04" src="{{ asset('images/icons/icon-heart-01.png') }}" alt="ICON" data-producto="{{ $productoRelacionado->id }}">
+                                            <img class="icon-heart2 dis-block trans-04 ab-t-l" src="{{ asset('images/icons/icon-heart-02.png') }}" alt="ICON" data-producto="{{ $productoRelacionado->id }}">
                                         </a>
                                     </div>
                                 </div>
@@ -248,6 +248,71 @@
             </div>
         </div>
     </section>
+
+    <!-- Modal1 -->
+	<div class="wrap-modal1 js-modal1 p-t-60 p-b-20">
+		<div class="overlay-modal1 js-hide-modal1"></div>
+
+		<div class="container">
+			<div class="bg0 p-t-60 p-b-30 p-lr-15-lg how-pos3-parent">
+				<button class="how-pos3 hov3 trans-04 js-hide-modal1">
+					<img src="{{ asset('images/icons/icon-close.png') }}" alt="CLOSE">
+				</button>
+
+				<div class="row">
+					<div class="col-md-6 col-lg-7 p-b-30">
+						<div class="p-l-25 p-r-30 p-lr-0-lg">
+							<div id="modal-producto-limpiar" class="wrap-slick3 flex-sb flex-w">
+								<div class="wrap-slick3-dots"></div>
+								<div class="wrap-slick3-arrows flex-sb-m flex-w"></div>
+
+								<div id="modal-producto-imagenes" class="slick3 gallery-lb">
+			
+								</div>
+							</div>
+						</div>
+					</div>
+					
+					<div class="col-md-6 col-lg-5 p-b-30">
+
+						<div class="p-r-50 p-t-5 p-lr-0-lg">
+
+							<div  id="modal-producto-nombre">
+								<h1 class="mtext-105 cl2 js-name-detail p-b-14 edit-nombre-modal">nombre</h1>
+							</div>
+							<div class="modal-cabecera">
+								<div id="modal-producto-precio" class="modal-producto-precio">
+									<span class="mtext-106 cl2">Precio</span>
+								</div>
+
+								<h4>Descripción</h4>
+								<div id="modal-producto-descripcion" class="modal-producto-descripcion">
+									<p class="stext-102 cl3 p-t-23">descripcion del producto</p>
+								</div>
+							</div>
+							<div class="modal-informacion-artesano">
+								<h4>Informacion del artesano</h4>
+								<div class="informacion-usuario">
+										<div id="modal-producto-usuario-foto" class="foto-artesano" ></div>
+										<div>
+											<div id="modal-producto-user-name" class="nombre-artesano">NOMBRE</div>
+											<div id="modal-producto-user-empresa" class="artesano-empresa">EMPRESA</div>
+											<div id="modal-producto-user-asociacion" class="artesano-asociacion">ASOCIACION</div>
+											<div id="modal-producto-user-direccion" class="artesano-direccion">DIRECCION</div>
+											<div id="modal-producto-user-telefono" class="artesano-telefono">TELEFONO</div>
+										</div>
+								</div>
+							</div>
+							<div class="modal-detalle-mapa">
+								<h4>Ubicación</h4>
+								<div id="modal-producto-usuario-map" class="modal-mapa">MAPA</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
 
 @endsection	
 

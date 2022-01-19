@@ -15,7 +15,7 @@ class ProductoController extends Controller
 
         $categoriasProducto = $producto->categorias->pluck('id');
 
-        $productosRelacionados = Producto::with('imagenes', 'user')->whereHas('categorias', function($query) use($categoriasProducto) {
+        $productosRelacionados = Producto::with('imagenes', 'categorias', 'user.asociacion')->where('id', '!=', $id)->whereHas('categorias', function($query) use($categoriasProducto) {
             $query->whereIn('id', $categoriasProducto);
         })->limit(8)->get();
         
