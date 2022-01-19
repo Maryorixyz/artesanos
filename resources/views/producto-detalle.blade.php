@@ -163,11 +163,20 @@
                                 </div>
                             </div>
                         </div>
+                        
+                        <div class="m-t-50 d-flex justify-content-center">
+                            <a 
+                                href="https://api.whatsapp.com/send?phone=+51{{ $producto->user->telefono }}&text=Hola {{ $producto->user->name }} encontré tu producto en el catálogo de artesania RUTA ARTESANAL, me interesa el producto {{ $producto->nombre }}.%20%0A%20%0A{{ Request::url() }}"
+                                class="btn btn-success"
+                                target="_blank">
+                                <i class="fab fa-whatsapp"></i>
+                                Contactar con el artesano
+                            </a>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
-
         <div class="bg6 flex-c-m flex-w size-302 m-t-73 p-tb-15">
             <span class="stext-107 cl6 p-lr-25">
                 Categorias: 
