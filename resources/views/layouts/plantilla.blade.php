@@ -210,7 +210,7 @@
 				</div>
 			</div>
 			
-			<div class="header-cart-content flex-w js-pscroll">
+			<div class="header-cart-content flex-w js-pscroll" id="productos-favoritos-eliminar">
 				<ul class="header-cart-wrapitem w-full" id="productos-favoritos">
 					
 				</ul>

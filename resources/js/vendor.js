@@ -186,81 +186,77 @@ $('.js-hide-sidebar').on('click',function(){
 
 /*==================================================================
 [ Lista de deseos ]*/
-var $grid = $('.isotope-grid');
 
-$('.js-addwish-b2').each(function(){
+$('#filas-producto').on('click','.btn-addwish-b2',function(e){
+    e.preventDefault()
 
     var nameProduct = $(this).parent().parent().find('.js-name-b2').html();
 
-    $(this).on('click', function(e){
-
-        e.preventDefault();
-
-        let productoId = e.target.dataset.producto
-
-        let productosFavoritos = localStorage.getItem('favoritos')
-
-        productosFavoritos = productosFavoritos ? JSON.parse(productosFavoritos) : []
-
-        let index = productosFavoritos.findIndex(
-            (element) => element == productoId
-        );
+    console.log(e)
 
 
-        if (index == -1) {
+    let productoId = e.target.dataset.producto
 
-            swal({
-                title: nameProduct,
-                text: "Añadido a tu lista de deseos.",
-                icon: "success",    
-            })    
-    
-            $(this).addClass('js-addedwish-b2');
-            
-            let nuevosFavoritos = productosFavoritos
-            nuevosFavoritos.push(productoId)
+    let productosFavoritos = localStorage.getItem('favoritos')
 
-            localStorage.setItem('favoritos', JSON.stringify(nuevosFavoritos))
+    productosFavoritos = productosFavoritos ? JSON.parse(productosFavoritos) : []
 
-            let cantidad = nuevosFavoritos.length
+    let index = productosFavoritos.findIndex(
+        (element) => element == productoId
+    );
 
 
-            $('#favoritos-desktop').attr('data-notify', cantidad)
-            $('#favoritos-mobile').attr('data-notify', cantidad)
+    if (index == -1) {
 
-            obtenerFavoritos(nuevosFavoritos)
+        swal({
+            title: nameProduct,
+            text: "Añadido a tu lista de deseos.",
+            icon: "success",    
+        })    
 
-            
-        } else {
-            
-            swal({
-                title: nameProduct,
-                text: "Se ha quitado de tu lista de deseos.",
-                icon: "success",    
-            })
+        $(this).addClass('js-addedwish-b2');
+        
+        let nuevosFavoritos = productosFavoritos
+        nuevosFavoritos.push(productoId)
 
-            $(this).removeClass('js-addedwish-b2');
+        localStorage.setItem('favoritos', JSON.stringify(nuevosFavoritos))
 
-            let nuevosFavoritos = productosFavoritos
-            nuevosFavoritos.splice(index, 1)
-    
-            localStorage.setItem('favoritos', JSON.stringify(nuevosFavoritos))
-            
-            let cantidad = nuevosFavoritos.length
+        let cantidad = nuevosFavoritos.length
 
 
-            $('#favoritos-desktop').attr('data-notify', cantidad)
-            $('#favoritos-mobile').attr('data-notify', cantidad)
+        $('#favoritos-desktop').attr('data-notify', cantidad)
+        $('#favoritos-mobile').attr('data-notify', cantidad)
 
-            obtenerFavoritos(nuevosFavoritos)
+        obtenerFavoritos(nuevosFavoritos)
 
-        }
+        
+    } else {
+        
+        swal({
+            title: nameProduct,
+            text: "Se ha quitado de tu lista de deseos.",
+            icon: "success",    
+        })
 
-    });
-});
+        $(this).removeClass('js-addedwish-b2');
+
+        let nuevosFavoritos = productosFavoritos
+        nuevosFavoritos.splice(index, 1)
+
+        localStorage.setItem('favoritos', JSON.stringify(nuevosFavoritos))
+        
+        let cantidad = nuevosFavoritos.length
 
 
-$grid.find('.btn-addwish-b2').each( function () {
+        $('#favoritos-desktop').attr('data-notify', cantidad)
+        $('#favoritos-mobile').attr('data-notify', cantidad)
+
+        obtenerFavoritos(nuevosFavoritos)
+
+    }
+})
+
+$('#filas-producto').find('.btn-addwish-b2').each( function () {
 
     let productoId = $(this)[0].dataset.producto
 
@@ -279,7 +275,7 @@ $grid.find('.btn-addwish-b2').each( function () {
 
         $(this).addClass('js-addedwish-b2');
 
-        
+
     }
 
 })
@@ -294,6 +290,43 @@ let cantidad = productos.length
 
 $('#favoritos-desktop').attr('data-notify', cantidad)
 $('#favoritos-mobile').attr('data-notify', cantidad)
+
+$('#productos-favoritos-eliminar').on('click','.img-favoritos-eliminar',function(e){
+    e.preventDefault()
+    var nameProduct = e.target.dataset.productoNombre
+
+    let productoId = e.target.dataset.producto
+
+    let productosFavoritos = localStorage.getItem('favoritos')
+
+    productosFavoritos = productosFavoritos ? JSON.parse(productosFavoritos) : []
+
+    let index = productosFavoritos.findIndex(
+        (element) => element == productoId
+    )
+
+    swal({
+        title: nameProduct,
+        text: "Se ha quitado de tu lista de deseos.",
+        icon: "success",    
+    })
+
+    $(this).removeClass('js-addedwish-b2');
+
+    let nuevosFavoritos = productosFavoritos
+    nuevosFavoritos.splice(index, 1)
+
+    localStorage.setItem('favoritos', JSON.stringify(nuevosFavoritos))
+    
+    let cantidad = nuevosFavoritos.length
+
+
+    $('#favoritos-desktop').attr('data-notify', cantidad)
+    $('#favoritos-mobile').attr('data-notify', cantidad)
+
+    obtenerFavoritos(nuevosFavoritos)
+
+})
 
 obtenerFavoritos(productos)
 
@@ -316,9 +349,13 @@ async function obtenerFavoritos(productos) {
                 
                 let $fila =$(`
                             <li class="header-cart-item flex-w flex-t m-b-12">
-                                <div class="header-cart-item-img">
-                                    <img src="${window.location.origin}/${e.imagenes ? e.imagenes[0].url : ''}" alt="IMG">
-                                </div>
+                                <a href="#" class="img-favoritos-eliminar" data-producto="${e.id}">
+                                    <div class="header-cart-item-img" data-producto="${e.id}" data-producto-nombre="${e.nombre}">
+                                        
+                                            <img src="${window.location.origin}/${e.imagenes ? e.imagenes[0].url : ''}" alt="IMG" class="imagen-favoritos">
+                                        
+                                    </div>
+                                </a>
 
                                 <div class="header-cart-item-txt p-t-8">
                                     <a href="${window.location.origin}/productos/${e.id}" class="header-cart-item-name m-b-18 hov-cl1 trans-04">
@@ -332,7 +369,7 @@ async function obtenerFavoritos(productos) {
                             </li>
                         `)
                 $('#productos-favoritos').append($fila)
-            }) 
+            })
 
         }) 
 }

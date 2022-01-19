@@ -690,8 +690,6 @@
                
                 let productos = JSON.parse(this.responseText)
     
-                console.log(productos)
-    
                 productos.forEach(producto => {
                     
 
@@ -726,7 +724,7 @@
 										</a>
 									</div>
 
-									<a href="product-detail.html" class="stext-104 cl3 hov-cl1 trans-04 p-b-6 producto-nombre">
+									<a href="artesanos/${producto.user.id}" class="stext-104 cl3 hov-cl1 trans-04 p-b-6 producto-nombre">
 										<img class="iconos" src=" ${producto.user.sexo == 'M' ? 'images/icons/artesano-hombre.png' : 'images/icons/artesano-mujer.png'}">
                                         ${producto.user.name}
 									</a>
@@ -745,7 +743,6 @@
 							</div>
 						</div>
 					</div>
-
                     `)
             
                         
@@ -754,104 +751,29 @@
                     
                 });
 
-                var $grid = $('.isotope-grid');
-
-
-                $grid.find('.btn-addwish-b2').each( function () {
-
+                $('#filas-producto').find('.btn-addwish-b2').each( function () {
 
                     let productoId = $(this)[0].dataset.producto
-
+                
                     let productosFavoritos = localStorage.getItem('favoritos')
-
+                
                     productosFavoritos = productosFavoritos ? JSON.parse(productosFavoritos) : []
-
-
+                
+                
                     let index = productosFavoritos.findIndex(
                         (element) => element == productoId
                     );
-
-
+                
+                
                     if (index !== -1) {
-
-
+                
+                
                         $(this).addClass('js-addedwish-b2');
-
-                        
+                
+                
                     }
-
+                
                 })
-
-                $grid.find('.js-addwish-b2').each(function(){
-
-                    var nameProduct = $(this).parent().parent().find('.js-name-b2').html();
-                
-                    $(this).on('click', function(e){
-                
-                        e.preventDefault();
-                
-                        let productoId = e.target.dataset.producto
-                
-                        let productosFavoritos = localStorage.getItem('favoritos')
-                
-                        productosFavoritos = productosFavoritos ? JSON.parse(productosFavoritos) : []
-                
-                        let index = productosFavoritos.findIndex(
-                            (element) => element == productoId
-                        );
-
-                        console.log(index)
-                
-                
-                        if (index == -1) {
-                
-                            swal({
-                                title: nameProduct,
-                                text: "Añadido a tu lista de deseos.",
-                                icon: "success",    
-                            })    
-                    
-                            $(this).addClass('js-addedwish-b2');
-                            
-                            let nuevosFavoritos = productosFavoritos
-                            nuevosFavoritos.push(productoId)
-                
-                            localStorage.setItem('favoritos', JSON.stringify(nuevosFavoritos))
-
-                            let cantidad = nuevosFavoritos.length
-
-
-                            $('#favoritos-desktop').attr('data-notify', cantidad)
-                            $('#favoritos-mobile').attr('data-notify', cantidad)
-                
-                            obtenerFavoritos(nuevosFavoritos)
-                            
-                        } else if (index !== -1) {
-                            
-                            swal({
-                                title: nameProduct,
-                                text: "Se ha quitado de tu lista de deseos.",
-                                icon: "success",    
-                            })
-                
-                            $(this).removeClass('js-addedwish-b2');
-                
-                            let nuevosFavoritos = productosFavoritos
-                            nuevosFavoritos.splice(index, 1)
-                    
-                            localStorage.setItem('favoritos', JSON.stringify(nuevosFavoritos))
-                            
-                            let cantidad = nuevosFavoritos.length
-
-
-                            $('#favoritos-desktop').attr('data-notify', cantidad)
-                            $('#favoritos-mobile').attr('data-notify', cantidad)
-                
-                            obtenerFavoritos(nuevosFavoritos)
-                        }
-                
-                    });
-                });
             }
         }
     
@@ -859,47 +781,5 @@
         http.send();
     
     }
-
-    async function obtenerFavoritos(productos) {
-
-        console.log('hola')
-    
-        let productosFavoritos = {
-            favoritos: productos
-        }
-        await axios.post(`/api/obtener_favoritos`, productosFavoritos)   
-            .then(respuesta => {
-    
-                let limpiar = `<ul class="header-cart-wrapitem w-full" id="productos-favoritos">
-                        
-                </ul>`
-                $('#productos-favoritos').replaceWith(limpiar)
-    
-                respuesta.data.forEach(e => {
-                    
-                    let $fila =$(`
-                                <li class="header-cart-item flex-w flex-t m-b-12">
-                                    <div class="header-cart-item-img">
-                                        <img src="${window.location.origin}/${e.imagenes ? e.imagenes[0].url : ''}" alt="IMG">
-                                    </div>
-    
-                                    <div class="header-cart-item-txt p-t-8">
-                                        <a href="${window.location.origin}/productos/${e.id}" class="header-cart-item-name m-b-18 hov-cl1 trans-04">
-                                            ${e.nombre}
-                                        </a>
-    
-                                        <span class="header-cart-item-info">
-                                            S/. ${e.precio}
-                                        </span>
-                                    </div>
-                                </li>
-                            `)
-                    $('#productos-favoritos').append($fila)
-                }) 
-    
-            }) 
-    }
-
-
 
 })(jQuery);
