@@ -1148,7 +1148,10 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
     $('#modal-producto-usuario-foto').empty().append(productoartesanoFoto); //todo:PRODUCTO DESCRIPCION ARTESANO NOMBREEE
 
     var productoartesanoNombre = "\n        <span>".concat(producto.user.name, "</span>\n        ");
-    $('#modal-producto-user-name').empty().append(productoartesanoNombre); //todo:PRODUCTO DESCRIPCION ARTESANO ASOCIACION
+    $('#modal-producto-user-name').empty().append(productoartesanoNombre); //todo:PRODUCTO DESCRIPCION ARTESANO EMPRESA
+
+    var productoartesanoEmpresa = "\n          <span>".concat(producto.user.empresa, "</span>\n          ");
+    $('#modal-producto-user-empresa').empty().append(productoartesanoEmpresa); //todo:PRODUCTO DESCRIPCION ARTESANO ASOCIACION
 
     var productoartesanoAsociacion = "\n        <span>".concat(producto.user.asociacion.nombre, "</span>\n        ");
     $('#modal-producto-user-asociacion').empty().append(productoartesanoAsociacion); //todo:PRODUCTO DESCRIPCION ARTESANO DIRECCION

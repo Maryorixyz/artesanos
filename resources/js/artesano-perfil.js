@@ -36,6 +36,12 @@ $('#filas-producto').on('click','.js-show-modal1',function(e){
     `
     $('#modal-producto-user-name').empty().append(productoartesanoNombre)
 
+    //todo:PRODUCTO DESCRIPCION ARTESANO EMPRESA
+    let productoartesanoEmpresa = `
+    <span>${producto.user.empresa}</span>
+    `
+    $('#modal-producto-user-empresa').empty().append(productoartesanoEmpresa)
+
     //todo:PRODUCTO DESCRIPCION ARTESANO ASOCIACION
     let productoartesanoAsociacion = `
     <span>${producto.user.asociacion.nombre}</span>

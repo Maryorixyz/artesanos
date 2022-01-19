@@ -16,7 +16,12 @@
     <section class="bg-img1 txt-center p-lr-15 p-tb-92 banner">
         <h2 class="ltext-105 cl0 txt-center">
             {{ $artesano->name }}
+            <br>
+            <span style="font-size: 2.5rem">
+                "{{ $artesano->empresa }}"
+            </span>
         </h2>
+        
     </section>	
 
     <!-- Content page -->

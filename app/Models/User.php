@@ -81,4 +81,15 @@ class User extends Authenticatable
     {
         return $this->belongsTo(Asociacion::class);
     }
+
+    public function adminlte_profile_url()
+    {
+        return route('profile.show');
+    }
+
+    public function adminlte_image()
+    {
+
+        return auth()->user()->profile_photo_url;
+    }
 }
